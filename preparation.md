@@ -33,11 +33,18 @@ git clone <주소> 				# 복사(clone) 명령
 
 * 중복작업과 충돌(conflict) 방지를 위해 이슈를 생성하고, `assignee`를 자신으로 설정해주세요.
 * 이슈는 원래의 저장소인 [pyconkr의 script 저장소](https://github.com/pythonkr/pyconkr-script)에 생성해주시면 됩니다.
-* `assign yourself`를 클릭하시면 자신을 `assignee`로 추가할 수 있습니다.
+
+
+
+1. `pycon/pycon-script` 저장소에서 새로운 이슈을 생성합니다.
+
+<img src="./image/new-issue.png" alt="이슈 생성" style="zoom:60%;" />
+
+2. `assign yourself`를 클릭하시면 자신을 `assignee`로 추가할 수 있습니다.
 
 <img src="./image/assign-yourself.png" alt="assignee 할당" style="zoom:60%;" />
 
-* (템플릿 작성 예시 추가 예정)
+3. (템플릿 작성 예시 추가 예정)
 
 
 
