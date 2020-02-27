@@ -6,13 +6,14 @@
 파이콘 한국 영상 자막입력은 [여기](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md)를 참고해주세요.
 
 ### 사전준비
-(작성 중)
+기여를 위해 필요한 사전작업은 [여기](./preparation.md)를 읽어주세요.
 
 ### 완료된 자막 스크립트를 PR 하는 방법
 (작성 중)
 
 ### 스크립트 편집
 **오타 등을 제외하고는 발화 내용을 편집하지 않도록 합니다.**
+
 1. 오,탈자 수정하기
 - 개발 용어는 영문으로 표기합니다.
     - 보다 자세한 표기에 대해서는 [자막 용어집](https://github.com/pythonkr/python-terms)를 참조해주세요. 대표어로 표기하면 됩니다.
