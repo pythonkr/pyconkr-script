@@ -2,11 +2,11 @@
 파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.
 
 ## 기여하기
-이 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력합니다. 아래와 같은 도움을 통해 보다 많은 분들이 발표세션 녹화본을 볼 수 있습니다.
-파이콘 한국 영상 자막입력은 [여기](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md)를 참고해주세요.
+이 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력합니다. 아래와 같은 도움을 통해 보다 많은 분들이 발표 세션 녹화본을 볼 수 있습니다.
+파이콘 한국 영상 자막 입력은 [여기](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md)를 참고해주세요.
 
 ### 사전준비
-기여를 위해 필요한 사전작업은 [여기](./preparation.md)를 읽어주세요.
+기여를 위해 필요한 사전 작업은 [여기](./preparation.md)를 읽어주세요.
 
 ### 완료된 자막 스크립트를 PR 하는 방법
 [여기](./pr-guide.md)를 참고해주세요.
