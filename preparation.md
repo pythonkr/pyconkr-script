@@ -16,7 +16,7 @@
 
   
 
-2. 포크 된 자신의 저장소 주소를 확인합니다.
+2. 포크된 자신의 저장소 주소를 확인합니다.
 
 <img src="./image/check_address.png" alt="주소 확인" style="zoom:60%;" />
 
@@ -44,7 +44,7 @@ git clone <주소> 				# 복사(clone) 명령
 
 
 
-1. `pycon/pycon-script` 저장소에서 새로운 이슈을 생성합니다.
+1. `pycon/pycon-script` 저장소에서 새로운 이슈를 생성합니다.
 
 <img src="./image/new-issue.png" alt="이슈 생성" style="zoom:60%;" />
 
