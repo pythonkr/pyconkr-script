@@ -44,17 +44,6 @@ git clone <주소> 				# 복사(clone) 명령
 
 <img src="./image/assign-yourself.png" alt="assignee 할당" style="zoom:60%;" />
 
-3. (템플릿 작성 예시 추가 예정)
+3. 제목 등 필요한 내용을 기입하신 뒤 `Submit new issue`를 눌러주세요.
 
-
-
-### 작성예정 (?)
-
-* 포크를 하면 branch를 별도로 만들어야 할까? 하는 생각이 들어서 일단은 해당부분 제외하고 만들어봤습니다.
-* 이미지는 논의 후에 더 깔끔하게 만들어 볼게요.
-
- (cli 명령어 / fork, git clone 등) - [참고](https://github.com/pythonkr/pyconkr#getting-started)
-
-  branch 세팅
-
-  - branch 명 형식, branch 를 forked project 에 생성
+<img src="./image/example-complete.png" alt="예제" style="zoom:60%;" />
