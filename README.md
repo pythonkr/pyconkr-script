@@ -1,4 +1,7 @@
 # pyconkr-script
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.
 
 ## 기여하기
@@ -29,3 +32,22 @@
 - 텍스트 자르기 : 읽기 속도나 길이를 위해서 필요하지 않다면 문장을 너무 짧게 자르지 말 것 (한국어 글자가 14자 정도 이하면 너무 짧음)
 - 강연이 아닌 소리 재현을 하려면 소괄호 안에 넣을 것
 - 화면에 뜨는 텍스트는 대괄호에 넣을 것
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://seongheum.golony.dev"><img src="https://avatars1.githubusercontent.com/u/10653376?v=4" width="100px;" alt=""/><br /><sub><b>Park Seong Heum</b></sub></a><br /><a href="https://github.com/pythonkr/pyconkr-script/commits?author=golony6449" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
