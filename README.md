@@ -2,20 +2,24 @@
 파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.
 
 ## 기여하기
-이 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력합니다. 아래와 같은 도움을 통해 보다 많은 분들이 발표세션 녹화본을 볼 수 있습니다.
-파이콘 한국 영상 자막입력은 [여기](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md)를 참고해주세요.
+이 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력합니다. 아래와 같은 도움을 통해 보다 많은 분들이 발표 세션 녹화본을 볼 수 있습니다.
+
+파이콘 한국 영상 자막 입력은 [여기](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md)를 참고해주세요.
 
 ### 사전준비
-(작성 중)
+기여를 위해 필요한 사전 작업은 [여기](./preparation.md)를 읽어주세요.
 
 ### 완료된 자막 스크립트를 PR 하는 방법
-(작성 중)
+
+[여기](./pr-guide.md)를 참고해주세요.
 
 ### 스크립트 편집
-**오타 등을 제외하고는 발화 내용을 편집하지 않도록 합니다.**
+- 스크립트의 일부만 편집해 기여하는 것도 가능합니다. 자세한 내용은 [PR guide](./pr-guide.md#자막-스크립트-편집-pr)를 참고해주세요.
+**오타 등을 제외하고는 발화 내용을 교정 및 편집하지 않도록 합니다.**
+
 1. 오,탈자 수정하기
 - 개발 용어는 영문으로 표기합니다.
-    - 보다 자세한 표기에 대해서는 [자막 용어집](https://github.com/pythonkr/python-terms)를 참조해주세요. 대표어로 표기하면 됩니다.
+    - 보다 자세한 표기에 대해서는 [자막 용어집](https://github.com/pythonkr/python-terms)을 참조해주세요. 대표어로 표기하면 됩니다.
 - \*, - 이나 발표자명이 발화 내용 앞에 적혀있을 경우 삭제합니다.
     - e.g., - 이것은 말이죠 / - 강종구 : 이 부분에서...
 - 통일된 표기법을 위해 [표기법 문서](https://github.com/pythonkr/pyconkr-script/blob/master/subtitle-notation.md)를 참고해주세요.
