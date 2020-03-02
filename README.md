@@ -4,7 +4,7 @@
 
 ## 기여하기
 이 repository의 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력하고 있습니다.   
-기여하는 자세한 방법은 [CONTRIBUTION](./contribution.md)을 참고해주세요. 
+기여하는 자세한 방법은 [CONTRIBUTING](./CONTRIBUTING.md)을 참고해주세요. 
 
 아래와 같은 도움을 통해 보다 많은 분들이 자막이 있는 발표 세션 녹화영상을 보거나 들을 수 있습니다.
 문자통역과 [파이콘 한국 영상](https://www.youtube.com/channel/UC26x6D5xpKx6io4ShfXa_Ow) 자막 입력은 아래와 같은 과정으로 이루어집니다.

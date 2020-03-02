@@ -4,7 +4,7 @@
     - [1. 저장소\(Repository\) 준비](#1-%EC%A0%80%EC%9E%A5%EC%86%8Crepository-%EC%A4%80%EB%B9%84)
     - [2. 작업 전 issue 생성](#2-%EC%9E%91%EC%97%85-%EC%A0%84-issue-%EC%83%9D%EC%84%B1)
 - [스크립트 편집](#%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%8E%B8%EC%A7%91)
-- [PR\(Pull Request\)하는 방법](#%EC%99%84%EB%A3%8C%EB%90%9C-%EC%9E%90%EB%A7%89-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A5%BC-prpull-request%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+- [Pull Request하는 방법](#Pull-Request하는-방법)
     - [PR 전 확인해주세요](#pr-%EC%A0%84-%ED%99%95%EC%9D%B8%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)
     - [모든 PR은](#%EB%AA%A8%EB%93%A0-pr%EC%9D%80)
     - [자막 스크립트 편집 PR](#%EC%9E%90%EB%A7%89-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%8E%B8%EC%A7%91-pr)
@@ -76,8 +76,8 @@ git clone <주소>              # 복사(clone) 명령
 - 화면에 뜨는 텍스트는 대괄호 `[]` 에 넣을 것
 
 ---
-## PR(Pull Request)하는 방법  
-- PR을 처음해보신다면 [첫 기여하기](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.ko.md)와 [Github Guide - Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)를 참고해보세요 :)  
+## Pull Request하는 방법
+- PR(Pull Request)을 처음해보신다면 [첫 기여하기](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.ko.md)와 [Github Guide - Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)를 참고해보세요 :)  
 - PR 한 후에 Maintainer가 리뷰한 후 내용 수정을 요청할 수 있습니다. (참고.[PR을 업데이트 하는 방법](https://pandas-docs.github.io/pandas-docs-travis/development/contributing.html#updating-your-pull-request))
 
 ### PR 전 확인해주세요 
