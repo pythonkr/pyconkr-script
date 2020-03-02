@@ -1,35 +1,25 @@
 # pyconkr-script
-파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.
+파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.  
+파이콘 한국 행사에서는 문자통역 :sound::arrow_right::memo: 을 진행하고 있습니다. 문자통역 스크립트는 오픈데이터로 공개합니다. 자세한 내용은 파이콘 한국 블로그의 [문자통역에 기여해봅시다](http://blog.pycon.kr/2020/02/24/contribute-speech-to-text-translation/)를 참고해주세요 :)
 
 ## 기여하기
-이 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력합니다. 아래와 같은 도움을 통해 보다 많은 분들이 발표 세션 녹화본을 볼 수 있습니다.
+이 repository의 스크립트를 참고해서 파이콘 한국 영상에 자막을 입력하고 있습니다.   
+기여하는 자세한 방법은 [CONTRIBUTION](./contribution.md)을 참고해주세요. 
 
-파이콘 한국 영상 자막 입력은 [여기](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md)를 참고해주세요.
+아래와 같은 도움을 통해 보다 많은 분들이 자막이 있는 발표 세션 녹화영상을 보거나 들을 수 있습니다.
+문자통역과 [파이콘 한국 영상](https://www.youtube.com/channel/UC26x6D5xpKx6io4ShfXa_Ow) 자막 입력은 아래와 같은 과정으로 이루어집니다.
 
-### 사전준비
-기여를 위해 필요한 사전 작업은 [여기](./preparation.md)를 읽어주세요.
+1. *[기여 필요]* 문자통역을 위한 [파이썬 용어집 정리](https://github.com/pythonkr/python-terms)
+2. 문자통역 스크립트 공개
+3. *[기여 필요]* 스크립트 편집 - 문자통역으로 만들어진 스크립트의 오탈자 수정
+4. *[기여 필요]* [영상자막 입력](https://github.com/pythonkr/pyconkr-guide/blob/master/subtitles/00-getting-started.md) - 편집된 스크립트를 참고해 Youtube 영상 자막 입력
 
-### 완료된 자막 스크립트를 PR 하는 방법
+여기서는 `3. 스크립트 편집` 과정이 이뤄집니다. 
 
-[여기](./pr-guide.md)를 참고해주세요.
 
-### 스크립트 편집
-- 스크립트의 일부만 편집해 기여하는 것도 가능합니다. 자세한 내용은 [PR guide](./pr-guide.md#자막-스크립트-편집-pr)를 참고해주세요.
-**오타 등을 제외하고는 발화 내용을 교정 및 편집하지 않도록 합니다.**
+## 기여해주신 분들 Contributor
+[Repository Contributors](https://github.com/pythonkr/pyconkr-script/graphs/contributors)
 
-1. 오,탈자 수정하기
-- 개발 용어는 영문으로 표기합니다.
-    - 보다 자세한 표기에 대해서는 [자막 용어집](https://github.com/pythonkr/python-terms)을 참조해주세요. 대표어로 표기하면 됩니다.
-- \*, - 이나 발표자명이 발화 내용 앞에 적혀있을 경우 삭제합니다.
-    - e.g., - 이것은 말이죠 / - 강종구 : 이 부분에서...
-- 통일된 표기법을 위해 [표기법 문서](https://github.com/pythonkr/pyconkr-script/blob/master/subtitle-notation.md)를 참고해주세요.
-
-2. 스크립트의 문단과 행을 슬라이드 구간에 맞춰서 분리하기
-- 자막 작업 시 복사, 붙여넣기가 편하도록 문장을 나누고 공백열을 추가합니다.
-- 하나의 자막에서 최고 줄 수 : 2줄
-- 하나의 자막에서 최고 줄 길이 : 21 한국어 글자
-- 줄 바꾸기에서 언어적 단위를 자르지 말 것 (형용사구, 명사구, 절 등. 또한 끝문장과 시작 문장을 같이 넣지 말 것)
-- 자막 구조를 위해 한 문장의 끝부분과 다른 문장의 시작 부분을 한 자막에 합쳐 넣지 말 것
-- 텍스트 자르기 : 읽기 속도나 길이를 위해서 필요하지 않다면 문장을 너무 짧게 자르지 말 것 (한국어 글자가 14자 정도 이하면 너무 짧음)
-- 강연이 아닌 소리 재현을 하려면 소괄호 안에 넣을 것
-- 화면에 뜨는 텍스트는 대괄호에 넣을 것
+---
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.  
+파이콘 한국의 모든 프로젝트는 [파이콘 한국 행동강령 CoC](https://github.com/pythonkr/pycon-code-of-conduct)를 준수합니다. 
