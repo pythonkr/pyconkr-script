@@ -39,7 +39,7 @@ git clone <주소> 				# 복사(clone) 명령
 
 ## 2. 작업 전 issue 생성
 
-* 중복작업과 충돌(conflict) 방지를 위해 이슈를 생성하고, `assignee`를 자신으로 설정해주세요.
+* 중복 작업과 충돌(conflict) 방지를 위해 이슈를 생성하고, `assignee`를 자신으로 설정해주세요.
 * 이슈는 원래의 저장소인 [pyconkr의 script 저장소](https://github.com/pythonkr/pyconkr-script)에 생성해주시면 됩니다.
 
 
