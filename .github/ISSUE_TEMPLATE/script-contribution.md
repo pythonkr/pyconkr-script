@@ -31,6 +31,6 @@ assignees: ''
 
 * 아래의 스크린샷을 참고해주세요.
 
-<img src="./script-in-repo.png" alt="주소" style="zoom:60%;" />
+<img src="https://github.com/pythonkr/pyconkr-script/blob/master/.github/ISSUE_TEMPLATE/script-in-repo.png" alt="주소" style="zoom:60%;" />
 
-<img src="./example-complete.png" alt="예시" style="zoom:60%;" />
+<img src="https://github.com/pythonkr/pyconkr-script/blob/master/.github/ISSUE_TEMPLATE/example-complete.png" alt="예시" style="zoom:60%;" />
