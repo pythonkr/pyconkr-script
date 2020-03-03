@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=5ksPJYEBYTU
+
 안녕하세요? 이번시간에 python으로 나만의 IOT 구축하기 미세먼지 온습도 편을 준비하게 된 박상우입니다.
 
 들어가기 앞서 이번 프로젝트 결과물 먼저 보고 들어가도록 하겠습니다.

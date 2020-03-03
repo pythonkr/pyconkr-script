@@ -1,3 +1,5 @@
+https://youtu.be/HpMYWk566OA
+
 < 실시간 의료 인공지능 데이터 처리를 위한 Django Query Optimization - 윤소영 >
 -지금 발표가 약간 지연되고 있습니다. 죄송합니다.
 잠시 시간이 55분에서 2시로 지연되었습니다. 죄송합니다.

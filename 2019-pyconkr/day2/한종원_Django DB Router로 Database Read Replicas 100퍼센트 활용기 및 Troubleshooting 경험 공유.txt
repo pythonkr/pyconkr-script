@@ -1,3 +1,5 @@
+https://youtu.be/eAP8zimx05M
+
 < Django DB Router로 Database read replica 100% 활용기 및 Troubleshooting 경험 공유>
 -안녕하세요? 이른 아침부터 오신 여러분, 환영합니다. 저는 Django DB Router로 Database read replica 100% 활용기 및 Troubleshooting 경험 공유...
 아, 화면이 안 나왔네요. 잠시만요.
