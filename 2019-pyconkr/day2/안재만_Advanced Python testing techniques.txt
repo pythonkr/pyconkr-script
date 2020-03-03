@@ -1,3 +1,5 @@
+https://youtu.be/3CfxhnDjtQQ
+
 *** Advanced Python testing techniques - 안재만 ***
 -(발표자) 안녕하세요? 저는 이번 세션에서 파이썬의 테스팅 기법에 대해서 발표를 하게 될 안재만입니다. 반갑습니다.
 (박수)
