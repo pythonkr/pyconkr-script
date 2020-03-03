@@ -54,9 +54,9 @@ git clone <주소>              # 복사(clone) 명령
 
 ---
 ## 스크립트 편집
-- 스크립트의 일부만 편집해 기여하는 것도 가능합니다. 
+- 스크립트의 일부만 편집하는 기여도 가능합니다. 
 - **오타 등을 제외하고는 발화 내용을 교정 및 편집하지 않도록 합니다.** 
-  - 세션 내용에 대한 의견은 영상의 댓글로 남겨주세요.
+  - 발표자의 의도를 최대한 해치지 않고 편집하기 위해서입니다. 세션 내용에 대한 의견이 있으시다면, 영상의 댓글로 남겨주세요. :smiley:
 
 1. 오,탈자 수정하기
 - 개발 용어는 영문으로 표기합니다.
@@ -65,7 +65,11 @@ git clone <주소>              # 복사(clone) 명령
     - e.g., - 이것은 말이죠 / - 강종구 : 이 부분에서...
 - 통일된 표기법을 위해 [표기법 문서](https://github.com/pythonkr/pyconkr-script/blob/master/subtitle-notation.md)를 참고해주세요.
 
-2. 스크립트의 문단과 행을 슬라이드 구간에 맞춰서 분리하기
+2. 스크립트에서 빠진 내용 추가하기
+- 문자통역 특성상 빠진 내용이 있을 수 있습니다. 최대한 발화내용과 가깝도록 빠진 내용을 추가해주세요. 
+- 원본영상 링크는 각 스크립트의 상단에 있습니다.
+
+3. 스크립트의 문단과 행을 슬라이드 구간에 맞춰서 분리하기
 - 자막 작업 시 복사, 붙여넣기가 편하도록 문장을 나누고 공백열을 추가합니다.
 - 하나의 자막에서 최고 줄 수 : 2줄
 - 하나의 자막에서 최고 줄 길이 : 21 한국어 글자
@@ -110,3 +114,4 @@ git clone <주소>              # 복사(clone) 명령
 - [첫 기여하기 by firstcontributions](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.ko.md)
 - [Github Guide - Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 - [pandas - contributing guide](https://pandas-docs.github.io/pandas-docs-travis/development/contributing.html#updating-your-pull-request)
+-  [TED Translators Resources:Main guide (TED Translators 번역 자료)](http://translations.ted.org/wiki/OTP_Resources:_Main_guide) 
