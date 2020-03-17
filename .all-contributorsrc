@@ -1,0 +1,64 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "golony6449",
+      "name": "Park Seong Heum",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10653376?v=4",
+      "profile": "http://seongheum.golony.dev",
+      "contributions": [
+        "projectManagement",
+        "review"
+      ]
+    },
+    {
+      "login": "ohahohah",
+      "name": "SiYoungOh",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17819874?v=4",
+      "profile": "http://github.com/ohahohah",
+      "contributions": [
+        "projectManagement",
+        "doc",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "chukycheese",
+      "name": "Kyoyoung Chu",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20205007?v=4",
+      "profile": "https://chukycheese.github.io",
+      "contributions": [
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "emscb",
+      "name": "emscb",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/32407677?v=4",
+      "profile": "https://github.com/emscb",
+      "contributions": [
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "cmygray",
+      "name": "Won Kim",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26966551?v=4",
+      "profile": "https://medium.com/@cmygray",
+      "contributions": [
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "pyconkr-script",
+  "projectOwner": "pythonkr",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
