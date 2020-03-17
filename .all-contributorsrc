@@ -40,6 +40,15 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "cmygray",
+      "name": "Won Kim",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26966551?v=4",
+      "profile": "https://medium.com/@cmygray",
+      "contributions": [
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
