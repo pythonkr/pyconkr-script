@@ -1,4 +1,7 @@
 # pyconkr-script
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.  
 파이콘 한국 행사에서는 문자 통역 :sound::arrow_right::memo: 을 진행하고 있습니다. 문자 통역 스크립트는 오픈데이터로 공개합니다. 자세한 내용은 파이콘 한국 블로그의 [문자 통역에 기여해봅시다](http://blog.pycon.kr/2020/02/24/contribute-speech-to-text-translation/)를 참고해주세요 :)
 
@@ -24,3 +27,21 @@
 ---
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.  
 파이콘 한국의 모든 프로젝트는 [파이콘 한국 행동강령 CoC](https://github.com/pythonkr/pycon-code-of-conduct)를 준수합니다. 
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://ohahohah.com"><img src="https://avatars3.githubusercontent.com/u/17819874?v=4" width="100px;" alt=""/><br /><sub><b>SiYoungOh</b></sub></a><br /><a href="#projectManagement-ohahohah" title="Project Management">📆</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
