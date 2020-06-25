@@ -1,6 +1,6 @@
 # pyconkr-script
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 파이콘 한국, 파이썬 격월 세미나의 스크립트 저장소입니다.  
 파이콘 한국 행사에서는 문자 통역 :sound::arrow_right::memo: 을 진행하고 있습니다. 문자 통역 스크립트는 오픈데이터로 공개합니다. 자세한 내용은 파이콘 한국 블로그의 [문자 통역에 기여해봅시다](http://blog.pycon.kr/2020/02/24/contribute-speech-to-text-translation/)를 참고해주세요 :)
@@ -41,6 +41,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://chukycheese.github.io"><img src="https://avatars2.githubusercontent.com/u/20205007?v=4" width="100px;" alt=""/><br /><sub><b>Kyoyoung Chu</b></sub></a><br /><a href="#projectManagement-chukycheese" title="Project Management">📆</a></td>
     <td align="center"><a href="https://github.com/emscb"><img src="https://avatars0.githubusercontent.com/u/32407677?v=4" width="100px;" alt=""/><br /><sub><b>emscb</b></sub></a><br /><a href="#projectManagement-emscb" title="Project Management">📆</a></td>
     <td align="center"><a href="https://medium.com/@cmygray"><img src="https://avatars3.githubusercontent.com/u/26966551?v=4" width="100px;" alt=""/><br /><sub><b>Won Kim</b></sub></a><br /><a href="#projectManagement-cmygray" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://constmoon.github.io"><img src="https://avatars1.githubusercontent.com/u/19185307?v=4" width="100px;" alt=""/><br /><sub><b>Jiwoo Kang</b></sub></a><br /><a href="#content-constmoon" title="Content">🖋</a></td>
   </tr>
 </table>
 
