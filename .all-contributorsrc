@@ -53,6 +53,15 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "constmoon",
+      "name": "Jiwoo Kang",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19185307?v=4",
+      "profile": "https://constmoon.github.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
