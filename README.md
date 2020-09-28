@@ -17,7 +17,7 @@
 1. *[기여 필요]* 문자 통역을 위한 [파이썬 용어집 정리](https://github.com/pythonkr/python-terms)
 2. 문자 통역 스크립트 공개
 3. *[기여 필요]* 스크립트 편집 - 문자 통역으로 만들어진 스크립트의 오탈자 수정
-4. *[기여 필요]* [영상 자막 입력]( https://pythonkr.github.io/pyconkr-guide/subtitles/00-getting-started.html) - 편집된 스크립트를 참고해 Youtube 영상 자막 입력
+4. *[파이콘 한국 준비위원회 작업]* [영상 자막 입력]( https://pythonkr.github.io/pyconkr-guide/subtitles/00-getting-started.html) - 편집된 스크립트를 참고해 Youtube 영상 자막 입력
 
 여기서는 `3. 스크립트 편집` 과정이 이뤄집니다. 
 
