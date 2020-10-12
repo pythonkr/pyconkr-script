@@ -1,0 +1,2120 @@
+1
+00:00:10,223 --> 00:00:13,343
+Hello Everyone.
+My name is Gajendra Deshpande.
+
+2
+00:00:13,285 --> 00:00:15,935
+and today I will be presenting a talk on
+ 
+
+3
+00:00:15,959 --> 00:00:20,262
+Python and FOSS in Education
+for Generation Z. 
+
+4
+00:00:20,286 --> 00:00:24,952
+So, FOSS is nothing but
+Free and Open-Source Software. 
+
+5
+00:00:26,977 --> 00:00:29,690
+So these are the contents which we are going to
+discuss today 
+
+7
+00:00:30,058 --> 00:00:32,466
+The Generation Z.
+ 
+
+8
+00:00:32,490 --> 00:00:36,474
+So that means who are the
+students who belongs to Generation Z? 
+
+9
+00:00:36,498 --> 00:00:42,632
+Then BYOD. So, what do we mean by BYOD
+and how it is important in education? 
+
+10
+00:00:42,656 --> 00:00:44,782
+What are its advantages and disadvantages?
+ 
+
+11
+00:00:44,806 --> 00:00:51,575
+Then we're going to discuss a few
+tools, such as QPython, Blockly, VisuPy, 
+
+12
+00:00:51,629 --> 00:00:55,487
+then TextBook Companion Project
+and Flowgorithm, 
+
+13
+00:00:55,511 --> 00:00:59,618
+then how we can build new
+programming language support. 
+
+14
+00:00:59,649 --> 00:01:06,992
+it is the example, for Julia language and how
+we can create it using Python template. 
+
+15
+00:01:07,016 --> 00:01:10,069
+Then finally, future goals.
+ 
+
+16
+00:01:12,991 --> 00:01:19,506
+So, Generation Z. So, these are the people
+who are born between 1995 and 2010. 
+
+17
+00:01:19,530 --> 00:01:22,403
+So, these are the true digital natives.
+ 
+
+18
+00:01:22,427 --> 00:01:26,343
+That is, from their earliest youth
+they have been exposed to the internet, 
+
+19
+00:01:26,367 --> 00:01:29,079
+social networks and mobile systems.
+ 
+
+20
+00:01:29,103 --> 00:01:32,653
+That means they are all
+gadget-oriented people. 
+
+21
+00:01:32,677 --> 00:01:36,069
+So, you see uh--
+ 
+
+22
+00:01:36,093 --> 00:01:43,786
+they use a lot of gadgets like mobile
+phones or even earphones, et cetera. 
+
+23
+00:01:43,825 --> 00:01:51,724
+So, these are very tech savvy people,
+and they believe in hands on learning. 
+
+24
+00:01:51,749 --> 00:01:56,118
+So, and if you consider the teachers now,
+ 
+
+25
+00:01:57,392 --> 00:02:03,273
+they are not belong to-- they
+don't belong to Generation Z. 
+
+26
+00:02:03,297 --> 00:02:08,554
+They belong to the previous generations,
+that is, Generation Y and Generation X. 
+
+27
+00:02:09,746 --> 00:02:13,637
+Then BYOD stands for
+Bring Your Own Device. 
+
+28
+00:02:15,364 --> 00:02:18,813
+So, with BYOD you are creating
+1:1 classroom. 
+
+29
+00:02:18,813 --> 00:02:22,315
+Students bring and use
+their own devices, 
+
+30
+00:02:22,315 --> 00:02:25,397
+their own choice of
+technological devices in the classroom. 
+
+31
+00:02:29,504 --> 00:02:34,738
+So, BYOD has got many
+advantages and disadvantages. 
+
+32
+00:02:34,762 --> 00:02:40,912
+The benefits of BYOD are that
+your students know the device, 
+
+33
+00:02:40,936 --> 00:02:44,898
+because after all it is
+their device so they know 
+
+34
+00:02:44,922 --> 00:02:47,308
+clearly how to use that device.
+ 
+
+35
+00:02:47,343 --> 00:02:50,944
+So, you do not have to worry
+about the device’s configurations. 
+
+36
+00:02:50,968 --> 00:02:54,647
+So, it shows that technology
+has many possibilities 
+
+37
+00:02:54,671 --> 00:03:00,641
+and cutting-edge devices
+are possible because generally, 
+
+38
+00:03:00,665 --> 00:03:03,995
+whenever students buy any gadgets,
+they buy the recent one 
+
+39
+00:03:04,315 --> 00:03:08,530
+and it is cost-effective from
+the side of an institution. 
+
+40
+00:03:08,555 --> 00:03:14,267
+So, institution does not have to invest
+much in procuring the advanced devices. 
+
+41
+00:03:14,291 --> 00:03:17,897
+Then, learning outside
+the school hours is possible. 
+
+42
+00:03:17,921 --> 00:03:20,947
+Then respect for the device
+since it is their device, 
+
+43
+00:03:20,947 --> 00:03:23,394
+ they use the device very carefully.
+ 
+
+44
+00:03:23,476 --> 00:03:28,579
+So otherwise, if it’s the institute’s
+device or if it's another’s device, 
+
+45
+00:03:28,603 --> 00:03:30,587
+then they may not use it with care.
+ 
+
+46
+00:03:31,956 --> 00:03:38,457
+Then it also helps in building
+the organized student community. 
+
+47
+00:03:38,481 --> 00:03:44,489
+Then the disadvantages of BYOD
+that is, bring your own devices, are that 
+
+48
+00:03:44,513 --> 00:03:47,155
+there are students without devices.
+ 
+
+49
+00:03:47,179 --> 00:03:52,352
+Because of their financial
+conditions, they may not be able to buy 
+
+50
+00:03:52,376 --> 00:03:55,668
+the devices,
+ even maybe a simple phone. 
+
+51
+00:03:55,668 --> 00:04:01,732
+Then, the different devices,
+we don't have control here. 
+
+52
+00:04:01,756 --> 00:04:04,723
+Each student has got his own,
+ 
+
+53
+00:04:04,723 --> 00:04:11,833
+or her own device preferences,
+their own configurations. 
+
+54
+00:04:11,857 --> 00:04:18,202
+So, it may create problems sometimes
+whenever they want to connect to 
+
+55
+00:04:18,226 --> 00:04:24,267
+a classroom, or to a teacher’s
+system in a classroom 
+
+56
+00:04:24,291 --> 00:04:28,995
+because some may have Android-
+based mobile phone, 
+
+57
+00:04:28,995 --> 00:04:34,497
+some may have iOS-based
+mobile phones, and so on. 
+
+58
+00:04:34,521 --> 00:04:37,163
+Then, it also creates a distraction
+ 
+
+59
+00:04:37,187 --> 00:04:40,577
+because students may
+also use it for other purposes. 
+
+60
+00:04:40,601 --> 00:04:46,997
+Maybe they may use the device for chatting
+apart from learning inside the classroom. 
+
+61
+00:04:47,301 --> 00:04:51,998
+Then, it results into a
+not-responsible student. 
+
+62
+00:04:52,022 --> 00:04:56,793
+Now many countries have got BYOD policy.
+ 
+
+63
+00:04:56,817 --> 00:05:03,522
+That means, if you see the example here
+Austria, USA and many countries in Europe, 
+
+64
+00:05:03,546 --> 00:05:11,024
+like Estonia, Finland, Norway, Portugal,
+Switzerland, United Kingdom, Australia. 
+
+65
+00:05:11,048 --> 00:05:17,729
+So, they have the BYOD policies.
+They encourage BYOD in the classroom. 
+
+66
+00:05:17,753 --> 00:05:19,684
+Even in India,
+ 
+
+67
+00:05:19,708 --> 00:05:26,487
+the ICT is encouraging the use of, bring
+your own devices concept in the classroom. 
+
+68
+00:05:30,326 --> 00:05:36,421
+Now, as we know that because of BYOD,
+ 
+
+69
+00:05:36,445 --> 00:05:43,314
+the students will be able to use-- are
+able to bring their own device and use it. 
+
+70
+00:05:43,338 --> 00:05:46,911
+So, most of the times when we say,
+bring your own device, 
+
+71
+00:05:46,935 --> 00:05:51,929
+actually it is the laptop, but many people
+ 
+
+72
+00:05:51,953 --> 00:05:56,065
+or many students here, what we have
+observed is they don't get their laptops 
+
+73
+00:05:57,208 --> 00:06:02,114
+because of various reasons. Some
+may not have purchased it or some, 
+
+74
+00:06:02,138 --> 00:06:04,479
+they don't want to bring it.
+ 
+
+75
+00:06:04,503 --> 00:06:11,724
+So for them, there is a solution that most
+of the people they have the smart phones. 
+
+76
+00:06:11,748 --> 00:06:15,286
+So, you can use the smart phone
+ 
+
+77
+00:06:16,656 --> 00:06:18,617
+for teaching-learning process.
+ 
+
+78
+00:06:18,641 --> 00:06:24,380
+So, what we can do now is if we
+are teaching a class using Python, 
+
+79
+00:06:24,404 --> 00:06:28,978
+or if you are teaching a Python course
+in the classroom, 
+
+80
+00:06:28,978 --> 00:06:33,810
+then there is a very nice
+mobile application called QPython. 
+
+81
+00:06:33,834 --> 00:06:38,027
+So, it basically runs only
+on Android now. Okay. 
+
+82
+00:06:38,074 --> 00:06:43,497
+So, QPython is a script engine which
+runs Python programs on Android devices. 
+
+83
+00:06:43,521 --> 00:06:47,637
+It also can help developers
+develop Android applications. 
+
+84
+00:06:47,661 --> 00:06:50,725
+So, you can also develop
+here web applications. 
+
+85
+00:06:50,749 --> 00:06:55,157
+It has also got the support
+of Jupyter Notebooks. 
+
+86
+00:06:56,673 --> 00:07:01,099
+Then the advantages are that you
+can easily develop the applications. 
+
+87
+00:07:01,123 --> 00:07:05,087
+So, QPython includes
+a complete development kit, 
+
+88
+00:07:05,111 --> 00:07:09,316
+which helps you to develop
+programs with the mobile. 
+
+89
+00:07:09,340 --> 00:07:11,519
+And it is very powerful
+ 
+
+90
+00:07:12,832 --> 00:07:16,192
+because you can extend it as you want.
+ 
+
+91
+00:07:16,216 --> 00:07:18,686
+Then it has got great support.
+ 
+
+92
+00:07:18,710 --> 00:07:25,483
+So, commercial support can support
+your development with QPython API or 
+
+93
+00:07:25,507 --> 00:07:29,254
+Embed QPython SDK,
+that is Software Development Kit. 
+
+94
+00:07:29,278 --> 00:07:32,837
+So, it can save you a lot of time.
+ 
+
+95
+00:07:35,841 --> 00:07:39,637
+Yeah. So, to download QPython,
+ 
+
+96
+00:07:39,661 --> 00:07:44,442
+you have to visit www.qpython.com.
+ 
+
+97
+00:07:44,466 --> 00:07:49,809
+It comes with two versions. One is
+qpython and second one is qpython3. 
+
+98
+00:07:49,833 --> 00:07:53,302
+So, whatever the screen you're
+seeing here, a screenshot. 
+
+99
+00:07:53,326 --> 00:07:59,483
+So, it's the welcome screen
+of QPython software. 
+
+100
+00:08:01,586 --> 00:08:06,677
+So, you can see here two more screenshots
+like QPython also supports Terminal 
+
+101
+00:08:06,701 --> 00:08:09,791
+and it also supports the Jupyter Notebook.
+ 
+
+102
+00:08:09,815 --> 00:08:16,879
+It can execute Python programs on
+Terminal and Notebook on Android programs. 
+
+103
+00:08:16,903 --> 00:08:21,974
+So, let us see the small demo here.
+ 
+
+104
+00:08:28,974 --> 00:08:34,278
+So, what I have done here is I have
+installed QPython on my mobile phone 
+
+105
+00:08:34,302 --> 00:08:42,194
+and I have connected to my mobile
+phone’s screen on laptop using TeamViewer. 
+
+106
+00:08:42,194 --> 00:08:48,311
+So, there is a option now, QPython OL.
+ 
+
+107
+00:08:48,335 --> 00:08:52,172
+So, you can click on that.
+So, you can see here 
+
+108
+00:08:52,196 --> 00:08:56,571
+we have got the same
+screen, which we had seen. 
+
+109
+00:08:56,595 --> 00:09:04,232
+Now the important ones are here-- three
+options; Terminal, Editor and Explorer. 
+
+110
+00:09:04,256 --> 00:09:09,687
+If I click on Terminal, so you can see
+here it is showing me the Terminal window. 
+
+111
+00:09:09,711 --> 00:09:14,710
+Here I can directly start
+typing the Python code. 
+
+112
+00:09:14,734 --> 00:09:20,829
+Let's say, I'll say 10+20
+and when I press enter, 
+
+113
+00:09:20,853 --> 00:09:23,761
+we can see here it is
+showing me the result, 30. 
+
+114
+00:09:23,786 --> 00:09:28,151
+Let me also try to
+print some message here. 
+
+115
+00:09:28,175 --> 00:09:32,178
+Print (“Hello Qpython”).
+ 
+
+116
+00:09:43,270 --> 00:09:47,246
+Okay. So, you can see here
+it has printed the message. 
+
+117
+00:09:47,270 --> 00:09:50,482
+Now, let me come out of this
+by typing exit. 
+
+118
+00:09:52,842 --> 00:09:55,937
+Yeah. So again, I'm back on my screen.
+ 
+
+119
+00:09:55,961 --> 00:10:01,978
+Now, there is also an option called Editor.
+So, you can type your entire program-- 
+
+120
+00:10:02,010 --> 00:10:05,722
+entire Python program here,
+ 
+
+121
+00:10:06,809 --> 00:10:09,480
+and you can save it and also run it.
+ 
+
+122
+00:10:10,630 --> 00:10:12,506
+So, I'll write,
+ 
+
+123
+00:10:12,530 --> 00:10:20,504
+(Hello PyCon Korea”).
+ 
+
+124
+00:10:31,617 --> 00:10:35,147
+Okay. So, this is what I have typed.
+ 
+
+125
+00:10:35,171 --> 00:10:38,528
+Now you can see here,
+there's a run button. Okay. 
+
+126
+00:10:38,559 --> 00:10:40,551
+When you click on run button, it says,
+ 
+
+127
+00:10:40,582 --> 00:10:42,805
+Warning: Do you want
+to save the changes first? 
+
+128
+00:10:42,829 --> 00:10:45,633
+So, you can say Yes to save the file.
+ 
+
+129
+00:10:45,657 --> 00:10:50,531
+Now you have to specify
+the message file name here. 
+
+130
+00:10:50,555 --> 00:10:56,163
+So, let's say, hello1.py, and save it.
+ 
+
+131
+00:10:56,187 --> 00:10:59,337
+So, you can see that message at the top
+ 
+
+132
+00:10:59,361 --> 00:11:04,313
+that it's saved and you can also note
+the changes from untitled to hello1.py. 
+
+133
+00:11:04,337 --> 00:11:07,003
+Now again, let's click on run.
+ 
+
+134
+00:11:09,046 --> 00:11:15,481
+There is some error here.
+That's-- that's fine. 
+
+135
+00:11:15,512 --> 00:11:18,484
+So, let's go back
+ 
+
+136
+00:11:19,954 --> 00:11:21,609
+and modify--
+ 
+
+137
+00:11:23,188 --> 00:11:25,822
+modify the program-- yeah.
+ 
+
+138
+00:11:27,456 --> 00:11:31,842
+So, after that you can save it.
+Now let's run it. 
+
+139
+00:11:33,566 --> 00:11:38,336
+Yeah. So, you can see here
+that it is showing the message 
+
+140
+00:11:40,407 --> 00:11:43,500
+that program has run successfully.
+ 
+
+141
+00:11:45,373 --> 00:11:49,234
+So, then there is also a
+third option called Explorer. 
+
+142
+00:11:49,258 --> 00:11:55,276
+So, come to Explorer here then you can see
+there is an option called Notebooks. 
+
+143
+00:11:55,300 --> 00:11:58,320
+So, there are some
+Jupyter Notebooks here. 
+
+144
+00:11:58,344 --> 00:12:02,661
+So, let's click on Welcome.ipynb file.
+ 
+
+145
+00:12:02,685 --> 00:12:09,140
+Note there that if you want to open
+a Jupyter Notebook and work with it, 
+
+146
+00:12:09,164 --> 00:12:11,500
+the option has to be enabled.
+ 
+
+147
+00:12:11,532 --> 00:12:15,911
+Then only you will be able
+to start the Jupyter Notebook. 
+
+148
+00:12:19,542 --> 00:12:23,463
+Let's see what happens here.
+ 
+
+149
+00:12:27,165 --> 00:12:32,219
+Yeah. So, it says-- please
+enable QPyNotebook in the setting. 
+
+150
+00:12:32,243 --> 00:12:35,276
+Let’s say, OK.
+ 
+
+151
+00:12:35,300 --> 00:12:40,929
+But it was already enabled here,
+so not a problem. 
+
+152
+00:12:43,238 --> 00:12:45,990
+Yeah, so I'm able to open it here.
+ 
+
+153
+00:12:45,990 --> 00:12:54,289
+So you can see here that
+there are already some code written. 
+
+154
+00:12:54,313 --> 00:13:02,000
+So, to run any code block just click
+on that and run this option, next option 
+
+155
+00:13:02,024 --> 00:13:04,305
+and again run next option.
+ 
+
+156
+00:13:04,329 --> 00:13:07,674
+Right. So, you can see it
+whenever you are clicking on run. 
+
+157
+00:13:07,698 --> 00:13:12,479
+So, it is now running the program.
+ 
+
+158
+00:13:13,562 --> 00:13:14,733
+Right.
+ 
+
+159
+00:13:23,153 --> 00:13:26,520
+Okay. So, it has printed
+a message, Hello 10. 
+
+160
+00:13:26,544 --> 00:13:32,069
+So, just a small message
+has appeared on the screen. 
+
+161
+00:13:33,194 --> 00:13:39,336
+So, this Qpython is very, very useful tool
+ 
+
+162
+00:13:39,360 --> 00:13:41,672
+to be used in the classroom.
+ 
+
+163
+00:13:41,696 --> 00:13:47,664
+So, now again, let's move
+back to our presentation here. 
+
+164
+00:13:49,803 --> 00:13:52,631
+So, this was about QPython.
+ 
+
+165
+00:13:52,655 --> 00:13:55,688
+The next tool is Google Blockly.
+ 
+
+166
+00:13:55,712 --> 00:13:59,128
+So, Blockly is a library
+created by Google. 
+
+167
+00:13:59,152 --> 00:14:04,080
+It's basically created using JavaScript.
+It supports many languages. 
+
+168
+00:14:04,105 --> 00:14:08,140
+So, it's a library for building
+visual programming editors. 
+
+169
+00:14:08,164 --> 00:14:14,330
+Blockly is a library that adds visual code
+editor to web and mobile applications. 
+
+170
+00:14:14,354 --> 00:14:19,314
+The Blockly editor uses
+interlocking graphical blocks 
+
+171
+00:14:19,338 --> 00:14:26,424
+to represent code concepts like variables,
+logical expressions, loops, and more. 
+
+172
+00:14:26,448 --> 00:14:30,035
+So, it allows users to apply
+programming principles 
+
+173
+00:14:30,059 --> 00:14:32,725
+without having to worry about syntax
+ 
+
+174
+00:14:32,749 --> 00:14:37,381
+or the intimidation of blinking
+cursor on the command line. 
+
+175
+00:14:37,405 --> 00:14:42,329
+So basically, if you have played zigsaw
+puzzle game, so it looks exactly like that. 
+
+176
+00:14:42,353 --> 00:14:45,394
+So, you have different code blocks
+ 
+
+177
+00:14:45,418 --> 00:14:48,479
+you need to drag and drop
+appropriate code block 
+
+178
+00:14:48,503 --> 00:14:51,697
+and make the appropriate setting there.
+ 
+
+179
+00:14:51,721 --> 00:14:55,868
+So, together it creates a
+code block and you can run it. 
+
+180
+00:14:55,892 --> 00:14:59,662
+So, you need not have to worry about
+the syntax of the programming language. 
+
+181
+00:14:59,824 --> 00:15:05,978
+So, from the user's perspective, Blockly
+is an intuitive visual way to build code. 
+
+182
+00:15:06,002 --> 00:15:11,220
+From a developer’s perspective, Blockly is
+a ready-made user interface for creating a 
+
+183
+00:15:11,244 --> 00:15:16,166
+visual language that emits
+syntactically correct user-generated code. 
+
+184
+00:15:16,190 --> 00:15:21,869
+Then next, Blockly can export blocks to
+many programming languages, including 
+
+185
+00:15:21,893 --> 00:15:28,105
+JavaScript, Python, PHP, Lua,
+and Dart. It also supports Arduino. 
+
+186
+00:15:28,129 --> 00:15:31,912
+Now, if you want to build a
+different language support, 
+
+187
+00:15:31,936 --> 00:15:35,927
+the entire Blockly source code
+is available. It's open source. 
+
+188
+00:15:35,951 --> 00:15:39,124
+You can refer to their documentation,
+ 
+
+189
+00:15:39,124 --> 00:15:45,952
+and you can generate the support
+for your own language. 
+
+190
+00:15:45,976 --> 00:15:51,066
+Now Blockly is one of the growing
+number of visual programming environments. 
+
+191
+00:15:51,090 --> 00:15:56,332
+Deciding which one to use in
+your application is an important step. 
+
+192
+00:15:56,356 --> 00:16:01,566
+So, here are a few Blockly’s biggest
+strengths to help you make the decision. 
+
+193
+00:16:01,590 --> 00:16:04,545
+So, first one is the exportable code.
+ 
+
+194
+00:16:04,569 --> 00:16:09,716
+Users can extract their block-based
+programs to common programming languages 
+
+195
+00:16:09,740 --> 00:16:13,695
+and smoothly transition
+to text-based programming. 
+
+196
+00:16:13,719 --> 00:16:18,728
+The next one is the open source.
+Everything about Blockly is open. 
+
+197
+00:16:18,752 --> 00:16:24,381
+You can fork it, hack it and use it in
+your own sites and Android applications. 
+
+198
+00:16:24,406 --> 00:16:30,270
+Then, extensible. Tweak Blockly to
+fit your needs by adding custom blocks 
+
+199
+00:16:30,294 --> 00:16:34,307
+for your API, or removing
+unneeded blocks and functionality. 
+
+200
+00:16:34,331 --> 00:16:36,600
+Then, it is highly capable.
+ 
+
+201
+00:16:36,624 --> 00:16:41,682
+Blockly is not a toy. You can
+implement complex programming tasks 
+
+202
+00:16:41,707 --> 00:16:45,446
+like calculating standard
+deviation in a single block. 
+
+203
+00:16:45,477 --> 00:16:47,424
+It is truly international.
+ 
+
+204
+00:16:47,424 --> 00:16:51,247
+That is Blockly has translated
+to 40 plus languages, 
+
+205
+00:16:51,248 --> 00:16:54,700
+including right-to-left
+versions for Arabic and Hebrew. 
+
+206
+00:16:57,372 --> 00:17:01,084
+Okay. So, whatever you are
+seeing on this screen now is the 
+
+207
+00:17:01,108 --> 00:17:05,031
+basic user interface of Blockly.
+ 
+
+208
+00:17:06,148 --> 00:17:10,613
+And you can see here that
+this is a very simple code 
+
+209
+00:17:10,637 --> 00:17:15,519
+which prints Hello World
+message for up to three times, 
+
+210
+00:17:15,543 --> 00:17:18,873
+and up to four times.
+ 
+
+211
+00:17:18,897 --> 00:17:20,123
+Basically, here--
+ 
+
+212
+00:17:21,451 --> 00:17:25,624
+you can see that on the left
+side you have the Blockly code 
+
+213
+00:17:25,648 --> 00:17:28,132
+and on the right hand side it is the--
+ 
+
+214
+00:17:29,945 --> 00:17:32,823
+generated code in Python language.
+ 
+
+215
+00:17:34,351 --> 00:17:38,002
+Let's see how it works.
+Let’s see the demo again. 
+
+216
+00:17:39,091 --> 00:17:47,877
+So yeah-- so you can visit this
+site, developers.google.com/blockly. 
+
+217
+00:17:49,137 --> 00:17:54,182
+So, you can see that this is the
+basic code which is written and loaded. 
+
+218
+00:17:54,206 --> 00:17:56,738
+So, if you want, you can modify it.
+ 
+
+219
+00:17:56,762 --> 00:18:00,760
+So, you can see here that these
+are the languages supported; 
+
+220
+00:18:00,784 --> 00:18:06,112
+JavaScript, Python, PHP, Lua
+and Dart. Let us select Python here. 
+
+221
+00:18:06,136 --> 00:18:10,708
+Now see here when we select Python,
+the code has been now converted 
+
+222
+00:18:10,732 --> 00:18:12,512
+to Python language.
+ 
+
+223
+00:18:12,536 --> 00:18:15,665
+Now let’s click on run button.
+ 
+
+224
+00:18:15,689 --> 00:18:21,854
+Now it says, Hello World, first time,
+second time, third time, fourth time. 
+
+225
+00:18:21,878 --> 00:18:25,868
+Okay, so four times Hello World
+has been printed. 
+
+226
+00:18:25,907 --> 00:18:27,978
+So, these are the different blocks.
+ 
+
+227
+00:18:28,002 --> 00:18:31,136
+So, you can see here
+there are different blocks. 
+
+228
+00:18:31,160 --> 00:18:34,527
+You just need to drag and drop it here.
+ 
+
+229
+00:18:34,552 --> 00:18:37,241
+Right. When you drag and drop it here,
+ 
+
+230
+00:18:38,468 --> 00:18:42,087
+it will generate the
+corresponding code automatically. 
+
+231
+00:18:42,111 --> 00:18:44,539
+So, you can see here.
+ 
+
+232
+00:18:44,539 --> 00:18:48,600
+So, it has generated the code.
+It is generating the code. 
+
+233
+00:18:48,839 --> 00:18:54,624
+So, whenever you want, you
+can just go on putting the block. 
+
+234
+00:18:54,648 --> 00:18:58,932
+So, just for demonstration
+purposes, I'll write some value here, 
+
+235
+00:19:00,487 --> 00:19:04,619
+but I will not execute these code blocks.
+So, this is just for demonstration. 
+
+236
+00:19:05,794 --> 00:19:12,784
+Okay. So, likewise, you have got several
+other options for functions and etc. 
+
+237
+00:19:12,838 --> 00:19:18,347
+Right. Even for mathematical operations--
+ 
+
+238
+00:19:18,371 --> 00:19:22,213
+there are functionalities.
+ 
+
+239
+00:19:22,237 --> 00:19:28,737
+So, square root of nine,
+and I just drag and drop it here 
+
+240
+00:19:28,761 --> 00:19:30,684
+so it generates the code for it.
+ 
+
+241
+00:19:30,708 --> 00:19:32,934
+So, it's very simple to use
+ 
+
+242
+00:19:34,185 --> 00:19:35,848
+and it's a great tool
+ 
+
+243
+00:19:37,119 --> 00:19:42,556
+and you can see here there are a lot
+of things which are built using Blockly. 
+
+244
+00:19:42,580 --> 00:19:46,127
+So, you can do a lot of great things.
+ 
+
+245
+00:19:51,637 --> 00:19:56,729
+So, let's move back to presentation again.
+ 
+
+246
+00:19:59,464 --> 00:20:03,212
+Yeah. So, next tool is the VisuPy.
+ 
+
+247
+00:20:03,236 --> 00:20:05,823
+This is the code visualization tool.
+ 
+
+248
+00:20:05,847 --> 00:20:11,093
+Actually, this was one of the
+projects in CERN’s Webfest 2020. 
+
+249
+00:20:12,299 --> 00:20:14,877
+So, some team has created it.
+ 
+
+250
+00:20:14,901 --> 00:20:18,561
+I don't have the exact details,
+but if you go to the following link, 
+
+251
+00:20:18,586 --> 00:20:21,439
+that is, webfest.cern/projects,
+ 
+
+252
+00:20:21,463 --> 00:20:24,691
+you will get the link
+and there is also a video on it. 
+
+253
+00:20:24,715 --> 00:20:27,932
+So, you can watch the video
+to understand how it works. 
+
+254
+00:20:27,956 --> 00:20:32,280
+So, basically, what you can
+see here is it is just the opposite 
+
+255
+00:20:32,305 --> 00:20:34,182
+of whatever you have seen earlier.
+ 
+
+256
+00:20:34,206 --> 00:20:39,098
+So, what your Blockly does is it generates
+this source code from the blocks. 
+
+257
+00:20:39,122 --> 00:20:43,938
+Okay, you are dragging and
+dropping the blocks, and once it is done, 
+
+258
+00:20:43,963 --> 00:20:45,427
+you are generating the source code.
+ 
+
+259
+00:20:45,452 --> 00:20:48,750
+But here you have the opposite
+way. You have the source code here, 
+
+260
+00:20:48,774 --> 00:20:53,024
+and you want to understand
+the working of the source code 
+
+261
+00:20:54,111 --> 00:20:56,126
+and flow of the source code.
+ 
+
+262
+00:20:56,150 --> 00:21:00,453
+So, in this case from source code, you
+are generating the visualization. Okay. 
+
+263
+00:21:03,899 --> 00:21:09,004
+Then next, this is also a great
+project related to Python. 
+
+264
+00:21:09,004 --> 00:21:13,659
+So, it is known as Python Textbook
+Companion project by FOSSEE 
+
+265
+00:21:13,683 --> 00:21:16,034
+that is in IIT Bombay, India.
+ 
+
+266
+00:21:17,261 --> 00:21:23,540
+So the Textbook Companion activity aims to
+create a repository of reference material 
+
+267
+00:21:23,564 --> 00:21:29,005
+for Python by coding solved examples of
+standard engineering textbooks using Python. 
+
+268
+00:21:29,027 --> 00:21:33,568
+So, this activity intends to
+make individuals learn Python 
+
+269
+00:21:33,592 --> 00:21:38,479
+through a practical approach,
+provide a huge database of companions 
+
+270
+00:21:38,503 --> 00:21:40,101
+as a learning resource
+ 
+
+271
+00:21:41,946 --> 00:21:48,775
+to make it easy for resources-- to
+make it easy for users of such textbooks 
+
+272
+00:21:48,799 --> 00:21:53,519
+to start using Python, to improve the
+documentation available for Python. 
+
+273
+00:21:53,543 --> 00:21:55,246
+So, here--
+ 
+
+274
+00:21:56,739 --> 00:21:59,752
+it was an interesting project.
+ 
+
+275
+00:21:59,776 --> 00:22:04,494
+So, what to do is, there are some
+textbooks so you need to select a textbook 
+
+276
+00:22:04,518 --> 00:22:10,019
+and from the textbook, you need to pick
+the examples 
+
+277
+00:22:10,019 --> 00:22:13,751
+and you have to write the code
+in Python language. 
+
+278
+00:22:13,775 --> 00:22:18,355
+So, in this way, they created a
+huge database of Python programs, 
+
+279
+00:22:18,379 --> 00:22:21,412
+which can be used in teaching
+ 
+
+280
+00:22:21,436 --> 00:22:24,361
+that particular subject
+but with Python examples. 
+
+281
+00:22:24,385 --> 00:22:28,129
+So, it was, again, a
+very interesting concept. 
+
+282
+00:22:28,153 --> 00:22:33,608
+Right now, they are not accepting
+any proposals, but in the past 
+
+283
+00:22:33,632 --> 00:22:41,157
+many have participated here and the
+advantage is that the selected fellows 
+
+284
+00:22:41,181 --> 00:22:48,065
+will be paid by FOSSEE project
+and they have been paid in the past. 
+
+285
+00:22:48,089 --> 00:22:53,666
+So, to get more details you can visit this
+Website: https:tbc-python.fossee.in
+
+286
+00:22:58,083 --> 00:23:02,899
+So this is the user interface,
+so if you visit
+
+287
+00:23:03,083 --> 00:23:06,199
+this website you will get all the
+details like who can contribute, 
+
+288
+00:23:06,223 --> 00:23:09,188
+how to contribute, what are
+the guidelines for coding? 
+
+289
+00:23:09,212 --> 00:23:13,416
+Everything is mentioned here
+on this site. 
+
+290
+00:23:15,698 --> 00:23:19,002
+The next interesting
+tool is the Flowgorithm. 
+
+291
+00:23:19,026 --> 00:23:23,330
+So Flowgorithm is a free
+beginner's programming tool 
+
+292
+00:23:23,354 --> 00:23:25,941
+that is based on simple
+graphical flow charts. 
+
+293
+00:23:25,965 --> 00:23:29,266
+So, it looks almost similar
+to Google Blockly, 
+
+294
+00:23:29,266 --> 00:23:35,315
+but it has a different concept
+because it deals with the flow charts. 
+
+295
+00:23:35,339 --> 00:23:38,887
+So typically, when a student
+first learns a program, 
+
+296
+00:23:38,911 --> 00:23:43,143
+they often use one of the
+text-based programming languages. 
+
+297
+00:23:43,167 --> 00:23:48,166
+Depending on the language, this can
+either be easy or frustratingly difficult. 
+
+298
+00:23:48,190 --> 00:23:52,467
+Many languages require you
+to write lines of confusing code 
+
+299
+00:23:52,492 --> 00:23:54,637
+just to display the text: Hello World.
+ 
+
+300
+00:23:54,661 --> 00:24:00,534
+By using flow charts, you can concentrate
+on programming concepts rather than 
+
+301
+00:24:00,558 --> 00:24:06,292
+all the nuances of
+a difficult programming language. 
+
+302
+00:24:06,370 --> 00:24:09,854
+So, you can also run your
+program directly in the Flowgorithm. 
+
+303
+00:24:09,878 --> 00:24:13,020
+So, once you understand
+the program logic it is easy 
+
+304
+00:24:13,044 --> 00:24:15,864
+for you to learn one
+of the major languages. 
+
+305
+00:24:15,888 --> 00:24:19,346
+So, Flowgorithm can interactively
+convert your flowchart 
+
+306
+00:24:19,346 --> 00:24:21,665
+to over 18 programming languages.
+ 
+
+307
+00:24:21,689 --> 00:24:28,683
+So, it includes C#, C++, Java,
+JavaScript, Lua, Perl, also Python, 
+
+308
+00:24:28,707 --> 00:24:32,940
+then Ruby, Swift,
+Visual Basic .NET and so on. 
+
+309
+00:24:32,964 --> 00:24:36,568
+So, the greatest advantage
+of Flowgorithm, what I see here is-- 
+
+310
+00:24:36,592 --> 00:24:42,220
+so, we see that many students’
+native language is not English. 
+
+311
+00:24:42,244 --> 00:24:46,355
+They come from rural backgrounds.
+They don't have access to 
+
+312
+00:24:46,379 --> 00:24:52,455
+the English medium
+education in their early education. 
+
+313
+00:24:52,479 --> 00:24:58,119
+So it becomes difficult for them to catch
+up with English medium instructions. 
+
+314
+00:24:58,143 --> 00:25:03,220
+So, in that case, we can use
+tools like Flowgorithm or Blockly 
+
+315
+00:25:03,244 --> 00:25:06,316
+where they can just
+concentrate on building the logic 
+
+316
+00:25:06,340 --> 00:25:10,449
+instead of the syntax and semantics
+of the programming language. 
+
+317
+00:25:10,473 --> 00:25:17,026
+So, that's a great way of teaching
+programming for beginners 
+
+318
+00:25:17,050 --> 00:25:19,594
+whose native language is not English.
+ 
+
+319
+00:25:21,861 --> 00:25:26,323
+So, Flowgorithm has
+some features-- that is, it-- 
+
+320
+00:25:26,347 --> 00:25:31,299
+there is easy to understand output,
+graphical variable watch window. 
+
+321
+00:25:31,323 --> 00:25:34,028
+Then it can interactively
+generate a real code, 
+
+322
+00:25:34,052 --> 00:25:37,379
+that is 18+ languages
+including Python is supported. 
+
+323
+00:25:37,403 --> 00:25:39,623
+It also supports safe recursion.
+ 
+
+324
+00:25:39,647 --> 00:25:42,772
+It supports loops, arrays,
+and flexible expressions. 
+
+325
+00:25:42,796 --> 00:25:47,112
+Then it also supports multilingual
+support, including Korean. 
+
+326
+00:25:47,136 --> 00:25:51,266
+So, user interface you can
+have in your own language, 
+
+327
+00:25:51,291 --> 00:25:54,027
+you can draw a flowchart in your own
+language. 
+
+328
+00:25:54,027 --> 00:25:55,242
+That's the advantage here.
+ 
+
+329
+00:25:55,242 --> 00:25:57,195
+If you don't find the language for--
+ 
+
+330
+00:25:57,219 --> 00:26:00,952
+If you don't find the support for
+your language then you can write 
+
+331
+00:26:00,976 --> 00:26:06,010
+to the creator of Flowgorithm--
+to Devin Cook. 
+
+332
+00:26:06,034 --> 00:26:10,323
+So, he will provide you the file
+and you can translate and send him. 
+
+333
+00:26:10,347 --> 00:26:14,450
+so he will integrate it
+into Flowgorithm software. 
+
+334
+00:26:16,341 --> 00:26:20,663
+So, we know that flowchart
+means there are some symbols. 
+
+335
+00:26:20,687 --> 00:26:23,181
+So, these are the symbols
+which are supported here. 
+
+336
+00:26:23,205 --> 00:26:26,274
+So, you have support for
+comments and breakpoints. 
+
+337
+00:26:26,298 --> 00:26:29,604
+Then you also have input/output symbols.
+ 
+
+338
+00:26:29,628 --> 00:26:33,661
+Then you have variables
+symbol, then control flow statement, 
+
+339
+00:26:33,685 --> 00:26:36,247
+function calls, looping statements.
+ 
+
+340
+00:26:37,568 --> 00:26:40,330
+So, all the basic flowchart
+symbols are supported. 
+
+341
+00:26:41,867 --> 00:26:46,626
+Now, so you can see here, this is
+a simple program which is created. 
+
+342
+00:26:46,650 --> 00:26:53,323
+So what it does is it just
+controls the sum of your numbers. 
+
+343
+00:26:54,838 --> 00:27:01,119
+So, on the left side, you can see that--
+see here, that there's a flow chart 
+
+344
+00:27:01,144 --> 00:27:06,334
+and on the right-hand side, it
+generates the source code in Python. 
+
+345
+00:27:07,418 --> 00:27:08,543
+Then
+ 
+
+346
+00:27:09,985 --> 00:27:14,078
+on the right bottom corner, you
+can see the output of the program. 
+
+347
+00:27:15,524 --> 00:27:21,019
+So, let's see the demo again
+for Flowgorithm. 
+
+348
+00:27:21,043 --> 00:27:26,193
+So, when you start Flowgorithm
+you will get this window here. 
+
+349
+00:27:27,654 --> 00:27:29,359
+Let me--
+ 
+
+350
+00:27:29,383 --> 00:27:33,304
+if you want to change the language
+so you can see here. 
+
+351
+00:27:33,328 --> 00:27:37,909
+So, it supports so many
+languages, including Korean. 
+
+352
+00:27:37,933 --> 00:27:40,634
+Then also, there is
+ 
+
+353
+00:27:43,307 --> 00:27:48,548
+so let's change the view layout windows.
+ 
+
+354
+00:27:48,572 --> 00:27:53,744
+So, I would like to have flowchart code
+as well as output in the same window. 
+
+355
+00:27:53,768 --> 00:27:55,980
+So, that's why I have chosen this.
+ 
+
+356
+00:27:56,004 --> 00:27:58,134
+So, let me--
+ 
+
+357
+00:27:59,267 --> 00:28:02,056
+open some program here.
+ 
+
+358
+00:28:04,455 --> 00:28:05,509
+Okay.
+ 
+
+359
+00:28:27,714 --> 00:28:33,395
+Okay, that's fine. So, let's
+print a Hello message program. 
+
+360
+00:28:33,419 --> 00:28:38,616
+So, let's select Hello, output
+symbol, then just double-click on it. 
+
+361
+00:28:38,640 --> 00:28:45,479
+Then in our code just write
+message here, Hello Flowgorithm, 
+
+362
+00:28:47,607 --> 00:28:48,958
+and say OK.
+ 
+
+363
+00:28:48,982 --> 00:28:52,919
+So, you can see here, it has
+generated the code in Python. 
+
+364
+00:28:52,943 --> 00:28:54,523
+So similarly, if you click here,
+ 
+
+365
+00:28:54,523 --> 00:28:58,830
+you can see here that it
+supports so many languages, right? 
+
+366
+00:28:58,869 --> 00:29:03,243
+Now with a change of the
+source code, now let’s run it. 
+
+367
+00:29:03,267 --> 00:29:08,416
+And you can see here at the bottom
+it has displayed the output. Okay? 
+
+368
+00:29:08,441 --> 00:29:11,237
+So, this is about the Flowgorithm tool.
+ 
+
+369
+00:29:11,261 --> 00:29:15,489
+So, you can visit
+Flowgorithm website here. 
+
+370
+00:29:15,513 --> 00:29:21,120
+That is, flowgorithm.org to
+get to know about more details. 
+
+371
+00:29:21,145 --> 00:29:22,210
+Now--
+ 
+
+372
+00:29:23,792 --> 00:29:26,425
+let's go to the next concept,
+ 
+
+373
+00:29:26,449 --> 00:29:31,990
+how we can support or how we
+can build support for a new language-- 
+
+374
+00:29:32,014 --> 00:29:38,035
+for a new language for
+Flowgorithm using templates. 
+
+375
+00:29:38,059 --> 00:29:42,021
+So, if you visit this URL,
+that is the documentation URL, 
+
+376
+00:29:42,045 --> 00:29:45,006
+so some templates are mentioned here.
+ 
+
+377
+00:29:45,030 --> 00:29:48,432
+Lua, Java, Pascal and Python
+templates are mentioned. 
+
+378
+00:29:48,456 --> 00:29:53,508
+Let’s download the Python template. I
+already downloaded the Python template. 
+
+379
+00:29:53,532 --> 00:29:55,323
+So, it’s in TXT file.
+ 
+
+380
+00:29:55,347 --> 00:30:00,510
+So, you can just go on mentioning--
+go on making the changes here. 
+
+381
+00:30:00,534 --> 00:30:03,457
+So, I wanted to create the
+support for Julia language. 
+
+382
+00:30:03,481 --> 00:30:05,387
+So, instead of Python I’ll write Julia.
+ 
+
+383
+00:30:05,411 --> 00:30:09,549
+I write extension as .jl.
+I will list here Julia’s keywords. 
+
+384
+00:30:09,573 --> 00:30:15,455
+Then similarly, I will also
+make appropriate changes here, 
+
+385
+00:30:15,479 --> 00:30:18,557
+appropriate changes at appropriate places.
+ 
+
+386
+00:30:18,581 --> 00:30:24,423
+Let's say, for example,
+the expressions syntaxes will be changed. 
+
+387
+00:30:25,966 --> 00:30:31,035
+Then, yeah. So, Julia doesn't
+support some operators here. 
+
+388
+00:30:31,059 --> 00:30:34,046
+So, I need to make
+appropriate changes here. 
+
+389
+00:30:34,070 --> 00:30:36,657
+Then some intrinsic functions.
+ 
+
+390
+00:30:36,681 --> 00:30:41,595
+So, whatever functions my language
+supports that I have to mention here. 
+
+391
+00:30:44,253 --> 00:30:46,776
+So, if something is not supported,
+just remove it. 
+
+392
+00:30:50,003 --> 00:30:56,114
+Okay. So similarly, you can see these are
+the syntax of Python programming language. 
+
+393
+00:30:56,138 --> 00:31:00,127
+So I don't want it here. So just
+replace the syntax of your own language. 
+
+394
+00:31:00,152 --> 00:31:02,560
+So, in my case, I will
+replace it with Julia. 
+
+395
+00:31:02,584 --> 00:31:07,699
+So, I have already done it.
+It's available on my GitHub repository, 
+
+396
+00:31:09,168 --> 00:31:14,435
+Okay. So, once it is done you
+need to save it with an extension .fpgt 
+
+397
+00:31:14,459 --> 00:31:21,558
+So, that is Flowgorithm template file.
+And what you should be doing here 
+
+398
+00:31:21,582 --> 00:31:27,951
+when you generate the
+source code is that-- yeah, 
+
+399
+00:31:27,975 --> 00:31:35,343
+so instead of Python here, now you need
+to select the appropriate template file. 
+
+400
+00:31:35,368 --> 00:31:42,626
+So open template file, and there's the
+Julia template file and then I say open. 
+
+401
+00:31:44,455 --> 00:31:47,635
+So, you can see here that it…
+ 
+
+402
+00:32:01,004 --> 00:32:04,696
+Okay, fine. I think there is some
+problem, fine. 
+
+403
+00:32:04,696 --> 00:32:08,298
+But it selects the code.
+ 
+
+404
+00:32:08,299 --> 00:32:12,429
+Appropriate code will be generated. So--
+ 
+
+405
+00:32:14,922 --> 00:32:20,623
+let’s to go back to our presentation again.
+ 
+
+406
+00:32:23,828 --> 00:32:27,204
+So, the advantage
+is that it's easy to use, 
+
+407
+00:32:27,228 --> 00:32:29,764
+drag and drop and corresponding
+code generation is possible. 
+
+408
+00:32:29,789 --> 00:32:35,119
+It is very beginner-friendly and a
+great tool to learn problem solving. 
+
+409
+00:32:35,144 --> 00:32:37,429
+So, code generation is limited.
+ 
+
+410
+00:32:37,454 --> 00:32:40,791
+For example, two or more
+dimensional arrays are not supported. 
+
+411
+00:32:40,815 --> 00:32:44,541
+So, language-specific features
+are not supported many times. 
+
+412
+00:32:44,565 --> 00:32:46,715
+Presently no support for Indic languages.
+ 
+
+413
+00:32:46,739 --> 00:32:48,945
+So, we need to develop
+support for Indic languages, 
+
+414
+00:32:48,970 --> 00:32:51,393
+especially with respect
+to the user interface 
+
+415
+00:32:51,417 --> 00:32:53,848
+so that it can reach to the villages
+ 
+
+416
+00:32:53,872 --> 00:32:59,530
+and it can reach to the students
+of village at their early age 
+
+417
+00:32:59,554 --> 00:33:03,428
+so that they can be introduced.
+They can put in that at early age. 
+
+418
+00:33:06,853 --> 00:33:10,969
+Yeah. So, this we have seen.
+Then the future goals is that 
+
+419
+00:33:10,993 --> 00:33:16,343
+add Indic language support for Flowgorithm
+and customize Blockly for more languages. 
+
+420
+00:33:16,367 --> 00:33:19,202
+Then, more code visualization
+tools can be developed. 
+
+421
+00:33:19,226 --> 00:33:23,796
+Then, more gamified tools are required
+to enhance learning and to create a better 
+
+422
+00:33:23,820 --> 00:33:28,781
+experience of learning for students.
+ 
+
+423
+00:33:31,024 --> 00:33:34,549
+Thank you, everyone
+for your patience listening-- 
+
+424
+00:33:34,573 --> 00:33:40,168
+patient listening and providing me
+an opportunity to speak at PyCon Korea. 
+
+425
+00:33:40,192 --> 00:33:42,304
+Thank you.
+Thank you everyone.
+

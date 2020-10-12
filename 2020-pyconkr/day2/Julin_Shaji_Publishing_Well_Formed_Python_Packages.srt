@@ -1,0 +1,1293 @@
+2
+00:00:10.033 --> 00:00:19.074
+I'm Julin Shaji, and my talk is
+Publishing Well-Formed Python Packages.     
+
+3
+00:00:19.074 --> 00:00:24.230
+Hi, welcome to my talk:
+Publishing Well-Formed Python Packages.     
+
+4
+00:00:24.262 --> 00:00:27.146
+Before we begin, let me say,
+     
+
+5
+00:00:27.170 --> 00:00:31.209
+the source of the images that I have
+used in this presentation are linked     
+
+6
+00:00:31.233 --> 00:00:33.480
+to the images themselves in the slides.
+     
+
+7
+00:00:33.504 --> 00:00:37.160
+We can share the link
+for the slides later on.     
+
+8
+00:00:37.184 --> 00:00:41.144
+So, what do I mean by
+a well-formed package?     
+
+9
+00:00:41.168 --> 00:00:46.211
+A package that has attained some sort of
+a structure by adhering to some guidelines     
+
+10
+00:00:46.236 --> 00:00:49.694
+and practices, which
+makes it easier to work with,     
+
+11
+00:00:49.726 --> 00:00:55.315
+and makes collaborating with others
+on the project a more fruitful experience.     
+
+12
+00:00:56.479 --> 00:01:01.622
+Making changes to such a
+package is a less likely to be chaotic.     
+
+13
+00:01:01.646 --> 00:01:06.629
+It can be adapted to match
+the changing requirements     
+
+14
+00:01:06.653 --> 00:01:09.174
+with significantly less effort.
+     
+
+15
+00:01:09.198 --> 00:01:11.299
+But how is it possible?
+     
+
+16
+00:01:11.299 --> 00:01:14.979
+How can we make
+our project better formed?     
+
+17
+00:01:14.980 --> 00:01:19.817
+Sufficient documentation,
+test, and readability     
+
+18
+00:01:19.841 --> 00:01:22.934
+are some of the key factors in this.
+     
+
+19
+00:01:22.959 --> 00:01:27.066
+A good first step towards making your
+package well-formed is     
+
+20
+00:01:27.066 --> 00:01:31.299
+by adopting a coding style
+and by using linting tools.     
+
+21
+00:01:31.323 --> 00:01:35.073
+It's good to have the suggestions
+mentioned in step eight in mind.     
+
+22
+00:01:35.097 --> 00:01:40.583
+Consistent formatting has a significant
+impact on the readability of your code.     
+
+23
+00:01:40.607 --> 00:01:46.300
+This will help us weed out
+a lot of bugs as it can make     
+
+24
+00:01:46.339 --> 00:01:50.613
+bug-inducing code snippets more prominent
+so that it will catch your attention     
+
+25
+00:01:50.637 --> 00:01:56.129
+and all that other tools that we use and
+you will be able to attend to it faster.     
+
+26
+00:01:58.500 --> 00:02:03.168
+But it should be noted that PEP8 itself
+says that its suggestions should be     
+
+27
+00:02:03.193 --> 00:02:07.589
+taken more as guideline
+rather than as steadfast rules.     
+
+28
+00:02:07.613 --> 00:02:12.401
+This is probably applicable for the
+coding style that you adopt as well.     
+
+29
+00:02:12.425 --> 00:02:17.305
+For example, consider a long link
+that you have in your code as a sort of     
+
+30
+00:02:17.329 --> 00:02:22.383
+reference to some website,
+possibly in a comment or something     
+
+31
+00:02:22.407 --> 00:02:29.632
+and your code coding style specifies
+a line length limit of say 80 characters.     
+
+32
+00:02:29.656 --> 00:02:35.192
+And if your link is way
+beyond 80-character limit,     
+
+33
+00:02:35.216 --> 00:02:39.547
+instead of us splitting that link into two
+lines or something,     
+
+34
+00:02:39.547 --> 00:02:42.932
+it's probably better 
+to create an exception     
+
+35
+00:02:42.932 --> 00:02:45.156
+and make an exception
+for your coding style     
+
+36
+00:02:45.156 --> 00:02:50.382
+so that it will remain a single link,
+and whatever editor that you're using     
+
+37
+00:02:50.406 --> 00:02:55.767
+can still recognize it as a link, so that
+it can go directly to that link by just     
+
+38
+00:02:55.806 --> 00:02:59.984
+clicking on it instead of first joining
+them together or pasting it or whatever.     
+
+39
+00:03:01.564 --> 00:03:06.413
+Pylint and flake8 are among the
+prominent linting and style tools     
+
+40
+00:03:06.437 --> 00:03:08.503
+used in Python packages.
+     
+
+41
+00:03:08.527 --> 00:03:11.933
+Both are very much configurable.
+     
+
+42
+00:03:11.933 --> 00:03:14.051
+Although the default configuration
+     
+
+43
+00:03:14.076 --> 00:03:16.991
+can be used as a good
+starting point in your project.     
+
+44
+00:03:18.656 --> 00:03:20.662
+And then there's Black.
+     
+
+45
+00:03:20.686 --> 00:03:24.451
+If you don't want to spend too
+much time fixing and formatting all     
+
+46
+00:03:24.475 --> 00:03:30.773
+all your code all the time and don't mind
+letting an external tool take control of--     
+
+47
+00:03:30.802 --> 00:03:34.471
+take your code formatting
+part, you can use Black.     
+
+48
+00:03:34.495 --> 00:03:37.968
+It is becoming more
+and more popular these days.     
+
+49
+00:03:37.992 --> 00:03:41.554
+It can automatically reformat
+your code for you so that     
+
+50
+00:03:41.578 --> 00:03:46.038
+regardless of the style that
+you use to write your code--     
+
+51
+00:03:46.097 --> 00:03:51.036
+that you use to actually write your
+code, after applying Black on it,     
+
+52
+00:03:51.060 --> 00:03:54.885
+it will just look the same
+as Black outputs it.     
+
+53
+00:03:54.909 --> 00:04:01.760
+This is often helpful if a lot of people
+are collaborating together on your project     
+
+54
+00:04:01.784 --> 00:04:06.983
+and you want all
+the code to look the same.     
+
+55
+00:04:09.755 --> 00:04:14.263
+Another mechanism that can
+help is static type checking.     
+
+56
+00:04:14.287 --> 00:04:20.250
+Python has been supporting type
+annotation for quite some time now.     
+
+57
+00:04:20.274 --> 00:04:24.432
+Making use of it not only
+improves the readability of your code     
+
+58
+00:04:24.456 --> 00:04:27.596
+without having any effect
+on the code execution part     
+
+59
+00:04:27.620 --> 00:04:31.182
+but it also enables us
+to run static type checks.     
+
+60
+00:04:31.206 --> 00:04:37.246
+In a way, we can have the advantage of a
+statically typed system in Python as well.     
+
+61
+00:04:37.270 --> 00:04:43.660
+These checks often help to reveal
+certain subtle bugs that would be     
+
+62
+00:04:43.685 --> 00:04:46.623
+very difficult to
+figure out otherwise.     
+
+63
+00:04:46.647 --> 00:04:52.450
+Mypy, pytype and pyre are some of the
+prominent static type checking tools     
+
+64
+00:04:52.474 --> 00:04:54.627
+available in Python
+we have right now.     
+
+65
+00:04:57.406 --> 00:05:04.072
+Let us use an example to illustrate the
+advantage of mypy in type annotations.     
+
+66
+00:05:04.096 --> 00:05:07.388
+I have a function here named add.
+     
+
+67
+00:05:07.388 --> 00:05:13.441
+Not a good name, but
+which accepts two arguments; X and Y.     
+
+68
+00:05:13.491 --> 00:05:19.830
+If X Boolean value is true, it
+returns the value of Y as such.     
+
+69
+00:05:19.854 --> 00:05:23.955
+Otherwise, it adds 10 to Y and returns it.
+     
+
+70
+00:05:25.802 --> 00:05:33.232
+But looking at this we have no
+idea what kind of values X and Y are.     
+
+71
+00:05:33.256 --> 00:05:37.519
+Here I have passed two integers
+as arguments to the function.     
+
+72
+00:05:37.590 --> 00:05:43.658
+But X could be a Boolean, a list
+or anything. It could be anything,     
+
+73
+00:05:43.683 --> 00:05:46.727
+no matter what we pass
+through it, it could be anything.     
+
+74
+00:05:46.751 --> 00:05:51.135
+So, we have no idea what the correct
+argument should be, and as of now,     
+
+75
+00:05:51.174 --> 00:05:53.467
+we have no mechanism to check it as well.
+     
+
+76
+00:05:54.712 --> 00:05:59.848
+Contrast it with the version
+that we have on the right side.     
+
+77
+00:05:59.872 --> 00:06:06.022
+Just by looking at it, we can say
+that X is a Boolean, Y is an integer     
+
+78
+00:06:06.046 --> 00:06:10.016
+and the function has returns int.
+Right?     
+
+79
+00:06:10.040 --> 00:06:13.280
+See what a difference it made.
+     
+
+80
+00:06:13.280 --> 00:06:17.609
+It's a lot more readable.
+Don't you agree?     
+
+81
+00:06:17.610 --> 00:06:21.379
+And running mypy on this example,
+in the updated example     
+
+82
+00:06:21.404 --> 00:06:25.068
+that we have on the right
+side would lead to this error.     
+
+83
+00:06:25.092 --> 00:06:31.425
+Argument one should have been
+a bool and instead, we got an int.     
+
+84
+00:06:31.449 --> 00:06:37.822
+So mypy can catch such kind of-- I
+mean, it could happen by mistake the     
+
+85
+00:06:37.846 --> 00:06:41.369
+stuff like this.
+Mypy can easily catch them.     
+
+86
+00:06:41.393 --> 00:06:49.244
+And usually the outcome of these bugs
+you'll experience only when actually--     
+
+87
+00:06:49.269 --> 00:06:51.176
+actually executing this program.
+     
+
+88
+00:06:51.200 --> 00:06:55.084
+But mypy can do that without
+even executing it, it’s static.     
+
+89
+00:06:56.827 --> 00:06:59.332
+Another concern is dead code.
+     
+
+90
+00:06:59.356 --> 00:07:05.394
+As a project evolves, it's bound to have
+some dead code accumulated along with it.     
+
+91
+00:07:05.429 --> 00:07:09.114
+This dead code could interfere with
+the rest of the code,     
+
+92
+00:07:09.114 --> 00:07:13.757
+and can lead to unexpected results
+because of this interference.     
+
+93
+00:07:13.781 --> 00:07:19.798
+We can use tools to help us identify
+dead code so that it may be removed.     
+
+94
+00:07:19.822 --> 00:07:22.554
+Vulture is such a tool.
+     
+
+95
+00:07:22.578 --> 00:07:26.716
+It does static analysis to figure
+out which objects may be unused     
+
+96
+00:07:26.740 --> 00:07:30.497
+and reports it along
+with its confidence score,     
+
+97
+00:07:30.521 --> 00:07:34.023
+how confident it is that
+that object is unused.     
+
+98
+00:07:34.047 --> 00:07:39.781
+Vulture is quite fast as it doesn't
+need to actually execute all the code,     
+
+99
+00:07:39.805 --> 00:07:44.888
+but identifies the unused parts using
+Python’s abstract syntax tree     
+
+100
+00:07:46.838 --> 00:07:49.390
+Before mentioning unit testing,
+     
+
+101
+00:07:49.390 --> 00:07:53.861
+let us talk about a project’s layout,
+its directory structure.     
+
+102
+00:07:53.861 --> 00:07:57.558
+Two of
+the most commonly seen structures     
+
+103
+00:07:57.582 --> 00:08:04.573
+used by the Python project
+are the flat layout and the src layout.     
+
+104
+00:08:04.597 --> 00:08:08.872
+The flat layout, as you can see,
+has the source code and the test     
+
+105
+00:08:08.896 --> 00:08:13.003
+in the same directory level. In this
+case, the source code is mentioned--     
+
+106
+00:08:13.027 --> 00:08:18.293
+is inside the package name directory
+and the test in the test directory.     
+
+107
+00:08:18.317 --> 00:08:24.350
+But the src layout adds a nesting to the
+directory and adds another directory level     
+
+108
+00:08:24.374 --> 00:08:26.078
+for it to store the source code.
+     
+
+109
+00:08:26.102 --> 00:08:30.531
+Usually the name of the outer
+directory is src and within which     
+
+110
+00:08:30.555 --> 00:08:35.533
+the source code is provided
+inside another directory.     
+
+111
+00:08:35.557 --> 00:08:41.853
+But that said, there is no
+officially recommended layout for--     
+
+112
+00:08:41.877 --> 00:08:43.584
+when choosing a layout for your project.
+     
+
+113
+00:08:43.608 --> 00:08:48.066
+You may choose a layout
+that fits your need better.     
+
+114
+00:08:48.090 --> 00:08:53.559
+Check out these links to see some interesting
+arguments regarding project layout.     
+
+115
+00:08:55.475 --> 00:08:57.267
+Now comes unit testing.
+     
+
+116
+00:08:57.291 --> 00:09:03.376
+Of course, it's important to check if your
+code works as you expect it to work.     
+
+117
+00:09:03.400 --> 00:09:05.878
+Otherwise, there'd be no point, right?
+     
+
+118
+00:09:05.902 --> 00:09:11.532
+So, but for the sake of unit testing,
+it is helpful to design the code so that     
+
+119
+00:09:11.556 --> 00:09:15.929
+different functionalities, the
+major functionality, are divided into--     
+
+120
+00:09:15.953 --> 00:09:18.536
+into separate testable functions.
+     
+
+121
+00:09:20.249 --> 00:09:25.776
+There are a lot of testing and tools
+and frameworks available for Python.     
+
+122
+00:09:25.800 --> 00:09:29.049
+Among them is the building unit test
+     
+
+123
+00:09:29.102 --> 00:09:32.780
+and the third party pytest,
+which is widely used.     
+
+124
+00:09:34.093 --> 00:09:40.289
+So, let us consider a simple
+example to illustrate the use of testing.     
+
+125
+00:09:40.313 --> 00:09:44.168
+I have here a simple function str_cmp,
+     
+
+126
+00:09:44.192 --> 00:09:47.879
+which takes two strings: str1 and str2;
+     
+
+127
+00:09:47.903 --> 00:09:55.328
+finds the ratio of the lengths and
+returns a Boolean based on that ratio.     
+
+128
+00:09:55.352 --> 00:09:58.504
+Here I have on the right side
+     
+
+129
+00:09:58.528 --> 00:10:01.656
+the test that I have
+written for this tiny function.     
+
+130
+00:10:01.680 --> 00:10:07.148
+Had string values and the
+expected return values specified using     
+
+131
+00:10:07.177 --> 00:10:11.472
+the parameterize from pytest.
+     
+
+132
+00:10:12.968 --> 00:10:19.402
+And once I ran it, I got the error
+that I have shown in the bottom side.     
+
+133
+00:10:19.426 --> 00:10:22.374
+So, I got a ZeroDivisionError.
+     
+
+134
+00:10:22.398 --> 00:10:24.356
+So, why is that?
+     
+
+135
+00:10:24.380 --> 00:10:30.975
+Because if the value, if the second
+string, the str true string’s value     
+
+136
+00:10:31.000 --> 00:10:38.390
+is an empty string and the division
+will here be divide by zero division,     
+
+137
+00:10:38.415 --> 00:10:39.554
+so it will lead to error.
+     
+
+138
+00:10:39.579 --> 00:10:42.947
+I had not considered that
+while writing that function,     
+
+139
+00:10:42.971 --> 00:10:49.140
+and writing appropriate test cases let
+me know that if there's something wrong.     
+
+140
+00:10:49.164 --> 00:10:51.763
+That there’s something
+that I had not considered earlier     
+
+141
+00:10:51.763 --> 00:10:53.846
+when I wrote the function.
+     
+
+142
+00:10:53.846 --> 00:10:55.040
+So, I will be able to fix that
+     
+
+143
+00:10:55.040 --> 00:10:58.390
+because now I’ve come across that
+in the testing phase itself.     
+
+144
+00:10:58.414 --> 00:11:01.876
+If I had not done the testing, I
+would have given it out to others     
+
+145
+00:11:01.900 --> 00:11:05.990
+and they would have come
+back to me with complaints, right?     
+
+146
+00:11:06.014 --> 00:11:07.201
+Yes. Something like that.
+     
+
+147
+00:11:08.816 --> 00:11:12.866
+But writing test cases
+alone is not enough.     
+
+148
+00:11:12.890 --> 00:11:18.469
+We should know that tests that we have
+written cover all the cases.     
+
+149
+00:11:18.469 --> 00:11:22.163
+I mean, all the desired parts of code
+should be covered,     
+
+150
+00:11:22.163 --> 00:11:26.999
+otherwise there would be little
+point in writing the test, right?     
+
+151
+00:11:27.023 --> 00:11:30.283
+So that's where test coverage comes in.
+     
+
+152
+00:11:30.307 --> 00:11:37.694
+100% coverage is ideal and desirable,
+but it may not always be possible.     
+
+153
+00:11:37.718 --> 00:11:43.194
+There are some projects, for example,
+Welcher that we mentioned earlier     
+
+154
+00:11:43.218 --> 00:11:46.417
+has almost 100% coverage.
+     
+
+155
+00:11:46.441 --> 00:11:51.025
+But that is not always
+possible due to various reasons.     
+
+156
+00:11:51.049 --> 00:11:55.978
+So, coming to tools that can be
+used to measure test coverage,     
+
+157
+00:11:56.002 --> 00:12:02.152
+there is coverage.py,
+a standalone package,     
+
+158
+00:12:02.176 --> 00:12:06.646
+and there's also pytest-cov,
+a plugin for the pytest module     
+
+159
+00:12:06.670 --> 00:12:09.175
+that we discussed earlier.
+     
+
+160
+00:12:09.199 --> 00:12:11.521
+Both are quite popular.
+     
+
+161
+00:12:13.270 --> 00:12:15.670
+Let us consider another simple example.
+     
+
+162
+00:12:15.695 --> 00:12:20.927
+We have a function, foo, which accepts
+an integer and returns a Boolean.     
+
+163
+00:12:20.951 --> 00:12:26.366
+So, it basically returns true if
+the number is an even number,     
+
+164
+00:12:26.390 --> 00:12:28.512
+otherwise a false is returned.
+     
+
+165
+00:12:28.536 --> 00:12:34.820
+But note that my test case covers
+only the even part; the odd part,     
+
+166
+00:12:34.844 --> 00:12:39.193
+the condition
+where the function foo accepts     
+
+167
+00:12:39.193 --> 00:12:41.469
+an odd number is not actually tested.
+     
+
+168
+00:12:41.494 --> 00:12:45.710
+So running coverage in such
+a situation will give you this--     
+
+169
+00:12:45.734 --> 00:12:51.072
+this output that you see on the right-hand
+side, they say coverage is only 75%,     
+
+170
+00:12:51.096 --> 00:12:54.136
+three lines were run, one is missing.
+     
+
+171
+00:12:54.160 --> 00:12:57.750
+And the missing line is
+highlighted in the red background.     
+
+172
+00:12:57.774 --> 00:13:00.983
+The coverage can generate STM reports,
+     
+
+173
+00:13:00.983 --> 00:13:05.550
+so this is the output
+that I got from that.     
+
+174
+00:13:05.551 --> 00:13:12.929
+But once I fix that and I write-- update
+my test to cover the old input as well,     
+
+175
+00:13:12.953 --> 00:13:16.353
+I run coverage again.
+Now it says 100% coverage.     
+
+176
+00:13:17.809 --> 00:13:22.277
+So, now we have a lot of tests
+to run on the package, right?     
+
+177
+00:13:22.301 --> 00:13:28.881
+From Pyland, to MyPy, Welcher,
+pytest, so a lot of tests to run,     
+
+178
+00:13:28.905 --> 00:13:31.627
+a lot of checks to be run on your package.
+     
+
+179
+00:13:31.651 --> 00:13:36.090
+So, we can definitely use a test
+automation tool to run all these tests.     
+
+180
+00:13:37.764 --> 00:13:41.658
+And also, we need to test on
+all the supported Python versions     
+
+181
+00:13:41.682 --> 00:13:47.029
+and Python implementations, so we can
+maybe your package is designed to run on     
+
+182
+00:13:47.053 --> 00:13:52.056
+even on PyPi another
+implementation, not seed pyth,     
+
+183
+00:13:52.080 --> 00:13:57.341
+and maybe if you
+need to verify that your     
+
+184
+00:13:57.365 --> 00:14:03.413
+package works on all the
+supported Python versions.     
+
+185
+00:14:03.437 --> 00:14:07.946
+Maybe suppose that you used the walrus
+operator, which is available only on--     
+
+186
+00:14:07.970 --> 00:14:13.345
+from Python 3.8 onwards on your project
+and you want your project to support     
+
+187
+00:14:13.370 --> 00:14:14.959
+even on Python 3.6.
+     
+
+188
+00:14:14.959 --> 00:14:20.233
+ So, you are unaware
+that you actually used the walrus operator     
+
+189
+00:14:20.234 --> 00:14:25.026
+and you run the tox test, I
+mean the test automation test     
+
+190
+00:14:25.050 --> 00:14:28.728
+and you will find that you have
+an error in 3.6, but not on 3.8,     
+
+191
+00:14:28.752 --> 00:14:30.319
+so you will know what to do.
+     
+
+192
+00:14:30.343 --> 00:14:37.895
+Tox and Nox are some of the prominent test
+automation tools that we have in Python.     
+
+193
+00:14:37.919 --> 00:14:43.639
+So, the test automation tools can be used
+to run the test locally or maybe even with     
+
+194
+00:14:43.663 --> 00:14:48.651
+other continuous integration services
+that you use, whichever ones that you use.     
+
+195
+00:14:50.989 --> 00:14:54.981
+Remember what I mentioned about
+the possibility of flat layer packages     
+
+196
+00:14:55.005 --> 00:14:57.813
+running into problems while testing?
+     
+
+197
+00:14:57.837 --> 00:15:02.358
+Well, that's because tools like
+tox create virtual environments just     
+
+198
+00:15:02.383 --> 00:15:07.049
+to run your tests so that they are
+tested just like they were installed     
+
+199
+00:15:07.073 --> 00:15:08.996
+like in your user machine.
+     
+
+200
+00:15:10.856 --> 00:15:15.656
+But if you had a flat environment,
+the source code itself could be imported     
+
+201
+00:15:15.680 --> 00:15:22.070
+from the test instead of the package
+that you have had installed in the virtual     
+
+202
+00:15:22.095 --> 00:15:29.401
+environment that the tox or any other test
+automation tool like that created for you.     
+
+203
+00:15:29.425 --> 00:15:34.381
+But such layout doesn't have
+this problem as the source code itself     
+
+204
+00:15:34.405 --> 00:15:38.412
+cannot be directly imported
+from the test directory,     
+
+205
+00:15:38.412 --> 00:15:43.162
+because it's inside yet
+another directory level.     
+
+206
+00:15:43.186 --> 00:15:47.322
+So, that eliminates the
+possibility of an accidental import     
+
+207
+00:15:47.346 --> 00:15:51.299
+like-- that is possible in a flat layout.
+     
+
+208
+00:15:53.344 --> 00:15:57.697
+Once you have your project ready,
+you can build and package it so that     
+
+209
+00:15:57.721 --> 00:16:01.369
+you can share your work
+with others and let them use it.     
+
+210
+00:16:01.393 --> 00:16:05.980
+The build process would create files
+that can be used to install your package     
+
+211
+00:16:06.004 --> 00:16:10.736
+in other machines, like
+the wheel file, for example.     
+
+212
+00:16:10.760 --> 00:16:16.247
+There are several tools these days
+that can be used to package your project.     
+
+213
+00:16:16.271 --> 00:16:20.751
+Like setuptools from PyPA,
+the Python Packaging Authority,     
+
+214
+00:16:20.775 --> 00:16:26.390
+or the newer non-PyPA
+tools like flit and poetry.     
+
+215
+00:16:27.750 --> 00:16:32.638
+The next step after packaging
+a project is publishing it.     
+
+216
+00:16:32.662 --> 00:16:38.714
+If you're using setuptools, you can
+use the twine package to upload it to     
+
+217
+00:16:38.738 --> 00:16:40.601
+the server of your preference.
+     
+
+218
+00:16:40.625 --> 00:16:46.157
+In the case of flit and poetry, they
+can do the publishing by themselves.     
+
+219
+00:16:46.191 --> 00:16:51.191
+People commonly upload
+their packages to the pyPI server.     
+
+220
+00:16:51.215 --> 00:16:56.603
+But if you are publishing there
+before trying the actual pyPI server,     
+
+221
+00:16:56.627 --> 00:17:01.691
+you can try out the test pyPI server,
+which is a place to try out your package     
+
+222
+00:17:01.715 --> 00:17:06.634
+and see if all is well before
+publishing to the actual pyPI.     
+
+223
+00:17:08.602 --> 00:17:12.561
+Other than the tools that I've mentioned
+so far, there are a lot of other tools     
+
+224
+00:17:12.586 --> 00:17:16.978
+that you can use to-- that can be
+used to make your package better.     
+
+225
+00:17:17.002 --> 00:17:20.310
+For example, there's
+bumpversion, which can be used to     
+
+226
+00:17:20.334 --> 00:17:23.640
+change your Python package’s version.
+     
+
+227
+00:17:23.664 --> 00:17:28.898
+And there's precommit, which can be
+used to run commands before committing,     
+
+228
+00:17:28.922 --> 00:17:33.421
+isort to sort your imports
+and your Python source files,     
+
+229
+00:17:33.445 --> 00:17:36.576
+and cookiecutter, especially
+handy if you're using setuptools     
+
+230
+00:17:36.600 --> 00:17:37.972
+to start your project.
+     
+
+231
+00:17:39.885 --> 00:17:46.189
+Once you have your package ready tests
+all set up you could use a CI/CD     
+
+232
+00:17:46.213 --> 00:17:47.999
+to run the test automatically.
+     
+
+233
+00:17:47.999 --> 00:17:54.296
+You can even, depending on
+the CI/CD service or tools that you use,     
+
+234
+00:17:54.296 --> 00:17:59.378
+you can even view
+the results of the past test and all,     
+
+235
+00:17:59.402 --> 00:18:01.127
+which can be quite helpful.
+     
+
+236
+00:18:02.997 --> 00:18:09.245
+Now, due to some proposals that have
+been accepted by the PyCon community,     
+
+237
+00:18:09.269 --> 00:18:15.821
+the pyproject.toml file has become
+the center point of the Python packages.     
+
+238
+00:18:15.845 --> 00:18:19.229
+Earlier, it used to be just setuptools.
+     
+
+239
+00:18:19.253 --> 00:18:26.324
+Now you can actually choose your build
+system to be something else if you like.     
+
+240
+00:18:26.348 --> 00:18:32.461
+Because of the toml file
+involved, you can probably expect--     
+
+241
+00:18:32.485 --> 00:18:38.254
+we can probably expect a toml
+module inside the Python language     
+
+242
+00:18:38.278 --> 00:18:41.192
+standard library itself,
+     
+
+243
+00:18:41.216 --> 00:18:47.387
+because a lot of projects will need that
+to pass pyproject.toml files’ content.     
+
+244
+00:18:47.411 --> 00:18:51.638
+Most of the packages
+that I have mentioned,     
+
+245
+00:18:51.662 --> 00:18:56.832
+those packages’ configuration
+files used to be separate,     
+
+246
+00:18:56.856 --> 00:19:01.619
+so there'll be a different
+configuration file for each tool.     
+
+247
+00:19:01.643 --> 00:19:09.443
+It used to be like that, but a lot of
+such tools have moved their configuration     
+
+248
+00:19:09.467 --> 00:19:12.050
+part to the pyproject.toml file.
+     
+
+249
+00:19:12.060 --> 00:19:13.675
+You can configure the tool
+     
+
+250
+00:19:13.766 --> 00:19:17.629
+in the appropriate section
+within the toml file itself.     
+
+251
+00:19:17.653 --> 00:19:20.803
+While some projects are yet to make the
+move,     
+
+252
+00:19:20.803 --> 00:19:24.657
+we can expect them to make that move 
+in the near future.     
+
+253
+00:19:26.854 --> 00:19:30.098
+So, we have come to the
+end of the presentation.     
+
+254
+00:19:30.122 --> 00:19:33.379
+So a quick recap of what we saw.
+     
+
+255
+00:19:33.403 --> 00:19:38.614
+We talked about the linting.
+We talked about static type checking.     
+
+256
+00:19:38.638 --> 00:19:44.125
+Dead code identification, testing,
+and test coverage and test automation     
+
+257
+00:19:44.149 --> 00:19:46.048
+and the packaging part.
+     
+
+258
+00:19:46.072 --> 00:19:49.267
+Follow the practices
+promoted by these tools     
+
+259
+00:19:49.291 --> 00:19:52.441
+and your project is
+bound to be better formed.     
+
+260
+00:19:52.465 --> 00:19:54.316
+Thanks for being here.
