@@ -19,12 +19,13 @@
       "login": "ohahohah",
       "name": "SiYoungOh",
       "avatar_url": "https://avatars3.githubusercontent.com/u/17819874?v=4",
-      "profile": "http://github.com/ohahohah",
+      "profile": "https://github.com/ohahohah",
       "contributions": [
         "projectManagement",
         "doc",
         "review",
-        "ideas"
+        "ideas",
+        "content"
       ]
     },
     {
@@ -52,6 +53,16 @@
       "profile": "https://medium.com/@cmygray",
       "contributions": [
         "projectManagement"
+      ]
+    },
+    {
+      "login": "constmoon",
+      "name": "Jiwoo Kang",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19185307?v=4",
+      "profile": "https://constmoon.github.io",
+      "contributions": [
+        "content",
+        "review"
       ]
     }
   ],

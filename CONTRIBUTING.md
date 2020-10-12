@@ -10,6 +10,7 @@
     - [자막 스크립트 편집 PR](#%EC%9E%90%EB%A7%89-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%8E%B8%EC%A7%91-pr)
         - [스크립트 일부만 편집했을 때](#%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9D%BC%EB%B6%80%EB%A7%8C-%ED%8E%B8%EC%A7%91%ED%96%88%EC%9D%84-%EB%95%8C)
         - [스크립트 전체 편집이 완료되었을 때](#%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%84%EC%B2%B4-%ED%8E%B8%EC%A7%91%EC%9D%B4-%EC%99%84%EB%A3%8C%EB%90%98%EC%97%88%EC%9D%84-%EB%95%8C)
+- [자막 파일을 유투브에 업로드 하는 방법](#자막-파일을-유투브에-업로드-하는-방법)
 
 ---
 ## 사전 준비
@@ -39,8 +40,14 @@ git clone <주소>              # 복사(clone) 명령
 ### 2. 작업 전 issue 생성  
 - 중복 작업과 충돌(conflict) 방지를 위해 이슈를 생성하고, `assignee`를 자신으로 설정해주세요.
 - 이슈는 원래의 저장소인 [pyconkr의 script 저장소](https://github.com/pythonkr/pyconkr-script)에 생성해주시면 됩니다.
+- 이미 검수가 끝난 스크립트인지, 이미 할당되어있는 이슈가 아닌지 먼저 확인해주세요. 
+  - 검수가 끝난 스크립트의 경우, 스크립트 마지막 줄에 `(검수완료)`라고 적혀있습니다. 
+    - 심각한 오류가 있지 않은 스크립트라면 되도록 검수되지 않은 새로운 스크립트로 작업해주세요 :) 더 많은 영상작업을 진행하기 위해서입니다.
+  - issue 탭에서 스크립트 파일이름으로 검색해주세요. 
+    - 만약 같은 이슈가 있다면, `예상완료일자`가 지난 이슈인지 확인해주세요. 먼저 이슈할당자(Assignee)에게 comment로 작업 중인지 물어봐주세요. 작업 중이 아니라면 같은 제목으로 새롭게 이슈를 생성하시면 됩니다.
+      - 작업 중이지 않은 이전 이슈는 maintainer가 close합니다.
 
-1. `python/pycon-script` 저장소에서 새로운 이슈를 생성합니다.  
+1. `python/pycon-script` 저장소에서 새로운 이슈를 생성합니다. 
 <img src="./image/new-issue.png" alt="이슈 생성" style="zoom:60%;" />  
 
 2. `assign yourself`를 클릭하시면 자신을 `assignee`로 추가할 수 있습니다.  
@@ -79,6 +86,12 @@ git clone <주소>              # 복사(clone) 명령
 - 강연이 아닌 소리 재현을 하려면 소괄호 안에 넣을 것
 - 화면에 뜨는 텍스트는 대괄호 `[]` 에 넣을 것
 
+4. 작업내용 표시하기
+  - 스크립트 일부만 편집했을 때 
+    - 편집한 스크립트 내용 앞에 줄을 추가해 `(여기부터 검수 시작)` 을 적어주시고 검수한 내용 마지막 줄에 `(여기까지 검수 완료)`를 추가해 적어주세요.
+  - 스크립트 전체 편집이 완료되었을 때
+    - 모든 내용이 검수 완료된 스크립트는 마지막 줄에 `(검수완료)` 라고 적어주세요.
+
 ---
 ## Pull Request하는 방법
 - PR(Pull Request)을 처음해보신다면 [첫 기여하기](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.ko.md)와 [Github Guide - Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)를 참고해보세요 :)  
@@ -99,15 +112,33 @@ git clone <주소>              # 복사(clone) 명령
 - [스크립트 편집 기준](#%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%8E%B8%EC%A7%91)
 
 #### 스크립트 일부만 편집했을 때 
-- 편집한 스크립트 내용 앞에 줄을 추가해 `(여기부터 검수 시작)` 을 적어주시고 검수한 내용 마지막 줄에 `(여기까지 검수 완료)`를 추가해 적어주세요.
+- 편집한 스크립트 내용 앞에 줄을 추가해 `(여기부터 검수 시작)` 을 적어주시고 검수한 내용 마지막 줄에 `(여기까지 검수 완료)`를 추가해 적어주세요.  
 - PR 제목은 `[일부수정]파일 경로포함 파일명` 으로 합니다. 
 (예. `[일부수정]2019-pyconkr/day2/라이트닝 토크/what is my PyCon - 배권한.txt`)
 
-#### 스크립트 전체 편집이 완료되었을 때
-
-- 모든 내용이 검수 완료된 스크립트는 마지막 줄에 `(검수완료)` 라고 적어주세요.
+#### 스크립트 전체 편집이 완료되었을 때  
+- 모든 내용이 검수 완료된 스크립트는 파일 내 마지막 줄에 `(검수완료)` 라고 적어주세요.  
 - PR 제목은 `[전체 편집]파일 경로포함 파일명` 으로 합니다. 
-(예. `[전체편집]2019-pyconkr/day2/라이트닝 토크/what is my PyCon - 배권한.txt`)
+(예. `[전체편집]2019-pyconkr/day2/라이트닝 토크/what is my PyCon - 배권한.txt`)  
+
+
+---
+## 자막 파일을 유투브에 업로드 하는 방법
+- [vrew](https://vrew.voyagerx.com/ko/)를 사용해 SRT 자막 스크립트를 생성, 유투브에 업로드해서 자막 작업에 들어가는 공수를 줄여봅시다.
+
+1. 자막을 추가하려는 영상에서 우측 하단의 설정 아이콘을 클릭, `자막 - 자막 추가`를 선택합니다.
+    - 동영상 링크는 .txt 스크립트 파일의 상단에 있습니다.
+<img src="image/upload_srt_subtitle_1.png" alt="Check Allow edits from maintainers" height="240">
+
+2. 자막 언어를 한국어로 설정, 자막 입력 화면으로 이동합니다.
+
+3. `작업 - 파일 업로드`를 클릭, 자막 파일을 선택합니다.
+<img src="image/upload_srt_subtitle_2.png" alt="Check Allow edits from maintainers" height="240">
+
+4. `내 번역 제출`을 클릭하셔서 진행 상황을 저장합니다.
+
+- **자막 스크립트에 기여해주실 때는 유투브에서 자막 수정을 하신 후 자막 파일을 다운로드받아 깃헙에 업로드 해주세요.**
+
 
 ---
 참고자료. 
