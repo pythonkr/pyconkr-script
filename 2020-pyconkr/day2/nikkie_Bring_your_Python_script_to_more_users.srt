@@ -1,0 +1,2004 @@
+1
+00:00:10.000 --> 00:00:15.000
+Bring your Python script to more users, Nikkie
+         
+
+2
+00:00:20.694 --> 00:00:23.170
+Nice to meet you everyone.
+          
+
+3
+00:00:23.194 --> 00:00:25.869
+Please call me Nikkie.
+          
+
+4
+00:00:25.893 --> 00:00:29.111
+I'm participating from Japan.
+          
+
+5
+00:00:29.135 --> 00:00:32.970
+Thank you for the
+opportunity to speak online.          
+
+6
+00:00:37.158 --> 00:00:42.110
+I use the ID @ftnext
+on Twitter and GitHub.          
+
+7
+00:00:42.134 --> 00:00:48.916
+I'm working on Natural Language
+Processing at Uzabase in Tokyo.          
+
+8
+00:00:48.940 --> 00:00:53.845
+I'm enthusiastic to automate
+boring stuff with Python.          
+
+9
+00:00:53.869 --> 00:00:57.889
+I've been a staff of PyCon JP
+since last year.          
+
+10
+00:01:01.644 --> 00:01:08.453
+In this summer, I've been speaking
+online at PyCons around the world.          
+
+11
+00:01:08.477 --> 00:01:14.053
+I talked about this topic
+at EuroPython in July.          
+
+12
+00:01:14.077 --> 00:01:17.142
+And I speak on another topic;
+          
+
+13
+00:01:17.672 --> 00:01:23.263
+How to automate PyCon JP staff activities
+at PyCon Africa.          
+
+14
+00:01:24.861 --> 00:01:27.058
+Let's cut to the chase.
+          
+
+15
+00:01:30.762 --> 00:01:36.909
+Why am I telling you:
+Bring your Python script to more users?          
+
+16
+00:01:41.691 --> 00:01:46.778
+After reading a first Python book,
+you can write a Python script          
+
+17
+00:01:46.802 --> 00:01:49.483
+to automate the boring stuff.
+          
+
+18
+00:01:49.507 --> 00:01:54.276
+It's beneficial to have
+Python do the boring stuff for me.          
+
+19
+00:01:58.845 --> 00:02:04.596
+Your Python script should help
+others who have similar boring stuff.          
+
+20
+00:02:04.620 --> 00:02:10.837
+In this talk, I will share how to
+bring your useful script to others.          
+
+21
+00:02:10.861 --> 00:02:17.243
+I'm glad if you try one of what I
+introduce after your first Python book.          
+
+22
+00:02:20.346 --> 00:02:23.236
+This talk is a quick tour.
+          
+
+23
+00:02:23.260 --> 00:02:27.222
+I will share three implementations
+          
+
+24
+00:02:27.246 --> 00:02:31.318
+to convert your Python
+script for others to use.          
+
+25
+00:02:31.342 --> 00:02:37.108
+Three implementations are
+CLI app, GUI app, and Web app.          
+
+26
+00:02:41.671 --> 00:02:46.108
+What kind of boring stuff
+am I talking about in this talk?          
+
+27
+00:02:49.004 --> 00:02:54.261
+This talk deals with resizing images
+to a smaller size          
+
+28
+00:02:54.285 --> 00:02:56.991
+as an example of boring stuff.
+          
+
+29
+00:02:57.015 --> 00:03:01.661
+I have lots of images
+of varying sizes.          
+
+30
+00:03:05.877 --> 00:03:16.082
+I want to resize all images to fit
+in 300 pixels square, keeping the ratio.          
+
+31
+00:03:16.693 --> 00:03:23.644
+For example, the image on the
+left is longer with the height.          
+
+32
+00:03:26.485 --> 00:03:32.984
+So, resize this image to width
+of 300 pixels, and keeping the ratio.          
+
+33
+00:03:37.259 --> 00:03:44.804
+Resizing them small by hand one by one
+is tedious. So, automate it with Python.          
+
+34
+00:03:44.828 --> 00:03:51.251
+I wrote a script, shrink_image.py
+referring a first Python book.          
+
+35
+00:03:55.119 --> 00:04:00.727
+To operate images from Python,
+I use Pillow package.          
+
+36
+00:04:00.751 --> 00:04:04.280
+I put all the images in one directory,
+          
+
+37
+00:04:05.366 --> 00:04:06.921
+use pathlib
+          
+
+38
+00:04:08.819 --> 00:04:13.663
+to find the path of the images
+in the directory one by one.          
+
+39
+00:04:13.687 --> 00:04:19.725
+In resize image function,
+open the image with path          
+
+40
+00:04:19.749 --> 00:04:26.663
+and calculate new size to keep the ratio.
+Then, resize the image and save it.          
+
+41
+00:04:26.687 --> 00:04:33.034
+This function returns true if
+and only if it resizes the image.          
+
+42
+00:04:35.370 --> 00:04:40.963
+I put all the images in
+img_pyconjp directory.          
+
+43
+00:04:40.987 --> 00:04:47.832
+Script shrink_image.py
+resizes images in that directory.          
+
+44
+00:04:51.660 --> 00:04:58.657
+After execution, I get a directory
+with images of smaller sizes.          
+
+45
+00:04:58.681 --> 00:05:01.751
+We are ready for the main talk.
+          
+
+46
+00:05:05.269 --> 00:05:11.873
+Our first stop in this quick tour
+is CLI, Command Line Interface.          
+
+47
+00:05:15.636 --> 00:05:21.964
+There is an issue with the
+current script. It is hard-coded.          
+
+48
+00:05:21.988 --> 00:05:29.643
+The target directory is hard-coded in
+the script, so we need to edit the script          
+
+49
+00:05:29.667 --> 00:05:31.979
+to target a different directory.
+          
+
+50
+00:05:36.482 --> 00:05:40.179
+To resolve the issue, we modify the script
+          
+
+51
+00:05:40.203 --> 00:05:44.669
+to specify the target directory
+from the command line.          
+
+52
+00:05:44.693 --> 00:05:50.530
+Specify from the command line.
+So, this is CLI.          
+
+53
+00:05:50.554 --> 00:05:55.471
+There is no need to edit the
+script every time you run it.          
+
+54
+00:05:57.361 --> 00:05:58.992
+There are several ways to do it.
+          
+
+55
+00:05:58.992 --> 00:06:05.700
+But I'd like to introduce argparse
+from Python standard library.          
+
+56
+00:06:08.544 --> 00:06:14.893
+Let's look at an example code
+that introduces argparse.          
+
+57
+00:06:14.918 --> 00:06:16.849
+In the first line,
+          
+
+58
+00:06:18.068 --> 00:06:22.882
+import ArgumentParser from
+argparse, then create a parser          
+
+59
+00:06:25.555 --> 00:06:29.984
+add argument to the parser
+and parse arguments.          
+
+60
+00:06:31.315 --> 00:06:33.454
+That's all you need.
+          
+
+61
+00:06:33.478 --> 00:06:39.688
+The four lines allow the script to take
+arguments from the command line.          
+
+62
+00:06:42.824 --> 00:06:50.767
+So, name attribute, so args.name is the
+value we specified in the command line.          
+
+63
+00:06:53.766 --> 00:06:58.197
+So, I show two examples
+on the above example.          
+
+64
+00:06:58.221 --> 00:07:03.468
+Now we need to specify some
+value as name from the command line.          
+
+65
+00:07:03.492 --> 00:07:06.142
+If a name is not specified,
+          
+
+66
+00:07:08.369 --> 00:07:10.533
+help message is displayed.
+          
+
+67
+00:07:12.255 --> 00:07:14.621
+In the example below,
+          
+
+68
+00:07:14.645 --> 00:07:19.818
+if you pass PyConKorea
+as a name argument,          
+
+69
+00:07:19.842 --> 00:07:24.194
+the script prints a message;
+Hello, PyConKorea.          
+
+70
+00:07:28.008 --> 00:07:32.291
+It's time to modify shrink_image.py.
+          
+
+71
+00:07:32.315 --> 00:07:34.561
+Import ArgumentParser
+          
+
+72
+00:07:36.219 --> 00:07:39.305
+ and create parser.
+          
+
+73
+00:07:39.329 --> 00:07:44.848
+Then code add_argument and parse_args.
+          
+
+74
+00:07:44.873 --> 00:07:50.024
+The hard code observed target
+directory has been removed.          
+
+75
+00:07:50.048 --> 00:07:53.912
+The target directory is now
+specified from the command line.          
+
+76
+00:07:55.298 --> 00:07:59.001
+We don't need to change
+anything else. It's easy.          
+
+77
+00:08:01.941 --> 00:08:08.529
+In running the script, you can pass
+here you can pass the directory          
+
+78
+00:08:08.553 --> 00:08:12.354
+where the image is located
+from the command line.          
+
+79
+00:08:12.378 --> 00:08:16.107
+The script resizes images in the directory.
+          
+
+80
+00:08:17.604 --> 00:08:21.580
+We do not need to edit
+the script every time running it.          
+
+81
+00:08:21.604 --> 00:08:25.221
+Next we will brush it up on this CLI app.
+          
+
+82
+00:08:30.479 --> 00:08:37.673
+We brush up the script to specify the
+maximum length from command line.          
+
+83
+00:08:37.767 --> 00:08:45.347
+The maximum length was set
+or hard-coded at 300 pixels.          
+
+84
+00:08:45.372 --> 00:08:48.381
+We will be able to specify this.
+          
+
+85
+00:08:48.405 --> 00:08:53.045
+Are you getting used
+to seeing this ArgParse code?          
+
+86
+00:08:54.536 --> 00:08:57.546
+The point is a double hyphen in
+add argument.          
+
+87
+00:08:57.659 --> 00:08:59.047
+Here, double hyphen.
+          
+
+88
+00:09:01.403 --> 00:09:06.186
+Arguments that start with
+double hyphen are optional to specify.          
+
+89
+00:09:06.210 --> 00:09:10.367
+Arguments without
+double hyphen are required          
+
+90
+00:09:10.391 --> 00:09:13.825
+and the specified order is important.
+          
+
+91
+00:09:16.844 --> 00:09:22.492
+This example shows two parameters
+of the add Argument result.          
+
+92
+00:09:23.856 --> 00:09:29.186
+If you do not specify
+the type parameter here,          
+
+93
+00:09:29.210 --> 00:09:33.686
+entered value from the command
+line is converted as an integer.          
+
+94
+00:09:35.579 --> 00:09:39.557
+The default parameter
+specifies default value.          
+
+95
+00:09:39.581 --> 00:09:46.239
+If you do not specify max length from
+the command line, it will be 300 pixel.          
+
+96
+00:09:51.108 --> 00:09:53.984
+Let's run the updated CLI app.
+          
+
+97
+00:09:55.561 --> 00:10:03.448
+In this time, we
+specified --max_length 200.          
+
+98
+00:10:03.494 --> 00:10:08.242
+Images have been resized
+to smaller sizes than before.          
+
+99
+00:10:12.240 --> 00:10:17.033
+Here is a tip to make
+the CLI app easier to use.          
+
+100
+00:10:17.057 --> 00:10:20.848
+We will be surprised
+when you see the traceback--          
+
+101
+00:10:20.872 --> 00:10:24.475
+traceback when you
+type an incorrect path.          
+
+102
+00:10:24.499 --> 00:10:31.171
+The path does not point to any directory.
+So the script raises file not found error.          
+
+103
+00:10:34.071 --> 00:10:40.188
+To prevent this, specify a
+function to type parameter here          
+
+104
+00:10:42.827 --> 00:10:44.655
+in add_argument method.
+          
+
+105
+00:10:48.483 --> 00:10:56.035
+A function, existing_path, converts
+string value into path object.          
+
+106
+00:10:57.391 --> 00:11:03.486
+After creating a path object from a
+string value check if the path points          
+
+107
+00:11:03.510 --> 00:11:06.286
+points to an existing file or directory.
+          
+
+108
+00:11:07.621 --> 00:11:09.386
+This is code for check.
+          
+
+109
+00:11:11.254 --> 00:11:16.156
+If not, it raises exception
+ArgumentTypeError.          
+
+110
+00:11:21.844 --> 00:11:26.328
+We updated the script to prevent
+the user from seeing the traceback.          
+
+111
+00:11:28.143 --> 00:11:30.158
+There are no tracebacks.
+          
+
+112
+00:11:34.653 --> 00:11:37.489
+I introduced argparse to you.
+          
+
+113
+00:11:37.513 --> 00:11:42.248
+Argparse allows you to specify
+arguments from the command line.          
+
+114
+00:11:42.272 --> 00:11:45.082
+There is no need to edit the script.
+          
+
+115
+00:11:45.106 --> 00:11:52.286
+About add_argument method, required
+arguments result here heading--          
+
+116
+00:11:52.310 --> 00:11:58.847
+result heading double hyphen and optional
+arguments with heading double hyphen          
+
+117
+00:12:01.146 --> 00:12:04.757
+Using type parameter add_argument,
+          
+
+118
+00:12:04.781 --> 00:12:09.791
+convert string value specified
+in the command line to other types.          
+
+119
+00:12:12.431 --> 00:12:16.566
+To learn CLI more,
+please visit the appendix.          
+
+120
+00:12:20.110 --> 00:12:26.784
+Our second stop in this quick
+tour is GUI, Graphical User Interface.          
+
+121
+00:12:30.612 --> 00:12:35.080
+You can now create
+your CLI app with argparse          
+
+122
+00:12:35.104 --> 00:12:39.010
+Everything has strengths and weaknesses.
+          
+
+123
+00:12:39.034 --> 00:12:42.223
+Developers are familiar with CLI apps,
+          
+
+124
+00:12:42.247 --> 00:12:45.748
+but non-developers might
+not be familiar with them.          
+
+125
+00:12:45.772 --> 00:12:48.991
+I want non-developers to use the app.
+          
+
+126
+00:12:52.128 --> 00:12:57.737
+Let's think about how to make
+the app more user-friendly than CLI.          
+
+127
+00:12:57.761 --> 00:13:01.238
+Now, it's GUI's turn.
+          
+
+128
+00:13:01.262 --> 00:13:04.648
+There are many, many GUI apps on PCs.
+          
+
+129
+00:13:04.648 --> 00:13:11.366
+GUI apps should be more familiar and
+user friendly to non-developers than CLI.          
+
+130
+00:13:16.149 --> 00:13:23.402
+In this part, we will convert the CLI app
+to a GUI app, like the right image.          
+
+131
+00:13:24.848 --> 00:13:29.224
+Users can specify a
+path to the target directory          
+
+132
+00:13:29.248 --> 00:13:31.860
+and the max length on the screen.
+          
+
+133
+00:13:35.192 --> 00:13:37.160
+I will show you a demo.
+   
+
+139
+00:13:38.256 --> 00:13:43.618
+Users enter paths of the target directory
+and max lengths.              
+
+140
+00:13:43.618 --> 00:13:52.291
+So, in this case, I paste target directory
+and max length is 200.              
+
+141
+00:13:52.315 --> 00:13:55.207
+Then quick resize.
+              
+
+142
+00:13:55.231 --> 00:14:00.807
+So, this CLI app shows
+resized images here.              
+
+143
+00:14:02.189 --> 00:14:07.135
+The directory includes two images,
+and two images are resized now.              
+
+144
+00:14:13.316 --> 00:14:16.120
+So, I introduced the demo app from now.
+              
+
+145
+00:14:17.865 --> 00:14:24.695
+There are several packages to build
+GUI apps, but I'd like to introduce Eel.              
+
+146
+00:14:24.719 --> 00:14:29.940
+Eel could make it easier
+to implement GUI apps.              
+
+147
+00:14:29.982 --> 00:14:36.757
+Note that to use the Eel package, Google
+Chrome needs to be installed on your PC.              
+
+148
+00:14:40.797 --> 00:14:46.595
+A GUI app made with Eel
+has four components.              
+
+149
+00:14:46.620 --> 00:14:54.411
+One, of course, is a Python code,
+and I will explain, HTML and JavaScript.              
+
+150
+00:14:55.489 --> 00:15:01.040
+They are essential for the
+Eel app, and CSS is optional.              
+
+151
+00:15:01.064 --> 00:15:05.182
+So, if you want to know,
+visit the appendix slides.              
+
+152
+00:15:10.094 --> 00:15:15.265
+HTML is code written
+using tags like upper right.              
+
+153
+00:15:16.836 --> 00:15:20.162
+It defines the
+structures of GUI apps.              
+
+154
+00:15:20.186 --> 00:15:27.807
+Google Chrome shows the input
+field comes first and the button next.              
+
+155
+00:15:27.832 --> 00:15:31.755
+If you want to learn more visit this link.
+              
+
+156
+00:15:35.648 --> 00:15:40.040
+JavaScript adds interaction to GUI apps.
+              
+
+157
+00:15:40.064 --> 00:15:43.876
+For example,
+when a user clicks the button,              
+
+158
+00:15:43.900 --> 00:15:49.826
+JavaScript changes the screen
+by rewriting certain tags in the HTML.              
+
+159
+00:15:51.330 --> 00:15:58.863
+The critical difference with Python
+code is that JavaScript requires              
+
+160
+00:15:58.887 --> 00:16:03.392
+‘let’ keyword before a variable name.
+              
+
+161
+00:16:03.417 --> 00:16:10.175
+the keyword let is very easy to forget
+because I am enthusiastic Pythonista,              
+
+162
+00:16:10.199 --> 00:16:15.245
+but JavaScript doesn't
+work well without let keyword.              
+
+163
+00:16:15.269 --> 00:16:20.090
+The same goes for the
+trailing semi-colons as well.              
+
+164
+00:16:23.155 --> 00:16:24.879
+This is a key point.
+              
+
+165
+00:16:24.903 --> 00:16:29.842
+Eel allows you to call functions with—
+              
+
+166
+00:16:29.866 --> 00:16:34.916
+call functions written in
+Python from JavaScript.              
+
+167
+00:16:34.941 --> 00:16:38.749
+This allows you to convert a
+Python script into a GUI app              
+
+168
+00:16:38.749 --> 00:16:43.021
+with just a little HTML
+and a little JavaScript.              
+
+169
+00:16:43.045 --> 00:16:47.535
+If you want to learn
+JavaScript more, visit this link.              
+
+170
+00:16:50.262 --> 00:16:56.691
+The three components are arranged in
+two files; a Python file and a HTML file.              
+
+171
+00:16:56.715 --> 00:17:03.331
+In Eel’s way, a HTML file
+is also placed in a folder called web.              
+
+172
+00:17:03.355 --> 00:17:08.480
+JavaScript is written in the HTML file
+because we write a written.              
+
+173
+00:17:12.440 --> 00:17:15.510
+Let’s build a simple GUI app.
+              
+
+174
+00:17:15.534 --> 00:17:20.489
+When you click the button,
+this app displays a greeting,              
+
+175
+00:17:20.513 --> 00:17:23.486
+“Hello World,” and
+a random number.              
+
+176
+00:17:23.510 --> 00:17:29.613
+I will share two things; how to execute
+the process by clicking the button              
+
+177
+00:17:29.637 --> 00:17:31.985
+and how to change the screen.
+              
+
+178
+00:17:34.420 --> 00:17:37.750
+The directory structure
+is the same as before,              
+
+179
+00:17:37.774 --> 00:17:42.343
+one Python file and one
+HTML file with JavaScript.              
+
+180
+00:17:45.520 --> 00:17:49.350
+A Python function say_hello
+              
+
+181
+00:17:49.374 --> 00:17:55.579
+returns, storing its greeting
+message, Hello World,              
+
+182
+00:17:55.603 --> 00:17:59.903
+and random number
+such as one, two, three.              
+
+183
+00:18:01.223 --> 00:18:05.856
+The point is the decorator, eel.expose.
+              
+
+184
+00:18:07.256 --> 00:18:11.927
+JavaScript called functions
+decorated with eel.expose.              
+
+185
+00:18:13.578 --> 00:18:20.606
+eel.init and eel.start allow
+to use hello.html under hello directory.              
+
+186
+00:18:24.036 --> 00:18:29.035
+HTML consists of two parts; head and body.
+              
+
+187
+00:18:30.536 --> 00:18:32.965
+In the head tag, you write JavaScript.
+              
+
+188
+00:18:34.327 --> 00:18:39.438
+In the body tag, you write other
+tags to define your structure.              
+
+189
+00:18:39.462 --> 00:18:44.069
+I would define the greet
+button under empty paragraph.              
+
+190
+00:18:45.714 --> 00:18:52.030
+The paragraph has a id
+greeting, JavaScript uses this id.              
+
+191
+00:18:52.055 --> 00:18:59.187
+There is a button on the top of the screen
+and below it there is an empty paragraph.              
+
+192
+00:19:01.115 --> 00:19:06.921
+The point is attribute onclick
+of the button tag.              
+
+193
+00:19:06.945 --> 00:19:10.022
+This code means
+when this button is clicked,              
+
+194
+00:19:10.022 --> 00:19:14.080
+JavaScript function greeting is called.
+              
+
+195
+00:19:18.927 --> 00:19:24.911
+The function greeting is called
+when a user clicks the greet button.              
+
+196
+00:19:24.935 --> 00:19:31.448
+It's a unique writing style here,
+series or parentheses.              
+
+197
+00:19:33.358 --> 00:19:38.815
+JavaScript first calls
+say_hello function in Python file,              
+
+198
+00:19:38.839 --> 00:19:42.559
+and then waits for the return value.
+              
+
+199
+00:19:42.583 --> 00:19:49.235
+After receiving the return value,
+JavaScript recalls print_greeting function              
+
+200
+00:19:49.259 --> 00:19:54.493
+written in JavaScript, with the return
+value of Python say_hello function.              
+
+201
+00:19:54.517 --> 00:19:59.784
+This writing style of waiting for
+a return value is called a call back.              
+
+202
+00:20:03.064 --> 00:20:08.548
+The print_greeting function
+operates on HTML tag ID greeting.              
+
+203
+00:20:09.986 --> 00:20:13.921
+So, print_greeting can rewrite
+the content of the empty paragraph.              
+
+204
+00:20:14.999 --> 00:20:18.860
+When you code this function with
+a message, hello world one,              
+
+205
+00:20:18.884 --> 00:20:23.279
+the contents of the paragraph
+changes to hello world one.              
+
+206
+00:20:23.304 --> 00:20:27.884
+So, users see a greeting
+after clicking the button. That’s it.              
+
+207
+00:20:30.626 --> 00:20:34.969
+Now it's time to convert the
+image size app to GUI app.              
+
+208
+00:20:34.993 --> 00:20:37.956
+I will share how to handle input values.
+              
+
+209
+00:20:40.789 --> 00:20:46.210
+You are getting used to arranging
+the two files, Python file and HTML file.              
+
+210
+00:20:46.234 --> 00:20:51.859
+We'll put the resized images in the
+images directory and the web directory.              
+
+211
+00:20:56.032 --> 00:20:59.430
+The Python code is the same as before.
+              
+
+212
+00:20:59.454 --> 00:21:05.459
+Create a function, resize,
+and decorate with eel.expose.              
+
+213
+00:21:05.483 --> 00:21:07.991
+Now we can call it from JavaScript.
+              
+
+214
+00:21:09.235 --> 00:21:13.947
+You can manipulate files on your
+PC from Python, without restriction,              
+
+215
+00:21:13.971 --> 00:21:17.660
+but from JavaScript
+there is some restriction.              
+
+216
+00:21:17.684 --> 00:21:24.047
+So, pass the directory path as the
+user enters it and let Python operate it.              
+
+217
+00:21:25.166 --> 00:21:30.488
+Resize function returns a restore
+with the file path for each resized image.              
+
+218
+00:21:30.512 --> 00:21:34.123
+In Java script, we use this list to
+              
+
+219
+00:21:35.467 --> 00:21:41.015
+return to-- sorry, we use this
+list to rewrite contents in HTML.              
+
+220
+00:21:43.758 --> 00:21:48.145
+So, HTML defines fields
+that the users can enter.              
+
+221
+00:21:49.198 --> 00:21:53.102
+User can specify the target paths
+and the max lengths on the screen.              
+
+222
+00:21:54.356 --> 00:21:57.170
+Set the onclick attribute
+              
+
+223
+00:21:58.710 --> 00:22:02.376
+of the resize button to recall
+the JavaScript resize function.              
+
+224
+00:22:04.814 --> 00:22:08.499
+When the resize function
+over JavaScript is called,              
+
+225
+00:22:08.538 --> 00:22:13.857
+it gets a target path and the maximum
+lengths using the target’s IDs.              
+
+226
+00:22:16.267 --> 00:22:22.054
+Then JavaScript calls the Python
+resize function with the entered values              
+
+227
+00:22:24.550 --> 00:22:26.122
+using call back
+              
+
+228
+00:22:27.373 --> 00:22:31.052
+after waiting the list
+return from resize function.              
+
+229
+00:22:31.076 --> 00:22:35.126
+JavaScript calls it listUpImages function.
+              
+
+230
+00:22:39.220 --> 00:22:44.650
+The listUpImages function rewrites
+the HTML using a listUpImages path.              
+
+231
+00:22:45.722 --> 00:22:52.198
+To display image in HTML
+using the img tag here              
+
+232
+00:22:54.285 --> 00:22:57.376
+in the source attribute
+              
+
+233
+00:22:59.985 --> 00:23:04.508
+of the img tag specifies
+the path to the image.              
+
+234
+00:23:04.532 --> 00:23:08.612
+This needs to be a
+relative path to resize HTML,              
+
+235
+00:23:08.636 --> 00:23:12.135
+and the Python function
+already returns a relative path.              
+
+236
+00:23:13.210 --> 00:23:19.790
+listUpImages function writes some
+img elements into the empty Div element.              
+
+237
+00:23:19.814 --> 00:23:23.628
+So, users can see the
+resized images on the screen.              
+
+238
+00:23:26.074 --> 00:23:28.423
+You can distribute eel app.
+              
+
+239
+00:23:28.447 --> 00:23:31.055
+Install PyInstaller,
+              
+
+240
+00:23:32.750 --> 00:23:35.039
+then type this command
+              
+
+241
+00:23:37.133 --> 00:23:39.912
+to create distributable binary.
+              
+
+242
+00:23:39.951 --> 00:23:44.689
+Distributable binary is
+created at dist directory.              
+
+243
+00:23:47.080 --> 00:23:51.025
+In my case, from macOS to macOS.
+              
+
+244
+00:23:51.049 --> 00:23:56.515
+Note that distribution requires
+knowledge of PyInstaller.              
+
+245
+00:23:56.539 --> 00:24:00.438
+In some cases,
+distribution may not be easy.              
+
+246
+00:24:03.423 --> 00:24:06.024
+I introduced Eel to you.
+              
+
+247
+00:24:06.048 --> 00:24:08.427
+Eel has four components;
+              
+
+248
+00:24:09.897 --> 00:24:14.611
+Python, HTML, JavaScript, and CSS.
+              
+
+249
+00:24:14.658 --> 00:24:19.574
+Eel enables JavaScript
+to code Python functions.              
+
+250
+00:24:20.879 --> 00:24:26.905
+To execute the process by clicking a
+button in HTML, set a JavaScript function.              
+
+251
+00:24:26.929 --> 00:24:31.545
+To handle input and display
+on the screen in JavaScript,              
+
+252
+00:24:31.569 --> 00:24:34.876
+get the entered value
+and rewrite the contents.              
+
+253
+00:24:37.773 --> 00:24:41.045
+To learn GUI more,
+please visit the appendix.              
+
+254
+00:24:44.187 --> 00:24:49.876
+Our final stop in this quick tour
+is web apps, web applications.              
+
+255
+00:24:52.646 --> 00:24:58.178
+I’ll tell you again that everything
+has strengths and weaknesses.              
+
+256
+00:24:58.217 --> 00:25:02.490
+GUI apps are user-friendly
+to non-developers,              
+
+257
+00:25:02.514 --> 00:25:08.883
+but distribution is sometimes tough
+because of OS dependency or some pitfalls.              
+
+258
+00:25:08.907 --> 00:25:11.575
+GUI apps need to be installed.
+              
+
+259
+00:25:11.599 --> 00:25:15.567
+So, some users may feel
+installation is a bit difficult.              
+
+260
+00:25:18.309 --> 00:25:21.405
+Can we avoid distribution
+and installation?              
+
+261
+00:25:22.781 --> 00:25:25.209
+Now it's web app style.
+              
+
+262
+00:25:26.459 --> 00:25:29.506
+Once users connect to the internet,
+              
+
+263
+00:25:29.530 --> 00:25:33.285
+the app is immediately
+available, without installation.              
+
+264
+00:25:37.160 --> 00:25:43.326
+Web apps have GUI and
+it is easy to start using.              
+
+265
+00:25:44.446 --> 00:25:48.526
+The web is a mechanism
+for sharing information              
+
+266
+00:25:48.550 --> 00:25:51.498
+and one of the ways we use the internet.
+   
+
+271
+00:25:52.946 --> 00:25:58.394
+So, I will show you a demo,
+and this is a browser window,                 
+
+272
+00:25:58.419 --> 00:26:02.874
+and I access to this link
+to demo web app              
+
+273
+00:26:03.752 --> 00:26:08.444
+and I choose images
+                 
+
+274
+00:26:10.578 --> 00:26:16.795
+and size, specify the size, so 300 pixels.
+                 
+
+275
+00:26:20.200 --> 00:26:24.985
+So, web app resize it and displays them.
+                 
+
+276
+00:26:24.985 --> 00:26:29.208
+So, I can download this one.
+                 
+
+277
+00:26:32.622 --> 00:26:33.714
+So demo is over.
+                 
+
+278
+00:26:33.714 --> 00:26:38.487
+I will introduce
+how to create the demo app.                 
+
+279
+00:26:41.477 --> 00:26:47.122
+In CLI and GUI app parts, we are
+thinking about a single machine.                 
+
+280
+00:26:47.146 --> 00:26:51.208
+In web app part we are
+thinking of more than one machine.                 
+
+281
+00:26:54.648 --> 00:26:58.395
+Multiple machines can
+be classified into two roles.                 
+
+282
+00:27:00.036 --> 00:27:03.074
+The server is a mechanism--
+sorry,                 
+
+283
+00:27:03.074 --> 00:27:06.632
+the server is a machine
+where the web app is running.                 
+
+284
+00:27:06.632 --> 00:27:09.820
+We put the source code on servers.
+                 
+
+285
+00:27:10.531 --> 00:27:14.136
+The client is a machine
+that uses web apps.                 
+
+286
+00:27:14.160 --> 00:27:20.546
+For example, we use web apps via
+browsers from PCs and smartphones.                 
+
+287
+00:27:23.233 --> 00:27:28.474
+This slide shows the communication
+between the server and the client.                 
+
+288
+00:27:28.498 --> 00:27:32.896
+The client sends a request to a server.
+                 
+
+289
+00:27:32.920 --> 00:27:36.187
+The server runs a process
+based on the request.                 
+
+290
+00:27:37.690 --> 00:27:42.841
+Once the process is completed, the
+server returns the response to the client.                 
+
+291
+00:27:46.966 --> 00:27:49.538
+What's in the request and the response?
+                 
+
+292
+00:27:50.781 --> 00:27:56.005
+A request includes a URL,
+a string started with                 
+
+293
+00:27:57.236 --> 00:28:00.173
+HTTPS or HTTP.
+                 
+
+294
+00:28:00.197 --> 00:28:07.724
+URL shows which server to access,
+and which process on the server to call.                 
+
+295
+00:28:09.669 --> 00:28:14.968
+A request also includes
+information entered into your browser.                 
+
+296
+00:28:14.992 --> 00:28:17.177
+The server processes the information.
+                 
+
+297
+00:28:19.682 --> 00:28:23.663
+A response includes HTML as a string.
+                 
+
+298
+00:28:23.688 --> 00:28:29.396
+Here is a good news: we can
+recycle HTML files in the GUI path.                 
+
+299
+00:28:32.428 --> 00:28:38.919
+There are several packages to build web
+apps, but I'd like to introduce Flask.                 
+
+300
+00:28:40.305 --> 00:28:44.560
+Flask could make it easier
+to implement simple web apps.                 
+
+301
+00:28:47.139 --> 00:28:50.260
+A web app has four components.
+                 
+
+302
+00:28:51.358 --> 00:28:53.781
+I wish I could tell you all of them,
+                 
+
+303
+00:28:53.805 --> 00:28:57.739
+but this talk we'll only
+deal with Python and HTML.                 
+
+304
+00:28:59.099 --> 00:29:03.380
+JavaScript and CSS are optional,
+so not covered in this talk.                 
+
+305
+00:29:04.234 --> 00:29:09.153
+In Eel, JavaScript handles interactions,
+but in a web app,                 
+
+306
+00:29:09.153 --> 00:29:13.231
+Python code in server handles them.
+                 
+
+307
+00:29:16.941 --> 00:29:21.286
+We’ll start with a simple example
+to be familiar with Flask.                 
+
+308
+00:29:22.404 --> 00:29:25.335
+When you open the URL in your browser,
+                 
+
+309
+00:29:25.359 --> 00:29:31.136
+the app displays a greeting:
+Hello World, with a random number.                 
+
+310
+00:29:34.496 --> 00:29:38.081
+The directory structure
+is similar to Eel apps.                 
+
+311
+00:29:38.105 --> 00:29:42.216
+Create two files:
+Python file and a HTML file.                 
+
+312
+00:29:43.303 --> 00:29:48.310
+By running the Python script,
+you can start the server on your PC.                 
+
+313
+00:29:49.461 --> 00:29:53.421
+You can send a request to it
+by opening this link.                 
+
+314
+00:29:56.188 --> 00:30:01.677
+When the user opens the URL in
+the browser, it sends a request                 
+
+315
+00:30:01.701 --> 00:30:04.316
+and the request includes URL.
+                 
+
+316
+00:30:07.152 --> 00:30:09.646
+Once receives the request,
+                 
+
+317
+00:30:09.670 --> 00:30:16.096
+the server starts a process
+corresponding to /hello.                 
+
+318
+00:30:16.120 --> 00:30:21.372
+After completing the process,
+the server returns a response.                 
+
+319
+00:30:23.950 --> 00:30:28.466
+The browser receives the response
+and render HTML on the screen,                 
+
+320
+00:30:28.749 --> 00:30:32.047
+so the user can see a greeting message.
+                 
+
+321
+00:30:35.578 --> 00:30:43.249
+In Python implementation, first, create
+an instance of Flask and the variable.                 
+
+322
+00:30:43.273 --> 00:30:46.378
+App stores it.
+                 
+
+323
+00:30:47.706 --> 00:30:51.581
+The point is to decorate hello function
+                 
+
+324
+00:30:52.784 --> 00:30:54.971
+with app.route decorator.
+                 
+
+325
+00:30:57.128 --> 00:31:01.576
+This hello function processes all
+requests to hello.                 
+
+326
+00:31:01.576 --> 00:31:03.910
+All requests to /hello.
+                 
+
+327
+00:31:05.628 --> 00:31:07.595
+The function gets a string
+                 
+
+328
+00:31:10.511 --> 00:31:13.977
+greeting by calling say_hello function,
+                 
+
+329
+00:31:15.224 --> 00:31:21.284
+and say_hello creates a-- sorry--
+                 
+
+330
+00:31:22.365 --> 00:31:30.038
+and hello function returns a
+response by render_template function,                 
+
+331
+00:31:31.157 --> 00:31:37.727
+which creates a response
+based on template’s HTML--                 
+
+332
+00:31:37.751 --> 00:31:44.370
+hello.html on the template directory
+and this variable message.                 
+
+333
+00:31:46.485 --> 00:31:48.742
+Next, HTML implementation.
+                 
+
+334
+00:31:49.821 --> 00:31:53.088
+Flask's render_template function
+                 
+
+335
+00:31:53.112 --> 00:32:00.649
+can handle not only HTML, but
+also Jinja2 template tags, uh this one.                 
+
+336
+00:32:00.673 --> 00:32:06.641
+Double curly brackets message
+is one of the Jinja2 template tags.                 
+
+337
+00:32:07.980 --> 00:32:12.799
+This template tag is replaced
+by the value of a variable in HTML.                 
+
+338
+00:32:12.823 --> 00:32:16.859
+When you pass the variable
+message to the return--                 
+
+339
+00:32:16.906 --> 00:32:19.520
+sorry, to the render template function,
+                 
+
+340
+00:32:20.692 --> 00:32:25.450
+In the returned HTML, we do not
+see double hyphen curly bracket.                 
+
+341
+00:32:30.606 --> 00:32:34.481
+Now, create image resize web app.
+                 
+
+342
+00:32:34.505 --> 00:32:38.652
+When you open the app’s
+URL from your browser,                 
+
+343
+00:32:39.824 --> 00:32:42.784
+you’ll see a screen like the left image.
+                 
+
+344
+00:32:43.926 --> 00:32:48.788
+Specify images and lengths,
+then click the send button.                 
+
+345
+00:32:48.812 --> 00:32:53.655
+The web app resizes the images
+and displays them like the right image.                 
+
+346
+00:32:57.158 --> 00:33:00.507
+If a user doesn't specify an image,
+                 
+
+347
+00:33:01.890 --> 00:33:08.007
+the screen displays in the same way
+as it does in the Hello World example.                 
+
+348
+00:33:08.031 --> 00:33:13.116
+So, send a request and process
+and return response and render it.                 
+
+349
+00:33:16.549 --> 00:33:19.731
+How to handle images in web apps.
+                 
+
+350
+00:33:19.755 --> 00:33:23.210
+After the user specifies the image,
+                 
+
+351
+00:33:23.234 --> 00:33:28.903
+the client sends a copy
+of the image to a server.                 
+
+352
+00:33:32.069 --> 00:33:36.209
+Request includes data or copy image.
+                 
+
+353
+00:33:39.364 --> 00:33:46.596
+So, web app loads the image from
+data, resizes it and saves on the server.                 
+
+354
+00:33:50.021 --> 00:33:55.021
+We need to save the image at
+public directory on the server.                 
+
+355
+00:34:00.232 --> 00:34:04.732
+img tag works for public
+images on the server.                 
+
+356
+00:34:04.756 --> 00:34:12.598
+In-- Eel part-- about Eel part,
+we've already used img tags, in fact,                 
+
+357
+00:34:14.201 --> 00:34:20.642
+Oh, sorry, we already used img tag.
+So, this time we use the same img tag.                 
+
+358
+00:34:24.585 --> 00:34:29.461
+Put the resized image
+in the images directory.                 
+
+359
+00:34:29.485 --> 00:34:31.836
+This directory will be published.
+                 
+
+360
+00:34:35.461 --> 00:34:41.113
+In Python code, the difference
+between hello_world.py and                 
+
+361
+00:34:43.080 --> 00:34:47.199
+that is-- the difference is
+static_folder parameter.                 
+
+362
+00:34:50.072 --> 00:34:55.972
+static_folder=”images”
+publishes the images directory.                 
+
+363
+00:34:55.996 --> 00:34:59.611
+Images in the directory
+can be displayed in HTML.                 
+
+364
+00:35:00.971 --> 00:35:07.597
+Resize function is decorated by
+app.route /resize so it processes requests                 
+
+365
+00:35:07.621 --> 00:35:09.796
+including /resize URL.
+                 
+
+366
+00:35:11.374 --> 00:35:17.043
+When you open /resize in your
+browser without sending any image data,                 
+
+367
+00:35:17.082 --> 00:35:20.710
+you will see the
+following slide HTML.                 
+
+368
+00:35:23.934 --> 00:35:28.203
+Here, it's called in the body tag
+and it defines input fields.                 
+
+369
+00:35:30.992 --> 00:35:35.665
+You can see input fields
+to select images on your computer                 
+
+370
+00:35:35.689 --> 00:35:37.650
+and specify max lengths.
+                 
+
+371
+00:35:40.555 --> 00:35:45.578
+When an image and maximum lengths are
+specified and the send button is clicked,                 
+
+372
+00:35:45.602 --> 00:35:50.078
+the data is sent to the same /resize path.
+                 
+
+373
+00:35:50.102 --> 00:35:55.195
+In this time, the condition of
+the if statement becomes false.                 
+
+374
+00:35:55.219 --> 00:35:59.180
+So, code in this slide is executed.
+                 
+
+375
+00:35:59.204 --> 00:36:05.102
+Python receives a max_length on the image
+file in the request sent by the browser.                 
+
+376
+00:36:07.643 --> 00:36:13.033
+After resizing the image data, save
+it to the image directory on the server.                 
+
+377
+00:36:13.057 --> 00:36:18.400
+render_template function receives
+a list of paths of resized images.                 
+
+378
+00:36:21.913 --> 00:36:25.936
+Render receives paths for
+render_template function.                 
+
+379
+00:36:25.960 --> 00:36:28.876
+It creates a response based on
+                 
+
+380
+00:36:30.162 --> 00:36:32.178
+these template tags.
+                 
+
+381
+00:36:32.202 --> 00:36:39.419
+{ and % is run with Jinja2 template tags.
+                 
+
+382
+00:36:39.443 --> 00:36:44.843
+And as this is a false statement
+in Python, this tag                 
+
+383
+00:36:45.929 --> 00:36:47.324
+behaves--
+                 
+
+384
+00:36:48.871 --> 00:36:55.170
+false statement. So, it creates
+img tags for each image.                 
+
+385
+00:36:55.194 --> 00:36:59.186
+Users can see resized
+images on their browsers.                 
+
+386
+00:37:02.454 --> 00:37:06.354
+Here’s how to use the
+demo I mentioned earlier.                 
+
+387
+00:37:06.378 --> 00:37:10.895
+Several services allow you
+to run your code as a web app.                 
+
+388
+00:37:10.919 --> 00:37:18.913
+To run your app on Heroku, install
+gunicorn and create config files                 
+
+389
+00:37:18.937 --> 00:37:24.520
+and then push your code to Heroku.
+                 
+
+390
+00:37:27.684 --> 00:37:29.082
+Recap time.
+                 
+
+391
+00:37:29.106 --> 00:37:35.029
+Web app receives a request from
+a client, and returns a response.                 
+
+392
+00:37:35.053 --> 00:37:41.164
+I introduced Flask to you.
+Flask executes the Python function                 
+
+393
+00:37:41.188 --> 00:37:44.228
+corresponding to the
+URL in the request.                 
+
+394
+00:37:44.252 --> 00:37:48.048
+Flask creates a response
+using temporary tags.                 
+
+395
+00:37:49.252 --> 00:37:53.536
+In web apps, to display
+the images in HTML,                 
+
+396
+00:37:53.560 --> 00:37:57.440
+you need to set images
+to publish on the server.                 
+
+397
+00:37:57.465 --> 00:38:03.274
+So we use static_folder argument in Flask.
+                 
+
+398
+00:38:05.984 --> 00:38:09.757
+To learn web app more,
+please visit the appendix.                 
+
+399
+00:38:12.390 --> 00:38:14.601
+Here's a recap of our tour.
+                 
+
+400
+00:38:18.125 --> 00:38:23.406
+In CLI, we resolve the hard-coded
+                 
+
+401
+00:38:23.430 --> 00:38:26.939
+by specifying from the command line.
+                 
+
+402
+00:38:26.964 --> 00:38:32.953
+GUI app is more user friendly and
+easier for non-developers to use.                 
+
+403
+00:38:32.977 --> 00:38:37.955
+To build your GUI app, we write
+HTML and the JavaScript, or we can--                 
+
+404
+00:38:39.159 --> 00:38:45.268
+we can use web apps; as you
+connect to the internet no installation.                 
+
+405
+00:38:45.268 --> 00:38:50.517
+In web, we need to sync communication
+with the server and the client.                 
+
+406
+00:38:51.764 --> 00:38:55.647
+In the server, Python
+code processes sent data.                 
+
+407
+00:38:58.272 --> 00:39:02.430
+So, my talk is over.
+                 
+
+408
+00:39:02.454 --> 00:39:08.127
+Ah-- my last message is,
+bring your script and                 
+
+409
+00:39:08.127 --> 00:39:13.032
+automate someone's boring stuff
+with your Python script.                 
+
+410
+00:39:13.056 --> 00:39:15.852
+Thank you very much
+for your attention.                

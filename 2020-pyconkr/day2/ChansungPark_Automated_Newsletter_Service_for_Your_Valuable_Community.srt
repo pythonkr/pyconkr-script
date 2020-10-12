@@ -1,0 +1,3045 @@
+2
+00:00:11,810 --> 00:00:16,300
+[Automated Newsletter Service
+for your valuable community]
+
+3
+00:00:16,300 --> 00:00:19,143
+Hello everybody, welcome to my session.
+   
+
+4
+00:00:20,400 --> 00:00:24,780
+My name is Chansung Park, and
+I am one of the administrators   
+
+5
+00:00:24,780 --> 00:00:27,690
+at TensorFlow Korea community.
+   
+
+6
+00:00:27,690 --> 00:00:31,060
+Today I'm here to share my own experience
+   
+
+7
+00:00:31,060 --> 00:00:34,540
+on how I have improved the
+quality of the community   
+
+8
+00:00:34,540 --> 00:00:37,530
+by creating something as shown in title,
+   
+
+9
+00:00:37,530 --> 00:00:39,343
+Automated Newsletter Service.
+   
+
+10
+00:00:40,220 --> 00:00:43,660
+This newsletter service
+is an open source project,   
+
+11
+00:00:43,660 --> 00:00:48,660
+and was built specifically for
+TensorFlow Korea community.   
+
+12
+00:00:48,930 --> 00:00:51,130
+But you'll see some general concepts
+   
+
+13
+00:00:51,130 --> 00:00:54,453
+and the way how to apply
+it for your own community.   
+
+14
+00:00:56,880 --> 00:01:00,330
+So here are some of the topics
+that I wanna cover today.   
+
+15
+00:01:00,330 --> 00:01:03,020
+First, I wanna give a
+little bit of background   
+
+16
+00:01:03,020 --> 00:01:06,190
+about what TensorFlow Korea community is
+   
+
+17
+00:01:06,190 --> 00:01:08,720
+in order to give you sense of what it is,
+   
+
+18
+00:01:08,720 --> 00:01:11,370
+and why the newsletter
+service might be a good thing.   
+
+19
+00:01:12,260 --> 00:01:16,130
+Second, I'll share some of my experiences,
+   
+
+20
+00:01:16,130 --> 00:01:19,160
+mostly bad experiences while interacting
+   
+
+21
+00:01:19,160 --> 00:01:22,160
+with the community over the past one year.
+   
+
+22
+00:01:22,160 --> 00:01:28,640
+By doing so, you'll understand what exactly
+motivated me to create such service.   
+
+23
+00:01:28,720 --> 00:01:32,600
+Third, I'm going through some
+of the implementation details,   
+
+24
+00:01:32,600 --> 00:01:36,230
+this is not about giving you
+how to write the actual code,   
+
+25
+00:01:36,230 --> 00:01:42,050
+but to give you a sense, what are
+the components needed to form such service,   
+
+26
+00:01:42,110 --> 00:01:46,440
+and what are the pipelines
+looks like to run the service.   
+
+27
+00:01:46,440 --> 00:01:49,630
+The fourth one is a
+part of the third topic,   
+
+28
+00:01:49,630 --> 00:01:51,340
+the newsletter service could be run
+   
+
+29
+00:01:51,340 --> 00:01:54,780
+as a standalone application locally,
+   
+
+30
+00:01:54,780 --> 00:01:58,270
+but it would be nice to send
+out newsletters automatically.   
+
+31
+00:01:58,270 --> 00:02:01,880
+You'll see how we can
+leverage GitHub Action   
+
+32
+00:02:01,880 --> 00:02:05,671
+for automated weekly newsletter service.
+   
+
+33
+00:02:05,671 --> 00:02:10,671
+And last but not least,
+I'll give you a brief talk   
+
+34
+00:02:10,900 --> 00:02:14,180
+about the current status of the service,
+   
+
+35
+00:02:14,180 --> 00:02:16,940
+and the future plan that
+I'm working on these days   
+
+36
+00:02:16,940 --> 00:02:19,163
+to improve the service any further.
+   
+
+37
+00:02:20,260 --> 00:02:21,453
+So let's begin.
+   
+
+38
+00:02:22,946 --> 00:02:26,560
+TensorFlow Korea is a community originated
+   
+
+39
+00:02:26,560 --> 00:02:29,870
+for sharing information and experiences
+   
+
+40
+00:02:29,870 --> 00:02:31,680
+about TensoerFlow framework.
+   
+
+41
+00:02:31,680 --> 00:02:36,023
+TensorFlow code is an open source project
+   
+
+42
+00:02:36,023 --> 00:02:40,071
+and is for machine learning
+and deep learning project.   
+
+43
+00:02:40,071 --> 00:02:43,690
+And it was created by Google, by the way,
+   
+
+44
+00:02:43,690 --> 00:02:45,520
+it's based on Facebook group,
+   
+
+45
+00:02:45,520 --> 00:02:49,530
+and it started out its
+own journey in 2016,   
+
+46
+00:02:49,530 --> 00:02:51,280
+I mean, TensorFlow Korea community
+   
+
+47
+00:02:51,280 --> 00:02:54,070
+not the TensorFlow
+framework, that was just   
+
+48
+00:02:54,070 --> 00:02:58,103
+an year after the born
+of TensorFlow framework.   
+
+49
+00:02:59,110 --> 00:03:04,965
+And we have reached about
+50,000 members about a month ago.   
+
+50
+00:03:04,970 --> 00:03:08,700
+It was a very important
+milestone for our community,   
+
+51
+00:03:08,700 --> 00:03:11,670
+so the newsletter service
+that I will explain   
+
+52
+00:03:11,670 --> 00:03:20,070
+was designed for celebrating and returning
+back event for our community members.   
+
+53
+00:03:20,071 --> 00:03:23,370
+Despite of its original purpose,
+   
+
+54
+00:03:23,370 --> 00:03:28,870
+there is a variety of topics that
+we discuss these days in our community.   
+
+55
+00:03:29,970 --> 00:03:33,170
+As you know, AI itself is not a big deal,
+   
+
+56
+00:03:33,170 --> 00:03:36,930
+but when it's combined with
+different technologies,   
+
+57
+00:03:36,930 --> 00:03:38,773
+it becomes a huge deal.
+   
+
+58
+00:03:39,870 --> 00:03:42,840
+Because of that, we have
+a very large user base   
+
+59
+00:03:42,840 --> 00:03:45,600
+from lots of different backgrounds.
+   
+
+60
+00:03:45,600 --> 00:03:49,340
+Interesting part is,
+our members are posting   
+
+61
+00:03:49,340 --> 00:03:55,320
+not only simple Q&As but also
+complex topics and some useful information.   
+
+62
+00:03:55,320 --> 00:03:59,023
+They're labeled by very
+rich text and images.   
+
+63
+00:03:59,890 --> 00:04:04,420
+There's quite different aspect
+from other communities, I think.   
+
+64
+00:04:04,515 --> 00:04:09,515
+Also we are holding lots of
+great events online and offline.   
+
+65
+00:04:10,010 --> 00:04:12,160
+During the COVID-19 pandemic,
+   
+
+66
+00:04:12,160 --> 00:04:15,620
+we have held awesome
+on-tech online seminars   
+
+67
+00:04:15,620 --> 00:04:17,900
+with a Leader of Google AI advocate,
+   
+
+68
+00:04:17,900 --> 00:04:21,010
+Professor Cho Kyunghyun
+from New York University,   
+
+69
+00:04:21,010 --> 00:04:24,523
+and NVIDIA engineer from Silicon Valley.
+   
+
+70
+00:04:25,940 --> 00:04:28,350
+Let me show you some of the showcases
+   
+
+71
+00:04:28,350 --> 00:04:32,540
+that we frequently share
+through this community.   
+
+72
+00:04:32,540 --> 00:04:34,730
+Most of all, as you can see,
+   
+
+73
+00:04:34,730 --> 00:04:38,410
+many posts are very
+rich and well organized.   
+
+74
+00:04:38,410 --> 00:04:41,150
+On the right hand side,
+ah, on the left hand side,   
+
+75
+00:04:41,150 --> 00:04:46,029
+the screenshot shows that we share
+ some news that's happening globally,   
+
+76
+00:04:46,029 --> 00:04:50,257
+and encourage members
+to join the discussion via comments.   
+
+77
+00:04:50,330 --> 00:04:53,520
+Also, since members use
+lots of different tools   
+
+78
+00:04:53,520 --> 00:04:57,910
+to realize AI for their own purpose,
+   
+
+79
+00:04:57,910 --> 00:05:01,600
+we wanna share tips and useful
+information about the tools.   
+
+80
+00:05:01,600 --> 00:05:06,600
+This is not just for TensorFlow framework,
+   
+
+81
+00:05:06,930 --> 00:05:08,290
+but it's for everything.
+   
+
+82
+00:05:08,290 --> 00:05:10,320
+You can frequently find out information
+   
+
+83
+00:05:10,320 --> 00:05:14,060
+related to PyTorch, Jags
+and other frameworks,   
+
+84
+00:05:14,060 --> 00:05:16,023
+and whatever you're looking for.
+   
+
+85
+00:05:17,290 --> 00:05:20,810
+And this kind of post sometimes includes
+   
+
+86
+00:05:20,810 --> 00:05:25,810
+the actual code snippets,
+I think it is super useful.   
+
+87
+00:05:25,860 --> 00:05:28,450
+The third example is a bit crazy, but yes,
+   
+
+88
+00:05:28,450 --> 00:05:30,970
+some of our members are researchers,
+   
+
+89
+00:05:30,970 --> 00:05:33,920
+and they're happy to share paper reviews,
+   
+
+90
+00:05:33,920 --> 00:05:36,110
+and their own thoughts about it.
+   
+
+91
+00:05:36,110 --> 00:05:39,320
+We actually have a group
+of people recording   
+
+92
+00:05:39,320 --> 00:05:43,216
+and sharing their paper
+reviews every week.   
+
+93
+00:05:43,216 --> 00:05:48,118
+Also, ethical issue is
+an important part in AI.   
+
+94
+00:05:48,118 --> 00:05:50,660
+As shown for the example,
+   
+
+95
+00:05:50,660 --> 00:05:54,600
+our members want to share
+ethical topics and eager   
+
+96
+00:05:54,600 --> 00:05:59,000
+to listen to what other
+people think about the topics.   
+
+97
+00:05:59,000 --> 00:06:03,410
+AI is rapidly evolving area,
+so it's also good thing   
+
+98
+00:06:03,410 --> 00:06:09,960
+to have some people who share
+recent trends and their limitations.   
+
+99
+00:06:10,030 --> 00:06:16,120
+Now, these are just a tiny bit of what's
+happening in TensorFlow Korea community,   
+
+100
+00:06:16,160 --> 00:06:20,280
+but by looking at these examples,
+you could get some sense   
+
+101
+00:06:20,280 --> 00:06:24,013
+that we have very rich
+information floating around.   
+
+102
+00:06:25,630 --> 00:06:29,540
+So this was the first thing
+that developed my intuition   
+
+103
+00:06:29,540 --> 00:06:31,553
+to create the newsletter service,
+   
+
+104
+00:06:32,430 --> 00:06:36,940
+because I didn't wanna lose
+all the information after all.   
+
+105
+00:06:36,940 --> 00:06:39,000
+As you know, it's not easy to hold
+   
+
+106
+00:06:39,000 --> 00:06:40,963
+past information in Facebook though.
+   
+
+107
+00:06:42,200 --> 00:06:46,670
+Here, let's look at
+some numbers this time.   
+
+108
+00:06:46,670 --> 00:06:48,480
+By inspecting some numbers,
+   
+
+109
+00:06:48,480 --> 00:06:52,803
+this idea could be developed
+much more concrete and strong.   
+
+110
+00:06:54,920 --> 00:06:56,430
+On the top left corner,
+   
+
+111
+00:06:56,430 --> 00:07:00,660
+the graph shows constantly
+increasing number of members,   
+
+112
+00:07:00,660 --> 00:07:05,810
+meaning we are possibly having more
+and more people to share rich information.   
+
+113
+00:07:06,690 --> 00:07:12,153
+Also we have a constant number
+of active members over the last year,   
+
+114
+00:07:12,153 --> 00:07:16,900
+this clearly shows many of our members are
+happy about the community.   
+
+115
+00:07:17,980 --> 00:07:22,090
+On the right hand side, you
+can see there are two graphs   
+
+116
+00:07:22,090 --> 00:07:26,070
+showing the number of
+posts for the past 60 days   
+
+117
+00:07:26,070 --> 00:07:28,920
+and seven days respectively.
+   
+
+118
+00:07:28,920 --> 00:07:33,920
+As you can see, we have a
+list of 150 posts every week,   
+
+119
+00:07:34,010 --> 00:07:37,140
+you might think it is small
+number, when you think about   
+
+120
+00:07:37,140 --> 00:07:41,220
+the number of members 50,000.
+   
+
+121
+00:07:41,220 --> 00:07:43,170
+However, this is a huge number,
+   
+
+122
+00:07:43,170 --> 00:07:46,710
+when you think about how well
+the information is refined   
+
+123
+00:07:46,710 --> 00:07:48,603
+as seen from the showcase.
+   
+
+124
+00:07:51,490 --> 00:07:56,490
+As you can see, TensorFlow
+Korea is a pretty good place   
+
+125
+00:07:56,680 --> 00:08:01,060
+by looking at some of the statistical 
+numbers and actual showcase.   
+
+126
+00:08:01,060 --> 00:08:04,800
+However, it turns out Facebook
+group is not a great place   
+
+127
+00:08:04,800 --> 00:08:08,570
+to archive and search
+past information.   
+
+128
+00:08:08,570 --> 00:08:10,810
+I wouldn't even have come up with the idea
+   
+
+129
+00:08:10,810 --> 00:08:15,330
+to create a newsletter service if not so.
+   
+
+130
+00:08:15,330 --> 00:08:18,290
+Who wants to share nicely
+formatted information,   
+
+131
+00:08:18,290 --> 00:08:21,593
+if it'll be dead the information
+like after a month or so?   
+
+132
+00:08:22,610 --> 00:08:26,500
+Here are some of the drawbacks
+that I wanna point out,   
+
+133
+00:08:26,500 --> 00:08:28,760
+which inspired me a lot.
+   
+
+134
+00:08:28,760 --> 00:08:32,940
+These are drawbacks specifically
+curated for Facebook Group,   
+
+135
+00:08:32,940 --> 00:08:36,720
+but this might not be
+true for your community.   
+
+136
+00:08:36,720 --> 00:08:40,854
+But if you think your community
+coincidentally has similar issues,   
+
+137
+00:08:40,854 --> 00:08:47,000
+you could consider creating
+a similar service for your own community.   
+
+138
+00:08:47,070 --> 00:08:51,062
+At the end, I'll let you know how to bring
+this open source project   
+
+139
+00:08:51,062 --> 00:08:52,731
+into your own community.
+   
+
+140
+00:08:54,100 --> 00:08:58,830
+So Facebook recommends what to
+read for each Facebook user.   
+
+141
+00:08:58,830 --> 00:09:02,310
+And Facebook keeps recommending
+what you should read   
+
+142
+00:09:02,310 --> 00:09:04,550
+based on your interest.
+   
+
+143
+00:09:04,550 --> 00:09:09,040
+It's hard to keep following topics
+that you have a little interest.   
+
+144
+00:09:09,090 --> 00:09:11,070
+This could be a useful feature
+   
+
+145
+00:09:11,070 --> 00:09:14,450
+if you wanna read what you're up to only.
+   
+
+146
+00:09:14,450 --> 00:09:17,290
+However, in the case
+that you want to expand   
+
+147
+00:09:17,290 --> 00:09:22,290
+your interest to other areas,
+that might be a bad feature.   
+
+148
+00:09:23,120 --> 00:09:26,000
+According to the nature of our community,
+   
+
+149
+00:09:26,000 --> 00:09:29,340
+this feature seems very inappropriate.
+   
+
+150
+00:09:29,340 --> 00:09:31,650
+Like I said before, our members
+   
+
+151
+00:09:31,650 --> 00:09:33,830
+have many different backgrounds,
+   
+
+152
+00:09:33,830 --> 00:09:36,103
+so they are kind of new to AI field.
+   
+
+153
+00:09:37,210 --> 00:09:41,576
+Also, consider the numbers that we
+have just discussed in the previous slide,   
+
+154
+00:09:41,576 --> 00:09:44,490
+ it's almost impossible to consume
+   
+
+155
+00:09:44,490 --> 00:09:47,650
+more than 150 posts every week,
+   
+
+156
+00:09:47,650 --> 00:09:50,210
+even with top few posts like 20,
+   
+
+157
+00:09:50,210 --> 00:09:54,460
+just ask yourself that
+you could really digest   
+
+158
+00:09:54,460 --> 00:09:58,110
+those information in a week, probably not,
+   
+
+159
+00:09:58,110 --> 00:10:03,110
+especially when information
+is not simple, but very rich.   
+
+160
+00:10:03,660 --> 00:10:07,300
+Fixing these drawbacks could
+led TensorFlow Korea community   
+
+161
+00:10:07,300 --> 00:10:10,630
+to become much better place.
+   
+
+162
+00:10:10,630 --> 00:10:14,270
+Also all the administrators
+at TensorFlow Korea   
+
+163
+00:10:14,270 --> 00:10:16,510
+always keep paying attention
+   
+
+164
+00:10:16,510 --> 00:10:19,110
+to what we could give back
+to our community members.   
+
+165
+00:10:21,490 --> 00:10:24,710
+So with this background
+in mind, I have created   
+
+166
+00:10:24,710 --> 00:10:28,200
+a newsletter service to
+solve some of those problems.   
+
+167
+00:10:28,200 --> 00:10:32,830
+Here is a quick overview of it,
+it is not a complicated service   
+
+168
+00:10:32,830 --> 00:10:36,420
+nor it requires a lot
+of Python coding skills   
+
+169
+00:10:36,420 --> 00:10:40,530
+like it only took about
+three weeks to launch.   
+
+170
+00:10:40,530 --> 00:10:44,400
+Rather, it was just designed
+to deliver rich information   
+
+171
+00:10:44,400 --> 00:10:47,820
+to as many people as possible.
+   
+
+172
+00:10:47,820 --> 00:10:51,310
+After receiving newsletters,
+it is up to receivers   
+
+173
+00:10:51,310 --> 00:10:55,950
+to archive if they want by
+using a simple functions   
+
+174
+00:10:55,950 --> 00:11:00,110
+in their mailbox like tagging function.
+   
+
+175
+00:11:00,110 --> 00:11:05,110
+Out of 150 weekly posts,
+up to 20 posts gets ranked   
+
+176
+00:11:05,630 --> 00:11:08,093
+by a simple summation formula,
+   
+
+177
+00:11:10,410 --> 00:11:13,380
+the number of reactions,
+the number of shares,   
+
+178
+00:11:13,380 --> 00:11:15,123
+and the number of comments.
+   
+
+179
+00:11:16,110 --> 00:11:18,840
+It's possible to give
+weights for each parameter,   
+
+180
+00:11:18,840 --> 00:11:22,400
+so there's a customizable point.
+   
+
+181
+00:11:22,400 --> 00:11:29,200
+For TensorFlow Korea, they're all set
+to one for now, as an experimental purpose.   
+
+182
+00:11:29,230 --> 00:11:32,270
+Also one of the great
+features about this service   
+
+183
+00:11:32,270 --> 00:11:35,070
+is the ability to issue
+a weekly newsletter   
+
+184
+00:11:35,070 --> 00:11:37,870
+without a human being involved.
+   
+
+185
+00:11:37,870 --> 00:11:40,090
+That means it's fully automated,
+   
+
+186
+00:11:40,090 --> 00:11:42,508
+and it's done through GitHub action.
+   
+
+187
+00:11:42,508 --> 00:11:50,183
+I'll give a talk about
+this topic just in shortly.   
+
+188
+00:11:52,440 --> 00:11:55,020
+I have included all the
+details about this project   
+
+189
+00:11:55,020 --> 00:12:00,020
+in README, I think the
+documentation has done nicely.   
+
+190
+00:12:00,130 --> 00:12:04,630
+In the document, you can read the CLI spec
+   
+
+191
+00:12:04,630 --> 00:12:09,630
+for this program, and I
+believe CLI is the best way   
+
+192
+00:12:09,900 --> 00:12:14,860
+to understand any project
+features in a high level view.   
+
+193
+00:12:14,860 --> 00:12:16,913
+So here's a sneak peek at it.
+   
+
+194
+00:12:18,220 --> 00:12:20,690
+As you can see, there are some options
+   
+
+195
+00:12:20,690 --> 00:12:24,889
+to make application
+behave in different ways.   
+
+196
+00:12:24,889 --> 00:12:28,750
+As we can set the range of dates when the,
+   
+
+197
+00:12:28,750 --> 00:12:31,560
+to be scrapped post or posted by
+   
+
+198
+00:12:31,560 --> 00:12:33,980
+using since then until flags.
+   
+
+199
+00:12:33,980 --> 00:12:38,630
+Also, we could limit the
+number of post to scrap.   
+
+200
+00:12:38,630 --> 00:12:42,378
+Again, the weights for
+each, different parameters   
+
+201
+00:12:42,378 --> 00:12:46,970
+for the number of
+reactions, number of shares,   
+
+202
+00:12:46,970 --> 00:12:50,263
+number of comments are
+all configurable as well.   
+
+203
+00:12:51,760 --> 00:12:52,918
+On the right hand side,
+   
+
+204
+00:12:52,918 --> 00:12:56,030
+the screenshot shows
+a sample example uses,   
+
+205
+00:12:56,030 --> 00:12:58,423
+so please check it out
+if you're interested.   
+
+206
+00:13:01,570 --> 00:13:06,120
+That was a pretty high level features
+of what the application does.   
+
+207
+00:13:06,150 --> 00:13:09,820
+Let's dive into bit more
+details about the pipeline,   
+
+208
+00:13:09,820 --> 00:13:12,993
+how the whole system
+actually works in a nutshell.   
+
+209
+00:13:14,010 --> 00:13:19,368
+The first thing it tries to do is
+to read configurations from external files.   
+
+210
+00:13:19,720 --> 00:13:23,240
+Configurations are split
+into two categories,   
+
+211
+00:13:23,240 --> 00:13:25,990
+sensitive and nonsensitive.
+   
+
+212
+00:13:25,990 --> 00:13:29,200
+There are a number of
+sensitive information,   
+
+213
+00:13:29,200 --> 00:13:31,616
+including Facebook access token,
+   
+
+214
+00:13:31,616 --> 00:13:34,900
+SMTP related information and et cetera.
+   
+
+215
+00:13:34,900 --> 00:13:37,870
+Nonsensitive information is all about
+   
+
+216
+00:13:37,870 --> 00:13:43,426
+what you can customize like
+the number of top posts to be included,   
+
+217
+00:13:43,810 --> 00:13:48,490
+how many words to include
+for each post, and more.   
+
+218
+00:13:48,490 --> 00:13:50,070
+Based on the configuration,
+   
+
+219
+00:13:50,070 --> 00:13:53,420
+it tries to scrap Facebook
+post in the group.   
+
+220
+00:13:53,420 --> 00:13:55,600
+The returning values from Facebook server
+   
+
+221
+00:13:55,600 --> 00:13:58,820
+are expressed in JSON format.
+   
+
+222
+00:13:58,820 --> 00:14:02,240
+So we need to parse them
+into Python objects.   
+
+223
+00:14:02,240 --> 00:14:07,060
+The next step is to inject
+parsed data into email template   
+
+224
+00:14:07,060 --> 00:14:10,370
+which consists of HTML and CSS,
+   
+
+225
+00:14:10,370 --> 00:14:13,716
+and injection is done
+through Jinja2 library.   
+
+226
+00:14:14,780 --> 00:14:18,480
+The next step is to send out
+   
+
+227
+00:14:18,480 --> 00:14:22,150
+the formed email template
+to the subscribers.   
+
+228
+00:14:22,150 --> 00:14:25,730
+At this point, the main goal
+will be achieved nicely.   
+
+229
+00:14:25,730 --> 00:14:29,450
+But as you can see, there
+are two additional steps,   
+
+230
+00:14:29,450 --> 00:14:33,253
+refreshing Facebook token
+and write configurations.   
+
+231
+00:14:34,490 --> 00:14:38,540
+Refreshing Facebook tokens
+are something inconvenient,   
+
+232
+00:14:38,540 --> 00:14:40,710
+but necessary for some reasons.
+   
+
+233
+00:14:40,710 --> 00:14:43,253
+I'll talk a bit more about that shortly.
+   
+
+234
+00:14:44,510 --> 00:14:47,960
+"Write configuration" is to
+update the Facebook token   
+
+235
+00:14:47,960 --> 00:14:51,970
+with the refreshed one
+into an external file   
+
+236
+00:14:51,970 --> 00:14:55,193
+to make sure the token wouldn't
+be expired in the next time,   
+
+237
+00:14:56,140 --> 00:14:59,830
+because the token persist
+for a certain range of time   
+
+238
+00:14:59,830 --> 00:15:04,302
+so in order to keep everything works fine
+after a week later,   
+
+239
+00:15:04,302 --> 00:15:07,500
+ a new token that will be still alive
+   
+
+240
+00:15:08,740 --> 00:15:13,343
+should be written down
+to the configuration file.   
+
+241
+00:15:15,610 --> 00:15:18,810
+So this slide shows the
+structure of the project.   
+
+242
+00:15:18,810 --> 00:15:22,200
+Let me go through one by one real quick.
+   
+
+243
+00:15:22,200 --> 00:15:25,280
+There are two directories, lib and static.
+   
+
+244
+00:15:25,280 --> 00:15:29,450
+I put every internal logics
+into a lib directory.   
+
+245
+00:15:29,450 --> 00:15:33,020
+This includes data object
+model, parsing logics,   
+
+246
+00:15:33,020 --> 00:15:36,293
+creating email templates,
+sending emails and so on.   
+
+247
+00:15:37,390 --> 00:15:41,695
+On the other hand, I put something
+without a logic into static folder.   
+
+248
+00:15:42,920 --> 00:15:47,910
+It's more like constant
+value stores in one place,   
+
+249
+00:15:47,910 --> 00:15:51,063
+HTML templates are stored in here too.
+   
+
+250
+00:15:52,650 --> 00:15:56,220
+Other than that, there are just
+two more interesting files,   
+
+251
+00:15:56,220 --> 00:16:00,896
+that env.gpg and config.cfg,
+which are responsible   
+
+252
+00:16:00,896 --> 00:16:05,750
+for sensitive and non sensitive
+information respectively.   
+
+253
+00:16:05,750 --> 00:16:09,600
+Just for experimental purpose
+and self-learning purpose,   
+
+254
+00:16:09,600 --> 00:16:13,630
+I have chosen that and that m-Python
+   
+
+255
+00:16:13,630 --> 00:16:16,721
+and standard config parser package
+   
+
+256
+00:16:16,721 --> 00:16:21,173
+for each file to insert and
+extract information from them.   
+
+257
+00:16:22,380 --> 00:16:25,800
+The remaining files are
+pretty much self-explanatory,   
+
+258
+00:16:25,800 --> 00:16:29,765
+so I don't think I need to give
+any further explanations about them.   
+
+259
+00:16:32,600 --> 00:16:37,010
+So let's talk about configuration now.
+   
+
+260
+00:16:37,010 --> 00:16:41,340
+Like I said, there are two
+separate configuration files.   
+
+261
+00:16:41,340 --> 00:16:45,400
+In a development phase,
+configurations are something   
+
+262
+00:16:45,400 --> 00:16:48,520
+that should be changed very often time.
+   
+
+263
+00:16:48,520 --> 00:16:52,750
+And it is the central place
+where other users can touch   
+
+264
+00:16:52,750 --> 00:16:56,830
+to port the project into
+their own situations.   
+
+265
+00:16:56,830 --> 00:16:58,630
+So I have found that keeping
+   
+
+266
+00:16:58,630 --> 00:17:02,401
+the two very different information
+separately is a good practice.   
+
+267
+00:17:02,440 --> 00:17:05,540
+I don't wanna make any
+difference whenever possible   
+
+268
+00:17:05,540 --> 00:17:10,300
+for like application ID,
+application secrete,   
+
+269
+00:17:10,300 --> 00:17:12,390
+Facebook access token,
+   
+
+270
+00:17:12,390 --> 00:17:15,293
+which should remain as
+the same all the time.   
+
+271
+00:17:16,250 --> 00:17:21,250
+Let's think about that,
+I don't separate those.   
+
+272
+00:17:21,550 --> 00:17:24,879
+Even though I'm not going
+to change the information   
+
+273
+00:17:24,879 --> 00:17:28,780
+that should remain as the same,
+I should save it   
+
+274
+00:17:28,780 --> 00:17:31,720
+and sync with the remote repository
+   
+
+275
+00:17:31,720 --> 00:17:35,650
+whenever I modify
+the configurable information.   
+
+276
+00:17:35,650 --> 00:17:41,017
+Further more, sensitive information is
+designed to be encrypted via GPG,   
+
+277
+00:17:41,020 --> 00:17:45,800
+which stands for GNU Privacy Guard,
+a server encryption algorithm.   
+
+278
+00:17:45,940 --> 00:17:49,310
+After encryption is done,
+all the information stays   
+
+279
+00:17:49,310 --> 00:17:52,870
+as the same except for
+the Facebook access token,   
+
+280
+00:17:52,870 --> 00:17:56,779
+and passphrases managed to
+GitHub secret by the way,   
+
+281
+00:17:56,779 --> 00:17:59,270
+where you can put secret values
+   
+
+282
+00:17:59,270 --> 00:18:01,620
+and reference back and GitHub Action,
+   
+
+283
+00:18:01,620 --> 00:18:05,050
+so that you can decrypt that GPG file
+   
+
+284
+00:18:05,050 --> 00:18:08,043
+with the passphrase without
+letting anyone know about it.   
+
+285
+00:18:09,570 --> 00:18:15,642
+On the other hand, config.cfg file
+contains all the customizable information.   
+
+286
+00:18:16,170 --> 00:18:20,700
+Just for your information, 
+Top K means the number of posts   
+
+287
+00:18:20,700 --> 00:18:25,160
+to appear in a newsletter,
+which is set to 24-hour.   
+
+288
+00:18:25,160 --> 00:18:30,160
+And most importantly, Facebook
+group ID is the ID of a group   
+
+289
+00:18:30,310 --> 00:18:32,790
+where you wanna scrap post from.
+   
+
+290
+00:18:32,790 --> 00:18:37,000
+The name of keys are pretty
+much self-explanatory,   
+
+291
+00:18:37,000 --> 00:18:40,430
+so please read it, if
+you're interested in.   
+
+292
+00:18:40,430 --> 00:18:44,020
+But let me move on to
+the next topic for now,   
+
+293
+00:18:44,020 --> 00:18:45,923
+which is Facebook access token.
+   
+
+294
+00:18:49,040 --> 00:18:53,920
+Facebook access token is
+something that you must acquire   
+
+295
+00:18:53,920 --> 00:18:56,613
+if you wanna use Facebook Graph API.
+   
+
+296
+00:18:57,886 --> 00:19:02,840
+In a normal process, you can
+get the Facebook access token   
+
+297
+00:19:02,840 --> 00:19:05,140
+for three major steps like,
+   
+
+298
+00:19:05,140 --> 00:19:08,100
+you should create an Facebook app,
+   
+
+299
+00:19:08,100 --> 00:19:11,250
+you should request on certain features
+   
+
+300
+00:19:11,250 --> 00:19:15,170
+like group API for your app,
+   
+
+301
+00:19:15,170 --> 00:19:19,700
+and your app must be
+reviewed by Facebook team.   
+
+302
+00:19:19,700 --> 00:19:22,971
+It doesn't look very
+complicated process at all.   
+
+303
+00:19:22,971 --> 00:19:27,220
+But the problem is, during
+the COVID-19 pandemic,   
+
+304
+00:19:27,220 --> 00:19:28,660
+Facebook has made a decision
+   
+
+305
+00:19:28,660 --> 00:19:32,950
+to temporarily pause individual
+verification process,   
+
+306
+00:19:32,950 --> 00:19:37,050
+meaning you can't get the
+access token in a normal way.   
+
+307
+00:19:37,050 --> 00:19:40,560
+I was kind of shocked by
+the fact because I was like,   
+
+308
+00:19:40,560 --> 00:19:42,900
+how I get a post back from Facebook now,
+   
+
+309
+00:19:42,900 --> 00:19:44,163
+is that even possible?
+   
+
+310
+00:19:45,005 --> 00:19:48,600
+But luckily, after playing
+around with the Facebook API   
+
+311
+00:19:48,600 --> 00:19:51,260
+and reading Facebook official documents,
+   
+
+312
+00:19:51,260 --> 00:19:54,200
+I found there's a workaround for this.
+   
+
+313
+00:19:54,200 --> 00:19:55,683
+It goes like this.
+   
+
+314
+00:19:55,683 --> 00:19:59,470
+First, you grab a temporary access token
+   
+
+315
+00:19:59,470 --> 00:20:05,338
+via Graph API Explorer, which
+is a playground for Graph API.   
+
+316
+00:20:05,672 --> 00:20:10,140
+Exchange the temporary access
+token with a long lived one,   
+
+317
+00:20:10,140 --> 00:20:13,690
+Facebook provides an API for this.
+   
+
+318
+00:20:13,690 --> 00:20:15,960
+Temporary access token only leaves
+   
+
+319
+00:20:15,960 --> 00:20:17,850
+up to less than a day or so,
+   
+
+320
+00:20:17,850 --> 00:20:21,750
+but the long lived one lives
+up to more than a week.   
+
+321
+00:20:21,750 --> 00:20:27,028
+So whenever graphing and parsing
+Facebook post with the current token,   
+
+322
+00:20:27,028 --> 00:20:29,960
+the current token will get refreshed
+   
+
+323
+00:20:29,960 --> 00:20:33,450
+for the next run for the one more week,
+   
+
+324
+00:20:33,450 --> 00:20:37,355
+because this is a weekly
+newsletter service.   
+
+325
+00:20:37,355 --> 00:20:40,080
+The refreshed token will be exported
+   
+
+326
+00:20:40,080 --> 00:20:44,028
+into the dotenv and encrypted via gpg.
+   
+
+327
+00:20:44,028 --> 00:20:46,720
+This was why we needed
+two additional steps   
+
+328
+00:20:46,720 --> 00:20:48,943
+at the end of the whole pipeline.
+   
+
+329
+00:20:49,932 --> 00:20:55,733
+And this slide is for a snippet of
+knowledge about Facebook's Graph API.   
+
+330
+00:20:55,964 --> 00:20:59,130
+Graph API is nothing but a graph structure
+   
+
+331
+00:20:59,130 --> 00:21:02,620
+that you probably studied
+from algorithm class.   
+
+332
+00:21:02,620 --> 00:21:03,850
+Everything can be expressed
+   
+
+333
+00:21:03,850 --> 00:21:07,750
+with three concepts, node, edge and field.
+   
+
+334
+00:21:07,750 --> 00:21:11,500
+Node is an entity and
+the edge is a connection,   
+
+335
+00:21:11,500 --> 00:21:13,690
+between nodes and fields
+   
+
+336
+00:21:13,690 --> 00:21:17,660
+is a piece of information
+dangling within a node.   
+
+337
+00:21:17,660 --> 00:21:21,860
+For instance, group is a
+node and posts are nodes,   
+
+338
+00:21:21,860 --> 00:21:25,580
+and there are edges
+between a group and posts.   
+
+339
+00:21:25,580 --> 00:21:31,717
+And each post contains a number of fields
+like date, contents, and so on.   
+
+340
+00:21:32,630 --> 00:21:34,600
+It is somewhat a hard concept
+   
+
+341
+00:21:34,600 --> 00:21:37,250
+when you have never heard about before.
+   
+
+342
+00:21:37,250 --> 00:21:41,398
+Also, the version has been
+dramatically changed over time.   
+
+343
+00:21:41,398 --> 00:21:46,063
+And it already has reached version 8.0.
+   
+
+344
+00:21:47,010 --> 00:21:52,010
+You might have read various
+news about digital privacy,   
+
+345
+00:21:52,140 --> 00:21:56,640
+so Facebook continuously
+addressed new policies,   
+
+346
+00:21:56,640 --> 00:21:59,010
+but the problem is that
+they don't really make   
+
+347
+00:21:59,010 --> 00:22:04,838
+any big announcement about
+it for their developers.   
+
+348
+00:22:06,350 --> 00:22:11,833
+But luckily, the only lucky
+part and hope is that,   
+
+349
+00:22:12,660 --> 00:22:17,560
+there is a graph API
+Explorer as a place that   
+
+350
+00:22:17,560 --> 00:22:21,543
+you can play with APIs, so
+please use it whenever possible.   
+
+351
+00:22:23,723 --> 00:22:27,192
+There's a tip for developers
+who wanna deal with Facebook API.   
+
+352
+00:22:29,778 --> 00:22:33,443
+So after parsing configuration,
+what's gonna happen?   
+
+353
+00:22:34,550 --> 00:22:36,750
+It's kind of boring steps.
+   
+
+354
+00:22:36,750 --> 00:22:40,030
+But almost always, you
+need a similar procedure,   
+
+355
+00:22:40,030 --> 00:22:43,300
+when you try to scrap
+information through API,   
+
+356
+00:22:43,300 --> 00:22:46,313
+or crawling, is not
+just only for Facebook.   
+
+357
+00:22:49,610 --> 00:22:53,980
+Make HTTP requests to Facebook
+server, is a good practice   
+
+358
+00:22:53,980 --> 00:22:57,290
+to make this function
+asynchronously working   
+
+359
+00:22:57,290 --> 00:23:00,453
+because you don't want other
+functions to be blocked.   
+
+360
+00:23:01,780 --> 00:23:04,700
+And Facebook server
+will give you back data   
+
+361
+00:23:04,700 --> 00:23:07,960
+in the response which is in JSON format.
+   
+
+362
+00:23:07,960 --> 00:23:10,070
+Because a raw JSON data
+   
+
+363
+00:23:10,070 --> 00:23:13,540
+is not really accessible in Python, right?
+   
+
+364
+00:23:13,540 --> 00:23:18,540
+So it should be properly
+parsed into Python objects.   
+
+365
+00:23:18,640 --> 00:23:21,090
+There are multiple ways
+to achieve this goal,   
+
+366
+00:23:21,090 --> 00:23:25,300
+but I have found it is easier
+and much more readable   
+
+367
+00:23:25,300 --> 00:23:28,480
+if you make a class method for this.
+   
+
+368
+00:23:28,480 --> 00:23:30,633
+So class method is a central place,
+   
+
+369
+00:23:33,484 --> 00:23:38,484
+which takes the incoming
+raw JSON data format file.   
+
+370
+00:23:38,600 --> 00:23:43,090
+And it extracts all the
+information from the JSON,   
+
+371
+00:23:43,090 --> 00:23:48,390
+and it creates an instance
+of the Python object   
+
+372
+00:23:48,640 --> 00:23:51,950
+if the JSON data is valid.
+   
+
+373
+00:23:51,950 --> 00:23:57,784
+Based on parsed data, it'll
+create a data model instance, like I said,   
+
+374
+00:23:57,784 --> 00:24:01,290
+so that all the information
+is much more accessible   
+
+375
+00:24:01,290 --> 00:24:03,823
+for the rest of the program logics.
+   
+
+376
+00:24:08,700 --> 00:24:11,550
+Based on parsed data within data model,
+   
+
+377
+00:24:11,550 --> 00:24:15,280
+we can now inject them into HTML template.
+   
+
+378
+00:24:15,280 --> 00:24:18,440
+HTML/CSS is easy, right?
+   
+
+379
+00:24:18,440 --> 00:24:22,603
+But when it gets too long,
+is not easily manageable,   
+
+380
+00:24:23,830 --> 00:24:28,240
+even it gets worse when you
+download a template from online,   
+
+381
+00:24:28,240 --> 00:24:31,090
+because they contain some weird characters
+   
+
+382
+00:24:31,090 --> 00:24:33,343
+that only their system understands.
+   
+
+383
+00:24:34,180 --> 00:24:40,746
+Like Jinja2, we can split HTML
+into several pieces of HTMLs   
+
+384
+00:24:40,746 --> 00:24:46,587
+is like managing and importing
+multiple sources of files in one project.   
+
+385
+00:24:47,000 --> 00:24:51,260
+Also Jinja2 is probably
+the most popular way   
+
+386
+00:24:51,260 --> 00:24:55,040
+to inject Python information into HTML,
+   
+
+387
+00:24:55,040 --> 00:24:58,433
+very flexible, and there
+are nothing much to learn.   
+
+388
+00:24:59,580 --> 00:25:02,870
+So which means syntax is straightforward,
+   
+
+389
+00:25:02,870 --> 00:25:05,163
+so you could learn it just in a day.
+   
+
+390
+00:25:06,160 --> 00:25:10,820
+I have additionally used Markdown2 package
+before information injection.   
+
+391
+00:25:10,820 --> 00:25:14,430
+Markdown2 is a tool to convert
+   
+
+392
+00:25:14,430 --> 00:25:18,293
+an article written in
+markdown format in HTML form.   
+
+393
+00:25:19,160 --> 00:25:23,825
+Because basically, Facebook's posts
+are written in Markdown format.   
+
+394
+00:25:24,300 --> 00:25:27,060
+It won't be rendered appropriately,
+   
+
+395
+00:25:27,060 --> 00:25:31,360
+if we don't make Markdown
+syntax to be HTML compatible.   
+
+396
+00:25:31,360 --> 00:25:37,649
+For instance, one hash character
+often means a heading in Markdown.   
+
+397
+00:25:37,850 --> 00:25:42,140
+But h1 tag is the counterpart in HTML.
+   
+
+398
+00:25:42,140 --> 00:25:47,140
+So the so hash characters
+should be converted into h1 tag.   
+
+399
+00:25:47,930 --> 00:25:52,021
+Premailer packages also necessary package
+   
+
+400
+00:25:52,021 --> 00:25:55,950
+if you consider email service,
+   
+
+401
+00:25:55,950 --> 00:25:58,670
+since every CSS style should be in line
+   
+
+402
+00:25:58,670 --> 00:26:01,710
+as attributes of every HTML tags,
+   
+
+403
+00:26:01,710 --> 00:26:06,140
+that's a kind of normal thing in an email.
+   
+
+404
+00:26:06,140 --> 00:26:09,290
+Otherwise almost every email clients
+   
+
+405
+00:26:09,290 --> 00:26:11,650
+will not render things nicely,
+   
+
+406
+00:26:11,650 --> 00:26:14,479
+and something will probably be broken.
+   
+
+407
+00:26:14,479 --> 00:26:17,430
+I have not mentioned about the first step
+   
+
+408
+00:26:17,430 --> 00:26:20,620
+in the email templating pipeline much,
+   
+
+409
+00:26:20,620 --> 00:26:22,850
+it's all about your searching ability
+   
+
+410
+00:26:22,850 --> 00:26:25,356
+to find out the best template.
+   
+
+411
+00:26:26,819 --> 00:26:30,166
+But it's a real time consuming job,
+   
+
+412
+00:26:30,166 --> 00:26:35,166
+if you don't have enough
+skills in HTML and CSS,   
+
+413
+00:26:35,350 --> 00:26:37,900
+looking for template line,
+   
+
+414
+00:26:37,900 --> 00:26:41,422
+consider how much time
+is going to be wasted.   
+
+415
+00:26:41,422 --> 00:26:46,422
+For me, a week out of the whole
+three weeks for this project   
+
+416
+00:26:47,110 --> 00:26:50,049
+were wasted for only this process.
+   
+
+417
+00:26:51,282 --> 00:26:56,993
+It's very fortunate to have free
+service like Google Groups,   
+
+418
+00:26:57,470 --> 00:26:59,660
+Google Groups is a central place
+   
+
+419
+00:26:59,660 --> 00:27:03,080
+to dispatch an email to all subscribers.
+   
+
+420
+00:27:03,080 --> 00:27:08,637
+So I just need to email the HTML template
+to our Google Groups   
+
+421
+00:27:08,890 --> 00:27:12,893
+and everyone in the group
+will get the same email.   
+
+422
+00:27:14,277 --> 00:27:23,687
+If you are planning to dispatch one email 
+template to a lot of people out there,   
+
+423
+00:27:23,687 --> 00:27:28,569
+and wanna make sure they're
+getting the same email all the time,   
+
+424
+00:27:28,960 --> 00:27:31,110
+please use Google Groups.
+   
+
+425
+00:27:31,110 --> 00:27:33,523
+I think that's the best solution for this.
+   
+
+426
+00:27:36,930 --> 00:27:39,230
+So that is pretty much
+everything you should know   
+
+427
+00:27:39,230 --> 00:27:41,603
+about how to build a newsletter service.
+   
+
+428
+00:27:42,510 --> 00:27:45,090
+This slide is kind of side note
+   
+
+429
+00:27:45,090 --> 00:27:47,530
+to let you know what GitHub Action is,
+   
+
+430
+00:27:47,530 --> 00:27:50,700
+and how we can make the job automatic.
+   
+
+431
+00:27:50,700 --> 00:27:55,704
+First of all, you can choose
+free or paid version for GitHub Action,   
+
+432
+00:27:55,704 --> 00:27:59,644
+but you are almost always be satisfied
+with the free version,   
+
+433
+00:27:59,644 --> 00:28:01,692
+I guarantee you.
+   
+
+434
+00:28:02,590 --> 00:28:04,300
+As you can see from the table,
+   
+
+435
+00:28:04,300 --> 00:28:07,140
+there are only differences
+about the size of storage   
+
+436
+00:28:07,140 --> 00:28:09,713
+and running minutes of GitHub Action.
+   
+
+437
+00:28:10,740 --> 00:28:15,380
+2000 minutes per month should
+be enough for most of you.   
+
+438
+00:28:15,380 --> 00:28:21,236
+You can also choose an operating
+system for your needs too.   
+
+439
+00:28:22,530 --> 00:28:27,530
+But just remember other
+specs like CPU, RAM size,   
+
+440
+00:28:28,410 --> 00:28:31,790
+other hardware specs
+are, they're all the same   
+
+441
+00:28:31,790 --> 00:28:35,633
+between the paid version and free version.
+   
+
+442
+00:28:37,020 --> 00:28:40,510
+One particular reason that I
+like about GitHub Action is,   
+
+443
+00:28:40,510 --> 00:28:46,207
+I can easily overview how the
+process goes in a project,   
+
+444
+00:28:46,280 --> 00:28:50,880
+meaning GitHub Action illustrates
+the high level workflow.   
+
+445
+00:28:50,880 --> 00:28:55,139
+And it's very important
+when you analyze an open source project.   
+
+446
+00:28:57,580 --> 00:29:00,310
+I will probably say
+this is the first place   
+
+447
+00:29:00,310 --> 00:29:03,390
+that I'll visit for
+any open source project   
+
+448
+00:29:03,390 --> 00:29:06,521
+if they use GitHub Action.
+   
+
+449
+00:29:06,521 --> 00:29:10,500
+However, one of the
+drawbacks is the difficulties   
+
+450
+00:29:10,500 --> 00:29:12,660
+during the GitHub Action testament,
+   
+
+451
+00:29:12,660 --> 00:29:16,087
+you get to find out a way
+to test Github Action locally.   
+
+452
+00:29:16,450 --> 00:29:19,900
+Otherwise, you'll probably
+end up with something   
+
+453
+00:29:19,900 --> 00:29:24,900
+like 150 commits from this
+slide, as you can see.   
+
+454
+00:29:27,400 --> 00:29:32,230
+100 out of 150 reflects
+the number of changes   
+
+455
+00:29:32,230 --> 00:29:36,060
+that are needed to experiment
+with a GitHub Action.   
+
+456
+00:29:36,060 --> 00:29:40,740
+Luckily, recently I have found
+there are a couple of ways   
+
+457
+00:29:40,740 --> 00:29:43,500
+that you can test in a local environment.
+   
+
+458
+00:29:43,500 --> 00:29:46,300
+One way is to pull GitHub Action event
+   
+
+459
+00:29:46,300 --> 00:29:49,400
+from their local machine, and do something
+   
+
+460
+00:29:49,400 --> 00:29:52,490
+within your local machine
+based on the event.   
+
+461
+00:29:52,490 --> 00:29:55,390
+That is the recommended way to do
+   
+
+462
+00:29:55,390 --> 00:29:58,220
+and you can find the
+information how to do it   
+
+463
+00:29:58,220 --> 00:30:02,470
+from the GitHub Action official document.
+   
+
+464
+00:30:02,470 --> 00:30:06,370
+The other way is to
+leverage "nektos/act" project   
+
+465
+00:30:06,370 --> 00:30:08,330
+which should lest you test
+   
+
+466
+00:30:09,215 --> 00:30:11,415
+the whole GitHub Action
+environment locally.   
+
+467
+00:30:12,250 --> 00:30:14,380
+So please, for further information,
+   
+
+468
+00:30:14,380 --> 00:30:18,290
+check out the official document
+on "nektos/act" project homepage.   
+
+469
+00:30:21,720 --> 00:30:26,600
+This slide shows the definition of
+the GitHub Action workflow for this project.   
+
+470
+00:30:27,470 --> 00:30:30,620
+Like I said, just by reading each line,
+   
+
+471
+00:30:30,620 --> 00:30:33,040
+you'll understand the high level overview
+   
+
+472
+00:30:33,040 --> 00:30:35,460
+about how this project works.
+   
+
+473
+00:30:35,460 --> 00:30:38,403
+For instance, let's look
+at the left hand side.   
+
+474
+00:30:39,725 --> 00:30:44,205
+GitHub Action is scheduled
+to be run every Friday at 3:00 AM,   
+
+475
+00:30:44,205 --> 00:30:46,733
+which is 12:00 pm in South Korea.
+   
+
+476
+00:30:47,650 --> 00:30:50,040
+Is just a simple cron job.
+   
+
+477
+00:30:50,040 --> 00:30:51,790
+If you're familiar with cron job
+   
+
+478
+00:30:51,790 --> 00:30:56,113
+from the Linux operating
+system, is super easy.   
+
+479
+00:30:57,040 --> 00:31:02,740
+Let me go through one red line
+by one on the right hand side.   
+
+480
+00:31:02,950 --> 00:31:05,050
+In order to pull encrypted information
+   
+
+481
+00:31:05,050 --> 00:31:10,050
+from .M.GPG, it should
+be decrypted first, right?   
+
+482
+00:31:10,490 --> 00:31:12,440
+And some environment variables
+   
+
+483
+00:31:12,440 --> 00:31:17,012
+are set to be used as
+arguments of the main program.   
+
+484
+00:31:17,012 --> 00:31:21,060
+That's the second red line.
+   
+
+485
+00:31:21,060 --> 00:31:23,390
+And program gets run and the email
+   
+
+486
+00:31:23,390 --> 00:31:27,300
+should be successfully sent
+by the end of this process.   
+
+487
+00:31:27,300 --> 00:31:30,060
+And the access token
+should be refreshed by now,   
+
+488
+00:31:30,060 --> 00:31:34,860
+with a new one for the next one more week.
+   
+
+489
+00:31:34,860 --> 00:31:38,750
+The refreshed token gets
+written down to the .env   
+
+490
+00:31:38,750 --> 00:31:43,000
+and .env will be encrypted again via GPG.
+   
+
+491
+00:31:43,000 --> 00:31:45,580
+Since .env gpg is updated,
+   
+
+492
+00:31:45,580 --> 00:31:48,320
+it should be pushed to the master branch.
+   
+
+493
+00:31:48,320 --> 00:31:52,101
+So the update information will persist
+for the next one more week.   
+
+494
+00:31:52,680 --> 00:31:54,550
+It is very straightforward
+   
+
+495
+00:31:54,550 --> 00:31:57,713
+and you'll get the sense how
+the program really works.   
+
+496
+00:32:01,510 --> 00:32:04,550
+We have explored how program works
+   
+
+497
+00:32:04,550 --> 00:32:06,790
+but you got to consider the privacy issue
+   
+
+498
+00:32:06,790 --> 00:32:09,560
+before working on the actual project.
+   
+
+499
+00:32:09,560 --> 00:32:13,338
+If your app is going to
+violate some privacy issues,   
+
+500
+00:32:13,338 --> 00:32:15,800
+then your application will be useless
+   
+
+501
+00:32:15,800 --> 00:32:19,280
+after spending a whole month to build one.
+   
+
+502
+00:32:19,280 --> 00:32:22,177
+This is all about ownership of each post
+   
+
+503
+00:32:22,177 --> 00:32:25,610
+and is like a question,
+can they be exposure   
+
+504
+00:32:25,610 --> 00:32:28,400
+without any permission or something?
+   
+
+505
+00:32:28,400 --> 00:32:31,630
+Fortunately, everything publicly posted
+   
+
+506
+00:32:31,630 --> 00:32:34,890
+can be shared without any
+permission in Facebook,   
+
+507
+00:32:34,890 --> 00:32:36,183
+that is the policy.
+   
+
+508
+00:32:37,080 --> 00:32:39,390
+This is not a great thing to know about
+   
+
+509
+00:32:39,390 --> 00:32:42,270
+as an individual Facebook user,
+   
+
+510
+00:32:42,270 --> 00:32:46,163
+but it may be nice to
+know as an app developer.   
+
+511
+00:32:47,620 --> 00:32:49,860
+TensorFlow Korea is a public group
+   
+
+512
+00:32:49,860 --> 00:32:53,350
+and everything in it is also public,
+   
+
+513
+00:32:53,350 --> 00:32:55,900
+so there were no problems at all
+   
+
+514
+00:32:55,900 --> 00:32:58,063
+to launch this newsletter service.
+   
+
+515
+00:32:59,340 --> 00:33:02,110
+I have found the supporting documents
+   
+
+516
+00:33:02,110 --> 00:33:05,740
+through Facebook's Help
+page and also I have found   
+
+517
+00:33:05,740 --> 00:33:09,390
+some attorneys from the
+US have confirmed it.   
+
+518
+00:33:09,390 --> 00:33:13,564
+So please check the privacy issue
+before diving into the implementation   
+
+519
+00:33:13,780 --> 00:33:16,223
+unless your group is based on Facebook.
+   
+
+520
+00:33:18,780 --> 00:33:20,640
+I'll skip over this slide a bit,
+   
+
+521
+00:33:20,640 --> 00:33:26,093
+but it shows how to port this project
+for your own community.   
+
+522
+00:33:26,380 --> 00:33:29,523
+So it looks like there are
+too many things to configure.   
+
+523
+00:33:31,100 --> 00:33:34,270
+But actually, the only things
+that should be modified   
+
+524
+00:33:34,270 --> 00:33:37,290
+are information about your Facebook group.
+   
+
+525
+00:33:37,290 --> 00:33:39,260
+You cannot avoid from this,
+   
+
+526
+00:33:39,260 --> 00:33:42,930
+no matter what you're going
+to build for Facebook,   
+
+527
+00:33:42,930 --> 00:33:44,993
+is a total necessary step.
+   
+
+528
+00:33:45,960 --> 00:33:50,930
+Even though, you're going to
+build some other application   
+
+529
+00:33:50,930 --> 00:33:55,810
+for Facebook other than
+this newsletter service.   
+
+530
+00:33:55,810 --> 00:34:00,810
+Like Facebook group ID, Facebook
+app ID, application secret   
+
+531
+00:34:01,760 --> 00:34:04,770
+also you should include
+SMTP related information   
+
+532
+00:34:04,770 --> 00:34:07,137
+to send email to somebody.
+   
+
+533
+00:34:07,137 --> 00:34:11,032
+You don't really need to
+modify the source code at all though,   
+
+534
+00:34:11,032 --> 00:34:14,330
+if you don't wanna make any change,
+   
+
+535
+00:34:14,330 --> 00:34:17,914
+like email design or parsing logic.
+   
+
+536
+00:34:17,914 --> 00:34:21,360
+However, if your group
+is not based on Facebook,   
+
+537
+00:34:21,360 --> 00:34:23,790
+you should probably
+modify the parsing logic,   
+
+538
+00:34:23,790 --> 00:34:26,400
+requests and logics and et cetera.
+   
+
+539
+00:34:26,400 --> 00:34:28,580
+Also, you've got to find out the way
+   
+
+540
+00:34:28,580 --> 00:34:31,950
+you can request, post the
+information to the server.   
+
+541
+00:34:31,950 --> 00:34:34,310
+Maybe there should be some APIs
+   
+
+542
+00:34:34,310 --> 00:34:38,948
+or you could build your own web crawler.
+   
+
+543
+00:34:38,948 --> 00:34:41,193
+I'll recommend to do it so though.
+   
+
+544
+00:34:45,960 --> 00:34:50,153
+So this project has been on service
+for the last two months or so.   
+
+545
+00:34:50,310 --> 00:34:55,020
+We have reached more than
+500 subscribers in a month,   
+
+546
+00:34:55,020 --> 00:34:57,940
+and I think yes
+ it is still not small number,   
+
+547
+00:34:57,940 --> 00:35:00,559
+but not bad as the first attempt.
+   
+
+548
+00:35:00,559 --> 00:35:06,497
+I assume many members still not even
+aware of existence of this service.   
+
+549
+00:35:07,090 --> 00:35:09,520
+I am planning to improve
+newsletter service   
+
+550
+00:35:09,520 --> 00:35:12,970
+by applying deep learning in near future.
+   
+
+551
+00:35:12,970 --> 00:35:15,970
+This pipeline shows a simple MLOps
+   
+
+552
+00:35:15,970 --> 00:35:19,390
+which is like DevOps for
+machine learning project.   
+
+553
+00:35:19,390 --> 00:35:24,290
+The core idea is to classify
+each post into categories   
+
+554
+00:35:24,290 --> 00:35:29,000
+like research, news,
+Q&A, tools and et cetera,   
+
+555
+00:35:29,000 --> 00:35:32,033
+by leveraging NLP model like BERT.
+   
+
+556
+00:35:33,020 --> 00:35:37,688
+It is to avoid some post
+with not much helpful information   
+
+557
+00:35:37,688 --> 00:35:39,645
+to be included in the newsletter.
+   
+
+558
+00:35:40,227 --> 00:35:43,860
+Because the current system grab everything
+   
+
+559
+00:35:43,860 --> 00:35:47,999
+without knowing what categories they are,
+   
+
+560
+00:35:47,999 --> 00:35:52,018
+so for example, 
+some events like sharing out   
+
+561
+00:35:52,018 --> 00:35:57,509
+newly published books are
+sometimes included as the top one rank.   
+
+562
+00:35:58,400 --> 00:36:02,282
+I think this kind of information
+is not real important to anyone   
+
+563
+00:36:02,282 --> 00:36:05,083
+if the event has been closed already.
+   
+
+564
+00:36:07,210 --> 00:36:10,410
+Leveraging NLP model is a trivial job,
+   
+
+565
+00:36:10,410 --> 00:36:15,290
+I can just make and deploy
+one useless model easily.   
+
+566
+00:36:15,290 --> 00:36:18,506
+However, since the characteristics of post
+   
+
+567
+00:36:18,506 --> 00:36:22,450
+on a community gets evolved
+and changed over time,   
+
+568
+00:36:22,450 --> 00:36:25,949
+the model should be retrained
+to avoid to be outdated.   
+
+569
+00:36:26,990 --> 00:36:30,410
+So DVC and CML are simple,
+   
+
+570
+00:36:30,410 --> 00:36:33,403
+but nice projects to tackle this problem.
+   
+
+571
+00:36:34,960 --> 00:36:38,170
+With DVC, which stands
+for Data Version Control,   
+
+572
+00:36:38,170 --> 00:36:40,430
+you can manage versions of data.
+   
+
+573
+00:36:40,430 --> 00:36:43,930
+But data here doesn't mean
+the training data only,   
+
+574
+00:36:43,930 --> 00:36:46,860
+but it also can support the management
+   
+
+575
+00:36:46,860 --> 00:36:49,210
+of versioning deep learning model.
+   
+
+576
+00:36:49,210 --> 00:36:51,090
+Actually, it can manage everything
+   
+
+577
+00:36:51,090 --> 00:36:55,393
+that is too large to be
+stored in GitHub repository.   
+
+578
+00:36:56,820 --> 00:37:00,090
+It manages the version of
+file which is actually stored   
+
+579
+00:37:00,090 --> 00:37:03,150
+in Google Drive or storage platform,
+   
+
+580
+00:37:03,150 --> 00:37:06,850
+you will also need to keep meta information
+   
+
+581
+00:37:06,850 --> 00:37:08,180
+and a GitHub repository.
+   
+
+582
+00:37:08,180 --> 00:37:12,672
+That's the only requirement to achieve 
+this data version controlling stuff.   
+
+583
+00:37:13,470 --> 00:37:15,960
+CML is continuous machine learning,
+   
+
+584
+00:37:15,960 --> 00:37:19,270
+is not thing but to
+report training results   
+
+585
+00:37:19,270 --> 00:37:22,250
+with a set of rich information like graph
+   
+
+586
+00:37:22,250 --> 00:37:25,460
+as a GitHub PRs command.
+   
+
+587
+00:37:25,460 --> 00:37:30,290
+Based on this report, we can
+decide whether to merge the PR.   
+
+588
+00:37:30,290 --> 00:37:34,350
+So when new data arrives, it
+will trigger GitHub Action   
+
+589
+00:37:34,350 --> 00:37:36,790
+to train a model on a data.
+   
+
+590
+00:37:36,790 --> 00:37:40,340
+After training is done,
+the reports will be posted   
+
+591
+00:37:40,340 --> 00:37:44,310
+as a GitHub PRs command via CML.
+   
+
+592
+00:37:44,310 --> 00:37:47,260
+By looking at it, we can
+decide to merge the PR,   
+
+593
+00:37:47,260 --> 00:37:50,890
+and when it is merged, it'll
+trigger another GitHub Action   
+
+594
+00:37:50,890 --> 00:37:55,980
+to create new endpoint
+for the most recently pretrained model.   
+
+595
+00:37:57,370 --> 00:38:00,480
+The reason to make
+everything work automatic is,   
+
+596
+00:38:00,480 --> 00:38:04,746
+there is a chance that I 'll
+quit the administrator position   
+
+597
+00:38:04,746 --> 00:38:07,260
+at TensorFlow Korea
+community at some point.   
+
+598
+00:38:07,260 --> 00:38:11,162
+When it happens, I won't
+hand this project over to someone else,   
+
+599
+00:38:11,162 --> 00:38:17,725
+and let him or her to manage
+this project with a minimal effort.   
+
+600
+00:38:18,750 --> 00:38:22,740
+Or hopefully no one should
+really look much in details   
+
+601
+00:38:22,740 --> 00:38:25,650
+or not a human being involved at all.
+   
+
+602
+00:38:25,650 --> 00:38:28,630
+If you find yourself being
+interested in this project,   
+
+603
+00:38:28,630 --> 00:38:31,990
+please find it by searching my ID,
+   
+
+604
+00:38:31,990 --> 00:38:33,773
+deep dash diver in GitHub.
+   
+
+605
+00:38:35,358 --> 00:38:37,995
+There are lots of contribution points.
+   
+
+606
+00:38:37,995 --> 00:38:42,687
+And I need help, and thank you.
+   
+
+607
+00:38:44,635 --> 00:38:44,894
+Thanks for listening,
+   
+
+608
+00:38:44,894 --> 00:38:48,978
+I hope this presentation
+has given you a valuable information.   
+
+609
+00:38:50,431 --> 00:38:52,063
+Thank you for listening a lot.
+   
+
+610
+00:38:53,150 --> 00:38:53,983
+See you.
+
+

@@ -1,0 +1,1563 @@
+1
+00:00:10.130 --> 00:00:13.596
+This is James.
+You can also call me Ing Wei 
+
+2
+00:00:13.596 --> 00:00:21.529
+The title of my session is Honey,
+Python inside Android is under control! 
+
+3
+00:00:21.530 --> 00:00:26.363
+First of all, let me introduce myself.
+ 
+
+4
+00:00:26.363 --> 00:00:30.096
+MY, of course, you know
+that my name is James 
+
+5
+00:00:30.096 --> 00:00:34.096
+and I am the chair
+for PyCon Malaysia 2019. 
+
+6
+00:00:34.096 --> 00:00:38.096
+I'm also the co-chair
+for PyCon Malaysia 2018. 
+
+7
+00:00:38.096 --> 00:00:41.649
+And also,
+I'm a senior automation engineer 
+
+8
+00:00:41.649 --> 00:00:45.863
+in one of the leading
+industrial insurance company, 
+
+9
+00:00:45.863 --> 00:00:52.996
+where my daily job is to deal
+with the network automations 
+
+10
+00:00:52.996 --> 00:00:56.996
+and discovery for network
+devices in the company. 
+
+11
+00:00:56.996 --> 00:01:00.629
+Just a small information
+about PyCon Malaysia, 
+
+12
+00:01:00.630 --> 00:01:06.796
+currently PyCon Malaysia has about 100--
+ 
+
+13
+00:01:06.796 --> 00:01:14.429
+size of 100 people of the community, so we
+are quite a small community at this time. 
+
+14
+00:01:14.430 --> 00:01:19.363
+But right now, our growth rate has
+quite steadily increased. 
+
+15
+00:01:19.363 --> 00:01:26.396
+We have also hosted
+PyCon APAC 2020 online. 
+
+16
+00:01:26.396 --> 00:01:30.761
+Even though the hosting
+is quite difficult, 
+
+17
+00:01:30.761 --> 00:01:34.553
+but I think at the time that
+this has been recorded, 
+
+18
+00:01:34.553 --> 00:01:39.362
+I believe that we have hosted
+a very successful event. 
+
+19
+00:01:39.363 --> 00:01:43.763
+Now, before we talk about the ideas
+of the Android phone, 
+
+20
+00:01:43.763 --> 00:01:47.963
+let us just look at how things
+have been developed over 20 years. 
+
+21
+00:01:47.963 --> 00:01:52.063
+On the left, it was the computer
+that I had when I was 15 years old. 
+
+22
+00:01:52.063 --> 00:01:59.696
+It was for 486-DX4 with the CPU speed
+about 100 MHz. The RAM is 8MB. 
+
+23
+00:01:59.696 --> 00:02:04.696
+And if you look at the size and the OS
+has been low there compared to today, 
+
+24
+00:02:04.696 --> 00:02:10.629
+certainly you might say that this is very sad
+and it can't do much during the time. 
+
+25
+00:02:10.630 --> 00:02:15.930
+But that was the computer that I had
+during the time when I was 15 years old, 
+
+26
+00:02:15.930 --> 00:02:18.830
+compared to the current
+phone that I have right now. 
+
+27
+00:02:18.830 --> 00:02:23.663
+Current phone that I have right now,
+I have the RAM which is more than 2GB 
+
+28
+00:02:23.663 --> 00:02:28.696
+which is about 8GB and the hard disk
+size is about more than 8GB. 
+
+29
+00:02:28.696 --> 00:02:33.229
+probably we have more than 16,
+and the size compared to it 
+
+30
+00:02:33.230 --> 00:02:36.030
+is about a pocket size. Okay?
+ 
+
+31
+00:02:36.030 --> 00:02:43.263
+Even though it runs on the Android or iOS,
+but the OS that owns by our phone 
+
+32
+00:02:43.263 --> 00:02:49.296
+runs much more powerful than what I
+had 15 years ago, which is DOS 6.22. 
+
+33
+00:02:49.296 --> 00:02:54.896
+because the OS nowadays is a 64-bit
+of the operating system. 
+
+34
+00:02:54.896 --> 00:02:59.762
+Meanwhile, 20 years back, I have
+only 16-bit of operating system, 
+
+35
+00:02:59.763 --> 00:03:02.129
+which is DOS 6.22.
+ 
+
+36
+00:03:02.130 --> 00:03:07.030
+So, our Android phone nowadays
+is not just a phone. 
+
+37
+00:03:07.030 --> 00:03:11.030
+It is also a computer
+and has a lot of sensors. 
+
+38
+00:03:11.030 --> 00:03:16.130
+And these sensors help us to track a
+lot of things, for example, our locations, 
+
+39
+00:03:16.130 --> 00:03:22.830
+the SLR meters. And then some of that
+also equates with NFC 
+
+40
+00:03:22.830 --> 00:03:28.563
+and a lot, a lot of different kinds of
+apps that act as a tracker to track 
+
+41
+00:03:28.563 --> 00:03:32.629
+not just our location, also our
+health and everything. 
+
+42
+00:03:32.630 --> 00:03:37.363
+But even though this Android
+phone is very powerful nowadays, 
+
+43
+00:03:37.363 --> 00:03:42.496
+we find that the phones will be
+degraded on average of two years, 
+
+44
+00:03:42.496 --> 00:03:45.362
+meaning that we need to change
+the phone over two years. 
+
+45
+00:03:45.363 --> 00:03:48.429
+So, if you look at the lifecycle
+of your phone, 
+
+46
+00:03:48.430 --> 00:03:51.563
+you find that every two years
+you're going to have a new phone. 
+
+47
+00:03:51.563 --> 00:03:55.563
+So, what are we going to do
+with the old phones then? 
+
+48
+00:03:55.563 --> 00:04:04.294
+So, the possibility of the old phones will
+be either we throw it away after two years. 
+
+49
+00:04:04.294 --> 00:04:09.296
+Or probably we'll just
+keep it somewhere that we no longer see. 
+
+50
+00:04:09.296 --> 00:04:12.896
+Or probably will just use it
+for the sake of other apps. 
+
+51
+00:04:12.896 --> 00:04:17.262
+Like I heard about there are some
+people who use a particular GPS apps 
+
+52
+00:04:17.263 --> 00:04:19.629
+on the old Android phone.
+ 
+
+53
+00:04:19.630 --> 00:04:24.596
+Or perhaps we'll give the phones
+to our parents, who is not quite tech-- 
+
+54
+00:04:24.596 --> 00:04:28.596
+who is not quite good in using the tech.
+ 
+
+55
+00:04:28.596 --> 00:04:34.729
+And probably the last option will be what
+as developers or programmers we’ll say, 
+
+56
+00:04:34.730 --> 00:04:37.896
+Can we program it? Okay?
+ 
+
+57
+00:04:37.896 --> 00:04:40.629
+So, in this case, when we talk
+about programming, 
+
+58
+00:04:40.630 --> 00:04:46.163
+of course, we have a lot of options
+like we do have Java, we do have Kotlin 
+
+59
+00:04:46.163 --> 00:04:48.629
+and not to mention there are
+some of the latest software 
+
+60
+00:04:48.630 --> 00:04:53.130
+which is like Flutter I know that we
+can definitely program that. 
+
+61
+00:04:53.130 --> 00:04:57.750
+But somehow having a program on
+the Android phone is not straightforward. 
+
+62
+00:04:57.750 --> 00:05:01.830
+And to me,
+all these languages are difficult to learn 
+
+63
+00:05:01.830 --> 00:05:07.163
+in the sense that it has quite a big
+challenge in terms of the learning steps. 
+
+64
+00:05:07.340 --> 00:05:13.740
+So, this is what this talk
+about, because what I'm thinking doing 
+
+65
+00:05:13.740 --> 00:05:19.300
+in this project over here, is try
+to run Python on Android phone. 
+
+66
+00:05:19.340 --> 00:05:23.620
+And what I got as a feedback
+of that is, people will say, 
+
+67
+00:05:23.620 --> 00:05:26.940
+Well, you definitely can run the Python
+on Android phone, 
+
+68
+00:05:26.940 --> 00:05:30.940
+but are you able
+to interact with the sensors? 
+
+69
+00:05:30.940 --> 00:05:35.500
+Meaning that let's say if we want to
+use a location, 
+
+70
+00:05:35.500 --> 00:05:43.900
+are we able to attract or receive
+the GPS location from the Android phone. 
+
+71
+00:05:43.940 --> 00:05:46.460
+So, that is the question that I have.
+ 
+
+72
+00:05:46.460 --> 00:05:49.740
+Fortunately, I will say yes to my project
+ 
+
+73
+00:05:49.740 --> 00:05:56.980
+and the Python running on the Android can
+do far more things that we can think of. 
+
+74
+00:05:56.980 --> 00:05:59.700
+So, this is what the talks is about
+ 
+
+75
+00:05:59.740 --> 00:06:03.740
+and also this is also the motivation
+of this project over here. 
+
+76
+00:06:03.740 --> 00:06:07.260
+Now, what started the motivation
+of this project is-- 
+
+77
+00:06:07.260 --> 00:06:11.900
+I still like my old phones, which is
+having a very large RAM, 
+
+78
+00:06:11.940 --> 00:06:19.460
+which is about 4 GB of RAM even
+though I have used it for two years, 
+
+79
+00:06:19.460 --> 00:06:24.860
+which you know, in hours, in what we
+mentioned just now it’s kind of old, 
+
+80
+00:06:24.860 --> 00:06:26.260
+but it's still running fast.
+ 
+
+81
+00:06:26.260 --> 00:06:30.260
+So, I would like to keep this phone
+and learn how to write a Python 
+
+82
+00:06:30.260 --> 00:06:33.220
+programming on this phone over that.
+ 
+
+83
+00:06:33.220 --> 00:06:36.180
+So, I decided to run a project called--
+ 
+
+84
+00:06:36.180 --> 00:06:40.900
+project for this which-- I would
+like to run simple barcode scanner. 
+
+85
+00:06:40.940 --> 00:06:46.060
+Because barcode scanner seems to be
+quite expensive back in four years’ time. 
+
+86
+00:06:46.060 --> 00:06:50.700
+So, I decided to say, okay,
+is it possible for us to just 
+
+87
+00:06:50.700 --> 00:06:56.180
+run a very simple Python code that
+allows me to interact with the camera 
+
+88
+00:06:56.180 --> 00:07:01.020
+on the Android phone so that it
+can be used as a barcode scanner. 
+
+89
+00:07:01.020 --> 00:07:08.100
+So, I decided to look for Google. Okay?
+And this is what I got from Google. 
+
+90
+00:07:08.100 --> 00:07:12.060
+So, turns out Google is always
+your best friend. So, do utilize that. 
+
+91
+00:07:12.060 --> 00:07:16.100
+So, the first search that I have
+over that is Android barcode scanner 
+
+92
+00:07:16.100 --> 00:07:19.900
+in six lines of Python code.
+That turns out to be interesting. 
+
+93
+00:07:19.940 --> 00:07:23.860
+And digging further, we find that the code
+is really easy. 
+
+94
+00:07:23.860 --> 00:07:28.340
+What I need to do is I just need to import
+the library, import for Android, 
+
+95
+00:07:28.340 --> 00:07:33.140
+and I just need to call the method.
+Then I can scan the book, 
+
+96
+00:07:33.140 --> 00:07:38.100
+scan the barcode of the book, and I
+can get the information of the book. 
+
+97
+00:07:38.100 --> 00:07:44.620
+So, this project has helped me a lot
+because I have quite a number of books, 
+
+98
+00:07:44.620 --> 00:07:47.100
+about 500 books at home.
+ 
+
+99
+00:07:47.100 --> 00:07:54.180
+So, cataloging the books has always
+been a very painful job for me. 
+
+100
+00:07:54.180 --> 00:07:58.620
+So, with this barcode
+scanner using the Python, 
+
+101
+00:07:58.620 --> 00:08:05.340
+it will definitely help me to
+catalog my books easily without going 
+
+102
+00:08:05.340 --> 00:08:09.180
+to enter the information
+about the books one by one. 
+
+103
+00:08:09.180 --> 00:08:16.300
+So, question over that, yes, can we
+actually run or access 
+
+104
+00:08:16.300 --> 00:08:20.300
+the sensors on the
+phone using Python? 
+
+105
+00:08:20.340 --> 00:08:22.660
+The answer is yes.
+ 
+
+106
+00:08:22.660 --> 00:08:25.980
+But how can we do that?
+ 
+
+107
+00:08:25.980 --> 00:08:31.300
+So, after that project, after that
+project, I decided to dig further 
+
+108
+00:08:31.300 --> 00:08:38.500
+and see what has offer in Python
+on the Android phone. 
+
+109
+00:08:38.500 --> 00:08:39.980
+Okay?
+ 
+
+110
+00:08:39.980 --> 00:08:45.980
+What I found out from that is, of course,
+a few Python apps have been written, 
+
+111
+00:08:45.980 --> 00:08:51.500
+but most of it can only run Python
+interpreter, meaning that there's not much 
+
+112
+00:08:51.540 --> 00:08:58.180
+Python app that can access
+the sensors on the phone. 
+
+113
+00:08:58.180 --> 00:09:01.940
+So, after a very long search,
+ 
+
+114
+00:09:01.940 --> 00:09:06.300
+I found out that there's one
+app that allows me to do that. 
+
+115
+00:09:06.340 --> 00:09:07.700
+Okay?
+ 
+
+116
+00:09:07.700 --> 00:09:13.780
+That will be the app that I'll review
+at the end of the slide from that. 
+
+117
+00:09:13.780 --> 00:09:19.460
+So, the first thing that I would like to
+explore further on the Python of that is, 
+
+118
+00:09:19.460 --> 00:09:23.100
+okay, since every phone has
+an accelerometer, 
+
+119
+00:09:23.140 --> 00:09:27.140
+meaning that the sensors
+that measures the gravity, 
+
+120
+00:09:27.140 --> 00:09:32.900
+so this is a very simple code that I write
+for the Python on Android. 
+
+121
+00:09:32.900 --> 00:09:39.420
+First thing, just get the gravity so I'll
+record the time and after 120 seconds, 
+
+122
+00:09:39.420 --> 00:09:43.540
+which is two minutes later,
+I'll try to read the values of that. 
+
+123
+00:09:43.540 --> 00:09:47.300
+So, if you look at the code
+carefully, that actually reads 
+
+124
+00:09:47.300 --> 00:09:52.620
+the gravitational field
+from three different axes, X, Y, and Z, 
+
+125
+00:09:52.620 --> 00:09:57.940
+and then I'll do an average of that.
+So, that will give me the value of the G. 
+
+126
+00:09:57.940 --> 00:10:04.580
+So, it is a very simple app that I
+can write using Python on Android, 
+
+127
+00:10:04.580 --> 00:10:09.940
+but that does not stop me to go
+further because I would like to know 
+
+128
+00:10:09.940 --> 00:10:14.100
+more about what happens at
+the back end of this Python on Android. 
+
+129
+00:10:14.140 --> 00:10:17.140
+So, I'll begin to look at that.
+ 
+
+130
+00:10:17.140 --> 00:10:19.460
+A few questions over here.
+ 
+
+131
+00:10:19.460 --> 00:10:22.220
+How does the Python
+access an Android API? 
+
+132
+00:10:22.900 --> 00:10:26.620
+How accurate is the data
+that returns from the API? 
+
+133
+00:10:26.620 --> 00:10:30.060
+And throughout the diggings
+of these questions over there, 
+
+134
+00:10:30.060 --> 00:10:33.740
+there was two files that I found out
+from their repository, 
+
+135
+00:10:33.740 --> 00:10:40.660
+which is one, androidhelper.py and
+another one is android.py. 
+
+136
+00:10:40.660 --> 00:10:47.020
+Okay. This is a small snippet
+of the code for androidhelper.py. 
+
+137
+00:10:47.020 --> 00:10:51.020
+So, they have different
+kinds of methods over that 
+
+138
+00:10:51.020 --> 00:10:55.740
+and of course, we would like to focus on
+one method that we are very familiar with, 
+
+139
+00:10:55.740 --> 00:10:57.820
+which is scanBarcode.
+ 
+
+140
+00:10:57.820 --> 00:11:01.820
+Throughout the reading
+of the code for scanBarcode, 
+
+141
+00:11:01.820 --> 00:11:07.140
+we'll realize that there's one part
+of a very interesting method over that, 
+
+142
+00:11:07.140 --> 00:11:11.740
+which is a private method in
+this context, which is rpc scanBarcode. 
+
+143
+00:11:11.740 --> 00:11:15.500
+So, does it mean that Python code
+ 
+
+144
+00:11:15.500 --> 00:11:19.500
+actually interacts
+with Android API via rpc? 
+
+145
+00:11:19.500 --> 00:11:23.500
+Okay, that's the first question.
+And the second question is, 
+
+146
+00:11:23.500 --> 00:11:28.660
+if rpc has been used,
+how does it interact 
+
+147
+00:11:28.660 --> 00:11:34.980
+with the intent or Android API?
+ 
+
+148
+00:11:34.980 --> 00:11:39.940
+So, since we mentioned that, the second
+file that we look at, which is android.py, 
+
+149
+00:11:39.940 --> 00:11:43.900
+then we'll begin to look
+at that for android.py. 
+
+150
+00:11:43.900 --> 00:11:50.740
+So, for the structures of android.py,
+the class android is very simple. 
+
+151
+00:11:50.740 --> 00:11:57.980
+First thing, you initiate the android
+object or instance in this case, 
+
+152
+00:11:57.980 --> 00:12:01.980
+and then your phones are
+self-socket connection. 
+
+153
+00:12:01.980 --> 00:12:08.620
+So this socket connection
+will connect to its own local host 
+
+154
+00:12:08.620 --> 00:12:16.140
+and then it'll you use the JSON data
+to write the data to the Android API 
+
+155
+00:12:16.140 --> 00:12:22.060
+via the rpc method. So, if you look
+at the rpc method of that, you find that 
+
+156
+00:12:22.060 --> 00:12:29.860
+there's a change--
+that the data is being 
+
+157
+00:12:29.860 --> 00:12:37.700
+is being changed to JSON format and it
+will send the data to the Android API 
+
+158
+00:12:37.700 --> 00:12:40.900
+via the socket easily.
+ 
+
+159
+00:12:40.900 --> 00:12:44.100
+So once the socket has
+received and processed the data, 
+
+160
+00:12:44.140 --> 00:12:48.860
+it'll return the result object over here.
+ 
+
+161
+00:12:48.860 --> 00:12:53.860
+So, it is quite simple for us to know how
+things work at the back end of that. 
+
+162
+00:12:53.860 --> 00:12:58.300
+So, as a summary-- oh, sorry, not
+summary here. 
+
+163
+00:12:58.300 --> 00:13:00.380
+On the Android end,
+ 
+
+164
+00:13:00.380 --> 00:13:05.620
+what happens is Android will receive
+it via the rpc again, and it'll process it 
+
+165
+00:13:05.620 --> 00:13:11.180
+according to the code’s intent and returns
+the result as what we have seen 
+
+166
+00:13:11.180 --> 00:13:15.180
+over here as a return of the result.
+ 
+
+167
+00:13:15.180 --> 00:13:18.900
+So, to summarize that,
+what we see over there is, 
+
+168
+00:13:18.900 --> 00:13:22.100
+when we write a python
+script over there, first thing, we have 
+
+169
+00:13:22.140 --> 00:13:26.740
+to import the android.helper once
+this android.helper has been called, 
+
+170
+00:13:26.740 --> 00:13:30.740
+it will send a request to the Android.
+ 
+
+171
+00:13:30.740 --> 00:13:38.220
+So android.py over here will process
+your request and-- process the request 
+
+172
+00:13:38.220 --> 00:13:45.020
+and send the JSON data to the intent
+via the localhost socket. 
+
+173
+00:13:45.020 --> 00:13:49.740
+The Android intent receive the request
+then you will process and it'll receive 
+
+174
+00:13:49.740 --> 00:13:53.740
+the data from the designated sensors.
+ 
+
+175
+00:13:53.740 --> 00:13:59.540
+For example, in this case where android.py
+receive a request for scanBarcode, 
+
+176
+00:13:59.540 --> 00:14:06.980
+it will process and send it via
+the rpc and then opens up the camera. 
+
+177
+00:14:06.980 --> 00:14:11.740
+The camera will scan the barcode
+and process the data from the barcode 
+
+178
+00:14:11.740 --> 00:14:17.700
+and send the data back to Android
+and then to the Android and back 
+
+179
+00:14:17.740 --> 00:14:22.940
+to the androidhelper and hence our screen
+over there are able to read the data 
+
+180
+00:14:22.940 --> 00:14:24.180
+from the barcode.
+ 
+
+181
+00:14:24.180 --> 00:14:27.500
+This is something that is quite
+straightforward without that, 
+
+182
+00:14:27.540 --> 00:14:33.940
+and looking at it, the API itself, it
+is very elegant in a way that it is simple 
+
+183
+00:14:33.940 --> 00:14:37.340
+and it does the job that it
+needs to be done. 
+
+184
+00:14:37.340 --> 00:14:41.340
+So, these are the APIs that currently
+can be accessed, which is first thing, 
+
+185
+00:14:41.340 --> 00:14:45.340
+as I keep mentioning, Accelerometer,
+and we do have a Gyroscope. 
+
+186
+00:14:45.340 --> 00:14:50.940
+In terms of in this word, some
+of you prefer to call it orientation 
+
+187
+00:14:50.940 --> 00:14:56.020
+and we do have Location, and we
+can access Wi-Fi, Bluetooth, SMS, 
+
+188
+00:14:56.020 --> 00:14:57.540
+phone calls, and everything.
+ 
+
+189
+00:14:57.540 --> 00:15:02.020
+However, there's few versions that
+you can find for this Python on Android. 
+
+190
+00:15:02.020 --> 00:15:06.580
+First thing, if you are downloading
+from the Play Store, you might have 
+
+191
+00:15:06.580 --> 00:15:11.980
+a limited privilege, but if you download
+it from GitHub, then you have more access 
+
+192
+00:15:11.980 --> 00:15:16.220
+to different kinds of the intent
+or sensors on the phone. 
+
+193
+00:15:16.220 --> 00:15:20.220
+So, as I mentioned before, there's
+a few apps that you can use 
+
+194
+00:15:20.220 --> 00:15:26.460
+rather-- other few other kinds of apps
+that you have on the Google Play Store. 
+
+195
+00:15:26.460 --> 00:15:31.300
+These are the two apps that I recommend
+for you to play with, particularly 
+
+196
+00:15:31.300 --> 00:15:36.900
+for the QPython3, because these are
+the apps that allows you not just to write 
+
+197
+00:15:36.940 --> 00:15:41.940
+a simple patent script for the
+latest version, it allows you to run 
+
+198
+00:15:41.940 --> 00:15:49.260
+the NumPy, SciPy, Scythe, as well
+as the QRS together with android.py 
+
+199
+00:15:49.260 --> 00:15:50.860
+as we mentioned before.
+ 
+
+200
+00:15:50.860 --> 00:15:52.900
+So, this is something
+that works for you to try 
+
+201
+00:15:52.900 --> 00:15:58.500
+and not to mention that this is an open
+source app, meaning that if you know Java, 
+
+202
+00:15:58.540 --> 00:16:02.540
+you can contribute your
+Java code to this project. 
+
+203
+00:16:02.540 --> 00:16:06.540
+So, purely this is an open
+source project over there. 
+
+204
+00:16:06.540 --> 00:16:10.660
+Okay. So, right now,
+we have a demo time. 
+
+205
+00:16:10.660 --> 00:16:11.900
+So, these are the demo.
+ 
+
+206
+00:16:11.900 --> 00:16:15.660
+So, the first demo, we'd like to do a
+location tracking and for this demo 
+
+207
+00:16:15.660 --> 00:16:21.020
+over there is a demo that shows
+how we can read the data straight away 
+
+208
+00:16:21.020 --> 00:16:26.040
+from the phone and display it with
+a Leaflet via the Flask applications. 
+
+209
+00:16:26.040 --> 00:16:29.200
+The purpose of this recording is to show
+ 
+
+210
+00:16:29.200 --> 00:16:33.840
+how the location tracking web app
+works using the WebSocket 
+
+211
+00:16:33.920 --> 00:16:37.760
+from the Python on Android.
+ 
+
+212
+00:16:37.840 --> 00:16:41.560
+So from this app over here what we can see is
+ 
+
+213
+00:16:41.560 --> 00:16:47.080
+the web app that we've wrote in Flask 
+connected to the WebSocket 
+
+214
+00:16:47.080 --> 00:16:54.960
+which is the IP address of the WebSocket server
+on the Python on Android app. 
+
+215
+00:16:55.040 --> 00:17:02.140
+While the front-end is written using the vue.js
+together with the Leaflet map app. 
+
+216
+00:17:02.220 --> 00:17:05.720
+So, as you can see this is the code
+that we have over there 
+
+217
+00:17:05.720 --> 00:17:08.160
+where we connect to the WebSocket
+and then we displayed it. 
+
+218
+00:17:08.720 --> 00:17:14.600
+So, this is the web app that we see from there.
+ 
+
+219
+00:17:14.980 --> 00:17:17.040
+So it can get the current location
+ 
+
+220
+00:17:17.040 --> 00:17:22.460
+as what we can see over here
+as well as getting the real-time GPS feed. 
+
+221
+00:17:22.540 --> 00:17:27.440
+So right now we can get the feed.
+Just wait for a while. 
+
+222
+00:17:27.600 --> 00:17:31.120
+Okay, just try to refresh that
+ 
+
+223
+00:17:31.120 --> 00:17:33.360
+so that we get the location.
+ 
+
+224
+00:17:33.360 --> 00:17:36.480
+So, get the location, 
+and then we'll get the feed. 
+
+225
+00:17:36.480 --> 00:17:38.960
+So right now, this feed is a little bit off
+ 
+
+226
+00:17:38.960 --> 00:17:44.740
+because right now I'm actually at the location
+where has a quite bad Internet connection 
+
+227
+00:17:44.780 --> 00:17:47.919
+so it will get an approximate location for that.
+ 
+
+228
+00:17:47.920 --> 00:17:51.000
+So it will have a little bit of deviation for that.
+ 
+
+229
+00:17:51.140 --> 00:17:53.700
+So meanwhile in this recording,
+ 
+
+230
+00:17:53.700 --> 00:17:58.880
+I'm going to record down 
+the location of this GPS live feed 
+
+231
+00:17:59.000 --> 00:18:01.560
+for a good 10 minutes.
+ 
+
+232
+00:18:01.560 --> 00:18:40.760
+(Recording the location while moving)
+ 
+
+233
+00:18:40.880 --> 00:18:45.580
+Okay, as you can see, 
+I have stopped somewhere right now 
+
+234
+00:18:45.580 --> 00:18:47.640
+to finish the recording.
+ 
+
+235
+00:18:47.640 --> 00:18:54.160
+So if you look at the trace,
+it actually shows the driving I had at each point. 
+
+236
+00:18:54.320 --> 00:18:58.080
+So if you click on all this point over there,
+it shows you the time 
+
+237
+00:18:58.160 --> 00:19:02.880
+where I drive, how I drive, and then the time.
+ 
+
+238
+00:19:03.020 --> 00:19:06.540
+So this drive over there also shows the speed,
+ 
+
+239
+00:19:06.660 --> 00:19:09.039
+of the speed of the location that I'm at,
+ 
+
+240
+00:19:09.039 --> 00:19:11.440
+as well as the plot.
+ 
+
+241
+00:19:11.440 --> 00:19:14.480
+So this is a clearly a very good demo
+ 
+
+242
+00:19:14.480 --> 00:19:21.420
+to show how I can track
+the driving of myself as well as others, too, 
+
+243
+00:19:21.480 --> 00:19:26.480
+by using just a very simple Python on
+Android app. 
+
+244
+00:19:26.720 --> 00:19:28.940
+Hope you enjoyed it.
+Thank you. 
+
+245
+00:19:34.240 --> 00:19:37.900
+So this is the demo for the location tracking.
+ 
+
+246
+00:19:37.940 --> 00:19:45.660
+Now, we like to look at another very fun
+demo as well that we utilize the phone call. 
+
+247
+00:19:45.660 --> 00:19:50.740
+So, in most of our data center for SRE,
+we do have problems 
+
+248
+00:19:50.740 --> 00:19:56.740
+with what we call as self-one,
+or somebody calls that P1. 
+
+249
+00:19:56.740 --> 00:19:59.300
+Okay? Meaning that you
+have severity one, 
+
+250
+00:19:59.300 --> 00:20:02.500
+means that you have an incident that
+is really down, or you have some sort of 
+
+251
+00:20:02.500 --> 00:20:06.500
+utilization, which goes
+beyond your critical level, 
+
+252
+00:20:06.500 --> 00:20:11.260
+which-- you need to address that.
+What happens in this demo of that is 
+
+253
+00:20:11.260 --> 00:20:16.380
+I'll generate a random number
+to simulate the utilization of the CPU. 
+
+254
+00:20:16.380 --> 00:20:23.540
+So, when the CPU usage is more than 80%,
+I'll make my phone to call the SRE. 
+
+255
+00:20:23.540 --> 00:20:28.500
+So, in this demo over there I
+used a few ingredients over there, 
+
+256
+00:20:28.500 --> 00:20:30.940
+which is the ZMQ.
+ 
+
+257
+00:20:30.940 --> 00:20:35.380
+In this case,
+ZMQ is just Zero Message Queuing, 
+
+258
+00:20:35.380 --> 00:20:39.540
+together with a simulator
+CPU utilization tools, okay? 
+
+259
+00:20:39.540 --> 00:20:41.300
+And also the Android call.
+ 
+
+260
+00:20:41.340 --> 00:20:44.700
+So, I'd like to begin
+my demo of that. 
+
+261
+00:20:44.700 --> 00:20:49.200
+The purpose of this demo
+over here is to show that 
+
+262
+00:20:49.200 --> 00:20:55.960
+we can use Python on Android
+to write a simple call script 
+
+263
+00:20:56.100 --> 00:21:01.600
+when we are having an issue
+in the data center. 
+
+264
+00:21:01.600 --> 00:21:04.480
+For example, in this demo over here,
+ 
+
+265
+00:21:04.480 --> 00:21:11.620
+we use the case of when the CPU is
+hitting a percentage of 80 percent 
+
+266
+00:21:11.760 --> 00:21:17.720
+the script will make a phone call
+to the respective SRE. 
+
+267
+00:21:17.820 --> 00:21:23.060
+So in this script over here,
+this script actually is a very simple script 
+
+268
+00:21:23.120 --> 00:21:28.920
+that allows me to send the incident
+by using a random number generator. 
+
+269
+00:21:29.100 --> 00:21:34.000
+So, first, in this case, I'm going to
+generate the status of the CPU 
+
+270
+00:21:34.000 --> 00:21:38.080
+by using a random number
+from 0 to 100. 
+
+271
+00:21:38.240 --> 00:21:41.880
+So if the CPU is hitting 80%,
+ 
+
+272
+00:21:41.880 --> 00:21:47.020
+we'll record the time, and then
+it starts to send a string of '1' 
+
+273
+00:21:47.020 --> 00:21:52.780
+to the respective ZMQ
+on the IP address 
+
+274
+00:21:52.780 --> 00:21:55.680
+which is as the following over here.
+ 
+
+275
+00:21:55.760 --> 00:21:59.300
+If the CPU is below 80%,
+ 
+
+276
+00:21:59.300 --> 00:22:03.080
+then we'll send a string of '0' over here.
+ 
+
+277
+00:22:03.120 --> 00:22:07.920
+So '1' over here represents the incident is happening,
+ 
+
+278
+00:22:08.080 --> 00:22:13.460
+which is the status that the CPU is hitting
+a percentage of 80%, 
+
+279
+00:22:13.500 --> 00:22:20.300
+while '0' is it's below 80%.
+ 
+
+280
+00:22:20.320 --> 00:22:23.180
+So for every five seconds,
+we'll check 
+
+281
+00:22:23.200 --> 00:22:29.180
+and if there's an incidence of that
+we are going to send this across. 
+
+282
+00:22:29.180 --> 00:22:34.520
+So right now, I'm going to start with
+the script that I have. 
+
+283
+00:22:34.720 --> 00:22:39.080
+What I'll do right now is
+I'll start the script for now. 
+
+284
+00:22:39.080 --> 00:22:50.880
+(Running the script)
+ 
+
+285
+00:22:51.040 --> 00:22:54.159
+And here I'm going to
+show you the phone 
+
+286
+00:22:54.160 --> 00:22:59.940
+I will start a video and then
+I'll make the phone. 
+
+287
+00:22:59.940 --> 00:23:02.880
+So if you look at the screen
+I have a phone over here. 
+
+288
+00:23:02.880 --> 00:23:25.920
+(Script is running)
+ 
+
+289
+00:23:26.120 --> 00:23:31.820
+We are still waiting because 
+the CPU has not reached above 80%. 
+
+290
+00:23:49.260 --> 00:23:52.860
+Okay, it starts making a call.
+ 
+
+291
+00:24:01.000 --> 00:24:02.180
+(Bell rings)
+ 
+
+292
+00:24:02.320 --> 00:24:05.440
+(Bell rings)
+Yep, if you hear that that is the sound. 
+
+293
+00:24:05.440 --> 00:24:08.480
+So the phone is ringing right now.
+ 
+
+294
+00:24:08.480 --> 00:24:11.640
+(Bell rings)
+So we are successfully making a call. 
+
+295
+00:24:13.400 --> 00:24:16.040
+(Bell rings)
+Okay, so right now, 
+
+296
+00:24:16.200 --> 00:24:18.940
+it's again, made a call in short while.
+ 
+
+297
+00:24:45.200 --> 00:24:48.500
+Let's just wait for a moment.
+ 
+
+298
+00:24:50.720 --> 00:24:54.000
+Okay, it's going to make a call again.
+ 
+
+299
+00:24:54.140 --> 00:24:57.860
+(Bell rings)
+ 
+
+300
+00:24:58.160 --> 00:25:01.780
+Okay, the phone's ringing, Okay.
+ 
+
+301
+00:25:01.780 --> 00:25:07.520
+(Bell rings)
+Yep, the phone is ringing so... 
+
+302
+00:25:09.360 --> 00:25:12.000
+Okay, so answer the phone.
+ 
+
+303
+00:25:14.160 --> 00:25:19.200
+So here comes the demo.
+ 
+
+304
+00:25:19.200 --> 00:25:22.400
+Okay, here comes the demo.
+ 
+
+305
+00:25:22.660 --> 00:25:26.080
+So I hope you enjoyed the demo
+for this script over here. 
+
+306
+00:25:26.080 --> 00:25:27.880
+Thank you.
+ 
+
+307
+00:25:29.420 --> 00:25:33.800
+So these are the reference for my project.
+ 
+
+308
+00:25:33.800 --> 00:25:35.840
+If you like or if you're interested,
+ 
+
+309
+00:25:35.840 --> 00:25:39.260
+you can look at this, all these
+reference of that, 
+
+310
+00:25:39.260 --> 00:25:41.300
+so that you can get more details on that.
+ 
+
+311
+00:25:41.300 --> 00:25:44.300
+With that, that is my presentation
+ 
+
+312
+00:25:44.300 --> 00:25:47.180
+and thank you for
+attending my presentation. 
+
+313
+00:25:47.180 --> 00:25:47.780
+Thank you.

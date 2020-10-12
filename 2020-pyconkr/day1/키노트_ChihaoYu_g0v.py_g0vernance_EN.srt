@@ -1,0 +1,2925 @@
+﻿1
+00:00:11,600 --> 00:00:16,720
+Hi everyone, this session is titled,
+"g0v.py g0vernance.txt".
+
+2
+00:00:16,720 --> 00:00:18,640
+My name is Chihhao Yu
+
+3
+00:00:18,640 --> 00:00:19,820
+and I'm from Taiwan.
+
+4
+00:00:19,820 --> 00:00:22,640
+I'm a g0v contributor.
+
+5
+00:00:23,540 --> 00:00:27,410
+First of all, these slides
+are publicly available on the Internet,
+
+6
+00:00:27,510 --> 00:00:30,740
+so if you go to the URL here,
+
+7
+00:00:30,740 --> 00:00:33,240
+you can just see
+the slides for yourself.
+
+8
+00:00:33,240 --> 00:00:36,220
+These slides are also open source,
+
+9
+00:00:36,220 --> 00:00:39,240
+it's released under a CC license.
+
+10
+00:00:39,240 --> 00:00:42,240
+Here are a list of contributors.
+
+11
+00:00:42,240 --> 00:00:45,620
+And before we begin,
+there's a warning
+
+12
+00:00:45,620 --> 00:00:50,200
+that says personal perspectives
+do not represent g0v as a whole.
+
+13
+00:00:50,200 --> 00:00:51,160
+I'll explain more later,
+
+14
+00:00:51,160 --> 00:00:54,840
+but because g0v is a community,
+not an organization,
+
+15
+00:00:54,840 --> 00:00:56,680
+so, everyone stands for themselves,
+
+16
+00:00:56,680 --> 00:00:59,240
+everyone speaks for themselves.
+
+17
+00:01:01,240 --> 00:01:04,540
+Let me introduce
+a little bit about g0v,
+
+18
+00:01:04,540 --> 00:01:07,020
+which is the name of our community.
+
+19
+00:01:07,040 --> 00:01:11,320
+g0v is spelled, G-Zero-V.
+
+20
+00:01:11,320 --> 00:01:15,220
+The name came from
+the word, "Government"
+
+21
+00:01:15,220 --> 00:01:20,020
+G-O-V, but replaced
+the O with a zero,
+
+22
+00:01:20,020 --> 00:01:24,220
+meaning either start over,
+
+23
+00:01:24,220 --> 00:01:28,760
+start from zero,
+or digitization of government.
+
+24
+00:01:28,760 --> 00:01:32,460
+This is a Taiwanese movement
+started from 2012.
+
+25
+00:01:34,000 --> 00:01:38,740
+And it has been very active
+until now, actually.
+
+26
+00:01:40,600 --> 00:01:43,460
+The g0v community has a manifesto
+
+27
+00:01:43,500 --> 00:01:46,460
+and it describes what
+it is in the document.
+
+28
+00:01:46,460 --> 00:01:52,600
+So, I'll try to adapt from the g0v manifesto
+and summarize it for you,
+
+29
+00:01:53,020 --> 00:01:57,360
+and tell you what g0v
+is in my own perspective.
+
+30
+00:01:57,360 --> 00:02:00,900
+So, g0v is a polycentric
+community in Taiwan
+
+31
+00:02:00,900 --> 00:02:03,220
+that uses open-source technology
+
+32
+00:02:03,220 --> 00:02:07,020
+and open collaboration to
+better government and society.
+
+33
+00:02:08,740 --> 00:02:15,370
+Every slide would have sources
+that links to the sources,
+
+34
+00:02:15,800 --> 00:02:18,100
+the references that's used in a slide.
+
+35
+00:02:18,540 --> 00:02:20,540
+So, here you can see
+
+36
+00:02:20,540 --> 00:02:22,540
+a Mandarin version
+of the manifesto,
+
+37
+00:02:22,540 --> 00:02:26,250
+and also an English version
+of the manifesto linked in the slides.
+
+38
+00:02:27,660 --> 00:02:32,700
+So, what this means is g0v is a community
+that has a lot of centers.
+
+39
+00:02:33,640 --> 00:02:38,700
+These centers include projects
+or task forces.
+
+40
+00:02:38,700 --> 00:02:40,700
+And each of these centers,
+
+41
+00:02:40,700 --> 00:02:42,700
+these projects, these task forces,
+
+42
+00:02:42,700 --> 00:02:45,320
+will decide what they want to do
+for themselves.
+
+43
+00:02:46,780 --> 00:02:50,940
+And each one of these centers
+would collaborate together.
+
+44
+00:02:51,580 --> 00:02:54,920
+And g0v's main methods are
+
+45
+00:02:54,920 --> 00:02:58,380
+using open-source technology
+and open collaboration,
+
+46
+00:02:58,920 --> 00:03:02,090
+and the goal is to
+better government and society.
+
+47
+00:03:04,780 --> 00:03:07,960
+So, today, since
+it's PyCon Korea,
+
+48
+00:03:07,960 --> 00:03:13,690
+the organizers have asked me to introduce
+some examples of g0v projects
+
+49
+00:03:13,790 --> 00:03:17,810
+that use Python
+in the past and in present.
+
+50
+00:03:18,280 --> 00:03:23,500
+So, as the title of
+this session suggests,
+
+51
+00:03:23,500 --> 00:03:25,500
+I'd like to introduce to you
+
+52
+00:03:25,500 --> 00:03:28,160
+some g0v projects that used Python.
+
+53
+00:03:29,280 --> 00:03:31,280
+So, after a little digging, actually,
+
+54
+00:03:31,280 --> 00:03:35,190
+Python was there from the very beginning
+of the g0v community.
+
+55
+00:03:37,920 --> 00:03:41,960
+So, I would like to introduce
+to you some a group of projects
+
+56
+00:03:44,320 --> 00:03:46,840
+that falls under four categories:
+
+57
+00:03:46,840 --> 00:03:48,520
+Open government,
+
+58
+00:03:48,520 --> 00:03:52,280
+open data, education,
+and media literacy.
+
+59
+00:03:53,100 --> 00:03:57,360
+And, of course, there are many, many
+more projects in the g0v community.
+
+60
+00:03:57,820 --> 00:03:59,720
+But today, because of time,
+
+61
+00:03:59,720 --> 00:04:02,380
+there's only so much
+we can discuss.
+
+62
+00:04:04,200 --> 00:04:06,200
+The first one is actually,
+
+63
+00:04:06,200 --> 00:04:09,300
+the first project of the g0v community,
+
+64
+00:04:09,300 --> 00:04:11,300
+which is TW Budget,
+which stands for
+
+65
+00:04:11,300 --> 00:04:14,420
+Taiwanese government budget,
+
+66
+00:04:14,420 --> 00:04:18,840
+it is one of the first
+projects that's produced by g0v-ers,
+
+67
+00:04:18,840 --> 00:04:23,010
+or which is how we call ourselves
+g0v contributors.
+
+68
+00:04:24,560 --> 00:04:30,870
+It is a project that visualizes
+Taiwan's central government budget.
+
+69
+00:04:31,600 --> 00:04:35,750
+And since this is a Web version
+of the presentation,
+
+70
+00:04:35,960 --> 00:04:38,580
+I can just go to the Web page
+
+71
+00:04:38,580 --> 00:04:41,700
+and show you, live,
+how this project will work.
+
+72
+00:04:41,700 --> 00:04:44,140
+As you see,
+this is an interactive
+
+73
+00:04:44,140 --> 00:04:47,140
+visualization of our
+central government's budget.
+
+74
+00:04:47,140 --> 00:04:51,080
+If you click, you can actually
+know more detail of each--
+
+75
+00:04:51,080 --> 00:04:53,080
+each of these budget items
+
+76
+00:04:53,080 --> 00:04:57,140
+corresponding to some government agencies,
+big or small.
+
+77
+00:04:58,230 --> 00:05:03,150
+Because of humor, which is a very
+important component of the g0v community,
+
+78
+00:05:03,150 --> 00:05:09,290
+this Website also converts
+every item of the budget into
+
+79
+00:05:09,290 --> 00:05:12,680
+cups of bubble tea or
+slices of chicken,
+
+80
+00:05:12,680 --> 00:05:18,170
+to sort of represent how much,
+how big the budget item is.
+
+81
+00:05:23,350 --> 00:05:28,450
+The second project that I would like
+to talk to you about is a voter guide.
+
+82
+00:05:28,450 --> 00:05:34,450
+Voter's guide is a voter's guide, which
+is a list of information
+
+83
+00:05:34,450 --> 00:05:41,830
+of candidates for Taiwan’s both
+local and national elections.
+
+84
+00:05:41,830 --> 00:05:44,630
+Voter's guide is a very old project in the
+g0v community.
+
+85
+00:05:44,630 --> 00:05:47,910
+It started in 2014, I think, if I'm not
+remembering--
+
+86
+00:05:47,910 --> 00:05:51,080
+if I'm remembering correctly.
+
+87
+00:05:51,080 --> 00:06:01,320
+It has undergone several iterations
+and this is the 2020 version.
+
+88
+00:06:01,320 --> 00:06:06,870
+If you can see, this is a link
+to all the legislative candidates here,
+
+89
+00:06:06,870 --> 00:06:11,400
+grouped by cities or counties
+here in Taipei.
+
+90
+00:06:13,060 --> 00:06:17,060
+You see all the candidates
+that was participating in the election
+
+91
+00:06:17,060 --> 00:06:22,880
+and if you click into them,
+you see some of their information,
+
+92
+00:06:22,880 --> 00:06:28,280
+including which of the
+legislations they've supported
+
+93
+00:06:28,280 --> 00:06:31,640
+including how much
+Facebook ads they have--
+
+94
+00:06:32,880 --> 00:06:35,520
+they have put out on Facebook.
+
+95
+00:06:39,060 --> 00:06:41,980
+And then we have projects for open data.
+
+96
+00:06:41,980 --> 00:06:44,460
+The first one, this one, is also very old.
+
+97
+00:06:44,460 --> 00:06:46,020
+It's ER Dashboard.
+
+98
+00:06:46,020 --> 00:06:48,020
+ER stands for emergency rooms.
+
+99
+00:06:48,020 --> 00:06:53,220
+This is a dashboard of all
+the emergency rooms in Taiwan, showing
+
+100
+00:06:53,220 --> 00:06:56,460
+how many patients are
+in each of these rooms
+
+101
+00:06:56,460 --> 00:06:59,280
+and how many beds are available,
+for example.
+
+102
+00:07:02,360 --> 00:07:07,180
+This one, this project, Rentea
+is a newer project in the g0v community.
+
+103
+00:07:07,180 --> 00:07:10,220
+It is about rental housing info in Taiwan.
+
+104
+00:07:11,240 --> 00:07:17,250
+And all of these projects use
+Python in various ways,
+
+105
+00:07:17,320 --> 00:07:20,860
+including in front-end, back-end
+
+106
+00:07:20,860 --> 00:07:24,290
+but most of them use Python
+for data processing.
+
+107
+00:07:26,780 --> 00:07:31,010
+This one is pronounced 'Moh-wet dict'.
+MoE Dict.
+
+108
+00:07:32,800 --> 00:07:37,520
+This is a dictionary, an open-source
+dictionary that is also a very old project
+
+109
+00:07:37,520 --> 00:07:41,000
+in Tai-- sorry, in the g0v community.
+
+110
+00:07:41,000 --> 00:07:48,360
+And this is a combination of a lot of
+different government and academic sources
+
+111
+00:07:48,600 --> 00:07:54,530
+to combine into one open-sourced dictionary
+online for people to use.
+
+112
+00:07:55,380 --> 00:08:00,320
+And if you see here, this is
+the MoE Dict Website.
+
+113
+00:08:00,320 --> 00:08:05,080
+This is a term that says, "The best"--
+or "The brightest."
+
+114
+00:08:05,080 --> 00:08:07,440
+And this is the Mandarin version
+of the phrase
+
+115
+00:08:07,440 --> 00:08:10,160
+and these are the Taiwanese version,
+
+116
+00:08:10,160 --> 00:08:13,460
+the English version,
+even French and German.
+
+117
+00:08:13,460 --> 00:08:18,120
+And because this-- because this
+is open source, it also
+
+118
+00:08:18,120 --> 00:08:22,120
+allows people to collectively correct it,
+if there is any mistake.
+
+119
+00:08:24,800 --> 00:08:27,440
+Another project is iTaigi,
+
+120
+00:08:27,440 --> 00:08:30,560
+which, in Taiwanese,
+means 'love Taiwanese'.
+
+121
+00:08:30,560 --> 00:08:34,280
+Taiwanese is our local language here.
+
+122
+00:08:34,280 --> 00:08:40,400
+Quite different from Mandarin,
+which is sort of a standardized language.
+
+123
+00:08:40,400 --> 00:08:44,210
+This is-- this is a website
+for you to learn
+
+124
+00:08:44,210 --> 00:08:47,800
+different pronunciations
+of Taiwanese terms.
+
+125
+00:08:47,800 --> 00:08:52,240
+You can actually listen to the
+pronunciation on the Website.
+
+126
+00:08:52,240 --> 00:08:55,980
+It also has-- it also has
+interesting features,
+
+127
+00:08:55,980 --> 00:09:02,120
+like how to pronounce your name
+or how to pronounce Pokemon monsters.
+
+128
+00:09:06,460 --> 00:09:09,520
+And that was an educational project,
+
+129
+00:09:09,520 --> 00:09:11,520
+and the final category
+I want to talk about
+
+130
+00:09:11,520 --> 00:09:14,040
+is a media literacy project.
+
+131
+00:09:14,040 --> 00:09:17,000
+This one is called News Diff.
+
+132
+00:09:17,000 --> 00:09:23,920
+As the name suggests, this project--
+records or archives news articles,
+
+133
+00:09:23,920 --> 00:09:26,620
+but also detects changes over time.
+
+134
+00:09:29,100 --> 00:09:31,100
+This is the website of the project.
+
+135
+00:09:33,100 --> 00:09:37,100
+You see, each item is a news article,
+
+136
+00:09:37,100 --> 00:09:39,660
+and the system automatically detects
+
+137
+00:09:39,660 --> 00:09:44,860
+the first-- the first instance
+of the article when it's published,
+
+138
+00:09:44,860 --> 00:09:48,360
+but also subsequent changes
+in the article,
+
+139
+00:09:48,360 --> 00:09:51,220
+both in the title or in the content.
+
+140
+00:09:51,220 --> 00:09:55,050
+So, it's very useful
+if you want to do further analysis
+
+141
+00:09:55,050 --> 00:09:57,310
+on news coverage here in Taiwan.
+
+142
+00:10:01,920 --> 00:10:05,920
+Another project I want
+to talk to you about is Cofacts.
+
+143
+00:10:05,920 --> 00:10:11,060
+Cofacts is a crowd-sourced,
+fact-checking platform and a line bot.
+
+144
+00:10:11,060 --> 00:10:15,860
+What this means is that it's
+a line bot, as in people can send
+
+145
+00:10:15,860 --> 00:10:19,020
+suspicious information to
+Cofacts database.
+
+146
+00:10:20,140 --> 00:10:22,740
+It's a crowd-sourced,
+fact-checking platform,
+
+147
+00:10:22,740 --> 00:10:25,580
+as in people can collectively
+come together
+
+148
+00:10:25,580 --> 00:10:27,580
+and fact check those messages together,
+
+149
+00:10:27,580 --> 00:10:32,100
+and publish the results
+into Cofacts’ database,
+
+150
+00:10:32,100 --> 00:10:36,520
+so that the original user who submitted
+the message will receive them.
+
+151
+00:10:39,220 --> 00:10:41,220
+This is Cofacts' Website.
+
+152
+00:10:41,220 --> 00:10:44,180
+And you can see how it works.
+
+153
+00:10:44,180 --> 00:10:49,900
+You forward suspicious information
+to the line bot
+
+154
+00:10:49,900 --> 00:10:54,720
+and then if the database contains it,
+you will receive fact-checking results.
+
+155
+00:10:54,720 --> 00:10:56,720
+If the database doesn't have it,
+
+156
+00:10:56,720 --> 00:11:02,200
+then you can also join
+the fact-checking efforts.
+
+157
+00:11:07,660 --> 00:11:12,200
+Another project is Oarchive.
+This is very new in the g0v community.
+
+158
+00:11:12,200 --> 00:11:16,640
+This is an effort to archive
+not only just the news websites,
+
+159
+00:11:16,640 --> 00:11:20,440
+but all kinds of different
+information here in Taiwan,
+
+160
+00:11:20,440 --> 00:11:24,760
+including some of the more
+suspicious ones like content farms,
+
+161
+00:11:25,140 --> 00:11:30,160
+but also Taiwan's local Web forums,
+like PTT or dcard.
+
+162
+00:11:30,160 --> 00:11:37,400
+These-- these media literacy projects
+all have open data, which means
+
+163
+00:11:37,400 --> 00:11:40,440
+it's very useful to
+researchers and academics
+
+164
+00:11:40,440 --> 00:11:42,440
+who want to do this kind of research.
+
+165
+00:11:45,300 --> 00:11:50,320
+So, there are a lot of
+projects in g0v community.
+
+166
+00:11:50,320 --> 00:11:53,370
+And why are there so many projects?
+
+167
+00:11:55,000 --> 00:12:00,100
+A big component of the g0v projects--
+sorry, the g0v community is food.
+
+168
+00:12:01,120 --> 00:12:03,800
+The g0v community hosts hack-a-thons
+
+169
+00:12:03,800 --> 00:12:06,320
+every now and then, and every hack-a-thon
+
+170
+00:12:06,320 --> 00:12:09,100
+would have a lot of pizza,
+a lot of fried chicken,
+
+171
+00:12:09,100 --> 00:12:13,920
+a lot of drinks, and also desserts.
+
+172
+00:12:13,920 --> 00:12:17,920
+And sometimes, these foods are themed
+to make it more interesting.
+
+173
+00:12:19,920 --> 00:12:21,920
+So, these events and this food--
+
+174
+00:12:21,920 --> 00:12:26,940
+these foods is a very important component
+that supports the entire community,
+
+175
+00:12:26,940 --> 00:12:30,700
+and what you might
+call infrastructure of the community.
+
+176
+00:12:31,880 --> 00:12:36,960
+And-- we just saw many projects
+in g0v community
+
+177
+00:12:36,960 --> 00:12:39,640
+that's using Python to do
+all sorts of things
+
+178
+00:12:39,640 --> 00:12:42,500
+like open data, like media literacy.
+
+179
+00:12:42,500 --> 00:12:47,100
+But you can also use Python to build up
+infrastructure of a community.
+
+180
+00:12:49,680 --> 00:12:53,010
+So, I'd like to talk to you about this.
+
+181
+00:12:54,300 --> 00:12:57,300
+Two major functions of infrastructure
+in a community:
+
+182
+00:12:57,300 --> 00:13:00,820
+One is to connect
+and the other one is to discover.
+
+183
+00:13:00,820 --> 00:13:05,720
+Because the g0v community is such
+a polycentric, or decentralized,
+
+184
+00:13:05,720 --> 00:13:08,060
+or distributed community,
+
+185
+00:13:08,060 --> 00:13:10,920
+and there is a lot of different things
+and different places
+
+186
+00:13:11,020 --> 00:13:13,630
+that you might not know
+about as a g0v contributor,
+
+187
+00:13:14,060 --> 00:13:17,700
+or as an outsider who wants
+to know more about g0v.
+
+188
+00:13:19,160 --> 00:13:23,260
+So, important features of infrastructure is
+
+189
+00:13:23,260 --> 00:13:27,160
+to connect a lot of different projects,
+and different people,
+
+190
+00:13:27,160 --> 00:13:31,160
+maybe into one place,
+maybe into a GitHub repo.
+
+191
+00:13:31,160 --> 00:13:35,360
+So you can see a list of all kinds
+of things that happen in the g0v community.
+
+192
+00:13:36,360 --> 00:13:38,960
+Another important function
+of the infrastructure
+
+193
+00:13:38,960 --> 00:13:44,440
+is to discover, is for you to--
+discover things that you're interested in,
+
+194
+00:13:44,440 --> 00:13:49,620
+in the community, despite its--
+decentralized nature.
+
+195
+00:13:50,960 --> 00:13:54,960
+So, for example, you can use Python
+and people have used--
+
+196
+00:13:54,960 --> 00:13:59,540
+g0v contributors have used Python
+to, for example, collect information
+
+197
+00:13:59,540 --> 00:14:04,240
+on GitHub repos, or GitHub issues.
+
+198
+00:14:04,240 --> 00:14:08,860
+But people have also used Python
+to build a search interface
+
+199
+00:14:08,860 --> 00:14:11,410
+for all kinds of things g0v related.
+
+200
+00:14:12,680 --> 00:14:18,720
+This is the search interface on g0v's
+official Website.
+
+201
+00:14:18,720 --> 00:14:23,060
+If you search, for example, COVID,
+you will see a lot of different things.
+
+202
+00:14:23,060 --> 00:14:29,520
+This page is full of chat log
+
+203
+00:14:29,520 --> 00:14:31,960
+and there's more chat log.
+
+204
+00:14:31,960 --> 00:14:34,400
+And there's more chat log.
+
+205
+00:14:34,400 --> 00:14:36,400
+So, this is an example of using Python
+
+206
+00:14:36,400 --> 00:14:39,520
+to build up infrastructure
+for the community.
+
+207
+00:14:43,320 --> 00:14:49,580
+So, I think infrastructure for g0v
+is also infrastructure for polycentrism,
+
+208
+00:14:49,580 --> 00:14:56,920
+which is infrastructure to support
+this kind of distributed community.
+
+209
+00:15:00,060 --> 00:15:04,060
+There are a lot of times when people ask,
+"Why is g0v decentralized?"
+
+210
+00:15:04,060 --> 00:15:06,740
+Or, "Why is g0v polycentric?"
+
+211
+00:15:06,740 --> 00:15:09,900
+It's a very important question,
+and a very interesting one.
+
+212
+00:15:09,900 --> 00:15:11,900
+Everyone has their own opinion,
+
+213
+00:15:11,900 --> 00:15:16,180
+and everyone has their own perspective
+when answering this question.
+
+214
+00:15:16,180 --> 00:15:22,900
+What I think is why is g0v polycentric
+is because democracy is also polycentric.
+
+215
+00:15:22,900 --> 00:15:26,900
+In a democracy, like South Korea
+or Taiwan,
+
+216
+00:15:26,900 --> 00:15:29,340
+there are a lot
+of different kinds of people,
+
+217
+00:15:29,340 --> 00:15:31,900
+and people have all kinds
+of different opinions.
+
+218
+00:15:31,900 --> 00:15:35,900
+And people form different groups,
+different organizations,
+
+219
+00:15:35,900 --> 00:15:40,220
+different networks, and every different
+networks or different groups
+
+220
+00:15:40,220 --> 00:15:45,620
+does different things, and because we
+have basic freedoms, civic liberties,
+
+221
+00:15:45,620 --> 00:15:50,780
+we're doing
+what we want to do,
+
+222
+00:15:50,780 --> 00:15:52,780
+and we have the freedom to associate,
+
+223
+00:15:52,780 --> 00:15:56,860
+we have the freedom to assemble,
+and we have the freedom of speech.
+
+224
+00:15:56,860 --> 00:15:59,420
+And these kind of values, these values
+
+225
+00:15:59,420 --> 00:16:02,960
+are the values that
+the g0v community supports.
+
+226
+00:16:04,760 --> 00:16:06,880
+So, what I think is g0v
+
+227
+00:16:06,880 --> 00:16:12,530
+could be seen as a mini version.
+or a shadow version of
+
+228
+00:16:12,530 --> 00:16:16,640
+the larger democracy or
+society that we live in today.
+
+229
+00:16:16,640 --> 00:16:22,660
+And g0v is also a very good place to
+discuss or even experiment
+
+230
+00:16:22,660 --> 00:16:25,280
+different kinds of democratic methods.
+
+231
+00:16:29,280 --> 00:16:34,330
+So a community like g0v
+is very decentralized or polycentric,
+
+232
+00:16:34,680 --> 00:16:39,920
+which also means that
+it needs policies and mechanisms
+
+233
+00:16:39,920 --> 00:16:43,640
+to protect
+or to support its polycentrism.
+
+234
+00:16:44,950 --> 00:16:51,060
+I think a community like g0v
+needs policies and mechanisms
+
+235
+00:16:51,060 --> 00:16:55,220
+to maintain its polycentric nature
+
+236
+00:16:55,540 --> 00:17:00,880
+to prevent abuse--
+to express its many selves
+
+237
+00:17:01,120 --> 00:17:06,360
+meaning everyone is
+everyone is a g0v contributor.
+
+238
+00:17:08,360 --> 00:17:12,950
+And everyone sort of reflects different
+characteristics of the community.
+
+239
+00:17:14,000 --> 00:17:18,000
+The community also needs
+policies and mechanisms to grow
+
+240
+00:17:18,000 --> 00:17:22,900
+and to evolve into
+whatever the contributor wants it to go.
+
+241
+00:17:24,160 --> 00:17:26,420
+So, these kind of policies and mechanisms
+
+242
+00:17:26,420 --> 00:17:29,280
+could also be seen
+as a part of infrastructure.
+
+243
+00:17:30,200 --> 00:17:34,200
+And although it's not Python,
+it's not written in Python,
+
+244
+00:17:34,200 --> 00:17:36,200
+it's still kind of a code.
+
+245
+00:17:38,200 --> 00:17:42,460
+Maybe it's policies, general concepts,
+
+246
+00:17:42,460 --> 00:17:48,500
+also maybe it's just
+very concrete rules that
+
+247
+00:17:48,500 --> 00:17:53,100
+defines how things are done,
+and what other things are not allowed.
+
+248
+00:17:54,460 --> 00:18:00,460
+This is why the second part of the title
+of this session is, "g0vernance.txt".
+
+249
+00:18:00,460 --> 00:18:05,460
+Although g0vernance is not
+actual runnable code
+
+250
+00:18:05,460 --> 00:18:10,760
+the computer might not know it,
+but people certainly know how to read,
+
+251
+00:18:10,760 --> 00:18:15,100
+and how to set up, and how to challenge
+these kinds of code.
+
+252
+00:18:15,700 --> 00:18:21,300
+So, I'd like to talk to you about these kinds
+of code as a second part of this session.
+
+253
+00:18:23,700 --> 00:18:25,700
+Like the part before,
+
+254
+00:18:25,700 --> 00:18:30,620
+I’ve also identified some different
+categories when it comes to g0vernance.
+
+255
+00:18:30,620 --> 00:18:32,620
+Different projects,
+
+256
+00:18:32,620 --> 00:18:37,300
+some of these projects here
+in the g0v community is related to policy.
+
+257
+00:18:37,680 --> 00:18:41,680
+Some of it is actually
+establishing mechanisms for
+
+258
+00:18:41,680 --> 00:18:45,680
+how things work and
+what kind of things are not allowed.
+
+259
+00:18:46,600 --> 00:18:50,600
+The other kind of project
+is to create maps, which means
+
+260
+00:18:50,600 --> 00:18:56,320
+since g0v is such a big and diverse
+community, we need maps to navigate.
+
+261
+00:18:56,320 --> 00:19:00,700
+We need maps to understand
+sort of the whole picture,
+
+262
+00:19:00,700 --> 00:19:05,840
+or as close to the whole picture as
+we could possibly be.
+
+263
+00:19:05,840 --> 00:19:11,040
+And the final category is 0RG.
+
+264
+00:19:11,040 --> 00:19:13,040
+This is a play on the organization.
+
+265
+00:19:13,040 --> 00:19:17,040
+But it's not a top-down
+or a hierarchical organization,
+
+266
+00:19:17,040 --> 00:19:19,800
+as we usually are familiar.
+
+267
+00:19:19,800 --> 00:19:24,380
+This is an organization that
+has g0v’s characteristics,
+
+268
+00:19:24,380 --> 00:19:30,680
+but also doing concrete actions to sort
+of implement the policies and mechanisms,
+
+269
+00:19:30,680 --> 00:19:34,120
+and try to evolve
+and make them better as well.
+
+270
+00:19:37,600 --> 00:19:40,140
+From the very beginning of the community,
+
+271
+00:19:40,140 --> 00:19:44,140
+you see a lot of shared
+documents that talk about these things.
+
+272
+00:19:46,140 --> 00:19:51,580
+Here are three examples of early
+g0v documents that talk about g0vernance,
+
+273
+00:19:51,580 --> 00:19:56,420
+in a very philosophical,
+but also sometimes very concrete ways.
+
+274
+00:19:57,460 --> 00:19:59,460
+There are three topics:
+
+275
+00:19:59,460 --> 00:20:02,040
+Citizenship, media policy,
+and foreign policy.
+
+276
+00:20:03,660 --> 00:20:05,660
+If you just look at foreign policy,
+
+277
+00:20:05,660 --> 00:20:10,380
+it almost feels like g0v is a
+kind of government,
+
+278
+00:20:10,380 --> 00:20:16,340
+which--actually, was part of the idea
+when g0v community was first started--
+
+279
+00:20:16,380 --> 00:20:19,140
+is to create some kind
+of shadow government
+
+280
+00:20:19,140 --> 00:20:23,140
+in order to supervise the government,
+and to better the government,
+
+281
+00:20:23,140 --> 00:20:26,180
+to show a different
+working kind of prototype,
+
+282
+00:20:26,180 --> 00:20:28,660
+to show that we can govern ourselves
+
+283
+00:20:28,660 --> 00:20:32,660
+differently, and more efficiently,
+and more inclusively.
+
+284
+00:20:34,520 --> 00:20:38,440
+The first document that we have
+is regarding citizenship.
+
+285
+00:20:39,620 --> 00:20:43,940
+And it talks about how
+to talk about yourself as a g0v-er.
+
+286
+00:20:43,940 --> 00:20:48,320
+In Mandarin, there's different-- different
+kinds of terms to describe yourself,
+
+287
+00:20:48,320 --> 00:20:53,160
+as someone who is connected,
+or who is participating,
+
+288
+00:20:53,160 --> 00:20:55,160
+or who is contributing to the community.
+
+289
+00:20:56,080 --> 00:21:00,080
+And here is the actual document
+that talks about this.
+
+290
+00:21:00,080 --> 00:21:02,600
+It actually--
+it actually just lists out
+
+291
+00:21:02,600 --> 00:21:06,820
+different kinds of way to
+identify yourself as someone
+
+292
+00:21:06,820 --> 00:21:15,200
+who is connected or who--
+who acknowledges the community.
+
+293
+00:21:15,200 --> 00:21:19,740
+This first one is contributor,
+the second one is participant.
+
+294
+00:21:21,060 --> 00:21:24,960
+And then different kinds of ways
+to talk about yourself,
+
+295
+00:21:24,970 --> 00:21:29,940
+and also lists out the pros and cons
+of different ways to identify yourself.
+
+296
+00:21:29,940 --> 00:21:34,720
+For example, if you say that you are
+a member of the g0v community,
+
+297
+00:21:34,720 --> 00:21:36,720
+the pros are--
+
+298
+00:21:36,720 --> 00:21:40,720
+it's easily understandable
+for other people,
+
+299
+00:21:40,720 --> 00:21:44,000
+and it creates less confusion
+for other people.
+
+300
+00:21:44,000 --> 00:21:46,320
+But the cons are--
+
+301
+00:21:46,320 --> 00:21:53,600
+because g0v is a polycentric community
+that has very vague borders,
+
+302
+00:21:53,600 --> 00:21:55,600
+but the term 'member'
+
+303
+00:21:55,600 --> 00:21:59,600
+just suggests that some people are inside,
+some people are outside,
+
+304
+00:21:59,600 --> 00:22:01,800
+but it's actually
+more complicated than that.
+
+305
+00:22:03,600 --> 00:22:06,900
+The second document is media policy.
+
+306
+00:22:08,120 --> 00:22:14,120
+Media policy talks about how g0v-ers
+go on the media and talk about g0v.
+
+307
+00:22:18,460 --> 00:22:20,820
+Here is the content of the document.
+
+308
+00:22:22,260 --> 00:22:26,260
+And it has many suggestions
+on what to do and what not to do.
+
+309
+00:22:30,260 --> 00:22:34,780
+This is the document for foreign policy.
+
+310
+00:22:34,780 --> 00:22:38,780
+It actually just expands
+media policy and talks about
+
+311
+00:22:38,780 --> 00:22:43,100
+how g0v-ers engage with--
+sort of, the world.
+
+312
+00:22:43,100 --> 00:22:46,900
+Things are-- things that are not communal.
+
+313
+00:22:46,900 --> 00:22:48,900
+Other hierarchical organizations.
+
+314
+00:22:48,900 --> 00:22:55,440
+Or other people that have not heard
+of g0v and how do we engage with them.
+
+315
+00:22:59,240 --> 00:23:05,240
+It lists out different ways
+of engaging with the world.
+
+316
+00:23:05,240 --> 00:23:07,840
+This one is a panel discussion.
+
+317
+00:23:07,840 --> 00:23:09,840
+Maybe a press conference.
+
+318
+00:23:09,840 --> 00:23:11,840
+How do you-- how do you--
+
+319
+00:23:11,840 --> 00:23:15,840
+what is the best way to sort of
+navigate those situations.
+
+320
+00:23:16,680 --> 00:23:20,680
+And here is when you are
+the point of contact
+
+321
+00:23:20,680 --> 00:23:22,680
+how do you do that?
+
+322
+00:23:22,680 --> 00:23:29,700
+This is when you're invited to
+give a talk, how do you do that?
+
+323
+00:23:29,700 --> 00:23:31,700
+And--
+
+324
+00:23:31,700 --> 00:23:35,700
+Yeah. It’s very interesting to
+read these early documents to
+
+325
+00:23:35,700 --> 00:23:40,800
+look at how early on g0v contributors
+think about these issues.
+
+326
+00:23:44,940 --> 00:23:49,740
+And these issues also
+persists in the community.
+
+327
+00:23:49,740 --> 00:23:51,740
+People still think about them
+
+328
+00:23:51,740 --> 00:23:53,740
+and all kinds of different mechanisms
+
+329
+00:23:53,740 --> 00:23:58,200
+are still being evolved, or being changed
+as we speak.
+
+330
+00:23:58,200 --> 00:24:00,580
+There's two examples here
+
+331
+00:24:00,580 --> 00:24:05,860
+I'd like to provide that actually set up
+concrete mechanisms for g0vernance.
+
+332
+00:24:06,860 --> 00:24:13,060
+The first one is the amendments,
+or how to amend the g0v communi--
+
+333
+00:24:13,060 --> 00:24:15,060
+Sorry, the g0v manifesto.
+
+334
+00:24:16,400 --> 00:24:20,400
+Remember the-- one of the first
+ideas we talked about in the g0v manifesto
+
+335
+00:24:20,400 --> 00:24:23,540
+is how g0v describes itself.
+
+336
+00:24:25,720 --> 00:24:30,140
+So what happens if g0v
+evolves and the description
+
+337
+00:24:30,140 --> 00:24:34,460
+when it was founded no longer fits
+the current situation?
+
+338
+00:24:34,460 --> 00:24:40,640
+It's sort of like, how do we
+amend our constitution when--
+
+339
+00:24:40,640 --> 00:24:43,220
+things have changed, when time has passed,
+
+340
+00:24:43,220 --> 00:24:48,320
+when the situation
+is very different from before.
+
+341
+00:24:50,200 --> 00:24:55,920
+So, in October 20th, 2019
+some g0v-ers actually came up
+
+342
+00:24:55,920 --> 00:25:00,260
+with a procedure of how to amend
+our manifesto.
+
+343
+00:25:01,900 --> 00:25:07,220
+The central idea is that anyone
+can propose an amendment to the manifesto.
+
+344
+00:25:08,340 --> 00:25:11,260
+And there are also
+some conditions regarding
+
+345
+00:25:11,260 --> 00:25:13,660
+how do you propose an amendment.
+
+346
+00:25:13,660 --> 00:25:18,700
+It has to be proposed
+in the big hack-a-thons
+
+347
+00:25:18,700 --> 00:25:22,140
+that g0v community hosts
+every two months.
+
+348
+00:25:22,140 --> 00:25:26,140
+It has to have a host
+of this proposal, meaning that
+
+349
+00:25:26,140 --> 00:25:30,140
+one person has to be the point of contact
+of this proposal.
+
+350
+00:25:31,180 --> 00:25:35,420
+And it has to have
+open documents that anyone can read
+
+351
+00:25:35,420 --> 00:25:39,420
+about the proposal and
+how it's being discussed in--
+
+352
+00:25:39,420 --> 00:25:41,620
+in the hack-a-thon
+and also in follow-up meetings.
+
+353
+00:25:42,500 --> 00:25:44,500
+And once the proposal is finalized,
+
+354
+00:25:44,500 --> 00:25:48,500
+it has to have a public review period
+of two weeks.
+
+355
+00:25:48,500 --> 00:25:54,360
+And it has to the link of the proposal
+has to be posted in g0v's Slack
+
+356
+00:25:54,360 --> 00:25:57,000
+for as many people to see as possible.
+
+357
+00:25:59,000 --> 00:26:03,000
+And if there's no opposing opinions
+in two weeks,
+
+358
+00:26:03,000 --> 00:26:09,080
+then the proposal is adopted
+and it becomes sort of the new manifesto.
+
+359
+00:26:09,800 --> 00:26:16,120
+And if there are opposing ideas,
+or opinions, then we would resolve
+
+360
+00:26:16,120 --> 00:26:21,840
+to general discussion in the general channel
+of g0v's Slack.
+
+361
+00:26:21,840 --> 00:26:27,750
+So this kind of
+procedure is very important
+
+362
+00:26:27,840 --> 00:26:33,840
+because it lists out exact steps
+of the g0vernance.
+
+363
+00:26:33,840 --> 00:26:37,840
+It's not vague ideas or
+vague, abstract concept.
+
+364
+00:26:37,840 --> 00:26:41,840
+It's actually-- it's actually
+something that you can follow
+
+365
+00:26:41,840 --> 00:26:44,650
+and go through and, you know,
+this is a checklist,
+
+366
+00:26:44,650 --> 00:26:49,840
+so it's very easy to see where
+each of these proposals
+
+367
+00:26:51,200 --> 00:26:56,120
+is in terms of their progress.
+
+368
+00:26:56,120 --> 00:27:03,490
+So this is actually the final version
+that has been proposed on October 20th
+
+369
+00:27:03,490 --> 00:27:08,040
+and it was passed
+two weeks later on November 4th.
+
+370
+00:27:08,660 --> 00:27:13,300
+It amends the original manifesto
+into its current form.
+
+371
+00:27:15,780 --> 00:27:21,980
+So, this document also provides
+some history of the original manifesto
+
+372
+00:27:21,980 --> 00:27:25,980
+and the changes underneath this.
+
+373
+00:27:25,980 --> 00:27:29,980
+And a log of all kinds of discussions
+that happened during the hack-a-thon
+
+374
+00:27:29,980 --> 00:27:32,180
+and also during follow-up meetings.
+
+375
+00:27:36,660 --> 00:27:41,460
+One of the interesting points that
+happened during this discussion
+
+376
+00:27:41,460 --> 00:27:44,220
+is the phrase, 'liquid democracy'.
+
+377
+00:27:44,860 --> 00:27:47,260
+When g0v was first founded
+
+378
+00:27:47,260 --> 00:27:51,260
+the idea of liquid democracy actually
+excites a lot of people.
+
+379
+00:27:52,400 --> 00:27:57,520
+And it was in the mani-- it was
+put inside the original manifesto.
+
+380
+00:27:58,180 --> 00:28:04,180
+But over time, we realized
+the difficulties of the liquid democracy
+
+381
+00:28:04,180 --> 00:28:08,380
+and in the current form of the manifesto,
+this term no longer exists.
+
+382
+00:28:10,860 --> 00:28:16,500
+The other interesting part is about
+freedom of speech, or freedom of expression.
+
+383
+00:28:17,100 --> 00:28:19,100
+And there are-- there are talks about
+
+384
+00:28:19,100 --> 00:28:23,100
+if freedom of expression is
+actually the best way,
+
+385
+00:28:23,100 --> 00:28:27,620
+or the best phrase to describe
+what we support fundamentally.
+
+386
+00:28:29,260 --> 00:28:33,220
+But then, the term actually--
+
+387
+00:28:33,220 --> 00:28:36,260
+well, after a period of
+discussion, the term actually--
+
+388
+00:28:36,260 --> 00:28:38,260
+the people have decided
+that this term actually
+
+389
+00:28:38,260 --> 00:28:42,260
+is still the best way to
+describe what we think here,
+
+390
+00:28:42,260 --> 00:28:48,760
+so it was put--
+it was kept unchanged.
+
+391
+00:28:50,760 --> 00:28:54,760
+So, this is a very good example
+for me to see,
+
+392
+00:28:54,760 --> 00:29:02,190
+while g0v has fundamental ideas as foundations
+or infrastructure as the community,
+
+393
+00:29:02,190 --> 00:29:05,080
+it's also very adaptable
+and it's also very open
+
+394
+00:29:05,100 --> 00:29:09,780
+and transparent when people
+when people propose change.
+
+395
+00:29:10,880 --> 00:29:15,960
+Open discussions are facilitated
+and different ideas are considered.
+
+396
+00:29:17,080 --> 00:29:29,360
+This sort of for me, in a way,
+manifests g0v's own beliefs in itself,
+
+397
+00:29:29,440 --> 00:29:33,410
+which is very interesting
+and very good to me, I think.
+
+398
+00:29:34,940 --> 00:29:39,980
+The second example is
+how the g0v community
+
+399
+00:29:39,980 --> 00:29:43,080
+governs its social media platforms.
+
+400
+00:29:43,840 --> 00:29:47,840
+And as you might know,
+g0v has a official--
+
+401
+00:29:47,840 --> 00:29:50,660
+Facebook account, Facebook page, actually.
+
+402
+00:29:51,360 --> 00:29:55,360
+So, the question,
+the concrete question is
+
+403
+00:29:55,360 --> 00:29:59,880
+who gets to post what
+on g0v's Facebook page?
+
+404
+00:30:01,100 --> 00:30:08,060
+So, this has been very vague
+for some time.
+
+405
+00:30:08,460 --> 00:30:13,260
+And some time last year,
+some g0v-ers, including myself,
+
+406
+00:30:13,260 --> 00:30:17,260
+decided to come together
+and discuss if we can set up
+
+407
+00:30:17,260 --> 00:30:21,200
+a concrete checklist-style mechanism
+
+408
+00:30:22,100 --> 00:30:29,050
+for all g0v contributors to follow
+
+409
+00:30:30,100 --> 00:30:34,200
+and while not make
+the g0v Facebook page
+
+410
+00:30:36,100 --> 00:30:40,100
+the tool for a minority of
+the g0v contributor,
+
+411
+00:30:40,100 --> 00:30:44,740
+but actually anyone can propose a post
+to be posted.
+
+412
+00:30:44,740 --> 00:30:50,840
+So, this is the final mechanism
+that was discussed and decided.
+
+413
+00:30:52,120 --> 00:30:57,840
+And we have decided that
+there will be a group of reviewers
+
+414
+00:30:57,840 --> 00:31:05,080
+that reviews every post that's been
+proposed to be posted.
+
+415
+00:31:05,840 --> 00:31:07,840
+And fundamentally, what's important
+
+416
+00:31:07,840 --> 00:31:12,040
+is that all the proposals
+and all the discussions
+
+417
+00:31:12,040 --> 00:31:14,040
+has to take place
+in public spaces.
+
+418
+00:31:15,120 --> 00:31:17,500
+In public channels on Slack,
+
+419
+00:31:17,500 --> 00:31:21,740
+or in public shared documents
+like Google Docs or HackMD,
+
+420
+00:31:21,740 --> 00:31:24,040
+so that it remains transparent.
+
+421
+00:31:25,940 --> 00:31:29,940
+We have also decided--
+
+422
+00:31:29,940 --> 00:31:34,860
+The g0vernance mechanism or model
+of the reviewer group--
+
+423
+00:31:34,860 --> 00:31:36,860
+Who gets to be a reviewer?
+
+424
+00:31:36,860 --> 00:31:42,400
+Anyone can say that he or she
+or they want to be a reviewer.
+
+425
+00:31:42,400 --> 00:31:49,020
+And if two people agree, they can join
+the reviewer group and become a reviewer.
+
+426
+00:31:52,460 --> 00:31:58,180
+We have also discussed the review period,
+
+427
+00:31:58,180 --> 00:32:05,240
+meaning how long does a post
+have to be reviewed before it's posted?
+
+428
+00:32:06,760 --> 00:32:10,760
+So, this is a very concrete and
+
+429
+00:32:10,760 --> 00:32:15,620
+and something that could be practiced
+in reality.
+
+430
+00:32:15,620 --> 00:32:22,820
+And this mechanism has actually been
+heavily enforced
+
+431
+00:32:22,820 --> 00:32:24,820
+during the past couple of months
+
+432
+00:32:24,820 --> 00:32:26,820
+because right now, the g0v community
+
+433
+00:32:26,820 --> 00:32:31,180
+is preparing for its summit
+at the end of this year
+
+434
+00:32:31,180 --> 00:32:35,380
+and because of the promotional
+needs of the summit,
+
+435
+00:32:37,180 --> 00:32:43,740
+there were a lot of posts being proposed
+to the reviewers to be posted,
+
+436
+00:32:43,740 --> 00:32:45,740
+And the workload spiked
+
+437
+00:32:48,420 --> 00:32:52,540
+and produced a lot of workload
+for the reviewers.
+
+438
+00:32:52,540 --> 00:32:56,940
+And that was a challenge
+for this mechanism.
+
+439
+00:32:56,940 --> 00:33:01,970
+And perhaps there will be a discussion of
+how to make it more efficient in the future.
+
+440
+00:33:02,560 --> 00:33:06,050
+But the important thing is--
+the important thing is all this--
+
+441
+00:33:06,560 --> 00:33:11,260
+all these discussions are transparent
+and open to anyone to see and participate.
+
+442
+00:33:11,260 --> 00:33:18,460
+So, that it doesn't become
+closed off and abused by some people,
+
+443
+00:33:18,460 --> 00:33:20,460
+rather the other.
+
+444
+00:33:23,560 --> 00:33:25,560
+So, let's go back to the slides.
+
+445
+00:33:27,460 --> 00:33:30,260
+The other type of project is map.
+
+446
+00:33:30,260 --> 00:33:34,260
+This is a very difficult
+kind of project to do
+
+447
+00:33:34,260 --> 00:33:38,980
+because g0v is so diverse and
+is so decentralized.
+
+448
+00:33:38,980 --> 00:33:41,740
+No one actually knows how big it is.
+
+449
+00:33:41,740 --> 00:33:45,740
+For example, we know that on
+g0v's Slack, there are
+
+450
+00:33:45,740 --> 00:33:47,740
+more or less eight thousand accounts.
+
+451
+00:33:47,740 --> 00:33:53,040
+But we never know the exact number of
+people who would identify
+
+452
+00:33:53,040 --> 00:33:55,040
+as g0v-ers, for example.
+
+453
+00:33:55,040 --> 00:34:01,560
+And we have never known the exact numbers
+of projects that's in the g0v community.
+
+454
+00:34:01,560 --> 00:34:04,320
+That's why people have done things like
+
+455
+00:34:05,560 --> 00:34:09,560
+aggregating repo info,
+or aggregating issue info.
+
+456
+00:34:09,560 --> 00:34:13,560
+People have done multiple project hubs
+to try to aggregate all--
+
+457
+00:34:13,560 --> 00:34:17,080
+all the projects
+of the g0v community, but
+
+458
+00:34:19,080 --> 00:34:21,720
+it was a very difficult project to do.
+
+459
+00:34:22,160 --> 00:34:24,160
+And so is the map.
+
+460
+00:34:24,160 --> 00:34:30,460
+This is something I attempted
+less than two years ago, in 2018.
+
+461
+00:34:30,460 --> 00:34:34,460
+I was trying to think of
+different projects that I know
+
+462
+00:34:34,460 --> 00:34:39,100
+in the g0v community and try to
+create a map of how they overlap.
+
+463
+00:34:40,460 --> 00:34:42,900
+And this map was created.
+
+464
+00:34:42,900 --> 00:34:44,900
+It was very chaotic.
+
+465
+00:34:44,900 --> 00:34:49,810
+It's quite difficult to read,
+so this is a very early draft
+
+466
+00:34:49,810 --> 00:34:52,900
+of what a map could look like.
+
+467
+00:34:52,900 --> 00:34:58,500
+And because g0v is decentralized,
+everyone could create their own maps.
+
+468
+00:34:58,500 --> 00:35:02,600
+And maybe there's a way
+to collectivize these results
+
+469
+00:35:02,600 --> 00:35:07,470
+and create a more inclusive map
+from different perspectives.
+
+470
+00:35:10,600 --> 00:35:14,600
+And the final example that I want
+to share with you is organizations,
+
+471
+00:35:14,600 --> 00:35:18,600
+or groups, or task forces,
+as we call them,
+
+472
+00:35:18,600 --> 00:35:23,240
+that practice these
+g0vernance models or mechanisms.
+
+473
+00:35:23,240 --> 00:35:27,460
+There are more than one of these groups,
+
+474
+00:35:27,460 --> 00:35:33,700
+but the one I have been participating
+is called g0v International.
+
+475
+00:35:33,700 --> 00:35:36,660
+This is a fairly new task force--
+
+476
+00:35:36,660 --> 00:35:41,820
+that was established
+in the end of 2018.
+
+477
+00:35:41,820 --> 00:35:44,300
+Sorry, the end of 2019.
+
+478
+00:35:45,400 --> 00:35:52,780
+What we were concerning was the g0vernance
+Of g0v's international affairs.
+
+479
+00:35:52,780 --> 00:35:57,360
+Since g0v was founded in 2012,
+
+480
+00:35:57,360 --> 00:35:59,360
+because there were a lot of projects
+
+481
+00:35:59,380 --> 00:36:02,640
+alot of contributors of the g0v movement
+
+482
+00:36:02,640 --> 00:36:04,640
+people from outside Taiwan
+
+483
+00:36:04,640 --> 00:36:08,640
+started to notice the
+community and started to reach out,
+
+484
+00:36:08,640 --> 00:36:13,440
+and trying to establish
+different kinds of relationships.
+
+485
+00:36:13,440 --> 00:36:17,440
+g0v-ers were invited to give talks,
+
+486
+00:36:17,440 --> 00:36:23,440
+g0v-ers were invited to collaborate
+with outside organizations outside Taiwan.
+
+487
+00:36:23,440 --> 00:36:27,440
+Some other chances are people want
+to fund certain g0v projects
+
+488
+00:36:27,440 --> 00:36:31,960
+these all kinds of
+international exchanges or affairs
+
+489
+00:36:31,960 --> 00:36:39,010
+really touches the center of what we
+just talked about g0vernance of a community.
+
+490
+00:36:39,960 --> 00:36:45,960
+At its core, I think, it's the question:
+who gets to represent the community
+
+491
+00:36:45,960 --> 00:36:50,860
+when reaching out to the
+international community?
+
+492
+00:36:50,860 --> 00:36:55,360
+So, g0v International is a new task force
+that's established
+
+493
+00:36:55,360 --> 00:36:57,960
+to think about this problem
+
+494
+00:36:57,960 --> 00:37:02,960
+because there are a lot of different
+problems that we think of every day,
+
+495
+00:37:02,960 --> 00:37:06,160
+but if there's no
+people inside the project
+
+496
+00:37:06,160 --> 00:37:10,160
+to think of it constantly,
+there will not be progress.
+
+497
+00:37:10,160 --> 00:37:14,160
+So, because I think
+about g0vernance a lot,
+
+498
+00:37:14,160 --> 00:37:19,040
+so I participated
+in this task force to think of
+
+499
+00:37:19,040 --> 00:37:23,300
+to think about this problem together
+with other g0v-ers.
+
+500
+00:37:23,300 --> 00:37:28,860
+And one thing that we
+feel strongly is that
+
+501
+00:37:28,860 --> 00:37:34,660
+rather than doing international
+exchanges through conferences,
+
+502
+00:37:34,660 --> 00:37:40,120
+by giving talks,
+giving keynote addresses,
+
+503
+00:37:40,120 --> 00:37:44,720
+what we think might be a better way to do
+these exchanges is
+
+504
+00:37:44,720 --> 00:37:47,640
+to host hack-a-thons,
+international hack-a-thons,
+
+505
+00:37:47,640 --> 00:37:52,000
+so that it's not so much
+as one g0v-er on the stage
+
+506
+00:37:52,000 --> 00:37:54,820
+representing the entire community,
+
+507
+00:37:54,820 --> 00:37:58,820
+but it's more about inviting
+more than one.
+
+508
+00:37:58,820 --> 00:38:02,820
+many g0v-er contributors to
+come to the event,
+
+509
+00:38:02,820 --> 00:38:06,820
+and also inviting a lot more
+different members
+
+510
+00:38:06,820 --> 00:38:11,840
+or contributors of different communities
+from the international-- from the world
+
+511
+00:38:11,840 --> 00:38:15,000
+to come together in a hack-a-thon
+and actually talk about projects,
+
+512
+00:38:15,000 --> 00:38:18,360
+and actually work together on projects.
+
+513
+00:38:19,800 --> 00:38:26,140
+So, this is one thing that the g0v
+international task force think would--
+
+514
+00:38:27,620 --> 00:38:33,860
+would more or less alleviate
+or lessen the impact of one person
+
+515
+00:38:33,860 --> 00:38:36,020
+representing the community,
+
+516
+00:38:36,020 --> 00:38:38,900
+because there are times
+when this is necessary--
+
+517
+00:38:41,540 --> 00:38:46,080
+when talking to
+groups or organizations
+
+518
+00:38:46,100 --> 00:38:50,100
+that doesn't necessarily know what
+a polycentric community is.
+
+519
+00:38:51,040 --> 00:38:57,040
+So, what the g0v International has done
+in the past two years is host such events.
+
+520
+00:38:58,740 --> 00:39:01,680
+The g0v International task force
+hosted two hack-a-thons,
+
+521
+00:39:01,680 --> 00:39:05,920
+along with our partners or our friends
+in Japan,
+
+522
+00:39:05,920 --> 00:39:08,680
+in South Korea, and in Hong Kong.
+
+523
+00:39:10,680 --> 00:39:15,440
+The first event
+was hosted in Okinawa, actually.
+
+524
+00:39:15,440 --> 00:39:20,280
+We were joking that Okinawa
+is sort of the midway between
+
+525
+00:39:20,280 --> 00:39:24,280
+all these places that we have--
+we are collaborating.
+
+526
+00:39:24,280 --> 00:39:28,280
+It's actually not, but everyone
+gets to fly somewhere else,
+
+527
+00:39:28,280 --> 00:39:30,860
+which is really interesting and attractive
+to a lot of us.
+
+528
+00:39:32,140 --> 00:39:36,440
+We are calling these hack-a-thons
+"Facing the Ocean" meet and hacks.
+
+529
+00:39:37,380 --> 00:39:42,200
+Facing the Ocean is something that we’ve
+talked about and discussed together,
+
+530
+00:39:43,360 --> 00:39:49,410
+between contributors in Taiwan
+in Japan, in South Korea, in Hong Kong,
+
+531
+00:39:49,410 --> 00:39:55,300
+and thinking about
+Facing the Ocean,
+
+532
+00:39:55,300 --> 00:39:59,300
+finding different opportunities
+to network together.
+
+533
+00:40:01,300 --> 00:40:07,300
+And the first one is, as I just said,
+it was hosted in Okinawa in June 2019,
+
+534
+00:40:07,300 --> 00:40:11,300
+and the second one was hosted
+in Tainan here in Taiwan,
+
+535
+00:40:11,300 --> 00:40:15,300
+a southern city of Taiwan,
+in December 2019.
+
+536
+00:40:16,560 --> 00:40:22,560
+And we were scheduling the third one
+to be hosted in Jeju Island, South Korea,
+
+537
+00:40:22,560 --> 00:40:27,060
+this summer, but because of
+COVID-19 we're not allowed,
+
+538
+00:40:27,060 --> 00:40:29,060
+we're not able to do that,
+
+539
+00:40:29,060 --> 00:40:33,620
+so instead, we've been hosting
+online sessions, small or big
+
+540
+00:40:34,280 --> 00:40:40,420
+trying to keep this network alive,
+and exchanges our experiences
+
+541
+00:40:40,420 --> 00:40:45,140
+in all kinds of things, including how to
+fight this pandemic together.
+
+542
+00:40:49,460 --> 00:40:55,340
+So, in close,
+I'd like to share this thought with you
+
+543
+00:40:55,340 --> 00:40:59,680
+is although there are a lot
+of different projects in g0v,
+
+544
+00:40:59,680 --> 00:41:04,640
+I think my favorite g0v project
+is g0v itself.
+
+545
+00:41:04,640 --> 00:41:09,380
+It's being to see all this diversity,
+all its differences,
+
+546
+00:41:09,380 --> 00:41:11,780
+but also trying to find commonalities
+
+547
+00:41:11,780 --> 00:41:14,280
+between different projects,
+different people.
+
+548
+00:41:15,140 --> 00:41:21,840
+And thinking about g0vernance might be
+really dull for some people, but not to me.
+
+549
+00:41:22,580 --> 00:41:27,670
+I think about these rules,
+these mechanisms a lot,
+
+550
+00:41:27,670 --> 00:41:31,720
+and these, I think, really is important
+
+551
+00:41:31,720 --> 00:41:36,680
+to a community that wants
+to keep its polycentric nature and
+
+552
+00:41:36,680 --> 00:41:39,840
+wants to keep it open, wants
+to keep things transparent.
+
+553
+00:41:41,840 --> 00:41:47,470
+So, that's why I decided to accept
+the invitation of the organizing team and
+
+554
+00:41:47,840 --> 00:41:53,330
+come to you and share not only the history
+of some projects of the g0v community,
+
+555
+00:41:53,840 --> 00:41:57,840
+but also g0vernance and how
+g0v-ers are handling
+
+556
+00:41:57,840 --> 00:42:01,840
+this very different and complex
+issue together.
+
+557
+00:42:03,840 --> 00:42:09,840
+So, there is a very common saying
+in the g0v community,
+
+558
+00:42:09,840 --> 00:42:11,840
+which is, "You are nobody."
+
+559
+00:42:11,840 --> 00:42:15,840
+This comes from a wordplay
+in the Mandarin language,
+
+560
+00:42:15,840 --> 00:42:22,740
+is that nobody-- we often complain,
+"Why is nobody doing this?"
+
+561
+00:42:23,240 --> 00:42:31,770
+But one belief that's very central to
+the community is that you are that nobody.
+
+562
+00:42:31,920 --> 00:42:34,920
+If you see something that nobody's doing,
+
+563
+00:42:34,920 --> 00:42:37,700
+maybe you're the one
+who's supposed to do that.
+
+564
+00:42:38,580 --> 00:42:44,810
+So in close, I'd like to share this
+saying with you,
+
+565
+00:42:45,380 --> 00:42:47,900
+that all of you are nobody.
+
+566
+00:42:47,900 --> 00:42:52,660
+Which means that if you see something
+that you want in the world,
+
+567
+00:42:52,660 --> 00:42:56,660
+you are the one to make it happen
+and exist in the world
+
+568
+00:42:57,200 --> 00:42:59,560
+not only just using technology,
+
+569
+00:42:59,560 --> 00:43:04,260
+not only creating open data,
+but other things as well.
+
+570
+00:43:05,160 --> 00:43:08,170
+People often say that
+people often ask,
+
+571
+00:43:08,170 --> 00:43:09,570
+"If I don't know how to code,
+
+572
+00:43:09,570 --> 00:43:13,920
+can I participate?
+Can I join the community?"
+
+573
+00:43:13,920 --> 00:43:16,120
+And people always say, "Yes."
+
+574
+00:43:16,120 --> 00:43:18,120
+You don't need to know coding.
+
+575
+00:43:18,120 --> 00:43:22,280
+You don't need to be an engineer
+to contribute to the g0v community,
+
+576
+00:43:22,280 --> 00:43:25,180
+or any other kind of community
+
+577
+00:43:25,180 --> 00:43:31,060
+that's using technology and collaboration
+to better government and society.
+
+578
+00:43:31,060 --> 00:43:35,600
+In g0v, there are a lot of people
+who are designers, who are writers,
+
+579
+00:43:35,600 --> 00:43:39,600
+who are lawyers,
+who just doesn't know how to code,
+
+580
+00:43:39,600 --> 00:43:42,820
+doesn't know how to
+write a computer program.
+
+581
+00:43:42,820 --> 00:43:44,820
+But everyone knows--
+
+582
+00:43:44,820 --> 00:43:46,820
+but the important thing is
+
+583
+00:43:46,820 --> 00:43:50,820
+keep the spirit of
+open source in your heart
+
+584
+00:43:50,820 --> 00:43:54,820
+and collaborate in an open manner.
+
+585
+00:43:54,820 --> 00:43:59,760
+And that way, the community
+will thrive and grow with you.
+
+586
+00:44:01,060 --> 00:44:05,440
+So, here are three links
+if you are interested to follow.
+
+587
+00:44:05,440 --> 00:44:10,420
+One is including
+this slides, a lot of these-- I mean,
+
+588
+00:44:11,440 --> 00:44:17,240
+most of g0v's shared documents live
+in this Web service called HackMD.
+
+589
+00:44:17,240 --> 00:44:20,040
+This is a link for you to check out
+
+590
+00:44:20,040 --> 00:44:25,240
+all the different kind of documents
+that's been composed by g0v-ers.
+
+591
+00:44:26,120 --> 00:44:30,120
+The second link is for you
+to join g0v's Slack.
+
+592
+00:44:30,120 --> 00:44:35,270
+If you are interested,
+come into our chat room and talk to us.
+
+593
+00:44:38,120 --> 00:44:44,120
+And the third link is actually
+if you're even more interested
+
+594
+00:44:44,120 --> 00:44:48,120
+you are very welcome to
+come join us at the end of this year,
+
+595
+00:44:48,120 --> 00:44:52,120
+December 3rd through
+December the 6th,
+
+596
+00:44:52,120 --> 00:44:58,320
+the g0v Summit 2020, which is
+g0v community's biannual gathering.
+
+597
+00:44:59,300 --> 00:45:04,900
+This year, because of COVID-19,
+foreigners might not be able
+
+598
+00:45:04,900 --> 00:45:09,640
+to attend physically here in Taiwan,
+but we are working very hard
+
+599
+00:45:09,640 --> 00:45:14,160
+to design mechanisms
+for people to participate remotely,
+
+600
+00:45:14,160 --> 00:45:19,780
+including our speakers
+and regular participants, attendees.
+
+601
+00:45:21,780 --> 00:45:24,080
+And this year's g0v Summit
+
+602
+00:45:25,780 --> 00:45:32,230
+the temporary, or the working theme
+is locality and connectivity,
+
+603
+00:45:32,640 --> 00:45:36,640
+which means that
+there are a lot of communities
+
+604
+00:45:36,640 --> 00:45:38,640
+here in Taiwan, not just g0v,
+
+605
+00:45:38,640 --> 00:45:41,680
+and there are a lot of
+different communities in our region
+
+606
+00:45:41,780 --> 00:45:44,640
+in Taiwan, in Japan,
+in South Korea, in Hong Kong,
+
+607
+00:45:44,640 --> 00:45:51,300
+and other places here in Asia,
+and also across the world.
+
+608
+00:45:51,300 --> 00:45:55,880
+So, we want to explore
+what more can we do when we're connected?
+
+609
+00:45:55,880 --> 00:45:58,120
+What more can we do when these networks
+
+610
+00:45:58,120 --> 00:46:03,160
+are built, are maintained,
+and are nurtured?
+
+611
+00:46:03,880 --> 00:46:09,310
+So as one of the co-chairs
+of this year's g0v Summit,
+
+612
+00:46:09,880 --> 00:46:14,880
+I very sincerely invite
+and welcome you to come
+
+613
+00:46:14,880 --> 00:46:19,080
+in December to join us
+in g0v Summit 2020.
+
+614
+00:46:20,180 --> 00:46:22,380
+So, that's my session.
+
+615
+00:46:22,380 --> 00:46:24,380
+Thank you for listening.
+
+616
+00:46:24,380 --> 00:46:26,380
+If you have any questions,
+
+617
+00:46:26,380 --> 00:46:30,380
+come to g0v's Slack and
+I'll be there,
+
+618
+00:46:30,380 --> 00:46:35,080
+and as will be many more
+g0v contributors to--
+
+619
+00:46:35,080 --> 00:46:37,080
+to answer your questions,
+
+620
+00:46:37,080 --> 00:46:40,560
+to introduce you to different projects,
+
+621
+00:46:40,560 --> 00:46:43,700
+and yeah, just to talk.
+
+622
+00:46:43,700 --> 00:46:45,700
+Thank you very much.
+

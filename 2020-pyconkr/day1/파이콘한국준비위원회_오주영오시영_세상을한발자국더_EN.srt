@@ -1,0 +1,1025 @@
+1
+00:00:10,400 --> 00:00:13,550
+Hello, I am Siyoung Oh from the
+PyCon Korea Organizing Team
+
+2
+00:00:13,720 --> 00:00:15,810
+And I am Aven Oh
+
+3
+00:00:16,750 --> 00:00:20,470
+This year, there is a special session
+from the PyCon Korea Organizing Team
+
+4
+00:00:20,510 --> 00:00:25,670
+We will tell you how we are shaping PyCon
+Korea to contribute to the Python ecosystem
+
+5
+00:00:25,710 --> 00:00:29,870
+Today, we will talk about about the CoC,
+which is PyCon Korea's code of conduct
+
+6
+00:00:30,860 --> 00:00:32,930
+Aven, have you heard of the CoC?
+
+7
+00:00:32,930 --> 00:00:35,380
+Yes, I have heard of it
+
+8
+00:00:36,000 --> 00:00:38,560
+I am sure you are all
+observing to the CoC as well
+
+9
+00:00:38,600 --> 00:00:42,760
+The CoC is our promise to
+everyone participating in PyCon Korea
+
+10
+00:00:42,800 --> 00:00:44,470
+PyCon Korea is a community event
+
+11
+00:00:44,470 --> 00:00:48,430
+Presenters have stepped up
+to share their experiences
+
+12
+00:00:48,830 --> 00:00:52,390
+Sponsors, individual sponsors,
+business partners,
+
+13
+00:00:52,970 --> 00:00:57,840
+and all participants including the
+PyCon Korea Organizing Team
+
+14
+00:00:57,870 --> 00:00:59,640
+who are volunteering the entire year
+
+15
+00:00:59,670 --> 00:01:03,060
+are voluntarily contributing to the
+community, expecting nothing in return
+
+16
+00:01:04,950 --> 00:01:09,990
+PyCon Korea aims to be an event
+in which anyone can easily participate
+
+17
+00:01:10,030 --> 00:01:13,420
+We aim to create an atmosphere in which
+we acknowledge and respect our differences
+
+18
+00:01:13,460 --> 00:01:16,250
+We encourage a welcoming atmosphere
+
+19
+00:01:17,650 --> 00:01:21,370
+Such values of PyCon Korea
+are embodied in this CoC
+
+20
+00:01:21,390 --> 00:01:26,310
+To create a Python community
+where nobody is excluded
+
+21
+00:01:26,350 --> 00:01:29,560
+PyCon Korea's CoC is a promise that should
+be kept by the members at the very least
+
+22
+00:01:31,400 --> 00:01:38,760
+All of you, including myself and
+ Aven here, are keeping this promise
+
+23
+00:01:38,790 --> 00:01:40,390
+It is kept not just for
+the day of the event
+
+24
+00:01:40,430 --> 00:01:45,630
+but also while preparing for PyCon Korea
+and in all of our contents
+
+25
+00:01:46,840 --> 00:01:48,520
+This is how it is done
+
+26
+00:01:53,120 --> 00:01:56,280
+Have you imagined an event
+where anyone can be involved?
+
+27
+00:01:56,310 --> 00:02:01,590
+At PyCon Korea, we want all of you
+to be respected for who you are
+
+28
+00:02:04,550 --> 00:02:10,270
+Are you thinking, "Is that even possible?"
+or "That's being too idealistic"?
+
+29
+00:02:10,310 --> 00:02:12,980
+You could think that way
+
+30
+00:02:13,020 --> 00:02:17,260
+We may not be perfect, but we
+are trying and putting in our efforts
+
+31
+00:02:17,270 --> 00:02:22,270
+while imagining the future
+that our efforts will bring
+
+32
+00:02:24,890 --> 00:02:27,890
+A place where you can feel safe
+and have fun talking even with strangers
+
+33
+00:02:27,910 --> 00:02:31,100
+about Python, which we all have in common
+
+34
+00:02:31,550 --> 00:02:34,200
+"Sure, this is good enough",
+"Everyone's like that"
+
+35
+00:02:34,230 --> 00:02:37,990
+"I should keep it in" "Am I sensitive?"
+Instead of these thoughts
+
+36
+00:02:38,030 --> 00:02:40,550
+what about a place where you can point out
+
+37
+00:02:40,590 --> 00:02:43,570
+that something's wrong
+without feeling threatened?
+
+38
+00:02:44,600 --> 00:02:46,480
+A community where I am
+respected for who I am
+
+39
+00:02:46,510 --> 00:02:50,580
+and where everyone feels safe
+and can trust each other
+
+40
+00:02:50,680 --> 00:02:55,150
+A place where we can
+all talk about going forward
+
+41
+00:02:55,190 --> 00:02:58,190
+That's the kind of environment
+we are imagining
+
+42
+00:03:00,570 --> 00:03:03,610
+But Aven,
+this is a technology conference
+
+43
+00:03:03,630 --> 00:03:08,270
+People might wonder why
+we are talking so idealistically
+
+44
+00:03:08,310 --> 00:03:11,190
+Why is it important that we
+embrace every participant?
+
+45
+00:03:11,410 --> 00:03:14,650
+You're right,
+and as Siyoung pointed out
+
+46
+00:03:14,670 --> 00:03:16,870
+this is a technology conference
+
+47
+00:03:16,910 --> 00:03:21,990
+However, if you ask us why it is so
+important that we embrace every participant
+
+48
+00:03:22,030 --> 00:03:24,390
+this is how we look at it
+
+49
+00:03:24,430 --> 00:03:27,710
+I think PyCon Korea's attitude
+of respecting diversity
+
+50
+00:03:27,750 --> 00:03:32,280
+is the source that enriches
+our society and community
+
+51
+00:03:32,320 --> 00:03:35,880
+Finding a solution to a problem
+and keeping the community growing
+
+52
+00:03:35,910 --> 00:03:39,350
+in order to change the world for the better
+
+53
+00:03:39,390 --> 00:03:41,900
+requires diverse experience and perspective
+
+54
+00:03:42,030 --> 00:03:44,470
+Such diverse experience and perspective
+
+55
+00:03:44,510 --> 00:03:48,600
+begin from respecting and
+embracing each other
+
+56
+00:03:48,620 --> 00:03:50,440
+That's what we think
+
+57
+00:03:52,870 --> 00:03:55,550
+The CoC is a promise for everyone
+
+58
+00:03:55,590 --> 00:03:59,230
+The CoC is always evolving
+to create a better community
+
+59
+00:03:59,270 --> 00:04:03,010
+It wasn't made to criticize
+or exclude anyone
+
+60
+00:04:03,050 --> 00:04:07,050
+It also isn't a perfect set of rules
+to determine if someone's wrong
+
+61
+00:04:09,620 --> 00:04:13,660
+That's right, as Siyoung just said
+
+62
+00:04:13,710 --> 00:04:17,190
+the CoC isn't a set of rules to
+criticize or exclude someone
+
+63
+00:04:17,230 --> 00:04:19,880
+nor is it perfect
+
+64
+00:04:19,920 --> 00:04:22,840
+However, we are trying things one at a time
+
+65
+00:04:22,870 --> 00:04:27,270
+so that our efforts seep through everywhere
+
+66
+00:04:27,310 --> 00:04:33,510
+One of them is the CoC Agreement
+like the one you see below
+
+67
+00:04:33,550 --> 00:04:37,820
+At PyCon Korea, when presenters
+make their presentations
+
+68
+00:04:37,860 --> 00:04:41,380
+or when our business partners work with us
+
+69
+00:04:41,390 --> 00:04:44,270
+or when our sponsors support us
+
+70
+00:04:44,310 --> 00:04:48,230
+or when someone becomes a member
+of the PyCon Korea Organizing Team
+
+71
+00:04:48,270 --> 00:04:52,230
+we sign an agreement like
+the one you see below
+
+72
+00:04:52,270 --> 00:04:55,080
+We also observe the CoC for presentations
+
+73
+00:04:55,110 --> 00:04:59,160
+When making presentation proposals or
+reviewing videos of presentation materials
+
+74
+00:04:59,180 --> 00:05:04,060
+we check to see if the CoC
+has been observed
+
+75
+00:05:05,730 --> 00:05:07,970
+Although it is unfortunate
+we can't see them this year
+
+76
+00:05:08,000 --> 00:05:13,160
+you can easily find signs on the CoC
+at the offline site of our event
+
+77
+00:05:13,190 --> 00:05:15,950
+This is how we're creating
+an environment where
+
+78
+00:05:15,970 --> 00:05:18,260
+thoughts are respected
+for being different, not wrong
+
+79
+00:05:18,910 --> 00:05:23,550
+During breaks in between sessions,
+we play the CoC guideline video
+
+80
+00:05:23,590 --> 00:05:28,590
+The CoC guideline video will be played
+in between sessions this year as well
+
+81
+00:05:28,630 --> 00:05:30,630
+so please take a look at it
+
+82
+00:05:30,670 --> 00:05:34,750
+We are also promoting the CoC
+on our official social media account
+
+83
+00:05:36,910 --> 00:05:40,030
+Also, by slightly applying
+the Universal Design
+
+84
+00:05:40,070 --> 00:05:45,030
+we are preparing financial support
+and a barrier-free location for the event
+
+85
+00:05:45,070 --> 00:05:47,150
+We still have a long way to go
+
+86
+00:05:47,190 --> 00:05:50,950
+but we are expanding one step at at time
+
+87
+00:05:53,920 --> 00:05:58,880
+Also, we educated our PyCon Korea
+Organizing Team on disability awareness
+
+88
+00:05:58,910 --> 00:06:03,910
+We invited specialists and asked a lot
+of questions during the session
+
+89
+00:06:03,950 --> 00:06:08,890
+to raise disability awareness
+
+90
+00:06:08,930 --> 00:06:10,250
+We provide real-time captions
+
+91
+00:06:10,270 --> 00:06:14,960
+and subtitles for all videos
+shown at PyCon Korea 2020
+
+92
+00:06:17,230 --> 00:06:18,830
+We aren't perfect
+
+93
+00:06:18,840 --> 00:06:22,440
+That's why we completely
+revised the CoC in 2019
+
+94
+00:06:22,460 --> 00:06:26,780
+Before its revision, the entire PyCon Korea
+Organizing Team held a human rights workshop
+
+95
+00:06:26,790 --> 00:06:28,510
+and to revise the CoC
+
+96
+00:06:28,550 --> 00:06:33,070
+we held a 2-day camp dedicated to discuss
+the CoC and also held regular debates
+
+97
+00:06:33,110 --> 00:06:36,310
+It took about 4 months
+
+98
+00:06:36,350 --> 00:06:40,270
+Before distributing the revised CoC,
+we received outside consultation
+
+99
+00:06:40,310 --> 00:06:44,390
+and even legal consultation before
+adding it to our agreement
+
+100
+00:06:44,430 --> 00:06:48,670
+Also, in 2020, we revised the CoC so that
+it can be applied to online environments
+
+101
+00:06:48,710 --> 00:06:52,310
+Every year, before the event
+
+102
+00:06:52,350 --> 00:06:55,270
+we hold an internal workshop to
+refresh our knowledge on the CoC
+
+103
+00:07:01,630 --> 00:07:04,230
+Please give us suggestions
+on how to improve the CoC
+
+104
+00:07:04,270 --> 00:07:06,750
+We want to build it together
+
+105
+00:07:06,790 --> 00:07:10,390
+If you run into a problem,
+please report it to us
+
+106
+00:07:10,430 --> 00:07:14,710
+It will help us to make a safer environment
+
+107
+00:07:18,870 --> 00:07:21,590
+Did you know about this?
+
+108
+00:07:21,920 --> 00:07:25,840
+The PyCon Korea Organizing Team
+members are also
+
+109
+00:07:25,870 --> 00:07:28,950
+ordinary participants as well as volunteers
+
+110
+00:07:28,990 --> 00:07:31,510
+Aven, when you found out that
+the PyCon Korea Organizing Team
+
+111
+00:07:31,530 --> 00:07:36,510
+are volunteers who purchase tickets,
+what did you think?
+
+112
+00:07:37,430 --> 00:07:40,510
+I thought it was interesting
+
+113
+00:07:40,550 --> 00:07:45,190
+When I first became a member
+of the PyCon Korea Organizing Team
+
+114
+00:07:45,230 --> 00:07:48,110
+it felt like it was the host of the event
+
+115
+00:07:48,150 --> 00:07:53,510
+Usually, the host of the event
+doesn't purchase separate tickets
+
+116
+00:07:53,650 --> 00:07:57,730
+But now, I know about 'Everybody Pays'
+
+117
+00:07:57,750 --> 00:07:59,670
+and that the PyCon Korea Organizing Team
+
+118
+00:07:59,710 --> 00:08:03,910
+are also ordinary participants
+who are contributing in a different way
+
+119
+00:08:05,500 --> 00:08:06,960
+How about you?
+
+120
+00:08:06,990 --> 00:08:09,300
+As Aven said,
+the PyCon Korea Organizing Team
+
+121
+00:08:09,320 --> 00:08:12,060
+are volunteers who are
+contributing in a different way
+
+122
+00:08:12,080 --> 00:08:15,010
+just like how you haven't
+merely purchased a ticket
+
+123
+00:08:15,030 --> 00:08:21,230
+but contributing to the community
+just by participating in this event
+
+124
+00:08:21,520 --> 00:08:23,880
+Actually, the majority of
+the PyCon Korea Organizing Team
+
+125
+00:08:23,900 --> 00:08:26,900
+consisted of people with jobs or students
+
+126
+00:08:26,910 --> 00:08:29,910
+So the members would get out
+of work and work at night
+
+127
+00:08:29,950 --> 00:08:33,190
+and sometimes even until dawn,
+during lunch hours, and on weekends
+
+128
+00:08:33,230 --> 00:08:35,430
+to prepare for this event
+
+129
+00:08:35,470 --> 00:08:38,310
+About fifteen people or so
+gathered to plan this event
+
+130
+00:08:38,350 --> 00:08:40,320
+and we had to talk with so many people
+
+131
+00:08:40,350 --> 00:08:42,550
+that we were burned out
+both physically and mentally
+
+132
+00:08:42,570 --> 00:08:44,530
+So when we communicated externally
+
+133
+00:08:44,550 --> 00:08:47,790
+we also sent out the message to
+respect the PyCon Korea Organizing Team
+
+134
+00:08:48,000 --> 00:08:50,640
+since we are participants who
+deserve to be respected as well
+
+135
+00:08:51,860 --> 00:08:55,740
+We are also putting in efforts to
+respect each other among ourselves
+
+136
+00:08:55,750 --> 00:08:58,230
+When we run into a problem,
+we don't focus on who's responsible for it
+
+137
+00:08:58,270 --> 00:09:00,950
+but instead on
+how we'll solve the problem
+
+138
+00:09:00,990 --> 00:09:04,110
+We make decisions and
+take responsibility together
+
+139
+00:09:05,310 --> 00:09:09,500
+The PyCon Korea CoC wasn't created
+so that an individual or a minority
+
+140
+00:09:09,550 --> 00:09:12,390
+can give a good talk
+
+141
+00:09:12,430 --> 00:09:14,590
+We made it for us
+
+142
+00:09:14,630 --> 00:09:18,470
+Through PyCon Korea, we hope that
+you support each other's experiences
+
+143
+00:09:18,490 --> 00:09:22,330
+and have a lot of conversations
+while being respected
+
+144
+00:09:22,580 --> 00:09:26,540
+We hope that you grow
+deeper, broader, and stronger
+
+145
+00:09:26,580 --> 00:09:30,100
+and spread a positive influence
+to other places as well
+
+146
+00:09:30,300 --> 00:09:32,940
+We hope that through
+this year's PyCon Korea
+
+147
+00:09:32,980 --> 00:09:37,590
+your world will become a step broader
+
+148
+00:09:37,620 --> 00:09:39,060
+Thank you
+
+149
+00:09:39,100 --> 00:09:41,660
+Wait!
+Did you think this was the end?
+
+150
+00:09:42,420 --> 00:09:45,340
+We conducted a short interview on how
+
+151
+00:09:45,380 --> 00:09:48,180
+the PyCon Korea Organizing Team views the CoC
+
+152
+00:09:48,600 --> 00:09:51,520
+What is your take on the CoC?
+
+153
+00:09:51,990 --> 00:09:53,750
+Let's take a look!
+
+154
+00:09:55,720 --> 00:09:57,520
+My thoughts on the CoC?
+
+155
+00:09:57,520 --> 00:10:01,680
+At PyCon Korea, the Code of Conduct
+is a very challenging subject
+
+156
+00:10:02,460 --> 00:10:06,120
+PyCon Korea hopes that
+more people will use Python
+
+157
+00:10:06,140 --> 00:10:11,020
+in their daily lives and
+at work in various ways
+
+158
+00:10:11,700 --> 00:10:14,920
+That's why we want to embrace
+people from various fields
+
+159
+00:10:16,140 --> 00:10:21,900
+By participating in the process of creating
+and revising the Code of Conduct
+
+160
+00:10:21,940 --> 00:10:25,260
+I've learned that there are diverse
+people and lives in this world
+
+161
+00:10:25,700 --> 00:10:31,220
+and to embrace everyone, it requires
+a lot of deep thinking and effort
+
+162
+00:10:31,720 --> 00:10:36,320
+Of course, my efforts as an individual
+may be small and insignificant
+
+163
+00:10:36,340 --> 00:10:38,940
+and I am also probably violating the CoC
+
+164
+00:10:39,290 --> 00:10:42,770
+However, someone here is making an effort
+
+165
+00:10:43,080 --> 00:10:45,830
+and there are probably people
+who know about that
+
+166
+00:10:46,300 --> 00:10:49,420
+That's why I, or we, hope that
+
+167
+00:10:49,460 --> 00:10:53,600
+we read the CoC and think about it
+even more and take action
+
+168
+00:10:53,610 --> 00:10:55,320
+My thoughts on the CoC?
+
+169
+00:10:55,570 --> 00:11:00,410
+I think the CoC is a promise among
+the participants to enjoy
+
+170
+00:11:00,440 --> 00:11:02,880
+a PyCon event that is safe and
+where everyone is respected
+
+171
+00:11:02,920 --> 00:11:07,020
+When I first encountered the CoC,
+I was surprised to see that this was dealt
+
+172
+00:11:07,040 --> 00:11:09,260
+at a developer conference
+
+173
+00:11:09,410 --> 00:11:14,010
+It's been about four years now,
+and it feels strange without it
+
+174
+00:11:14,410 --> 00:11:20,010
+Outside of PyCon Korea, other developer
+conferences are creating codes of conduct
+
+175
+00:11:20,040 --> 00:11:22,440
+which the participants observe
+
+176
+00:11:22,480 --> 00:11:26,970
+and the developer community is
+becoming safer and more comfortable
+
+177
+00:11:27,440 --> 00:11:30,320
+PyCon Korea wasn't the first to do this
+
+178
+00:11:30,340 --> 00:11:32,830
+but I think it played a role in publicizing
+
+179
+00:11:32,850 --> 00:11:36,000
+the code of conduct in Korea
+
+180
+00:11:36,370 --> 00:11:41,570
+I hope there will be more events
+in which anyone can easily participate
+
+181
+00:11:41,600 --> 00:11:42,900
+Thank you
+
+182
+00:11:42,910 --> 00:11:47,790
+Creating a CoC is a very
+difficult task in itself
+
+183
+00:11:48,920 --> 00:11:52,640
+but I think it is a set of manners selected
+from what's normative and ethical
+
+184
+00:11:52,680 --> 00:11:59,100
+that should be observed at the very least
+
+185
+00:12:00,750 --> 00:12:05,270
+Also, you could say that
+the CoC is a measure
+
+186
+00:12:05,600 --> 00:12:09,880
+to allow contribution in creating a culture
+
+187
+00:12:09,920 --> 00:12:14,360
+where everyone is equal
+
+188
+00:12:14,600 --> 00:12:18,480
+If there wasn't such a measure,
+I think it would have been very difficult
+
+189
+00:12:18,500 --> 00:12:20,420
+to create a culture that
+accepts differences
+
+190
+00:12:21,410 --> 00:12:23,590
+Not just the participants
+
+191
+00:12:23,610 --> 00:12:27,290
+but those who are planning PyCon Korea
+should all be respected
+
+192
+00:12:27,540 --> 00:12:30,860
+I believe the CoC is essential for that
+
+193
+00:12:30,880 --> 00:12:36,920
+I think I should also personally
+make an effort to make that happen
+
+194
+00:12:36,960 --> 00:12:41,520
+but if we all observe the CoC and each
+make an effort to be considerate of others
+
+195
+00:12:41,560 --> 00:12:45,680
+I think that will create a better
+conference and a better society
+
+196
+00:12:45,960 --> 00:12:47,200
+Thank you
+
+197
+00:12:48,210 --> 00:12:50,810
+Yes, to me, CoC
+
+198
+00:12:50,840 --> 00:12:55,600
+is the reason I became interested
+in diversity for the first time
+
+199
+00:12:55,640 --> 00:12:57,680
+So, to me, CoC is
+
+200
+00:12:57,720 --> 00:13:01,200
+like a friend who reminds me
+about the importance of diversity
+
+201
+00:13:01,240 --> 00:13:06,920
+and helps me and everyone
+to grow in our daily lives
+
+202
+00:13:07,330 --> 00:13:11,690
+Honestly, if I only thought about
+my own experiences and opinions,
+
+203
+00:13:11,720 --> 00:13:15,520
+I would probably be stuck there
+
+204
+00:13:15,560 --> 00:13:19,880
+If diverse people gather,
+diverse thoughts come together
+
+205
+00:13:19,920 --> 00:13:24,040
+and my own thoughts become
+refined in that gathering
+
+206
+00:13:24,080 --> 00:13:26,000
+That would allow me to grow more
+
+207
+00:13:26,040 --> 00:13:28,960
+and make me become a better person
+
+208
+00:13:29,000 --> 00:13:31,610
+That's why I hope that with the CoC
+
+209
+00:13:31,630 --> 00:13:36,350
+we can all have a valuable
+experience in which we can grow
+
+210
+00:13:36,600 --> 00:13:40,060
+To me, CoC is the very heart of
+
+211
+00:13:40,080 --> 00:13:43,310
+our slogan this year, 'We Are Pythonistas'
+
+212
+00:13:43,340 --> 00:13:47,180
+I encountered the CoC
+for the first time at PyCon
+
+213
+00:13:47,220 --> 00:13:50,900
+When I saw the CoC being emphasized
+in various locations of the event
+
+214
+00:13:50,940 --> 00:13:56,190
+I realized that it was an event that truly
+embraces every person and every Pythonistas
+
+215
+00:13:56,220 --> 00:13:58,380
+It really hit home for me
+
+216
+00:13:58,750 --> 00:14:03,290
+As a participant and even as
+a volunteer in the Organizing Team
+
+217
+00:14:03,310 --> 00:14:08,830
+I probably didn't observe the CoC perfectly
+
+218
+00:14:08,860 --> 00:14:11,230
+but by continuously checking on the CoC
+
+219
+00:14:11,260 --> 00:14:17,710
+I hope this will become an event that
+embraces everyone as a Pythonista
+
+220
+00:14:17,850 --> 00:14:20,000
+To all of you who are watching right now,
+
+221
+00:14:20,180 --> 00:14:22,400
+thank you for joining us at the festival
+
+222
+00:14:22,430 --> 00:14:26,400
+We are Pythonistas
+

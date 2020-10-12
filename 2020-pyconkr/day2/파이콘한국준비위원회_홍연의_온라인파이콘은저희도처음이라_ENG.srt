@@ -1,0 +1,1491 @@
+1
+00:00:11,650 --> 00:00:13,100
+Hello
+
+2
+00:00:13,110 --> 00:00:17,990
+"PyCon Korea's 7-year History
+We're Also Newbies to an Online PyCon"
+
+3
+00:00:18,020 --> 00:00:22,620
+I am Yeoneui Hong from the PyCon Korea
+Organizing Team and I'll be presenting today
+
+4
+00:00:22,700 --> 00:00:25,980
+PyCon first started in 2014
+
+5
+00:00:26,020 --> 00:00:28,940
+and this is the 7th year
+that it is being held
+
+6
+00:00:29,190 --> 00:00:32,380
+This is a picture from 2014
+
+7
+00:00:32,380 --> 00:00:33,850
+2015
+
+8
+00:00:33,870 --> 00:00:35,430
+2016
+
+9
+00:00:35,700 --> 00:00:37,300
+2017
+
+10
+00:00:37,630 --> 00:00:42,780
+2018, which is when I joined
+the PyCon Korea Organizing Team
+
+11
+00:00:42,820 --> 00:00:44,860
+And 2019
+
+12
+00:00:44,900 --> 00:00:48,940
+And the anticipated year of 2020
+
+13
+00:00:49,020 --> 00:00:56,100
+Actually, we had an exciting first meeting
+in mid-February this year
+
+14
+00:00:56,140 --> 00:00:58,740
+with our new members of
+the PyCon Korea Organizing Team
+
+15
+00:00:59,010 --> 00:01:04,370
+It was mid-February, and we were really
+worried about gathering at the time
+
+16
+00:01:04,380 --> 00:01:07,050
+so for those who wanted
+to participate virtually
+
+17
+00:01:07,080 --> 00:01:10,140
+we provided a separate
+video conference link
+
+18
+00:01:10,180 --> 00:01:11,540
+However
+
+19
+00:01:12,230 --> 00:01:17,350
+we later ran into
+an unprecedented situation
+
+20
+00:01:17,380 --> 00:01:22,700
+and the 2020 PyCon Korea Organizing Team
+never gathered as a whole
+
+21
+00:01:22,870 --> 00:01:26,030
+I think we did maybe once
+
+22
+00:01:28,260 --> 00:01:33,780
+We had to meet virtually online
+
+23
+00:01:33,810 --> 00:01:39,010
+and since we had to change how we will hold
+the event, we began to discuss it
+
+24
+00:01:40,380 --> 00:01:44,420
+I will share with you what
+discussions we had in order to
+
+25
+00:01:44,460 --> 00:01:49,340
+turn PyCon Korea 2020
+into an online event
+
+26
+00:01:51,420 --> 00:01:56,890
+To help you better understand,
+I will explain to you on how
+
+27
+00:01:56,910 --> 00:02:01,430
+the 2020 PyCon Korea Organizing Team works
+
+28
+00:02:01,460 --> 00:02:04,380
+First of all,
+we don't have a representative
+
+29
+00:02:04,420 --> 00:02:06,100
+Since we don't have
+someone representing us
+
+30
+00:02:06,140 --> 00:02:10,300
+we did everything by discussing
+and making agreements
+
+31
+00:02:10,340 --> 00:02:12,980
+We had a lot of discussions
+
+32
+00:02:13,020 --> 00:02:17,460
+Nothing happens based on
+a single person's authority
+
+33
+00:02:17,500 --> 00:02:21,100
+We all make an agreement to do something
+and share the responsibility
+
+34
+00:02:21,120 --> 00:02:25,120
+Instead, since everyone
+has different experiences
+
+35
+00:02:25,140 --> 00:02:28,020
+we discuss based on those experiences
+
+36
+00:02:28,060 --> 00:02:32,340
+and we also work together with
+the thought that we are all equal
+
+37
+00:02:33,420 --> 00:02:38,100
+However, I bet some of you are
+watching this and wondering
+
+38
+00:02:38,140 --> 00:02:43,140
+how we can work and make decisions
+by having so many discussions
+
+39
+00:02:43,180 --> 00:02:45,700
+You could think that way
+
+40
+00:02:46,280 --> 00:02:49,640
+In order to make up for this
+
+41
+00:02:49,660 --> 00:02:54,780
+we have introduced and are using a tool
+called the 'gradients of agreement scale'
+
+42
+00:02:54,820 --> 00:02:58,260
+I will briefly explain what this is
+
+43
+00:02:58,680 --> 00:03:00,640
+This is what it is
+
+44
+00:03:00,660 --> 00:03:04,900
+If you take a look, this is how we
+can be a little more efficient
+
+45
+00:03:04,940 --> 00:03:09,860
+while listening to a little bit of
+what everyone has to say
+
+46
+00:03:09,900 --> 00:03:13,780
+You choose from the gradients of agreement
+scale that ranges from one to eight
+
+47
+00:03:13,820 --> 00:03:17,140
+and before we start our discussion
+
+48
+00:03:17,160 --> 00:03:24,120
+we vote on a gradient of agreement
+that ranges from one to eight
+
+49
+00:03:24,140 --> 00:03:26,980
+If you look, there's
+whole-hearted endorsement
+
+50
+00:03:27,020 --> 00:03:31,700
+and eight is 'veto'
+
+51
+00:03:31,740 --> 00:03:36,060
+which is where you reject a proposal
+so much that you'd block it
+
+52
+00:03:36,100 --> 00:03:40,500
+Since we voted in the very beginning
+
+53
+00:03:40,540 --> 00:03:43,100
+we discuss after the voting
+
+54
+00:03:43,140 --> 00:03:46,260
+and then vote again after the discussion
+
+55
+00:03:46,300 --> 00:03:51,060
+This is how we mediate opinions
+
+56
+00:03:51,160 --> 00:03:55,900
+On March 11, we had our first discussion
+
+57
+00:03:55,920 --> 00:03:58,080
+on how to respond to the COVID-19 pandemic
+
+58
+00:03:58,120 --> 00:04:02,240
+Honestly, at the time,
+we were all so confused
+
+59
+00:04:02,840 --> 00:04:06,160
+that we didn't even know
+what we should discuss about
+
+60
+00:04:06,200 --> 00:04:09,230
+So we had a meeting on March 11
+
+61
+00:04:09,270 --> 00:04:13,390
+to decide on what we should discuss about
+
+62
+00:04:13,400 --> 00:04:19,840
+Here on the screen is an excerpt
+from our minutes from March 11
+
+63
+00:04:19,900 --> 00:04:25,700
+Since we had previously put
+together what to discuss about
+
+64
+00:04:25,740 --> 00:04:30,940
+on March 15, we discussed what
+options we had to choose from
+
+65
+00:04:30,980 --> 00:04:35,860
+As you can see from the flow chart,
+"Should the PyCon be held or not?"
+
+66
+00:04:35,900 --> 00:04:39,180
+"Should the event be held
+offline or virtually?"
+
+67
+00:04:39,220 --> 00:04:41,900
+"Should the event still
+be held in August or not?"
+
+68
+00:04:41,940 --> 00:04:46,260
+Since we have always held the event at COEX
+
+69
+00:04:46,300 --> 00:04:48,140
+"Should the event be held at COEX or not?"
+
+70
+00:04:48,180 --> 00:04:51,100
+We came up with these options
+
+71
+00:04:51,170 --> 00:04:55,730
+So on March 18, based on
+the choices we had drawn
+
+72
+00:04:55,740 --> 00:05:00,280
+we discussed using the
+gradient of agreement scale
+
+73
+00:05:00,320 --> 00:05:05,240
+As you can see, this is an extract
+from our minutes from March 18
+
+74
+00:05:05,260 --> 00:05:08,860
+Whole-hearted endorsement,
+agreement with a minor point of contention
+
+75
+00:05:08,900 --> 00:05:12,600
+We've covered them up right now,
+but we wrote down every opinion here
+
+76
+00:05:12,640 --> 00:05:16,120
+We even had people who vetoed
+
+77
+00:05:16,140 --> 00:05:19,580
+and everyone's opinions varied
+
+78
+00:05:20,390 --> 00:05:27,260
+Because everyone's opinions were so
+diverse, we couldn't come to a conclusion
+
+79
+00:05:27,820 --> 00:05:33,530
+Since we had each expressed our initial
+level of agreement on March 18
+
+80
+00:05:33,550 --> 00:05:35,500
+and also held a discussion
+
+81
+00:05:35,540 --> 00:05:39,190
+we conducted a preliminary
+survey the following week
+
+82
+00:05:39,210 --> 00:05:41,230
+using the gradient
+of agreement scale
+
+83
+00:05:41,260 --> 00:05:44,500
+This is the survey that
+we conducted internally
+
+84
+00:05:45,730 --> 00:05:49,290
+And a week later on March 25
+
+85
+00:05:49,300 --> 00:05:55,820
+we held a meeting with the tremendous title
+'The Concluding Meeting and Vote Regarding
+
+86
+00:05:55,840 --> 00:05:58,110
+Holding PyCon Korea 2020
+and Measures for COVID-19'
+
+87
+00:05:58,130 --> 00:06:02,760
+We held a discussion based on
+the preliminary survey results
+
+88
+00:06:03,910 --> 00:06:09,200
+On March 25, through a virtual meeting
+
+89
+00:06:09,220 --> 00:06:12,190
+we held a final vote on
+our level of agreement
+
+90
+00:06:12,220 --> 00:06:13,940
+And finally
+
+91
+00:06:14,630 --> 00:06:16,750
+we landed on this conclusion
+
+92
+00:06:16,780 --> 00:06:19,460
+As you previously saw on the flow chart,
+Choice 1 was
+
+93
+00:06:19,500 --> 00:06:20,820
+Should the PyCon be held?
+
+94
+00:06:20,860 --> 00:06:24,060
+Yes, the event will be
+held in whatever format
+
+95
+00:06:24,100 --> 00:06:26,300
+Second, should the event be held offline?
+
+96
+00:06:26,320 --> 00:06:28,840
+No, let's hold it virtually
+
+97
+00:06:28,860 --> 00:06:30,190
+Should we still hold it in August?
+
+98
+00:06:30,210 --> 00:06:34,560
+Actually, just discussing about
+Choices 1 and 2 took up a lot of time
+
+99
+00:06:34,580 --> 00:06:38,700
+so we couldn't finish talking about
+Choice 3 during this meeting
+
+100
+00:06:39,900 --> 00:06:44,980
+Although the conclusion was somewhat made
+
+101
+00:06:45,020 --> 00:06:47,460
+we still had to decide on
+the date of the event
+
+102
+00:06:47,500 --> 00:06:50,500
+We held this meeting on April 1
+
+103
+00:06:50,540 --> 00:06:53,820
+As you can see, there were various opinions
+to hold it in mid-September,
+
+104
+00:06:53,840 --> 00:06:57,970
+on the last week of September,
+that October was too late
+
+105
+00:06:58,420 --> 00:07:02,780
+Finally, on April 3,
+many of you probably saw this
+
+106
+00:07:02,820 --> 00:07:09,060
+We announced on PyCon's social media
+that the event will be held online
+
+107
+00:07:10,470 --> 00:07:13,190
+As you can see from
+our process of discussion
+
+108
+00:07:13,220 --> 00:07:18,260
+we went through numerous discussions
+to announce these four sentences to you
+
+109
+00:07:18,300 --> 00:07:20,620
+It definitely wasn't an easy process
+
+110
+00:07:21,620 --> 00:07:24,780
+Even afterward, our PyCon Korea Organizing Team
+
+111
+00:07:25,210 --> 00:07:30,130
+continuously held discussions to
+decide how to hold a virtual PyCon
+
+112
+00:07:30,140 --> 00:07:32,860
+how many days and hours it will be held
+
+113
+00:07:32,900 --> 00:07:35,480
+how the sessions will be streamed
+
+114
+00:07:35,520 --> 00:07:39,050
+whether the event should
+be free or not and so forth
+
+115
+00:07:39,070 --> 00:07:41,400
+To mediate our opinions,
+we researched
+
+116
+00:07:41,420 --> 00:07:45,980
+and based on this, we decided one by
+one how the event would be held
+
+117
+00:07:46,960 --> 00:07:52,760
+The good thing was that we weren't
+the only ones preparing a virtual event
+
+118
+00:07:52,780 --> 00:07:57,500
+We connected with PyCon organizers overseas
+who were preparing their events virtually
+
+119
+00:07:57,540 --> 00:08:02,340
+We shared documents regarding
+switching to a virtual event
+
+120
+00:08:02,380 --> 00:08:05,220
+and held meetings with
+the members of PyCon APAC
+
+121
+00:08:05,260 --> 00:08:07,340
+We were able to have such experiences
+
+122
+00:08:07,380 --> 00:08:12,540
+Some people commented that we were able
+to connect with PyCon organizers overseas
+
+123
+00:08:12,580 --> 00:08:16,340
+even more than before
+
+124
+00:08:18,420 --> 00:08:22,660
+But everything didn't go so smoothly
+
+125
+00:08:22,700 --> 00:08:26,060
+As a preparation for our event
+
+126
+00:08:26,080 --> 00:08:30,960
+we sign a provisional contract for
+the COEX Grand Ballroom a year in advance
+
+127
+00:08:30,980 --> 00:08:35,480
+However, we couldn't help but
+cancel the provisional contract
+
+128
+00:08:35,500 --> 00:08:38,530
+that we had signed back in 2019
+
+129
+00:08:38,570 --> 00:08:41,290
+because the event was
+going to be held virtually
+
+130
+00:08:42,740 --> 00:08:48,940
+Since we were preparing for our first
+ever virtual PyCon, we were always talking
+
+131
+00:08:48,980 --> 00:08:55,420
+but even up to that point, the sense of
+closeness was relatively weaker
+
+132
+00:08:55,460 --> 00:08:58,720
+than when we worked
+together in person offline
+
+133
+00:08:58,740 --> 00:09:03,700
+Personally, after making
+the announcement on April 3
+
+134
+00:09:03,740 --> 00:09:12,620
+I went through what seemed like the Dark
+Age of our preparation from April to June
+
+135
+00:09:13,650 --> 00:09:15,770
+Finally, June came
+
+136
+00:09:16,440 --> 00:09:19,280
+and our preparation went into full swing
+
+137
+00:09:19,570 --> 00:09:24,130
+If you are following our PyCon Facebook
+account, you probably saw this photo
+
+138
+00:09:24,140 --> 00:09:28,540
+It had been a while since the PyCon Korea
+ had all gathered virtually
+
+139
+00:09:28,580 --> 00:09:32,380
+so we set up a Zoom virtual background
+that said 'We are Pythonistas'
+
+140
+00:09:32,420 --> 00:09:35,540
+and took a group photo after the meeting
+
+141
+00:09:37,030 --> 00:09:41,670
+This is the PyCon Korea
+PyCon Korea Organizing Team's shared calendar
+
+142
+00:09:41,700 --> 00:09:44,020
+The meetings were spread out in July
+
+143
+00:09:44,880 --> 00:09:46,400
+but it was packed in August
+
+144
+00:09:46,420 --> 00:09:49,740
+Honestly, August simply zipped by
+
+145
+00:09:50,010 --> 00:09:53,410
+And now, it's September is ongoing
+
+146
+00:09:53,420 --> 00:09:56,990
+That's because this video was recorded
+
+147
+00:09:57,010 --> 00:09:59,800
+before the event at which
+you are watching this
+
+148
+00:10:01,190 --> 00:10:06,990
+Now, I'd like to share with you
+about what has changed
+
+149
+00:10:07,020 --> 00:10:10,580
+ever since PyCon Korea 2020 became virtual
+
+150
+00:10:13,580 --> 00:10:19,020
+One of the goals we had while
+preparing for the PyCon Korea 2020
+
+151
+00:10:19,540 --> 00:10:23,980
+was to share our experience of
+having been together even in 2020
+
+152
+00:10:24,020 --> 00:10:28,500
+to those virtually participating
+in the PyCon Korea
+
+153
+00:10:28,820 --> 00:10:31,780
+In order to do that,
+we prepared this session
+
+154
+00:10:31,810 --> 00:10:34,760
+so that we can share with you
+what kind of things we considered
+
+155
+00:10:34,780 --> 00:10:37,220
+and what kind of work we did
+
+156
+00:10:37,260 --> 00:10:41,480
+Other than PyCon, there are
+probably many other communities
+
+157
+00:10:41,500 --> 00:10:44,740
+that are preparing to
+hold their events virtually
+
+158
+00:10:44,780 --> 00:10:48,180
+We hope we can be helpful to them as well
+
+159
+00:10:49,580 --> 00:10:52,020
+First is the registration process
+
+160
+00:10:52,570 --> 00:10:56,050
+With PyCon's tradition of 'Everybody Pays'
+
+161
+00:10:56,060 --> 00:11:01,780
+participants, presenters, and even the
+PyCon Korea Organizing Team members
+
+162
+00:11:01,800 --> 00:11:03,940
+all purchased tickets
+
+163
+00:11:04,210 --> 00:11:10,330
+However, our event was free of charge this
+time so there was no need to get tickets
+
+164
+00:11:10,340 --> 00:11:13,660
+since we were going to stream
+the event via YouTube Live
+
+165
+00:11:13,700 --> 00:11:20,500
+Still, we created a process for ticket
+purchase just the same as before
+
+166
+00:11:20,540 --> 00:11:26,090
+We did it because we wanted to invite
+our participants to a virtual space
+
+167
+00:11:26,130 --> 00:11:30,650
+but the biggest reason was that
+we wanted to give you the feeling
+
+168
+00:11:30,660 --> 00:11:33,540
+of having registered to this year's PyCon
+
+169
+00:11:33,580 --> 00:11:39,330
+So to all participants who registered
+for this year's PyCon Korea regardless
+
+170
+00:11:39,350 --> 00:11:41,120
+thank you very much
+
+171
+00:11:43,540 --> 00:11:46,620
+Second is changes regarding the sessions
+
+172
+00:11:46,660 --> 00:11:52,580
+Up until now, all presentations were
+held at the COEX Grand Ballroom
+
+173
+00:11:52,620 --> 00:11:57,340
+At PyCon Korea 2020, we have
+recorded all presentations in advance
+
+174
+00:11:57,380 --> 00:12:00,460
+and streaming it on YouTube
+like you are watching right now
+
+175
+00:12:00,500 --> 00:12:04,300
+If the presentations were
+streamed online in real-time
+
+176
+00:12:04,340 --> 00:12:08,150
+there could be issues such as
+poor connection or quality
+
+177
+00:12:08,170 --> 00:12:14,580
+so we avoided that and also captioned
+the videos in advance so that everyone
+
+178
+00:12:14,620 --> 00:12:18,460
+could participate in this event regardless
+of their hearing or watching environment
+
+179
+00:12:18,500 --> 00:12:22,870
+The Keynote sessions in English
+were translated in advance
+
+180
+00:12:22,900 --> 00:12:26,160
+to lower the language barrier
+
+181
+00:12:26,180 --> 00:12:31,270
+We even recorded the opening
+and closing videos in advance
+
+182
+00:12:31,290 --> 00:12:33,230
+which personally made my heart ache a bit
+
+183
+00:12:33,260 --> 00:12:37,540
+since there's something special about
+opening and closing an event
+
+184
+00:12:37,560 --> 00:12:39,580
+but that couldn't be helped
+
+185
+00:12:39,620 --> 00:12:45,500
+Anyway, recording 40 videos total
+that were each 25~40 minutes long
+
+186
+00:12:45,540 --> 00:12:49,900
+and checking them wasn't
+an easy process at all
+
+187
+00:12:52,180 --> 00:12:56,610
+We recorded the presentations
+
+188
+00:12:56,640 --> 00:13:01,040
+from mid-August to end of August
+
+189
+00:13:01,060 --> 00:13:05,460
+At first, the presenters had the
+option to record at a studio
+
+190
+00:13:05,500 --> 00:13:11,200
+You could record at a studio
+or using Zoom
+
+191
+00:13:11,220 --> 00:13:15,340
+or record your presentation on your own
+
+192
+00:13:15,780 --> 00:13:17,890
+We were going to start recording mid-August
+
+193
+00:13:17,910 --> 00:13:21,340
+but things got very serious then
+
+194
+00:13:21,380 --> 00:13:24,340
+and we canceled recording at a studio
+
+195
+00:13:24,500 --> 00:13:27,860
+and many presenters used Zoom
+to record their presentations
+
+196
+00:13:27,900 --> 00:13:31,660
+At this time, two members from
+the Organizing Team and one presenter
+
+197
+00:13:31,700 --> 00:13:34,660
+met on Zoom and recorded the presentation
+
+198
+00:13:34,700 --> 00:13:39,420
+Of course, we had created and distributed
+a video recording guideline for presenters
+
+199
+00:13:39,890 --> 00:13:45,090
+and I think we might reveal
+the guideline later on
+
+200
+00:13:45,110 --> 00:13:49,030
+While we went through
+40 presentation videos
+
+201
+00:13:49,060 --> 00:13:54,260
+we checked to make sure that
+every video observed the CoC
+
+202
+00:13:55,480 --> 00:13:59,700
+After all the videos were recorded,
+we edited them to be streamed
+
+203
+00:13:59,720 --> 00:14:02,780
+and then captioned
+
+204
+00:14:02,820 --> 00:14:04,390
+After the captioning was done
+
+205
+00:14:04,410 --> 00:14:09,240
+we checked to see if there were
+any errors in the technical terms
+
+206
+00:14:10,810 --> 00:14:15,090
+After going through this process,
+the presentation videos for
+
+207
+00:14:15,110 --> 00:14:19,110
+the PyCon Korea 2020 that you've seen
+for the past two days were ready
+
+208
+00:14:19,540 --> 00:14:23,060
+We thank all the presenters
+who have made time to share
+
+209
+00:14:23,100 --> 00:14:29,260
+their valuable experiences to
+contribute to the Python ecosystem
+
+210
+00:14:32,690 --> 00:14:35,050
+Next is track management
+
+211
+00:14:35,060 --> 00:14:40,100
+The PyCon usually consists of five tracks
+
+212
+00:14:40,530 --> 00:14:44,200
+For example, we had split
+the COEX Grand Ballroom
+
+213
+00:14:44,230 --> 00:14:47,690
+into five sections numbered 101~105
+
+214
+00:14:47,700 --> 00:14:51,940
+However, during the virtual PyCon,
+we had to stream 40 session videos
+
+215
+00:14:51,980 --> 00:14:55,500
+via YouTube Live over
+the course of two days
+
+216
+00:14:55,540 --> 00:14:58,020
+so we split them into tracks
+like we always used to
+
+217
+00:14:58,060 --> 00:14:59,520
+If you look at the track names
+
+218
+00:14:59,540 --> 00:15:03,660
+although, honestly, I'm not sure
+how this will change later on
+
+219
+00:15:03,700 --> 00:15:06,620
+but the names are
+101, 102, 103, 104, and 105
+
+220
+00:15:06,640 --> 00:15:09,760
+We named them in remembrance of COEX
+
+221
+00:15:11,700 --> 00:15:17,060
+Someone posted this on Twitter,
+and I asked for permission to show it here
+
+222
+00:15:17,450 --> 00:15:21,210
+"I heard that PyCon Korea
+will be held virtually"
+
+223
+00:15:21,210 --> 00:15:27,010
+"Are they going to overlap the tracks
+and session times like they do offline?"
+
+224
+00:15:27,820 --> 00:15:30,180
+That actually happened
+
+225
+00:15:30,220 --> 00:15:34,260
+I hope everyone enjoyed the experience
+
+226
+00:15:35,740 --> 00:15:38,940
+Next is that the Pythonistas' meeting point
+
+227
+00:15:38,980 --> 00:15:42,460
+changed from the COEX
+Grand Ballroom to Slack
+
+228
+00:15:42,500 --> 00:15:46,380
+We made the decision to offer Slack
+
+229
+00:15:46,400 --> 00:15:49,180
+to those who bought tickets in advance
+or to individual sponsors
+
+230
+00:15:49,210 --> 00:15:54,370
+We grouped the Slack channels by
+categories from the PyCon sessions
+
+231
+00:15:54,390 --> 00:15:59,710
+so that the participants could
+have discussions more easily
+
+232
+00:15:59,950 --> 00:16:05,190
+For those of you watching this video
+and will be preparing for another event
+
+233
+00:16:05,220 --> 00:16:07,560
+if you are registered as
+a non-profit organization
+
+234
+00:16:07,580 --> 00:16:10,380
+you can use Slack at a discounted price
+
+235
+00:16:10,420 --> 00:16:13,790
+We used Slack during the event
+at a discounted price for
+
+236
+00:16:13,820 --> 00:16:16,060
+non-profit organizations
+
+237
+00:16:18,760 --> 00:16:22,960
+Next is a very important
+value of PyCon Korea
+
+238
+00:16:22,980 --> 00:16:26,180
+which is the CoC, the Code of Conduct
+
+239
+00:16:26,480 --> 00:16:30,390
+Of course the existing CoC
+did contain content regarding
+
+240
+00:16:30,410 --> 00:16:31,510
+situations happening online
+
+241
+00:16:31,540 --> 00:16:36,860
+However, it didn't apply for an event
+that was only held virtually
+
+242
+00:16:36,900 --> 00:16:40,140
+so we supplemented this part
+
+243
+00:16:40,180 --> 00:16:44,860
+For more details about the CoC
+
+244
+00:16:44,900 --> 00:16:47,780
+there was a special session yesterday
+by the Python Korea Organizing Team
+
+245
+00:16:47,820 --> 00:16:51,470
+called 'Expanding the world one more step'
+
+246
+00:16:51,490 --> 00:16:55,380
+so please check out that video
+for more information
+
+247
+00:16:57,470 --> 00:16:59,590
+Next is the merchandise
+
+248
+00:16:59,620 --> 00:17:04,700
+Actually, we were sad to let this part go
+due to the event becoming virtual
+
+249
+00:17:04,740 --> 00:17:07,590
+At PyCon, there is an event
+called 'Bag Insert'
+
+250
+00:17:07,610 --> 00:17:11,140
+for the presenters, members of the
+PyCon Korea Organizing Team, or anyone
+
+251
+00:17:11,180 --> 00:17:16,510
+Everyone would gather before the event
+where there are 1,800 or so eco bags
+
+252
+00:17:16,530 --> 00:17:19,900
+to fill with merchandised goods
+
+253
+00:17:19,940 --> 00:17:22,610
+However, since that wasn't
+possible this time
+
+254
+00:17:22,630 --> 00:17:26,140
+we had no choice but to
+use a delivery service
+
+255
+00:17:26,180 --> 00:17:28,540
+We used Tumblbug
+
+256
+00:17:28,580 --> 00:17:33,100
+to sell T-shirts, which can't be
+left out at a developer event
+
+257
+00:17:33,120 --> 00:17:35,080
+and also to receive
+donation from individuals
+
+258
+00:17:35,100 --> 00:17:39,160
+Instead, we prepared merchandised
+goods so that you could receive them
+
+259
+00:17:39,180 --> 00:17:41,660
+before September 26, the date of the PyCon
+
+260
+00:17:41,700 --> 00:17:46,340
+The T-shirt manufacturer did
+the individual delivery
+
+261
+00:17:46,360 --> 00:17:49,890
+and even combined shipping
+for gifts and merchandise
+
+262
+00:17:49,920 --> 00:17:52,770
+designated for individual sponsors
+
+263
+00:17:52,820 --> 00:17:54,420
+so it was very nice
+
+264
+00:17:54,460 --> 00:17:59,220
+I'd like to take this time to express our
+greatest gratitude to our sponsors
+
+265
+00:17:59,260 --> 00:18:02,300
+who contributed to the
+PyCon in different ways
+
+266
+00:18:04,330 --> 00:18:06,210
+Next are the sponsoring companies
+
+267
+00:18:06,530 --> 00:18:08,690
+Because PyCon became a virtual event
+
+268
+00:18:08,720 --> 00:18:13,450
+we had to change the benefits
+provided to the sponsors
+
+269
+00:18:13,470 --> 00:18:16,150
+to befit an virtual environment
+
+270
+00:18:16,160 --> 00:18:21,710
+Also, the sponsors' booths that used to be
+set up in front of the Grand Ballroom
+
+271
+00:18:21,730 --> 00:18:25,690
+were changed to virtual booths
+
+272
+00:18:25,700 --> 00:18:29,760
+For those of you watching this video,
+we'd greatly appreciate it
+
+273
+00:18:29,780 --> 00:18:33,500
+if you visit our sponsors' virtual
+booths at the PyCon website
+
+274
+00:18:33,540 --> 00:18:36,320
+Despite the event becoming virtual
+
+275
+00:18:36,340 --> 00:18:42,020
+we thank our sponsors for greatly
+contributing to running PyCon
+
+276
+00:18:45,940 --> 00:18:50,300
+This was our first-ever virtual PyCon Korea
+
+277
+00:18:50,340 --> 00:18:54,420
+so in order to focus on
+running this event smoothly
+
+278
+00:18:54,460 --> 00:18:58,840
+we had to cancel our other programs
+inevitably such as tutorials, sprints,
+
+279
+00:18:58,860 --> 00:19:01,050
+childcare service, and young coders
+
+280
+00:19:01,070 --> 00:19:03,870
+We hope that we will
+someday have the expertise
+
+281
+00:19:03,900 --> 00:19:09,100
+to run these programs virtually as well
+
+282
+00:19:10,380 --> 00:19:14,260
+However, we just couldn't
+give up the lightning talks
+
+283
+00:19:14,300 --> 00:19:18,230
+We used to receive presentation materials
+online on a first-come-first-served basis
+
+284
+00:19:18,260 --> 00:19:20,700
+and then have the presentation
+at the site of the event
+
+285
+00:19:20,740 --> 00:19:25,460
+This year, we received recorded videos
+on a first-come-first-served basis
+
+286
+00:19:25,490 --> 00:19:27,590
+and then streamed them online
+
+287
+00:19:28,900 --> 00:19:33,100
+Also, we made a hashtag
+event on social media
+
+288
+00:19:33,140 --> 00:19:37,380
+In the past, we merely shared that
+we had a hashtag for our event
+
+289
+00:19:37,420 --> 00:19:41,860
+This year, we utilized hashtags
+to hold small events
+
+290
+00:19:41,900 --> 00:19:46,660
+Actually, I'm talking in past tense but
+for me right now, this is a future event
+
+291
+00:19:46,700 --> 00:19:51,180
+because as I mentioned before,
+this video is being recorded in advance
+
+292
+00:19:52,250 --> 00:19:57,730
+The main reason to have a hashtag
+event was because of our group picture
+
+293
+00:19:57,950 --> 00:20:00,670
+If we had held PyCon at an offline site
+
+294
+00:20:00,690 --> 00:20:05,230
+we probably would have taken a photo
+holding a banner at the end of the event
+
+295
+00:20:05,270 --> 00:20:07,910
+However, since that's not
+possible this year
+
+296
+00:20:07,940 --> 00:20:11,740
+we're trying to collect your photos
+for a group photo
+
+297
+00:20:11,780 --> 00:20:15,100
+If you are watching this video
+on September 26 and 27
+
+298
+00:20:15,140 --> 00:20:17,780
+you will participate in the
+hashtag event, won't you?
+
+299
+00:20:18,700 --> 00:20:24,660
+I will wish from the past that in the
+future, I would have put together
+
+300
+00:20:24,700 --> 00:20:27,660
+a wonderful group photo with all of you
+
+301
+00:20:28,930 --> 00:20:33,370
+So I've shared what kind of struggles
+and steps we went through
+
+302
+00:20:33,380 --> 00:20:37,580
+to hold our first virtual PyCon Korea
+
+303
+00:20:37,970 --> 00:20:43,090
+Honestly, I thought preparing for
+a virtual event would be easier
+
+304
+00:20:43,100 --> 00:20:46,580
+However, it wasn't easy at all
+
+305
+00:20:47,660 --> 00:20:51,660
+I know we weren't perfect in some areas
+but what I hope is that
+
+306
+00:20:51,700 --> 00:20:55,550
+you remember that PyCon
+Korea took place in 2020
+
+307
+00:20:55,570 --> 00:21:00,820
+and how much fun it was for you
+
+308
+00:21:01,700 --> 00:21:03,380
+Lastly
+
+309
+00:21:03,800 --> 00:21:09,440
+From February until September 25 of 2020,
+our PyCon Korea Organizing Team
+
+310
+00:21:09,460 --> 00:21:13,540
+prepared for PyCon Korea 2020
+
+311
+00:21:13,580 --> 00:21:16,820
+entirely online
+
+312
+00:21:16,860 --> 00:21:20,260
+Slack, Slack, Slack, Dooray!, Dooray!,
+Dooray!, Zoom, Zoom, Zoom
+
+313
+00:21:20,300 --> 00:21:27,620
+Since we could only meet virtually,
+we really, really wanted to meet each other
+
+314
+00:21:28,940 --> 00:21:31,380
+And to really wrap things up
+
+315
+00:21:32,500 --> 00:21:36,140
+for the final two months before the event
+and even way before that
+
+316
+00:21:36,180 --> 00:21:39,650
+we spent more time together
+via Slack, Zoom, and Dooray!
+
+317
+00:21:39,680 --> 00:21:42,620
+even more than with our families
+
+318
+00:21:42,900 --> 00:21:45,670
+When one team finished its dawn shift,
+the morning team came
+
+319
+00:21:45,690 --> 00:21:48,660
+and then the evening team
+would take over after work
+
+320
+00:21:48,700 --> 00:21:53,540
+It was really tough, but we always
+tried to support each other
+
+321
+00:21:53,820 --> 00:21:57,700
+To our beloved members of the
+2020 PyCon Korea Organizing Team
+
+322
+00:21:57,740 --> 00:22:03,820
+I'd like to say thank you to all of you
+as I finish this session
+
+323
+00:22:05,060 --> 00:22:06,740
+Thank you
+
