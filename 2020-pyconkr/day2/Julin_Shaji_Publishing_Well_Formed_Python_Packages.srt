@@ -1,1293 +1,1235 @@
-2
-00:00:10.033 --> 00:00:19.074
+1
+00:00:10,880 --> 00:00:16,320
 I'm Julin Shaji, and my talk is
-Publishing Well-Formed Python Packages.     
+Publishing Well-Formed Python Packages.
+
+2
+00:00:16,320 --> 00:00:20,640
+Hi, welcome to my talk:
+Publishing Well-Formed Python Packages.
 
 3
-00:00:19.074 --> 00:00:24.230
-Hi, welcome to my talk:
-Publishing Well-Formed Python Packages.     
+00:00:22,000 --> 00:00:23,840
+Before we begin, let me say,
 
 4
-00:00:24.262 --> 00:00:27.146
-Before we begin, let me say,
-     
+00:00:24,400 --> 00:00:28,320
+the source of the images that I have
+used in this presentation are linked
 
 5
-00:00:27.170 --> 00:00:31.209
-the source of the images that I have
-used in this presentation are linked     
+00:00:28,320 --> 00:00:30,320
+to the images themselves in the slides.
 
 6
-00:00:31.233 --> 00:00:33.480
-to the images themselves in the slides.
-     
+00:00:31,120 --> 00:00:33,440
+We can share the link
+for the slides later on.
 
 7
-00:00:33.504 --> 00:00:37.160
-We can share the link
-for the slides later on.     
+00:00:34,800 --> 00:00:37,360
+So, what do I mean by
+a well-formed package?
 
 8
-00:00:37.184 --> 00:00:41.144
-So, what do I mean by
-a well-formed package?     
+00:00:38,560 --> 00:00:43,360
+A package that has attained some sort of
+a structure by adhering to some guidelines
 
 9
-00:00:41.168 --> 00:00:46.211
-A package that has attained some sort of
-a structure by adhering to some guidelines     
+00:00:43,360 --> 00:00:46,880
+and practices, which
+makes it easier to work with,
 
 10
-00:00:46.236 --> 00:00:49.694
-and practices, which
-makes it easier to work with,     
+00:00:46,880 --> 00:00:52,240
+and makes collaborating with others
+on the project a more fruitful experience.
 
 11
-00:00:49.726 --> 00:00:55.315
-and makes collaborating with others
-on the project a more fruitful experience.     
+00:00:53,760 --> 00:00:58,400
+Making changes to such a
+package is a less likely to be chaotic.
 
 12
-00:00:56.479 --> 00:01:01.622
-Making changes to such a
-package is a less likely to be chaotic.     
+00:00:59,040 --> 00:01:03,360
+It can be adapted to match
+the changing requirements
 
 13
-00:01:01.646 --> 00:01:06.629
-It can be adapted to match
-the changing requirements     
+00:01:04,080 --> 00:01:05,680
+with significantly less effort.
 
 14
-00:01:06.653 --> 00:01:09.174
-with significantly less effort.
-     
+00:01:07,120 --> 00:01:08,400
+But how is it possible?
 
 15
-00:01:09.198 --> 00:01:11.299
-But how is it possible?
-     
+00:01:08,400 --> 00:01:11,840
+How can we make
+our project better formed?
 
 16
-00:01:11.299 --> 00:01:14.979
-How can we make
-our project better formed?     
+00:01:12,800 --> 00:01:16,960
+Sufficient documentation,
+test, and readability
 
 17
-00:01:14.980 --> 00:01:19.817
-Sufficient documentation,
-test, and readability     
+00:01:16,960 --> 00:01:19,040
+are some of the key factors in this.
 
 18
-00:01:19.841 --> 00:01:22.934
-are some of the key factors in this.
-     
+00:01:20,480 --> 00:01:23,920
+A good first step towards making your
+package well-formed is
 
 19
-00:01:22.959 --> 00:01:27.066
-A good first step towards making your
-package well-formed is     
+00:01:23,920 --> 00:01:27,920
+by adopting a coding style
+and by using linting tools.
 
 20
-00:01:27.066 --> 00:01:31.299
-by adopting a coding style
-and by using linting tools.     
+00:01:28,640 --> 00:01:31,600
+It's good to have the suggestions
+mentioned in step eight in mind.
 
 21
-00:01:31.323 --> 00:01:35.073
-It's good to have the suggestions
-mentioned in step eight in mind.     
+00:01:32,800 --> 00:01:37,040
+Consistent formatting has a significant
+impact on the readability of your code.
 
 22
-00:01:35.097 --> 00:01:40.583
-Consistent formatting has a significant
-impact on the readability of your code.     
+00:01:38,720 --> 00:01:42,480
+This will help us weed out
+a lot of bugs as it can make
 
 23
-00:01:40.607 --> 00:01:46.300
-This will help us weed out
-a lot of bugs as it can make     
+00:01:43,360 --> 00:01:47,760
+bug-inducing code snippets more prominent
+so that it will catch your attention
 
 24
-00:01:46.339 --> 00:01:50.613
-bug-inducing code snippets more prominent
-so that it will catch your attention     
+00:01:47,760 --> 00:01:53,840
+and all that other tools that we use and
+you will be able to attend to it faster.
 
 25
-00:01:50.637 --> 00:01:56.129
-and all that other tools that we use and
-you will be able to attend to it faster.     
+00:01:55,760 --> 00:02:00,240
+But it should be noted that PEP8 itself
+says that its suggestions should be
 
 26
-00:01:58.500 --> 00:02:03.168
-But it should be noted that PEP8 itself
-says that its suggestions should be     
+00:02:00,240 --> 00:02:04,320
+taken more as guideline
+rather than as steadfast rules.
 
 27
-00:02:03.193 --> 00:02:07.589
-taken more as guideline
-rather than as steadfast rules.     
+00:02:05,120 --> 00:02:09,120
+This is probably applicable for the
+coding style that you adopt as well.
 
 28
-00:02:07.613 --> 00:02:12.401
-This is probably applicable for the
-coding style that you adopt as well.     
+00:02:09,760 --> 00:02:14,400
+For example, consider a long link
+that you have in your code as a sort of
 
 29
-00:02:12.425 --> 00:02:17.305
-For example, consider a long link
-that you have in your code as a sort of     
+00:02:14,400 --> 00:02:19,120
+reference to some website,
+possibly in a comment or something
 
 30
-00:02:17.329 --> 00:02:22.383
-reference to some website,
-possibly in a comment or something     
+00:02:19,840 --> 00:02:26,480
+and your code coding style specifies
+a line length limit of say 80 characters.
 
 31
-00:02:22.407 --> 00:02:29.632
-and your code coding style specifies
-a line length limit of say 80 characters.     
+00:02:27,120 --> 00:02:31,040
+And if your link is way
+beyond 80-character limit,
 
 32
-00:02:29.656 --> 00:02:35.192
-And if your link is way
-beyond 80-character limit,     
+00:02:32,400 --> 00:02:36,720
+instead of us splitting that link into two
+lines or something,
 
 33
-00:02:35.216 --> 00:02:39.547
-instead of us splitting that link into two
-lines or something,     
+00:02:36,720 --> 00:02:39,920
+it's probably better
+to create an exception
 
 34
-00:02:39.547 --> 00:02:42.932
-it's probably better 
-to create an exception     
+00:02:39,920 --> 00:02:42,160
+and make an exception
+for your coding style
 
 35
-00:02:42.932 --> 00:02:45.156
-and make an exception
-for your coding style     
+00:02:42,160 --> 00:02:47,520
+so that it will remain a single link,
+and whatever editor that you're using
 
 36
-00:02:45.156 --> 00:02:50.382
-so that it will remain a single link,
-and whatever editor that you're using     
+00:02:47,520 --> 00:02:52,880
+can still recognize it as a link, so that
+it can go directly to that link by just
 
 37
-00:02:50.406 --> 00:02:55.767
-can still recognize it as a link, so that
-it can go directly to that link by just     
+00:02:52,880 --> 00:02:57,040
+clicking on it instead of first joining
+them together or pasting it or whatever.
 
 38
-00:02:55.806 --> 00:02:59.984
-clicking on it instead of first joining
-them together or pasting it or whatever.     
+00:02:58,800 --> 00:03:03,200
+Pylint and flake8 are among the
+prominent linting and style tools
 
 39
-00:03:01.564 --> 00:03:06.413
-Pylint and flake8 are among the
-prominent linting and style tools     
+00:03:03,760 --> 00:03:05,120
+used in Python packages.
 
 40
-00:03:06.437 --> 00:03:08.503
-used in Python packages.
-     
+00:03:06,160 --> 00:03:08,160
+Both are very much configurable.
 
 41
-00:03:08.527 --> 00:03:11.933
-Both are very much configurable.
-     
+00:03:09,440 --> 00:03:11,440
+Although the default configuration
 
 42
-00:03:11.933 --> 00:03:14.051
-Although the default configuration
-     
+00:03:11,440 --> 00:03:13,920
+can be used as a good
+starting point in your project.
 
 43
-00:03:14.076 --> 00:03:16.991
-can be used as a good
-starting point in your project.     
+00:03:16,080 --> 00:03:18,000
+And then there's Black.
 
 44
-00:03:18.656 --> 00:03:20.662
-And then there's Black.
-     
+00:03:18,000 --> 00:03:21,200
+If you don't want to spend too
+much time fixing and formatting all
 
 45
-00:03:20.686 --> 00:03:24.451
-If you don't want to spend too
-much time fixing and formatting all     
+00:03:21,200 --> 00:03:27,280
+all your code all the time and don't mind
+letting an external tool take control of--
 
 46
-00:03:24.475 --> 00:03:30.773
-all your code all the time and don't mind
-letting an external tool take control of--     
+00:03:28,080 --> 00:03:31,760
+take your code formatting
+part, you can use Black.
 
 47
-00:03:30.802 --> 00:03:34.471
-take your code formatting
-part, you can use Black.     
+00:03:31,760 --> 00:03:34,400
+It is becoming more
+and more popular these days.
 
 48
-00:03:34.495 --> 00:03:37.968
-It is becoming more
-and more popular these days.     
+00:03:35,360 --> 00:03:38,800
+It can automatically reformat
+your code for you so that
 
 49
-00:03:37.992 --> 00:03:41.554
-It can automatically reformat
-your code for you so that     
+00:03:38,800 --> 00:03:42,800
+regardless of the style that
+you use to write your code--
 
 50
-00:03:41.578 --> 00:03:46.038
-regardless of the style that
-you use to write your code--     
+00:03:43,360 --> 00:03:48,160
+that you use to actually write your
+code, after applying Black on it,
 
 51
-00:03:46.097 --> 00:03:51.036
-that you use to actually write your
-code, after applying Black on it,     
+00:03:48,160 --> 00:03:51,360
+it will just look the same
+as Black outputs it.
 
 52
-00:03:51.060 --> 00:03:54.885
-it will just look the same
-as Black outputs it.     
+00:03:52,320 --> 00:03:59,040
+This is often helpful if a lot of people
+are collaborating together on your project
 
 53
-00:03:54.909 --> 00:04:01.760
-This is often helpful if a lot of people
-are collaborating together on your project     
+00:03:59,040 --> 00:04:03,760
+and you want all
+the code to look the same.
 
 54
-00:04:01.784 --> 00:04:06.983
-and you want all
-the code to look the same.     
+00:04:07,120 --> 00:04:10,640
+Another mechanism that can
+help is static type checking.
 
 55
-00:04:09.755 --> 00:04:14.263
-Another mechanism that can
-help is static type checking.     
+00:04:11,920 --> 00:04:16,640
+Python has been supporting type
+annotation for quite some time now.
 
 56
-00:04:14.287 --> 00:04:20.250
-Python has been supporting type
-annotation for quite some time now.     
+00:04:18,000 --> 00:04:21,600
+Making use of it not only
+improves the readability of your code
 
 57
-00:04:20.274 --> 00:04:24.432
-Making use of it not only
-improves the readability of your code     
+00:04:21,600 --> 00:04:25,040
+without having any effect
+on the code execution part
 
 58
-00:04:24.456 --> 00:04:27.596
-without having any effect
-on the code execution part     
+00:04:25,040 --> 00:04:27,840
+but it also enables us
+to run static type checks.
 
 59
-00:04:27.620 --> 00:04:31.182
-but it also enables us
-to run static type checks.     
+00:04:28,960 --> 00:04:33,680
+In a way, we can have the advantage of a
+statically typed system in Python as well.
 
 60
-00:04:31.206 --> 00:04:37.246
-In a way, we can have the advantage of a
-statically typed system in Python as well.     
+00:04:34,960 --> 00:04:40,800
+These checks often help to reveal
+certain subtle bugs that would be
 
 61
-00:04:37.270 --> 00:04:43.660
-These checks often help to reveal
-certain subtle bugs that would be     
+00:04:40,800 --> 00:04:43,040
+very difficult to
+figure out otherwise.
 
 62
-00:04:43.685 --> 00:04:46.623
-very difficult to
-figure out otherwise.     
+00:04:44,400 --> 00:04:49,520
+Mypy, pytype and pyre are some of the
+prominent static type checking tools
 
 63
-00:04:46.647 --> 00:04:52.450
-Mypy, pytype and pyre are some of the
-prominent static type checking tools     
+00:04:49,520 --> 00:04:51,680
+available in Python
+we have right now.
 
 64
-00:04:52.474 --> 00:04:54.627
-available in Python
-we have right now.     
+00:04:54,720 --> 00:05:00,400
+Let us use an example to illustrate the
+advantage of mypy in type annotations.
 
 65
-00:04:57.406 --> 00:05:04.072
-Let us use an example to illustrate the
-advantage of mypy in type annotations.     
+00:05:02,240 --> 00:05:04,240
+I have a function here named add.
 
 66
-00:05:04.096 --> 00:05:07.388
-I have a function here named add.
-     
+00:05:04,880 --> 00:05:10,640
+Not a good name, but
+which accepts two arguments; X and Y.
 
 67
-00:05:07.388 --> 00:05:13.441
-Not a good name, but
-which accepts two arguments; X and Y.     
+00:05:10,640 --> 00:05:16,640
+If X Boolean value is true, it
+returns the value of Y as such.
 
 68
-00:05:13.491 --> 00:05:19.830
-If X Boolean value is true, it
-returns the value of Y as such.     
+00:05:17,200 --> 00:05:20,960
+Otherwise, it adds 10 to Y and returns it.
 
 69
-00:05:19.854 --> 00:05:23.955
-Otherwise, it adds 10 to Y and returns it.
-     
+00:05:22,960 --> 00:05:30,160
+But looking at this we have no
+idea what kind of values X and Y are.
 
 70
-00:05:25.802 --> 00:05:33.232
-But looking at this we have no
-idea what kind of values X and Y are.     
+00:05:30,800 --> 00:05:34,240
+Here I have passed two integers
+as arguments to the function.
 
 71
-00:05:33.256 --> 00:05:37.519
-Here I have passed two integers
-as arguments to the function.     
+00:05:34,960 --> 00:05:40,960
+But X could be a Boolean, a list
+or anything. It could be anything,
 
 72
-00:05:37.590 --> 00:05:43.658
-But X could be a Boolean, a list
-or anything. It could be anything,     
+00:05:40,960 --> 00:05:43,440
+no matter what we pass
+through it, it could be anything.
 
 73
-00:05:43.683 --> 00:05:46.727
-no matter what we pass
-through it, it could be anything.     
+00:05:44,160 --> 00:05:48,160
+So, we have no idea what the correct
+argument should be, and as of now,
 
 74
-00:05:46.751 --> 00:05:51.135
-So, we have no idea what the correct
-argument should be, and as of now,     
+00:05:48,160 --> 00:05:51,920
+we have no mechanism to check it as well.
 
 75
-00:05:51.174 --> 00:05:53.467
-we have no mechanism to check it as well.
-     
+00:05:51,920 --> 00:05:56,240
+Contrast it with the version
+that we have on the right side.
 
 76
-00:05:54.712 --> 00:05:59.848
-Contrast it with the version
-that we have on the right side.     
+00:05:58,400 --> 00:06:03,200
+Just by looking at it, we can say
+that X is a Boolean, Y is an integer
 
 77
-00:05:59.872 --> 00:06:06.022
-Just by looking at it, we can say
-that X is a Boolean, Y is an integer     
+00:06:03,200 --> 00:06:06,560
+and the function has returns int.
+Right?
 
 78
-00:06:06.046 --> 00:06:10.016
-and the function has returns int.
-Right?     
+00:06:08,720 --> 00:06:10,480
+See what a difference it made.
 
 79
-00:06:10.040 --> 00:06:13.280
-See what a difference it made.
-     
+00:06:10,480 --> 00:06:12,880
+It's a lot more readable.
+Don't you agree?
 
 80
-00:06:13.280 --> 00:06:17.609
-It's a lot more readable.
-Don't you agree?     
+00:06:14,880 --> 00:06:18,400
+And running mypy on this example,
+in the updated example
 
 81
-00:06:17.610 --> 00:06:21.379
-And running mypy on this example,
-in the updated example     
+00:06:18,400 --> 00:06:21,680
+that we have on the right
+side would lead to this error.
 
 82
-00:06:21.404 --> 00:06:25.068
-that we have on the right
-side would lead to this error.     
+00:06:22,560 --> 00:06:27,920
+Argument one should have been
+a bool and instead, we got an int.
 
 83
-00:06:25.092 --> 00:06:31.425
-Argument one should have been
-a bool and instead, we got an int.     
+00:06:29,200 --> 00:06:34,240
+So mypy can catch such kind of-- I
+mean, it could happen by mistake the
 
 84
-00:06:31.449 --> 00:06:37.822
-So mypy can catch such kind of-- I
-mean, it could happen by mistake the     
+00:06:35,440 --> 00:06:38,640
+stuff like this.
+Mypy can easily catch them.
 
 85
-00:06:37.846 --> 00:06:41.369
-stuff like this.
-Mypy can easily catch them.     
+00:06:38,640 --> 00:06:46,400
+And usually the outcome of these bugs
+you'll experience only when actually--
 
 86
-00:06:41.393 --> 00:06:49.244
-And usually the outcome of these bugs
-you'll experience only when actually--     
+00:06:46,400 --> 00:06:47,840
+actually executing this program.
 
 87
-00:06:49.269 --> 00:06:51.176
-actually executing this program.
-     
+00:06:48,480 --> 00:06:51,920
+But mypy can do that without
+even executing it, it’s static.
 
 88
-00:06:51.200 --> 00:06:55.084
-But mypy can do that without
-even executing it, it’s static.     
+00:06:54,160 --> 00:06:55,920
+Another concern is dead code.
 
 89
-00:06:56.827 --> 00:06:59.332
-Another concern is dead code.
-     
+00:06:56,800 --> 00:07:02,000
+As a project evolves, it's bound to have
+some dead code accumulated along with it.
 
 90
-00:06:59.356 --> 00:07:05.394
-As a project evolves, it's bound to have
-some dead code accumulated along with it.     
+00:07:03,200 --> 00:07:06,080
+This dead code could interfere with
+the rest of the code,
 
 91
-00:07:05.429 --> 00:07:09.114
-This dead code could interfere with
-the rest of the code,     
+00:07:06,800 --> 00:07:11,040
+and can lead to unexpected results
+because of this interference.
 
 92
-00:07:09.114 --> 00:07:13.757
-and can lead to unexpected results
-because of this interference.     
+00:07:11,040 --> 00:07:16,640
+We can use tools to help us identify
+dead code so that it may be removed.
 
 93
-00:07:13.781 --> 00:07:19.798
-We can use tools to help us identify
-dead code so that it may be removed.     
+00:07:17,600 --> 00:07:19,200
+Vulture is such a tool.
 
 94
-00:07:19.822 --> 00:07:22.554
-Vulture is such a tool.
-     
+00:07:20,000 --> 00:07:23,920
+It does static analysis to figure
+out which objects may be unused
 
 95
-00:07:22.578 --> 00:07:26.716
-It does static analysis to figure
-out which objects may be unused     
+00:07:23,920 --> 00:07:27,600
+and reports it along
+with its confidence score,
 
 96
-00:07:26.740 --> 00:07:30.497
-and reports it along
-with its confidence score,     
+00:07:27,600 --> 00:07:30,480
+how confident it is that
+that object is unused.
 
 97
-00:07:30.521 --> 00:07:34.023
-how confident it is that
-that object is unused.     
+00:07:31,680 --> 00:07:36,240
+Vulture is quite fast as it doesn't
+need to actually execute all the code,
 
 98
-00:07:34.047 --> 00:07:39.781
-Vulture is quite fast as it doesn't
-need to actually execute all the code,     
+00:07:36,240 --> 00:07:44,080
+but identifies the unused parts using
+Python’s abstract syntax tree
 
 99
-00:07:39.805 --> 00:07:44.888
-but identifies the unused parts using
-Python’s abstract syntax tree     
+00:07:44,080 --> 00:07:46,480
+Before mentioning unit testing,
 
 100
-00:07:46.838 --> 00:07:49.390
-Before mentioning unit testing,
-     
+00:07:47,200 --> 00:07:50,880
+let us talk about a project’s layout,
+its directory structure.
 
 101
-00:07:49.390 --> 00:07:53.861
-let us talk about a project’s layout,
-its directory structure.     
+00:07:51,440 --> 00:07:54,480
+Two of
+the most commonly seen structures
 
 102
-00:07:53.861 --> 00:07:57.558
-Two of
-the most commonly seen structures     
+00:07:55,360 --> 00:08:01,440
+used by the Python project
+are the flat layout and the src layout.
 
 103
-00:07:57.582 --> 00:08:04.573
-used by the Python project
-are the flat layout and the src layout.     
+00:08:02,000 --> 00:08:06,000
+The flat layout, as you can see,
+has the source code and the test
 
 104
-00:08:04.597 --> 00:08:08.872
-The flat layout, as you can see,
-has the source code and the test     
+00:08:06,000 --> 00:08:10,400
+in the same directory level. In this
+case, the source code is mentioned--
 
 105
-00:08:08.896 --> 00:08:13.003
-in the same directory level. In this
-case, the source code is mentioned--     
+00:08:10,400 --> 00:08:15,040
+is inside the package name directory
+and the test in the test directory.
 
 106
-00:08:13.027 --> 00:08:18.293
-is inside the package name directory
-and the test in the test directory.     
+00:08:15,760 --> 00:08:21,440
+But the src layout adds a nesting to the
+directory and adds another directory level
 
 107
-00:08:18.317 --> 00:08:24.350
-But the src layout adds a nesting to the
-directory and adds another directory level     
+00:08:21,440 --> 00:08:22,960
+for it to store the source code.
 
 108
-00:08:24.374 --> 00:08:26.078
-for it to store the source code.
-     
+00:08:23,680 --> 00:08:27,280
+Usually the name of the outer
+directory is src and within which
 
 109
-00:08:26.102 --> 00:08:30.531
-Usually the name of the outer
-directory is src and within which     
+00:08:28,400 --> 00:08:31,760
+the source code is provided
+inside another directory.
 
 110
-00:08:30.555 --> 00:08:35.533
-the source code is provided
-inside another directory.     
+00:08:33,440 --> 00:08:38,960
+But that said, there is no
+officially recommended layout for--
 
 111
-00:08:35.557 --> 00:08:41.853
-But that said, there is no
-officially recommended layout for--     
+00:08:38,960 --> 00:08:41,040
+when choosing a layout for your project.
 
 112
-00:08:41.877 --> 00:08:43.584
-when choosing a layout for your project.
-     
+00:08:41,040 --> 00:08:44,480
+You may choose a layout
+that fits your need better.
 
 113
-00:08:43.608 --> 00:08:48.066
-You may choose a layout
-that fits your need better.     
+00:08:46,080 --> 00:08:50,400
+Check out these links to see some interesting
+arguments regarding project layout.
 
 114
-00:08:48.090 --> 00:08:53.559
-Check out these links to see some interesting
-arguments regarding project layout.     
+00:08:52,720 --> 00:08:54,080
+Now comes unit testing.
 
 115
-00:08:55.475 --> 00:08:57.267
-Now comes unit testing.
-     
+00:08:54,960 --> 00:09:00,240
+Of course, it's important to check if your
+code works as you expect it to work.
 
 116
-00:08:57.291 --> 00:09:03.376
-Of course, it's important to check if your
-code works as you expect it to work.     
+00:09:01,040 --> 00:09:02,480
+Otherwise, there'd be no point, right?
 
 117
-00:09:03.400 --> 00:09:05.878
-Otherwise, there'd be no point, right?
-     
+00:09:03,280 --> 00:09:08,400
+So, but for the sake of unit testing,
+it is helpful to design the code so that
 
 118
-00:09:05.902 --> 00:09:11.532
-So, but for the sake of unit testing,
-it is helpful to design the code so that     
+00:09:09,120 --> 00:09:13,280
+different functionalities, the
+major functionality, are divided into--
 
 119
-00:09:11.556 --> 00:09:15.929
-different functionalities, the
-major functionality, are divided into--     
+00:09:13,280 --> 00:09:15,360
+into separate testable functions.
 
 120
-00:09:15.953 --> 00:09:18.536
-into separate testable functions.
-     
+00:09:17,600 --> 00:09:22,480
+There are a lot of testing and tools
+and frameworks available for Python.
 
 121
-00:09:20.249 --> 00:09:25.776
-There are a lot of testing and tools
-and frameworks available for Python.     
+00:09:23,280 --> 00:09:25,680
+Among them is the building unit test
 
 122
-00:09:25.800 --> 00:09:29.049
-Among them is the building unit test
-     
+00:09:26,560 --> 00:09:29,680
+and the third party pytest,
+which is widely used.
 
 123
-00:09:29.102 --> 00:09:32.780
-and the third party pytest,
-which is widely used.     
+00:09:31,280 --> 00:09:37,200
+So, let us consider a simple
+example to illustrate the use of testing.
 
 124
-00:09:34.093 --> 00:09:40.289
-So, let us consider a simple
-example to illustrate the use of testing.     
+00:09:38,000 --> 00:09:41,360
+I have here a simple function str_cmp,
 
 125
-00:09:40.313 --> 00:09:44.168
-I have here a simple function str_cmp,
-     
+00:09:41,360 --> 00:09:44,560
+which takes two strings: str1 and str2;
 
 126
-00:09:44.192 --> 00:09:47.879
-which takes two strings: str1 and str2;
-     
+00:09:45,920 --> 00:09:51,760
+finds the ratio of the lengths and
+returns a Boolean based on that ratio.
 
 127
-00:09:47.903 --> 00:09:55.328
-finds the ratio of the lengths and
-returns a Boolean based on that ratio.     
+00:09:53,040 --> 00:09:54,480
+Here I have on the right side
 
 128
-00:09:55.352 --> 00:09:58.504
-Here I have on the right side
-     
+00:09:55,920 --> 00:09:58,160
+the test that I have
+written for this tiny function.
 
 129
-00:09:58.528 --> 00:10:01.656
-the test that I have
-written for this tiny function.     
+00:09:59,200 --> 00:10:04,240
+Had string values and the
+expected return values specified using
 
 130
-00:10:01.680 --> 00:10:07.148
-Had string values and the
-expected return values specified using     
+00:10:04,240 --> 00:10:08,320
+the parameterize from pytest.
 
 131
-00:10:07.177 --> 00:10:11.472
-the parameterize from pytest.
-     
+00:10:10,320 --> 00:10:16,160
+And once I ran it, I got the error
+that I have shown in the bottom side.
 
 132
-00:10:12.968 --> 00:10:19.402
-And once I ran it, I got the error
-that I have shown in the bottom side.     
+00:10:17,120 --> 00:10:18,800
+So, I got a ZeroDivisionError.
 
 133
-00:10:19.426 --> 00:10:22.374
-So, I got a ZeroDivisionError.
-     
+00:10:20,160 --> 00:10:21,520
+So, why is that?
 
 134
-00:10:22.398 --> 00:10:24.356
-So, why is that?
-     
+00:10:21,520 --> 00:10:28,160
+Because if the value, if the second
+string, the str true string’s value
 
 135
-00:10:24.380 --> 00:10:30.975
-Because if the value, if the second
-string, the str true string’s value     
+00:10:28,160 --> 00:10:35,520
+is an empty string and the division
+will here be divide by zero division,
 
 136
-00:10:31.000 --> 00:10:38.390
-is an empty string and the division
-will here be divide by zero division,     
+00:10:35,520 --> 00:10:36,640
+so it will lead to error.
 
 137
-00:10:38.415 --> 00:10:39.554
-so it will lead to error.
-     
+00:10:36,640 --> 00:10:39,760
+I had not considered that
+while writing that function,
 
 138
-00:10:39.579 --> 00:10:42.947
-I had not considered that
-while writing that function,     
+00:10:40,320 --> 00:10:46,160
+and writing appropriate test cases let
+me know that if there's something wrong.
 
 139
-00:10:42.971 --> 00:10:49.140
-and writing appropriate test cases let
-me know that if there's something wrong.     
+00:10:46,160 --> 00:10:48,720
+That there’s something
+that I had not considered earlier
 
 140
-00:10:49.164 --> 00:10:51.763
-That there’s something
-that I had not considered earlier     
+00:10:49,280 --> 00:10:50,320
+when I wrote the function.
 
 141
-00:10:51.763 --> 00:10:53.846
-when I wrote the function.
-     
+00:10:50,320 --> 00:10:51,920
+So, I will be able to fix that
 
 142
-00:10:53.846 --> 00:10:55.040
-So, I will be able to fix that
-     
+00:10:51,920 --> 00:10:55,520
+because now I’ve come across that
+in the testing phase itself.
 
 143
-00:10:55.040 --> 00:10:58.390
-because now I’ve come across that
-in the testing phase itself.     
+00:10:55,520 --> 00:10:59,120
+If I had not done the testing, I
+would have given it out to others
 
 144
-00:10:58.414 --> 00:11:01.876
-If I had not done the testing, I
-would have given it out to others     
+00:10:59,120 --> 00:11:02,560
+and they would have come
+back to me with complaints, right?
 
 145
-00:11:01.900 --> 00:11:05.990
-and they would have come
-back to me with complaints, right?     
+00:11:03,280 --> 00:11:04,240
+Yes. Something like that.
 
 146
-00:11:06.014 --> 00:11:07.201
-Yes. Something like that.
-     
+00:11:06,240 --> 00:11:09,600
+But writing test cases
+alone is not enough.
 
 147
-00:11:08.816 --> 00:11:12.866
-But writing test cases
-alone is not enough.     
+00:11:10,240 --> 00:11:15,600
+We should know that tests that we have
+written cover all the cases.
 
 148
-00:11:12.890 --> 00:11:18.469
-We should know that tests that we have
-written cover all the cases.     
+00:11:15,600 --> 00:11:19,200
+I mean, all the desired parts of code
+should be covered,
 
 149
-00:11:18.469 --> 00:11:22.163
-I mean, all the desired parts of code
-should be covered,     
+00:11:19,840 --> 00:11:23,440
+otherwise there would be little
+point in writing the test, right?
 
 150
-00:11:22.163 --> 00:11:26.999
-otherwise there would be little
-point in writing the test, right?     
+00:11:24,320 --> 00:11:28,080
+So that's where test coverage comes in.
 
 151
-00:11:27.023 --> 00:11:30.283
-So that's where test coverage comes in.
-     
+00:11:28,080 --> 00:11:34,640
+100% coverage is ideal and desirable,
+but it may not always be possible.
 
 152
-00:11:30.307 --> 00:11:37.694
-100% coverage is ideal and desirable,
-but it may not always be possible.     
+00:11:35,680 --> 00:11:40,080
+There are some projects, for example,
+Welcher that we mentioned earlier
 
 153
-00:11:37.718 --> 00:11:43.194
-There are some projects, for example,
-Welcher that we mentioned earlier     
+00:11:40,720 --> 00:11:43,040
+has almost 100% coverage.
 
 154
-00:11:43.218 --> 00:11:46.417
-has almost 100% coverage.
-     
+00:11:43,680 --> 00:11:47,520
+But that is not always
+possible due to various reasons.
 
 155
-00:11:46.441 --> 00:11:51.025
-But that is not always
-possible due to various reasons.     
+00:11:48,800 --> 00:11:53,120
+So, coming to tools that can be
+used to measure test coverage,
 
 156
-00:11:51.049 --> 00:11:55.978
-So, coming to tools that can be
-used to measure test coverage,     
+00:11:53,120 --> 00:11:58,960
+there is coverage.py,
+a standalone package,
 
 157
-00:11:56.002 --> 00:12:02.152
-there is coverage.py,
-a standalone package,     
+00:11:59,520 --> 00:12:04,320
+and there's also pytest-cov,
+a plugin for the pytest module
 
 158
-00:12:02.176 --> 00:12:06.646
-and there's also pytest-cov,
-a plugin for the pytest module     
+00:12:04,320 --> 00:12:05,440
+that we discussed earlier.
 
 159
-00:12:06.670 --> 00:12:09.175
-that we discussed earlier.
-     
+00:12:07,040 --> 00:12:09,840
+Both are quite popular.
 
 160
-00:12:09.199 --> 00:12:11.521
-Both are quite popular.
-     
+00:12:10,640 --> 00:12:12,480
+Let us consider another simple example.
 
 161
-00:12:13.270 --> 00:12:15.670
-Let us consider another simple example.
-     
+00:12:13,520 --> 00:12:17,760
+We have a function, foo, which accepts
+an integer and returns a Boolean.
 
 162
-00:12:15.695 --> 00:12:20.927
-We have a function, foo, which accepts
-an integer and returns a Boolean.     
+00:12:18,400 --> 00:12:23,600
+So, it basically returns true if
+the number is an even number,
 
 163
-00:12:20.951 --> 00:12:26.366
-So, it basically returns true if
-the number is an even number,     
+00:12:23,600 --> 00:12:25,280
+otherwise a false is returned.
 
 164
-00:12:26.390 --> 00:12:28.512
-otherwise a false is returned.
-     
+00:12:26,080 --> 00:12:31,680
+But note that my test case covers
+only the even part; the odd part,
 
 165
-00:12:28.536 --> 00:12:34.820
-But note that my test case covers
-only the even part; the odd part,     
+00:12:32,960 --> 00:12:36,160
+the condition
+where the function foo accepts
 
 166
-00:12:34.844 --> 00:12:39.193
-the condition
-where the function foo accepts     
+00:12:36,160 --> 00:12:38,160
+an odd number is not actually tested.
 
 167
-00:12:39.193 --> 00:12:41.469
-an odd number is not actually tested.
-     
+00:12:39,200 --> 00:12:42,400
+So running coverage in such
+a situation will give you this--
 
 168
-00:12:41.494 --> 00:12:45.710
-So running coverage in such
-a situation will give you this--     
+00:12:43,200 --> 00:12:47,600
+this output that you see on the right-hand
+side, they say coverage is only 75%,
 
 169
-00:12:45.734 --> 00:12:51.072
-this output that you see on the right-hand
-side, they say coverage is only 75%,     
+00:12:48,480 --> 00:12:50,800
+three lines were run, one is missing.
 
 170
-00:12:51.096 --> 00:12:54.136
-three lines were run, one is missing.
-     
+00:12:51,440 --> 00:12:54,480
+And the missing line is
+highlighted in the red background.
 
 171
-00:12:54.160 --> 00:12:57.750
-And the missing line is
-highlighted in the red background.     
+00:12:55,120 --> 00:12:58,480
+The coverage can generate STM reports,
 
 172
-00:12:57.774 --> 00:13:00.983
-The coverage can generate STM reports,
-     
+00:12:58,480 --> 00:13:00,800
+so this is the output
+that I got from that.
 
 173
-00:13:00.983 --> 00:13:05.550
-so this is the output
-that I got from that.     
+00:13:02,720 --> 00:13:10,240
+But once I fix that and I write-- update
+my test to cover the old input as well,
 
 174
-00:13:05.551 --> 00:13:12.929
-But once I fix that and I write-- update
-my test to cover the old input as well,     
+00:13:10,240 --> 00:13:13,280
+I run coverage again.
+Now it says 100% coverage.
 
 175
-00:13:12.953 --> 00:13:16.353
-I run coverage again.
-Now it says 100% coverage.     
+00:13:15,120 --> 00:13:19,680
+So, now we have a lot of tests
+to run on the package, right?
 
 176
-00:13:17.809 --> 00:13:22.277
-So, now we have a lot of tests
-to run on the package, right?     
+00:13:19,680 --> 00:13:26,000
+From Pyland, to MyPy, Welcher,
+pytest, so a lot of tests to run,
 
 177
-00:13:22.301 --> 00:13:28.881
-From Pyland, to MyPy, Welcher,
-pytest, so a lot of tests to run,     
+00:13:26,000 --> 00:13:28,880
+a lot of checks to be run on your package.
 
 178
-00:13:28.905 --> 00:13:31.627
-a lot of checks to be run on your package.
-     
+00:13:28,880 --> 00:13:33,840
+So, we can definitely use a test
+automation tool to run all these tests.
 
 179
-00:13:31.651 --> 00:13:36.090
-So, we can definitely use a test
-automation tool to run all these tests.     
+00:13:35,040 --> 00:13:38,800
+And also, we need to test on
+all the supported Python versions
 
 180
-00:13:37.764 --> 00:13:41.658
-And also, we need to test on
-all the supported Python versions     
+00:13:38,800 --> 00:13:43,840
+and Python implementations, so we can
+maybe your package is designed to run on
 
 181
-00:13:41.682 --> 00:13:47.029
-and Python implementations, so we can
-maybe your package is designed to run on     
+00:13:44,800 --> 00:13:48,880
+even on PyPi another
+implementation, not seed pyth,
 
 182
-00:13:47.053 --> 00:13:52.056
-even on PyPi another
-implementation, not seed pyth,     
+00:13:50,080 --> 00:13:53,440
+and maybe if you
+need to verify that your
 
 183
-00:13:52.080 --> 00:13:57.341
-and maybe if you
-need to verify that your     
+00:13:55,120 --> 00:14:00,240
+package works on all the
+supported Python versions.
 
 184
-00:13:57.365 --> 00:14:03.413
-package works on all the
-supported Python versions.     
+00:14:00,960 --> 00:14:05,360
+Maybe suppose that you used the walrus
+operator, which is available only on--
 
 185
-00:14:03.437 --> 00:14:07.946
-Maybe suppose that you used the walrus
-operator, which is available only on--     
+00:14:05,360 --> 00:14:10,480
+from Python 3.8 onwards on your project
+and you want your project to support
 
 186
-00:14:07.970 --> 00:14:13.345
-from Python 3.8 onwards on your project
-and you want your project to support     
+00:14:10,480 --> 00:14:11,920
+even on Python 3.6.
 
 187
-00:14:13.370 --> 00:14:14.959
-even on Python 3.6.
-     
+00:14:12,880 --> 00:14:17,040
+So, you are unaware
+that you actually used the walrus operator
 
 188
-00:14:14.959 --> 00:14:20.233
- So, you are unaware
-that you actually used the walrus operator     
+00:14:17,600 --> 00:14:22,320
+and you run the tox test, I
+mean the test automation test
 
 189
-00:14:20.234 --> 00:14:25.026
-and you run the tox test, I
-mean the test automation test     
+00:14:22,320 --> 00:14:25,920
+and you will find that you have
+an error in 3.6, but not on 3.8,
 
 190
-00:14:25.050 --> 00:14:28.728
-and you will find that you have
-an error in 3.6, but not on 3.8,     
+00:14:25,920 --> 00:14:26,960
+so you will know what to do.
 
 191
-00:14:28.752 --> 00:14:30.319
-so you will know what to do.
-     
+00:14:28,080 --> 00:14:34,480
+Tox and Nox are some of the prominent test
+automation tools that we have in Python.
 
 192
-00:14:30.343 --> 00:14:37.895
-Tox and Nox are some of the prominent test
-automation tools that we have in Python.     
+00:14:35,440 --> 00:14:40,960
+So, the test automation tools can be used
+to run the test locally or maybe even with
 
 193
-00:14:37.919 --> 00:14:43.639
-So, the test automation tools can be used
-to run the test locally or maybe even with     
+00:14:40,960 --> 00:14:45,520
+other continuous integration services
+that you use, whichever ones that you use.
 
 194
-00:14:43.663 --> 00:14:48.651
-other continuous integration services
-that you use, whichever ones that you use.     
+00:14:48,320 --> 00:14:52,320
+Remember what I mentioned about
+the possibility of flat layer packages
 
 195
-00:14:50.989 --> 00:14:54.981
-Remember what I mentioned about
-the possibility of flat layer packages     
+00:14:52,320 --> 00:14:54,240
+running into problems while testing?
 
 196
-00:14:55.005 --> 00:14:57.813
-running into problems while testing?
-     
+00:14:55,280 --> 00:14:59,440
+Well, that's because tools like
+tox create virtual environments just
 
 197
-00:14:57.837 --> 00:15:02.358
-Well, that's because tools like
-tox create virtual environments just     
+00:14:59,440 --> 00:15:04,000
+to run your tests so that they are
+tested just like they were installed
 
 198
-00:15:02.383 --> 00:15:07.049
-to run your tests so that they are
-tested just like they were installed     
+00:15:04,560 --> 00:15:05,920
+like in your user machine.
 
 199
-00:15:07.073 --> 00:15:08.996
-like in your user machine.
-     
+00:15:08,240 --> 00:15:12,320
+But if you had a flat environment,
+the source code itself could be imported
 
 200
-00:15:10.856 --> 00:15:15.656
-But if you had a flat environment,
-the source code itself could be imported     
+00:15:12,880 --> 00:15:19,280
+from the test instead of the package
+that you have had installed in the virtual
 
 201
-00:15:15.680 --> 00:15:22.070
-from the test instead of the package
-that you have had installed in the virtual     
+00:15:19,280 --> 00:15:25,840
+environment that the tox or any other test
+automation tool like that created for you.
 
 202
-00:15:22.095 --> 00:15:29.401
-environment that the tox or any other test
-automation tool like that created for you.     
+00:15:27,200 --> 00:15:31,120
+But such layout doesn't have
+this problem as the source code itself
 
 203
-00:15:29.425 --> 00:15:34.381
-But such layout doesn't have
-this problem as the source code itself     
+00:15:32,080 --> 00:15:35,600
+cannot be directly imported
+from the test directory,
 
 204
-00:15:34.405 --> 00:15:38.412
-cannot be directly imported
-from the test directory,     
+00:15:35,600 --> 00:15:39,840
+because it's inside yet
+another directory level.
 
 205
-00:15:38.412 --> 00:15:43.162
-because it's inside yet
-another directory level.     
+00:15:40,880 --> 00:15:44,320
+So, that eliminates the
+possibility of an accidental import
 
 206
-00:15:43.186 --> 00:15:47.322
-So, that eliminates the
-possibility of an accidental import     
+00:15:44,960 --> 00:15:48,240
+like-- that is possible in a flat layout.
 
 207
-00:15:47.346 --> 00:15:51.299
-like-- that is possible in a flat layout.
-     
+00:15:50,800 --> 00:15:54,960
+Once you have your project ready,
+you can build and package it so that
 
 208
-00:15:53.344 --> 00:15:57.697
-Once you have your project ready,
-you can build and package it so that     
+00:15:54,960 --> 00:15:58,160
+you can share your work
+with others and let them use it.
 
 209
-00:15:57.721 --> 00:16:01.369
-you can share your work
-with others and let them use it.     
+00:15:59,280 --> 00:16:03,120
+The build process would create files
+that can be used to install your package
 
 210
-00:16:01.393 --> 00:16:05.980
-The build process would create files
-that can be used to install your package     
+00:16:03,120 --> 00:16:07,840
+in other machines, like
+the wheel file, for example.
 
 211
-00:16:06.004 --> 00:16:10.736
-in other machines, like
-the wheel file, for example.     
+00:16:09,040 --> 00:16:12,880
+There are several tools these days
+that can be used to package your project.
 
 212
-00:16:10.760 --> 00:16:16.247
-There are several tools these days
-that can be used to package your project.     
+00:16:14,160 --> 00:16:17,520
+Like setuptools from PyPA,
+the Python Packaging Authority,
 
 213
-00:16:16.271 --> 00:16:20.751
-Like setuptools from PyPA,
-the Python Packaging Authority,     
+00:16:18,080 --> 00:16:23,360
+or the newer non-PyPA
+tools like flit and poetry.
 
 214
-00:16:20.775 --> 00:16:26.390
-or the newer non-PyPA
-tools like flit and poetry.     
+00:16:25,120 --> 00:16:29,040
+The next step after packaging
+a project is publishing it.
 
 215
-00:16:27.750 --> 00:16:32.638
-The next step after packaging
-a project is publishing it.     
+00:16:30,720 --> 00:16:35,840
+If you're using setuptools, you can
+use the twine package to upload it to
 
 216
-00:16:32.662 --> 00:16:38.714
-If you're using setuptools, you can
-use the twine package to upload it to     
+00:16:35,840 --> 00:16:37,280
+the server of your preference.
 
 217
-00:16:38.738 --> 00:16:40.601
-the server of your preference.
-     
+00:16:38,560 --> 00:16:43,040
+In the case of flit and poetry, they
+can do the publishing by themselves.
 
 218
-00:16:40.625 --> 00:16:46.157
-In the case of flit and poetry, they
-can do the publishing by themselves.     
+00:16:43,760 --> 00:16:48,400
+People commonly upload
+their packages to the pyPI server.
 
 219
-00:16:46.191 --> 00:16:51.191
-People commonly upload
-their packages to the pyPI server.     
+00:16:48,400 --> 00:16:53,440
+But if you are publishing there
+before trying the actual pyPI server,
 
 220
-00:16:51.215 --> 00:16:56.603
-But if you are publishing there
-before trying the actual pyPI server,     
+00:16:54,000 --> 00:16:58,960
+you can try out the test pyPI server,
+which is a place to try out your package
 
 221
-00:16:56.627 --> 00:17:01.691
-you can try out the test pyPI server,
-which is a place to try out your package     
+00:16:58,960 --> 00:17:03,840
+and see if all is well before
+publishing to the actual pyPI.
 
 222
-00:17:01.715 --> 00:17:06.634
-and see if all is well before
-publishing to the actual pyPI.     
+00:17:05,920 --> 00:17:09,680
+Other than the tools that I've mentioned
+so far, there are a lot of other tools
 
 223
-00:17:08.602 --> 00:17:12.561
-Other than the tools that I've mentioned
-so far, there are a lot of other tools     
+00:17:09,680 --> 00:17:13,840
+that you can use to-- that can be
+used to make your package better.
 
 224
-00:17:12.586 --> 00:17:16.978
-that you can use to-- that can be
-used to make your package better.     
+00:17:14,800 --> 00:17:18,000
+For example, there's
+bumpversion, which can be used to
 
 225
-00:17:17.002 --> 00:17:20.310
-For example, there's
-bumpversion, which can be used to     
+00:17:18,000 --> 00:17:20,160
+change your Python package’s version.
 
 226
-00:17:20.334 --> 00:17:23.640
-change your Python package’s version.
-     
+00:17:21,120 --> 00:17:26,160
+And there's precommit, which can be
+used to run commands before committing,
 
 227
-00:17:23.664 --> 00:17:28.898
-And there's precommit, which can be
-used to run commands before committing,     
+00:17:26,160 --> 00:17:30,640
+isort to sort your imports
+and your Python source files,
 
 228
-00:17:28.922 --> 00:17:33.421
-isort to sort your imports
-and your Python source files,     
+00:17:30,640 --> 00:17:33,680
+and cookiecutter, especially
+handy if you're using setuptools
 
 229
-00:17:33.445 --> 00:17:36.576
-and cookiecutter, especially
-handy if you're using setuptools     
+00:17:33,680 --> 00:17:34,800
+to start your project.
 
 230
-00:17:36.600 --> 00:17:37.972
-to start your project.
-     
+00:17:37,200 --> 00:17:43,280
+Once you have your package ready tests
+all set up you could use a CI/CD
 
 231
-00:17:39.885 --> 00:17:46.189
-Once you have your package ready tests
-all set up you could use a CI/CD     
+00:17:43,280 --> 00:17:45,280
+to run the test automatically.
 
 232
-00:17:46.213 --> 00:17:47.999
-to run the test automatically.
-     
+00:17:45,280 --> 00:17:51,200
+You can even, depending on
+the CI/CD service or tools that you use,
 
 233
-00:17:47.999 --> 00:17:54.296
-You can even, depending on
-the CI/CD service or tools that you use,     
+00:17:52,560 --> 00:17:56,800
+you can even view
+the results of the past test and all,
 
 234
-00:17:54.296 --> 00:17:59.378
-you can even view
-the results of the past test and all,     
+00:17:56,800 --> 00:17:59,840
+which can be quite helpful.
 
 235
-00:17:59.402 --> 00:18:01.127
-which can be quite helpful.
-     
+00:18:00,720 --> 00:18:06,080
+Now, due to some proposals that have
+been accepted by the PyCon community,
 
 236
-00:18:02.997 --> 00:18:09.245
-Now, due to some proposals that have
-been accepted by the PyCon community,     
+00:18:06,800 --> 00:18:12,640
+the pyproject.toml file has become
+the center point of the Python packages.
 
 237
-00:18:09.269 --> 00:18:15.821
-the pyproject.toml file has become
-the center point of the Python packages.     
+00:18:13,920 --> 00:18:16,400
+Earlier, it used to be just setuptools.
 
 238
-00:18:15.845 --> 00:18:19.229
-Earlier, it used to be just setuptools.
-     
+00:18:16,400 --> 00:18:22,880
+Now you can actually choose your build
+system to be something else if you like.
 
 239
-00:18:19.253 --> 00:18:26.324
-Now you can actually choose your build
-system to be something else if you like.     
+00:18:26,080 --> 00:18:29,280
+Because of the toml file
+involved, you can probably expect--
 
 240
-00:18:26.348 --> 00:18:32.461
-Because of the toml file
-involved, you can probably expect--     
+00:18:30,080 --> 00:18:35,520
+we can probably expect a toml
+module inside the Python language
 
 241
-00:18:32.485 --> 00:18:38.254
-we can probably expect a toml
-module inside the Python language     
+00:18:35,520 --> 00:18:37,040
+standard library itself,
 
 242
-00:18:38.278 --> 00:18:41.192
-standard library itself,
-     
+00:18:38,400 --> 00:18:44,240
+because a lot of projects will need that
+to pass pyproject.toml files’ content.
 
 243
-00:18:41.216 --> 00:18:47.387
-because a lot of projects will need that
-to pass pyproject.toml files’ content.     
+00:18:45,200 --> 00:18:47,760
+Most of the packages
+that I have mentioned,
 
 244
-00:18:47.411 --> 00:18:51.638
-Most of the packages
-that I have mentioned,     
+00:18:49,360 --> 00:18:53,600
+those packages’ configuration
+files used to be separate,
 
 245
-00:18:51.662 --> 00:18:56.832
-those packages’ configuration
-files used to be separate,     
+00:18:54,400 --> 00:18:58,720
+so there'll be a different
+configuration file for each tool.
 
 246
-00:18:56.856 --> 00:19:01.619
-so there'll be a different
-configuration file for each tool.     
+00:18:58,720 --> 00:19:06,480
+It used to be like that, but a lot of
+such tools have moved their configuration
 
 247
-00:19:01.643 --> 00:19:09.443
-It used to be like that, but a lot of
-such tools have moved their configuration     
+00:19:07,280 --> 00:19:09,120
+part to the pyproject.toml file.
 
 248
-00:19:09.467 --> 00:19:12.050
-part to the pyproject.toml file.
-     
+00:19:09,120 --> 00:19:10,560
+You can configure the tool
 
 249
-00:19:12.060 --> 00:19:13.675
-You can configure the tool
-     
+00:19:11,600 --> 00:19:14,240
+in the appropriate section
+within the toml file itself.
 
 250
-00:19:13.766 --> 00:19:17.629
-in the appropriate section
-within the toml file itself.     
+00:19:15,040 --> 00:19:17,920
+While some projects are yet to make the
+move,
 
 251
-00:19:17.653 --> 00:19:20.803
-While some projects are yet to make the
-move,     
+00:19:17,920 --> 00:19:24,240
+we can expect them to make that move
+in the near future.
 
 252
-00:19:20.803 --> 00:19:24.657
-we can expect them to make that move 
-in the near future.     
+00:19:24,240 --> 00:19:26,480
+So, we have come to the
+end of the presentation.
 
 253
-00:19:26.854 --> 00:19:30.098
-So, we have come to the
-end of the presentation.     
+00:19:27,440 --> 00:19:30,000
+So a quick recap of what we saw.
 
 254
-00:19:30.122 --> 00:19:33.379
-So a quick recap of what we saw.
-     
+00:19:31,760 --> 00:19:35,360
+We talked about the linting.
+We talked about static type checking.
 
 255
-00:19:33.403 --> 00:19:38.614
-We talked about the linting.
-We talked about static type checking.     
+00:19:36,000 --> 00:19:40,720
+Dead code identification, testing,
+and test coverage and test automation
 
 256
-00:19:38.638 --> 00:19:44.125
-Dead code identification, testing,
-and test coverage and test automation     
+00:19:41,600 --> 00:19:42,800
+and the packaging part.
 
 257
-00:19:44.149 --> 00:19:46.048
-and the packaging part.
-     
+00:19:43,360 --> 00:19:46,000
+Follow the practices
+promoted by these tools
 
 258
-00:19:46.072 --> 00:19:49.267
-Follow the practices
-promoted by these tools     
+00:19:46,560 --> 00:19:49,280
+and your project is
+bound to be better formed.
 
 259
-00:19:49.291 --> 00:19:52.441
-and your project is
-bound to be better formed.     
-
-260
-00:19:52.465 --> 00:19:54.316
+00:19:50,080 --> 00:19:51,840
 Thanks for being here.
+
