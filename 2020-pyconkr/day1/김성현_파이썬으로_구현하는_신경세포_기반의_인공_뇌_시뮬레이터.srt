@@ -215,7 +215,7 @@ neuron은 Postsynaptic neuron이라고 합니다
 
 52
 00:04:04,110 --> 00:04:07,950
-반대로 이니 Inhibitory Synapse는 음전하를 분비함으로써
+반대로 Inhibitory Synapse는 음전하를 분비함으로써
 
 53
 00:04:07,970 --> 00:04:11,670
